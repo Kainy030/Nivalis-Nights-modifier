@@ -1,5 +1,8 @@
 # 四个钩子与公共 HookRuntime
 
+范围更新（2026-09-30）：完整 1,067 个目录入口恢复为被动资料，含 AI/视觉；默认观察选择为空，不初始化原生目标/字段/定时器。仅 Features.AllowList 或独立 Diagnostics.Enabled + 精确 AllowList 可安装观察。ResolveTarget 按需校验解析，不自动 patch 或调用游戏。旧安装数与实测为历史状态；本版本尚未游戏内验证。
+
+
 更新：2026-09-30。项目 `D:/NightsHack`，目标 Nivalis Nights，IL2CPP/net6.0/x64。
 
 ## 本轮结果

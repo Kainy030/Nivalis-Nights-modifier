@@ -22,8 +22,17 @@ public abstract class ObservationPlugin : BasePlugin
     protected static ObservationPlugin? FindActive(string id) => ActivePlugins.TryGetValue(id, out var plugin) ? plugin : null;
     public HookObservationBuffer Observations { get; } = new();
     public bool Installed => Volatile.Read(ref installed);
+    public IReadOnlyList<string> AvailableTargetIds => availableTargetIds;
     public IReadOnlyList<string> FieldDiagnostics => snapshots?.Diagnostics ?? Array.Empty<string>();
     private bool installed;
+    private Catalog? catalog;
+    private IReadOnlyList<string> availableTargetIds = Array.Empty<string>();
+    private Assembly? gameAssembly;
+    private long moduleBase;
+    private int loaderThreadId;
+    private long diagnosticDeadline;
+    private ObservationBudget? traceBudget;
+    private bool captureFields, capturePlayerDetails;
     private System.Threading.Timer? diagnosticsTimer;
     private readonly object diagnosticsLock = new();
     private long callSequence;
@@ -37,19 +46,24 @@ public abstract class ObservationPlugin : BasePlugin
         internal readonly ObservationPlugin Owner;
         internal readonly MethodSpec Spec;
         internal readonly SampleGate Gate;
+        internal readonly ObservationMode Mode;
+        internal readonly bool Diagnostic;
+        internal readonly string Id;
         internal MethodInfo? Method;
         internal string State = "Pending", Detail = "";
         internal long Calls, Samples, Faults;
-        internal Endpoint(ObservationPlugin owner, MethodSpec spec, int interval)
-        { Owner = owner; Spec = spec; Gate = new SampleGate(spec.Sampled ? interval : 0); }
+        internal Endpoint(ObservationPlugin owner, MethodSpec spec, ObservationMode mode, bool diagnostic, int interval)
+        { Owner = owner; Spec = spec; Mode = mode; Diagnostic = diagnostic; Id = spec.Id; Gate = new SampleGate(interval); }
         internal HookStatus Status()
         {
             long calls = Interlocked.Read(ref Calls), samples = Interlocked.Read(ref Samples), faults = Interlocked.Read(ref Faults);
-            string state = State == "Installed" && faults >= 3 ? "ObservationDisabled" :
+            string state = State == "Installed" && Diagnostic && Owner.DiagnosticsExpired ? "DiagnosticExpired" :
+                State == "Installed" && Mode == ObservationMode.Trace && Owner.traceBudget?.IsExhausted == true ? "BudgetExhausted" :
+                State == "Installed" && faults >= 3 ? "ObservationDisabled" :
                 State == "Installed" && calls > 0 ? "Observed" : State;
             string detail = state == "Observed" && faults == 0
                 ? "Callback observed; inspect samples and field diagnostics for actual data coverage." : Detail;
-            return new(Spec.Id, Spec.Group, state, detail, calls, samples, faults);
+            return new(Id, Spec.Group, state, detail, calls, samples, faults);
         }
     }
 
@@ -57,24 +71,42 @@ public abstract class ObservationPlugin : BasePlugin
 
     public override void Load()
     {
-        if (!Config.Bind("Hook", "Enabled", true, "Install observation-only hooks.").Value) return;
+        if (!Config.Bind("Hook", "Enabled", true, "Enable the passive target registry; does not opt into observation.").Value) return;
         if (!ActivePlugins.TryAdd(Identifier, this)) { Log.LogWarning(Identifier + " already active."); return; }
         try
         {
-            if (!Environment.Is64BitProcess) throw new PlatformNotSupportedException("x64 required.");
-            TargetValidation.VerifyFile(Path.Combine(Paths.GameRootPath, "GameAssembly.dll"), TargetValidation.AssemblyHash);
-            TargetValidation.VerifyFile(Path.Combine(Paths.GameRootPath, "Nivalis Nights_Data", "il2cpp_data", "Metadata", "global-metadata.dat"), TargetValidation.MetadataHash);
-            Catalog catalog = Catalog.Load(GetType().Assembly, CatalogResource);
-            int interval = Math.Clamp(Config.Bind("Observation", "SampleIntervalMs", 250,
-                "Frequent endpoints only, per method across instances (25..10000 ms).").Value, 25, 10000);
-            endpoints = catalog.Methods.Select(m => new Endpoint(this, m, interval)).ToArray();
+            loaderThreadId = Environment.CurrentManagedThreadId;
+            catalog = Catalog.Load(GetType().Assembly, CatalogResource);
+            availableTargetIds = Array.AsReadOnly(catalog.Methods.Select(m => m.Id).ToArray());
+            string features = Config.Bind("Features", "AllowList", "",
+                "Explicit full method IDs separated by semicolons; empty installs no feature observers. Selected feature observers count only.").Value;
+            bool diagnosticsEnabled = Config.Bind("Diagnostics", "Enabled", false,
+                "Explicitly opt into selected diagnostics. Legacy Groups/ExportIntervalSeconds never enable observation. Restart required.").Value;
+            string diagnosticMode = Config.Bind("Diagnostics", "Mode", "Counter", "Counter or Trace; only used when Diagnostics.Enabled=true.").Value;
+            string diagnosticAllowList = Config.Bind("Diagnostics", "AllowList", "", "Explicit full method IDs separated by semicolons; no wildcards or groups.").Value;
+            var selection = ObservationPolicy.Select(catalog, features, diagnosticsEnabled, diagnosticMode, diagnosticAllowList);
             exclusions = Array.AsReadOnly(catalog.Excluded.Select(e => new HookStatus(
                 $"{e.Type}.{e.Name}@{e.Rva}", "Excluded", "Excluded", e.Reason, 0, 0, 0)).ToArray());
-            var assembly = Assembly.Load(new AssemblyName("Assembly-CSharp"));
-            snapshots = new NativeSnapshots(assembly, catalog.Types);
-            using var process = Process.GetCurrentProcess();
-            var module = process.Modules.Cast<ProcessModule>().Single(m => string.Equals(m.ModuleName, "GameAssembly.dll", StringComparison.OrdinalIgnoreCase));
-            long moduleBase = module.BaseAddress.ToInt64();
+            if (selection.Length == 0)
+            {
+                Log.LogInfo($"{Identifier}: passive registry ready; {catalog.Methods.Length} available targets, 0 observation patches, no snapshots or export timer. AI/render targets are metadata only.");
+                return;
+            }
+            var diagnosticIds = ObservationPolicy.Select(catalog, "", diagnosticsEnabled, diagnosticMode, diagnosticAllowList)
+                .Select(s => s.Method.Id).ToHashSet(StringComparer.Ordinal);
+            int interval = Math.Clamp(Config.Bind("Observation", "SampleIntervalMs", 250,
+                "Explicit Trace endpoints only; applies to EVERY selected trace method (25..10000 ms), across instances.").Value, 25, 10000);
+            endpoints = selection.Select(s => new Endpoint(this, s.Method, s.Mode, diagnosticIds.Contains(s.Method.Id), interval)).ToArray();
+            int duration = Math.Clamp(Config.Bind("Diagnostics", "DurationSeconds", 30, "Diagnostic collection lifetime, 1..300 seconds. Detours remain until restart/unload.").Value, 1, 300);
+            bool hasTrace = selection.Any(s => s.Mode == ObservationMode.Trace);
+            captureFields = hasTrace && Config.Bind("Diagnostics", "CaptureFields", false, "Explicit Trace only: include instance fields; otherwise args/result only.").Value;
+            capturePlayerDetails = captureFields && Config.Bind("Diagnostics", "CapturePlayerDetails", false, "Explicit Trace only: expand player stats/skills/locks.").Value;
+            if (hasTrace)
+                traceBudget = new ObservationBudget(
+                    Math.Clamp(Config.Bind("Diagnostics", "MaxSamplesPerSecond", 20, "Shared per-plugin Trace budget, 1..200 captures; each admits a Before/After pair.").Value, 1, 200),
+                    Math.Clamp(Config.Bind("Diagnostics", "MaxTotalSamples", 500, "Total Trace capture budget, 1..5000; each admits a Before/After pair.").Value, 1, 5000), duration);
+            EnsureNativeContext();
+            if (captureFields) snapshots = new NativeSnapshots(gameAssembly!, SelectSnapshotTypes(catalog, selection));
             var excludedRvas = Config.Bind("Diagnostics", "ExcludedRvas", "",
                 "Temporary isolation only: comma-separated catalog RVAs to leave unpatched. Empty enables the full configured scope.").Value
                 .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
@@ -88,28 +120,7 @@ public abstract class ObservationPlugin : BasePlugin
                 { endpoint.State = "Disabled"; continue; }
                 try
                 {
-                    Type type = NativeSnapshots.ResolveType(assembly, endpoint.Spec.Type);
-                    if (!endpoint.Spec.IsStatic && !typeof(Il2CppObjectBase).IsAssignableFrom(type))
-                        throw new InvalidOperationException("Instance is not generated object interop.");
-                    IntPtr klass = Il2CppClassPointerStore.GetNativeClassPointer(type);
-                    if (klass == IntPtr.Zero) throw new InvalidOperationException("No native class.");
-                    endpoint.Method = TargetValidation.Resolve(type, endpoint.Spec, NativeSnapshots.NativeName(klass));
-                    bool IsNativeValueType(Type element)
-                    {
-                        if (!typeof(Il2CppObjectBase).IsAssignableFrom(element)) return false;
-                        IntPtr elementClass = Il2CppClassPointerStore.GetNativeClassPointer(element);
-                        if (elementClass == IntPtr.Zero) throw new InvalidOperationException("Missing byref native class.");
-                        return IL2CPP.il2cpp_class_is_valuetype(elementClass);
-                    }
-                    TargetValidation.VerifyByRefMarshalling(endpoint.Method);
-                    TargetValidation.VerifyReturnMarshalling(endpoint.Method, IsNativeValueType);
-                    TargetValidation.VerifySmallValueParameters(endpoint.Method, element =>
-                    {
-                        if (!IsNativeValueType(element)) return null;
-                        uint alignment = 0;
-                        return IL2CPP.il2cpp_class_value_size(Il2CppClassPointerStore.GetNativeClassPointer(element), ref alignment);
-                    });
-                    VerifyNativeEntry(endpoint.Method, moduleBase, endpoint.Spec.Rva);
+                    endpoint.Method = ResolveTarget(endpoint.Id);
                     TargetValidation.VerifyKnownNativeCompatibility(endpoint.Spec);
                     if (!Dispatch.TryAdd(endpoint.Method, endpoint)) throw new InvalidOperationException("Method already owned by another observer.");
                 }
@@ -123,8 +134,11 @@ public abstract class ObservationPlugin : BasePlugin
                     string before = isStatic ? nameof(BeforeStatic) : nameof(BeforeInstance);
                     string after = isStatic ? (returnsVoid ? nameof(AfterStaticVoid) : nameof(AfterStaticResult)) :
                         (returnsVoid ? nameof(AfterInstanceVoid) : nameof(AfterInstanceResult));
-                    harmony.Patch(endpoint.Method, prefix: new HarmonyMethod(typeof(ObservationPlugin), before),
-                        postfix: new HarmonyMethod(typeof(ObservationPlugin), after));
+                    if (endpoint.Mode == ObservationMode.Counter)
+                        harmony.Patch(endpoint.Method, prefix: new HarmonyMethod(typeof(ObservationPlugin), nameof(CounterOnly)));
+                    else
+                        harmony.Patch(endpoint.Method, prefix: new HarmonyMethod(typeof(ObservationPlugin), before),
+                            postfix: new HarmonyMethod(typeof(ObservationPlugin), after));
                     endpoint.State = "Installed";
                     endpoint.Detail = "Patch accepted; native hits and field coverage not yet confirmed.";
                 }
@@ -135,19 +149,88 @@ public abstract class ObservationPlugin : BasePlugin
                     catch (Exception cleanup) { endpoint.Detail += "; cleanup failed: " + cleanup.Message; }
                 }
             }
+            diagnosticDeadline = Stopwatch.GetTimestamp() + (long)duration * Stopwatch.Frequency;
             Volatile.Write(ref installed, endpoints.Any(e => e.State == "Installed"));
             Log.LogInfo($"{Identifier}: {endpoints.Count(e => e.State == "Installed")}/{endpoints.Length} installed; {catalog.Excluded.Length} excluded. Observation only.");
             foreach (var status in GetStatus().Where(s => s.State is "Failed" or "Rejected")) Log.LogWarning($"{status.Id}: {status.Detail}");
             foreach (string diagnostic in FieldDiagnostics) Log.LogWarning("Field unavailable: " + diagnostic);
-            int exportSeconds = Config.Bind("Diagnostics", "ExportIntervalSeconds", 0,
-                "Write detached status/latest samples to BepInEx/diagnostics; 0 disables, otherwise minimum 5 seconds.").Value;
+            int exportSeconds = diagnosticsEnabled && diagnosticIds.Count > 0 && Installed ? Config.Bind("Diagnostics", "ExportIntervalSeconds", 0,
+                "Write detached status/latest samples to BepInEx/diagnostics; 0 disables, otherwise minimum 5 seconds.").Value
+                : 0;
             if (exportSeconds > 0)
             {
                 var exportInterval = TimeSpan.FromSeconds(Math.Clamp(exportSeconds, 5, 3600));
-                diagnosticsTimer = new System.Threading.Timer(_ => ExportDiagnostics(), null, exportInterval, exportInterval);
+                // Even a short diagnostic session emits its terminal report.
+                var timerInterval = TimeSpan.FromSeconds(Math.Min(exportInterval.TotalSeconds, duration));
+                diagnosticsTimer = new System.Threading.Timer(_ => ExportDiagnostics(), null, timerInterval, timerInterval);
             }
         }
         catch (Exception error) { Log.LogError(Identifier + " installation refused/failed: " + error); Unload(); }
+    }
+
+    private bool DiagnosticsExpired => Stopwatch.GetTimestamp() >= diagnosticDeadline;
+
+    // Resolution is deliberately separate from interception. It never installs a
+    // Harmony patch, executes a method, or treats a historical pointer as an instance.
+    // Callers must separately validate gameplay state and marshal execution correctly.
+    public MethodInfo ResolveTarget(string targetId)
+    {
+        if (catalog == null || Environment.CurrentManagedThreadId != loaderThreadId)
+            throw new InvalidOperationException("Target resolution requires a loaded plugin and its loader thread; no automatic thread dispatch is implemented.");
+        var spec = catalog.Methods.SingleOrDefault(m => m.Id == targetId)
+            ?? throw new InvalidOperationException("Unknown or excluded target ID.");
+        EnsureNativeContext();
+        Type type = NativeSnapshots.ResolveType(gameAssembly!, spec.Type);
+        if (!spec.IsStatic && !typeof(Il2CppObjectBase).IsAssignableFrom(type))
+            throw new InvalidOperationException("Instance is not generated object interop.");
+        IntPtr klass = Il2CppClassPointerStore.GetNativeClassPointer(type);
+        if (klass == IntPtr.Zero) throw new InvalidOperationException("No native class.");
+        MethodInfo method = TargetValidation.Resolve(type, spec, NativeSnapshots.NativeName(klass));
+        bool IsNativeValueType(Type element)
+        {
+            if (!typeof(Il2CppObjectBase).IsAssignableFrom(element)) return false;
+            IntPtr elementClass = Il2CppClassPointerStore.GetNativeClassPointer(element);
+            if (elementClass == IntPtr.Zero) throw new InvalidOperationException("Missing native class.");
+            return IL2CPP.il2cpp_class_is_valuetype(elementClass);
+        }
+        TargetValidation.VerifyByRefMarshalling(method);
+        TargetValidation.VerifyReturnMarshalling(method, IsNativeValueType);
+        TargetValidation.VerifySmallValueParameters(method, element =>
+        {
+            if (!IsNativeValueType(element)) return null;
+            uint alignment = 0;
+            return IL2CPP.il2cpp_class_value_size(Il2CppClassPointerStore.GetNativeClassPointer(element), ref alignment);
+        });
+        VerifyNativeEntry(method, moduleBase, spec.Rva);
+        return method;
+    }
+
+    private void EnsureNativeContext()
+    {
+        if (gameAssembly != null) return;
+        if (!Environment.Is64BitProcess) throw new PlatformNotSupportedException("x64 required.");
+        TargetValidation.VerifyFile(Path.Combine(Paths.GameRootPath, "GameAssembly.dll"), TargetValidation.AssemblyHash);
+        TargetValidation.VerifyFile(Path.Combine(Paths.GameRootPath, "Nivalis Nights_Data", "il2cpp_data", "Metadata", "global-metadata.dat"), TargetValidation.MetadataHash);
+        using var process = Process.GetCurrentProcess();
+        var module = process.Modules.Cast<ProcessModule>().Single(m => string.Equals(m.ModuleName, "GameAssembly.dll", StringComparison.OrdinalIgnoreCase));
+        var assembly = Assembly.Load(new AssemblyName("Assembly-CSharp"));
+        moduleBase = module.BaseAddress.ToInt64();
+        gameAssembly = assembly;
+    }
+
+    private IEnumerable<TypeSpec> SelectSnapshotTypes(Catalog source, IEnumerable<ObservationSelection> selection)
+    {
+        var names = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var selected in selection.Where(s => s.Mode == ObservationMode.Trace))
+        {
+            for (Type? type = NativeSnapshots.ResolveType(gameAssembly!, selected.Method.Type); type != null; type = type.BaseType)
+                names.Add(TargetValidation.Canonical(type));
+        }
+        if (capturePlayerDetails && CapturePlayerDetails)
+            foreach (var type in source.Types.Where(t => t.Name.StartsWith("Nivalis.Player", StringComparison.Ordinal) ||
+                t.Name.StartsWith("Nivalis.SkillSystem.", StringComparison.Ordinal) || t.Name.StartsWith("Nivalis.OverrideableBool", StringComparison.Ordinal)))
+                names.Add(type.Name);
+        return source.Types.Where(t => names.Contains(t.Name));
     }
 
     private static unsafe void VerifyNativeEntry(MethodInfo method, long moduleBase, string rva)
@@ -184,6 +267,10 @@ public abstract class ObservationPlugin : BasePlugin
         {
             patches.Clear();
             if (ReferenceEquals(FindActive(Identifier), this)) ActivePlugins.TryRemove(Identifier, out _);
+            catalog = null;
+            availableTargetIds = Array.Empty<string>();
+            snapshots = null;
+            gameAssembly = null;
         }
         return success;
     }
@@ -191,6 +278,7 @@ public abstract class ObservationPlugin : BasePlugin
     private void ExportDiagnostics()
     {
         if (!Monitor.TryEnter(diagnosticsLock)) return;
+        bool finalReport = DiagnosticsExpired;
         try
         {
             // Read only managed, detached observations; never access game objects on this timer.
@@ -207,10 +295,21 @@ public abstract class ObservationPlugin : BasePlugin
             File.Move(destination + ".tmp", destination, true);
         }
         catch (Exception error) { Log.LogWarning(Identifier + " diagnostic export failed: " + error.Message); }
-        finally { Monitor.Exit(diagnosticsLock); }
+        finally
+        {
+            if (finalReport) { diagnosticsTimer?.Dispose(); diagnosticsTimer = null; }
+            Monitor.Exit(diagnosticsLock);
+        }
     }
 
     private sealed record Capture(Endpoint Endpoint, long CallId, long InstanceAddress);
+    private static void CounterOnly(MethodBase __originalMethod)
+    {
+        if (!Dispatch.TryGetValue(__originalMethod, out var endpoint) || endpoint.Mode != ObservationMode.Counter ||
+            !endpoint.Owner.Installed || endpoint.State != "Installed" ||
+            (endpoint.Diagnostic && endpoint.Owner.DiagnosticsExpired)) return;
+        Interlocked.Increment(ref endpoint.Calls);
+    }
     private static void BeforeInstance(Il2CppObjectBase __instance, MethodBase __originalMethod, object[] __args, out Capture? __state)
         => Begin(__instance, __originalMethod, __args, out __state);
     private static void BeforeStatic(MethodBase __originalMethod, object[] __args, out Capture? __state)
@@ -220,9 +319,10 @@ public abstract class ObservationPlugin : BasePlugin
         state = null;
         if (!Dispatch.TryGetValue(method, out var endpoint)) return;
         var owner = endpoint.Owner;
-        if (!owner.Installed || endpoint.State != "Installed") return;
+        if (!owner.Installed || endpoint.State != "Installed" || endpoint.Mode != ObservationMode.Trace || owner.DiagnosticsExpired) return;
         Interlocked.Increment(ref endpoint.Calls);
-        if (Interlocked.Read(ref endpoint.Faults) >= 3 || !endpoint.Gate.TryEnter(Stopwatch.GetTimestamp())) return;
+        long now = Stopwatch.GetTimestamp();
+        if (Interlocked.Read(ref endpoint.Faults) >= 3 || !endpoint.Gate.TryEnter(now) || owner.traceBudget?.TryEnter(now) != true) return;
         try
         {
             long id = Interlocked.Increment(ref owner.callSequence), address = instance?.Pointer.ToInt64() ?? 0;
@@ -248,23 +348,26 @@ public abstract class ObservationPlugin : BasePlugin
     {
         var values = new List<ObservedValue>();
         bool skipAfter = endpoint.Spec.SkipAfterInstance || endpoint.Spec.Name.Contains("Destroy", StringComparison.Ordinal);
-        if (instance != null && (phase == "Before" || !skipAfter))
+        if (captureFields && instance != null && (phase == "Before" || !skipAfter))
         {
             values.AddRange(snapshots!.Read(instance));
-            if (CapturePlayerDetails)
+            if (capturePlayerDetails && CapturePlayerDetails)
             {
                 values.AddRange(snapshots.ReadStatEntries(instance));
                 values.AddRange(snapshots.ReadOwnedLocks(instance));
             }
         }
-        values.AddRange(snapshots!.Arguments(args, endpoint.Spec, phase == "Before", CapturePlayerDetails));
+        if (snapshots != null) values.AddRange(snapshots.Arguments(args, endpoint.Spec, phase == "Before", capturePlayerDetails && CapturePlayerDetails));
+        else
+            for (int i = 0; i < args.Length && i < endpoint.Spec.Parameters.Length; i++)
+                values.Add(NativeSnapshots.Describe("arg." + endpoint.Spec.ParameterNames[i], args[i]));
         if (phase == "After" && endpoint.Spec.ReturnType != "System.Void")
         {
             values.Add(NativeSnapshots.Describe("result", result));
-            if (CapturePlayerDetails && endpoint.Spec.ReturnType == "Nivalis.OverrideableBool+OverrideLock" && result is Il2CppObjectBase native)
-                values.AddRange(snapshots.Read(native, "result."));
+            if (capturePlayerDetails && CapturePlayerDetails && endpoint.Spec.ReturnType == "Nivalis.OverrideableBool+OverrideLock" && result is Il2CppObjectBase native)
+                values.AddRange(snapshots!.Read(native, "result."));
         }
-        Observations.Record(callId, phase, endpoint.Spec, address, values);
+        Observations.Record(callId, phase, endpoint.Spec, address, values, endpoint.Id);
     }
 
     private void Fault(Endpoint endpoint, Exception error)

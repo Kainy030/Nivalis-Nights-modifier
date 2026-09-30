@@ -1,72 +1,60 @@
-# HookRuntime：四个观察钩子的公共运行库
+# HookRuntime：被动目录、按需解析与独立诊断
 
-PlayerHook、WorldHook、ItemHook、GameRuntimeHook 四个 BepInEx IL2CPP 插件均继承公共 ObservationPlugin，共用 `NightsHack.HookRuntime.dll` 的安装/卸载、签名校验、回调分发、字段读取、采样和快照队列实现；按完整签名及原生 RVA 排除重复。没有写值、UI、IPC 或热键；已在本机游戏部署并进行读档实测，边界见 [实测报告](../../outputs/HOOK-RUNTIME-TEST.md)。
+更新：2026-09-30。四插件仍共用 NightsHack.HookRuntime.dll。默认只登记业务入口，不安装观察补丁，不初始化原生字段快照，不启动诊断导出定时器。正常运行时没有本库附加到原版方法上的持续回调。
 
-| 插件 | 职责 | 静态候选数 |
-|---|---|---:|
-| PlayerHook | 玩家、属性/技能、移动/交互、金钱与玩家业务 | 324 |
-| WorldHook | 场景、旅行、Ghost/空间索引、世界视图、任务对象、地产经营 | 350 |
-| ItemHook | 定义/单件/堆栈/库存、腐坏、拾取摆放、家具、经营库存 | 220 |
-| GameRuntimeHook | 时间、AI 模拟、天气光照、存取档、对象池 | 173 |
+## 目录与安装分离
 
-这些是候选数，不是原生安装或命中数。构造/终结、共享 native body、泛型、抽象声明、普通访问器、编辑器/显式接口包装等有明确排除记录。调查过的 202 条方法记录均能对应候选或排除，不是 202 条全部安装。
+| 插件 | 被动目录入口数 | 默认观察补丁数 |
+|---|---:|---:|
+| PlayerHook | 324 | 0 |
+| WorldHook | 350 | 0 |
+| ItemHook | 220 | 0 |
+| GameRuntimeHook | 173 | 0 |
 
-## 构建与交付
+原先因性能排除的 183 个视觉入口、30 个 AI 入口已恢复到被动目录。目录项存在不等于安装、调用安全或经过游戏内验证。共享 RVA、签名歧义等原始排除项仍保留。仅解析少量托管目录会有一次性启动/内存成本，不会因原版持续执行该方法而触发观察工作。
 
-- `D:/NightsHack/Build-Hooks.ps1`：编译四个插件、公共运行库并运行两套检查，成功后统一打包到 `D:/NightsHack/outputs/Hooks/`。旧 Build-PlayerHook.ps1 / Build-WorldHooks.ps1 转发到此入口；旧交付目录同步刷新。
-- 首次需要还原时使用 `./Build-Hooks.ps1 -Restore`。本次已用缓存及单次 `--ignore-failed-sources '-p:NuGetAudit=false'` 还原；未执行在线漏洞审计，未更改依赖版本。
-- 沿用 net6.0/x64、Il2CppInterop.Runtime 1.4.6、HarmonyX 2.10.2；BepInEx 实际自报 6.0.0-be.697 / .NET 6.0.7。依赖目录 pre.2 是历史命名，不代表实际加载器版本。
-- 四个插件共用一份 `NightsHack.HookRuntime.dll`，它是普通依赖库，不另注册为游戏插件。仅复制某个插件 DLL 而漏掉共享库不能视为完整交付。依赖的 BepInEx/Interop/Harmony 来自既定加载器。
-- 此脚本不安装加载器，不复制任何文件到游戏目录。
+AvailableTargetIds 列举完整签名。Active 非空表示插件登记可用；Installed=false 在默认模式是预期结果。GetStatus 返回实际选中的观察项和原始排除记录，不把全部目录假装成已安装。
 
-## 观察接入
+ResolveTarget(targetId) 是按需解析 API：要求插件已加载且在其 loader 线程调用，首次使用才加载原生上下文并检查游戏双哈希，再验证类型、完整签名、ABI 和 RVA，返回 MethodInfo。它不安装补丁、不执行方法、不获取活实例、不提供自动游戏线程调度。loader 线程约束并不证明任何玩法调用时机都安全。未来命令层必须另行验证对象、线程、状态、参数和实际结果。
 
-```csharp
-var hook = NightsHack.ItemHook.ItemHook.Active;
-if (hook != null)
-{
-    var status = hook.GetStatus();
-    var diagnostics = hook.FieldDiagnostics;
-    while (hook.Observations.TryDequeue(out var sample))
-    {
-        // sample 是脱离游戏对象的诊断数据，不能用其地址作为永久句柄。
-    }
-}
+## 默认配置与明确启用
+
+每个插件独立配置。旧 Hook.Enabled=true、Groups=true、ExportIntervalSeconds=5 都不会自行恢复全量观察。
+
+```ini
+[Hook]
+Enabled = true
+[Features]
+AllowList =
+[Diagnostics]
+Enabled = false
+Mode = Counter
+AllowList =
+ExportIntervalSeconds = 0
 ```
 
-PlayerHook、WorldHook 与 GameRuntimeHook 提供相同入口。四者统一使用 NightsHack.HookRuntime.HookObservation / HookObservationBuffer / HookStatus，旧 PlayerObservation 类型已合并；使用 var 的常规读取方式不变。该 API 面向同进程组件，进程外修改器仍需后续 IPC。
+Features.AllowList 仅接受分号或换行分隔的完整方法 ID，默认空；明确选择的功能观察目前仅计数（Counter），不自动实现任何修改器功能。Diagnostics 必须另外 Enabled=true，并明确指定 Counter 或 Trace 及 AllowList。签名参数含逗号，不能使用逗号拆分入口。不支持通配、整个组或模糊名称；未知 ID/非法启用模式导致安装拒绝。诊断关闭时忽略残留诊断模式和列表。
 
-每次采样包含 Before/After、插件内 CallId、完整方法签名、线程/时间、参数、结果和可读取的实例字段。不同插件的 CallId 不可当作全局唯一值。静态方法实例地址为 0，不读取静态字段。引用仅记录地址，容器不自动展开为完整物品清单，复杂结构可能以字节或 opaque 表示。
+例：Nivalis.PlayerCharacter.Initialize() 是精确 ID 的格式示例，不是推荐常驻观察的目标。启用高频 AI/渲染诊断仍会产生桥接成本；恢复目录并不表示这些高频观察已经免费。
 
-每插件队列 512 条，满时丢最旧；Latest 按方法/阶段保留，不按实例。Calls 统计回调，Samples 统计写出 Before，Faults 统计观察错误；端点累计 3 次错误停止采样。高频入口默认 250ms、跨实例采样，MoveNext 同样采样，因此不是无损阶段日志。原方法异常等情形可能只有 Before。
+## Counter 与 Trace
 
-不调用 `ItemEntity.get_Item` 等业务 getter 来取快照；只在游戏自身调用时观察该入口。销毁/回收/加载协程等清单标记的入口跳过 After 实例字段读取，保留 Before 的诊断地址。记录仍不保证构成完整事务，也不自动归属于 LocalPlayer。
+- Counter 只装一个不请求实例/参数/返回值的 Prefix，计数而不读取快照。已选方法仍经过桥接，因此只在必要时选择。
+- Trace 才使用 Before/After；所有选中入口都执行采样间隔，不再依赖旧 Sampled 名称分类。
+- Observation.SampleIntervalMs 默认 250，范围 25..10000；同一方法跨实例共享门限，不代表完整世界状态。
+- Diagnostics.CaptureFields 默认 false；默认 Trace 仅描述参数/返回值。CapturePlayerDetails 默认 false，且须同时允许字段读取才展开玩家属性、技能和锁。
+- MaxSamplesPerSecond 默认 20（1..200）、MaxTotalSamples 默认 500（1..5000），每插件共享预算在字段读取/载荷分配前准入；一次额度对应一组 Before/After，通常是两条记录。
+- DurationSeconds 默认 30（1..300），诊断时限从补丁安装完成起算。时限结束停止新计数/采集；已开始的调用可完成配对的 After。Trace 另有首个样本起算的预算时限，实际受较早截止限制。
+- 时限到期不自动卸载 detour；桥接仍保留至游戏退出或明确卸载。要回到默认无观察开销状态，应关闭选择并重启；不承诺热卸载已验证。
+- ExportIntervalSeconds 默认 0，正值最少 5 秒，必须明确启用诊断且实际安装成功才创建 Timer。到期尝试导出最终状态后停止 Timer；短于导出间隔的会话也会安排终态导出。写出失败记录警告，不无限续期。
+- 后台只格式化/导出脱离游戏对象的托管快照，不从后台读取原生对象。旧 diagnostics JSON 可能来自旧 PID，应检查 ProcessId/TimestampUtc。
 
-PlayerHook 单独启用公共库的 Player 快照扩展：保留最多 32 项的属性/技能字典、knowledge 标志、PlayerStat 参数及持有/返回锁的读取。只调用校验过的生成字段访问器与只读集合枚举，不调用游戏业务 getter。其余三个插件不启用此扩展。各插件的队列、采样器、状态和卸载归属仍各自独立。
+## 安全边界与验证
 
-## 增加物品接口预留
+保留 ref/out、投影原生值类型返回、小结构体按值参数等兼容性拒绝。HoldableEntity.Update 的已复现 detour 不兼容仍在观察安装前拒绝；恢复目录没有绕开这些保护。按需解析没有证明该方法适合任意游戏状态或参数。
 
-```csharp
-using NightsHack.ItemHook;
+修改器 UI、IPC、主线程命令服务仍未实现。ItemHook.BackpackItems.IsImplemented=false，有效请求返回 NotImplemented；本次不是改钱/加物品功能交付。
 
-IBackpackItemAddition service = ItemHook.BackpackItems;
-var request = new AddBackpackItemRequest(Guid.NewGuid(), itemTypeGuid, quantity);
-AddBackpackItemResult result = await service.AddToBackpackAsync(request, cancellationToken);
-// 当前 IsImplemented=false；有效请求返回 NotImplemented、AddedQuantity=0。
-```
+四插件 Release 构建零警告/错误，16+42=58 项托管/静态检查通过，由 Build-Hooks.ps1 执行；检查包括默认零选择、旧配置隔离、精确签名、预算并发、Counter 无采集、ResolveTarget 无 patch/invoke、空选择在原生初始化前返回。编译及静态检查不代表游戏内性能实测。
 
-目标契约为当前本地玩家背包，ItemTypeGuid 指定义标识，不是物品名称、世界实体 ID 或内存地址。RequestId、非空标识与正数量会校验；取消返回 Cancelled；无排队、无游戏对象解析、无物品创建。不要把该预留接口当成已经能刷物品。
-
-未来实现需要解析实际 ItemType 与 LocalPlayer.PlayerInventory，再在游戏线程走已确认的原生业务入口，核对限制、实际接受数量、部分成功与通知；价格/单件价值语义、重复 RequestId、防止重复执行、场景切换和 IPC 尚需实现。详见 HOOKS-REFERENCE.md。
-
-## 验证边界
-
-加载时校验两个游戏输入哈希、原生类身份、完整方法签名、静态/实例与 out/ref、动态解析 MethodInfo 对应 RVA。版本或投影不符就拒绝该入口。协程名字被 interop 改写时按原生嵌套类型身份匹配，不猜生成后的名称。
-
-Release 编译 0 警告/错误，Player 检查 15 项及跨插件/运行库检查 26 项通过。已在本机验证加载器发现、四插件安装和市场存档真实回调，不能升级为全部玩法验证。完整字段、长期稳定性、性能和热卸载仍未全面验证。`Installed` 只表示 patch API 接受；`Observed` 表示回调发生，不证明所有参数或业务结果都正确。
-
-当前兼容性防护拒绝：所有 ref/out 参数、投影为托管类的原生值类型返回值、同类投影中原生大小为 1/2/4/8 字节的按值参数，以及当前版本已复现崩溃的 HoldableEntity.Update（0x840710）。这些方法保留游戏原入口。其余安装仍需实际路径验证；候选目录不因运行时拒绝而删除。
-
-诊断配置 `[Diagnostics] ExportIntervalSeconds` 默认 0，正值最小 5 秒，导出到 BepInEx/diagnostics。导出只访问托管快照，不从定时器访问游戏对象。`ExcludedRvas` 默认空，为临时二分提供逗号分隔的 RVA 排除；正式修复版不依赖临时排除。Faults=0 不覆盖桥接或原生崩溃。
-
-完整归属/排除：每个插件的 `*.Catalog.json` 与 `hook-coverage-audit.json`。结构和设计档案：`D:/NightsHack/outputs/HOOKS-REFERENCE.md`；原始逆向报告：`D:/NightsHack/outputs/world-investigation.md`。
+统一包：outputs/Hooks；旧 PlayerHook/WorldHooks 目录为兼容副本。四 DLL 必须配同版公共库。构建脚本不会部署或启动游戏。本轮没有启动游戏，没有帧时间基准测试；旧读档实测属于之前的广覆盖观察版本。

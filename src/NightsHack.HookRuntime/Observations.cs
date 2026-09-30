@@ -28,19 +28,20 @@ public sealed class HookObservationBuffer
         lock (sync) { observation = queue.Count == 0 ? null : queue.Dequeue(); return observation != null; }
     }
     public IReadOnlyList<HookObservation> GetLatest()
-    { lock (sync) return Array.AsReadOnly(latest.Values.OrderBy(v => v.Sequence).ToArray()); }
-    internal HookObservation Record(long callId, string phase, MethodSpec spec, long instance, IEnumerable<ObservedValue> values)
+    { HookObservation[] copy; lock (sync) copy = latest.Values.ToArray(); return Array.AsReadOnly(copy.OrderBy(v => v.Sequence).ToArray()); }
+    internal HookObservation Record(long callId, string phase, MethodSpec spec, long instance, IEnumerable<ObservedValue> values, string? methodId = null)
     {
         // Defensive copy: neither the game nor consumers can mutate queued snapshots.
         var detached = new ReadOnlyCollection<ObservedValue>(values.ToArray());
+        string id = methodId ?? spec.Id;
         lock (sync)
         {
-            var observation = new HookObservation(++sequence, callId, phase, spec.Group, spec.Id,
+            var observation = new HookObservation(++sequence, callId, phase, spec.Group, id,
                 DateTimeOffset.UtcNow, Environment.CurrentManagedThreadId, instance, detached);
             if (queue.Count == Capacity) { queue.Dequeue(); dropped++; }
             queue.Enqueue(observation);
             // Only internal catalog IDs reach this method. At most two entries per endpoint.
-            latest[spec.Id + ":" + phase] = observation;
+            latest[id + ":" + phase] = observation;
             return observation;
         }
     }

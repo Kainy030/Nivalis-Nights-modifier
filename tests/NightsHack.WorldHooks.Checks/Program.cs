@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Text.Json;
 using Mono.Cecil;
+using Mono.Cecil.Cil;
 using NightsHack.HookRuntime;
 using NightsHack.ItemHook;
 
@@ -24,11 +25,15 @@ var aliases = mapping.RootElement.GetProperty("ScriptMethod").EnumerateArray().G
 
 Check("four catalogs have disjoint signatures and native entries", () => {
     var combined = all.Concat(player.Methods).ToArray();
+    Assert(player.Methods.Length == 324 && player.Types.Length == 32 && player.Excluded.Length == 46);
+    Assert(catalogs["WorldHook"].Methods.Length == 350 && catalogs["ItemHook"].Methods.Length == 220 &&
+        catalogs["GameRuntimeHook"].Methods.Length == 173 && combined.Length == 1067);
     Assert(combined.Select(m => m.Id).Distinct().Count() == combined.Length);
     Assert(combined.Select(m => Convert.ToInt64(m.Rva,16)).Distinct().Count() == combined.Length);
     Assert(all.All(m => m.Parameters.Length == m.OutParameters.Length && m.Parameters.Length == m.ParameterNames.Length));
     Assert(catalogs.Values.All(c => c.Methods.Length > 0 && c.Types.Length > 0 && c.Excluded.Length > 0));
 });
+ObservationPolicyChecks.Run(Check);
 Check("every candidate matches original metadata signature, flags and RVA", () => {
     foreach (var spec in all) {
         var matches = gameTypes[spec.Type].Methods.Where(m => m.Name == spec.Name && m.IsStatic == spec.IsStatic &&
@@ -151,6 +156,37 @@ Check("backpack API rejects invalid input and observes pre-dispatch cancellation
 });
 
 using var engine=AssemblyDefinition.ReadAssembly(Path.Combine(root,"src/NightsHack.HookRuntime/bin/Release/net6.0/NightsHack.HookRuntime.dll"));
+var engineMethods=Flatten(engine.MainModule.Types).SelectMany(t=>t.Methods).Where(m=>m.HasBody).ToDictionary(m=>m.FullName);
+IEnumerable<MethodReference> EngineCalls(MethodDefinition entry) {
+    var pending=new Stack<MethodDefinition>(); var seen=new HashSet<string>(); pending.Push(entry);
+    while(pending.Count>0) {
+        var method=pending.Pop(); if(!seen.Add(method.FullName)) continue;
+        foreach(var call in method.Body.Instructions.Select(i=>i.Operand).OfType<MethodReference>()) {
+            yield return call;
+            string name=call is GenericInstanceMethod generic ? generic.ElementMethod.FullName : call.FullName;
+            if(engineMethods.TryGetValue(name,out var next)) pending.Push(next);
+        }
+    }
+}
+bool StartsNativeObservation(MethodReference method) => method.Name is "EnsureNativeContext" or "ResolveTarget" or "CaptureValues" ||
+    method.DeclaringType.FullName=="HarmonyLib.Harmony" || method.DeclaringType.FullName=="System.Threading.Timer" ||
+    (method.Name==".ctor" && method.DeclaringType.FullName=="NightsHack.HookRuntime.NativeSnapshots");
+int LocalIndex(Instruction instruction, bool store) {
+    if(instruction.OpCode.Code==(store ? Code.Stloc : Code.Ldloc) || instruction.OpCode.Code==(store ? Code.Stloc_S : Code.Ldloc_S))
+        return ((VariableDefinition)instruction.Operand).Index;
+    Code[] codes=store ? new[]{Code.Stloc_0,Code.Stloc_1,Code.Stloc_2,Code.Stloc_3} : new[]{Code.Ldloc_0,Code.Ldloc_1,Code.Ldloc_2,Code.Ldloc_3};
+    return Array.IndexOf(codes,instruction.OpCode.Code);
+}
+IEnumerable<Instruction> ReachableInstructions(Instruction entry) {
+    var pending=new Stack<Instruction>(); var seen=new HashSet<Instruction>(); pending.Push(entry);
+    while(pending.Count>0) {
+        var instruction=pending.Pop(); if(!seen.Add(instruction)) continue; yield return instruction;
+        if(instruction.OpCode.FlowControl is FlowControl.Return or FlowControl.Throw) continue;
+        if(instruction.Operand is Instruction target) pending.Push(target);
+        if(instruction.Operand is Instruction[] targets) foreach(var item in targets) pending.Push(item);
+        if(instruction.OpCode.FlowControl!=FlowControl.Branch && instruction.Next!=null) pending.Push(instruction.Next);
+    }
+}
 Check("compiled callbacks cannot skip originals or overwrite game arguments/results", () => {
     var observer=engine.MainModule.Types.Single(t=>t.Name=="ObservationPlugin");
     foreach(string name in new[] {"BeforeInstance","BeforeStatic","AfterInstanceVoid","AfterInstanceResult","AfterStaticVoid","AfterStaticResult"}) {
@@ -159,6 +195,50 @@ Check("compiled callbacks cannot skip originals or overwrite game arguments/resu
         Assert(method.Parameters.All(p=>!p.ParameterType.IsByReference || p.Name=="__state"));
         if(name.Contains("Static")) Assert(method.Parameters.All(p=>p.Name!="__instance"));
     }
+});
+Check("compiled counter callback requests only original method and never captures values", () => {
+    var observer=engine.MainModule.Types.Single(t=>t.Name=="ObservationPlugin");
+    var counter=observer.Methods.Single(m=>m.Name=="CounterOnly");
+    Assert(counter.ReturnType.FullName=="System.Void");
+    Assert(counter.Parameters.Count==1 && counter.Parameters[0].Name=="__originalMethod" &&
+        counter.Parameters[0].ParameterType.FullName=="System.Reflection.MethodBase");
+    Assert(!EngineCalls(counter).Any(m=>m.Name=="CaptureValues" || m.DeclaringType.FullName=="NightsHack.HookRuntime.NativeSnapshots" ||
+        m.DeclaringType.FullName=="NightsHack.HookRuntime.HookObservationBuffer"));
+});
+Check("target resolution validates without installing patches, capturing or invoking gameplay", () => {
+    var observer=engine.MainModule.Types.Single(t=>t.Name=="ObservationPlugin");
+    var resolver=observer.Methods.Single(m=>m.Name=="ResolveTarget");
+    Assert(resolver.IsPublic && resolver.ReturnType.FullName=="System.Reflection.MethodInfo");
+    var calls=EngineCalls(resolver).ToArray();
+    Assert(calls.Any(m=>m.Name=="EnsureNativeContext") && calls.Any(m=>m.Name=="VerifyNativeEntry"));
+    foreach(string guard in new[]{"VerifyFile","VerifyByRefMarshalling","VerifyReturnMarshalling","VerifySmallValueParameters"})
+        Assert(calls.Any(m=>m.Name==guard),"Resolution lost guard: "+guard);
+    Assert(!calls.Any(m=>m.Name=="CaptureValues" || m.DeclaringType.FullName=="HarmonyLib.Harmony" ||
+        m.DeclaringType.FullName=="System.Threading.Timer" ||
+        (m.Name==".ctor" && m.DeclaringType.FullName=="NightsHack.HookRuntime.NativeSnapshots") ||
+        (m.Name=="Invoke" && m.DeclaringType.FullName.StartsWith("System.Reflection.",StringComparison.Ordinal))));
+});
+Check("empty selection returns before any native observation setup", () => {
+    var observer=engine.MainModule.Types.Single(t=>t.Name=="ObservationPlugin");
+    var load=observer.Methods.Single(m=>m.Name=="Load");
+    var instructions=load.Body.Instructions;
+    var select=instructions.First(i=>i.Operand is MethodReference m && m.Name=="Select" && m.DeclaringType.FullName=="NightsHack.HookRuntime.ObservationPolicy");
+    int local=LocalIndex(select.Next,true);
+    Assert(local>=0,"Selection must be stored before its empty check.");
+    var length=instructions.First(i=>i.Offset>select.Offset && i.OpCode.Code==Code.Ldlen && LocalIndex(i.Previous,false)==local);
+    var branch=length.Next; bool compareToZero=false;
+    while(branch.OpCode.FlowControl!=FlowControl.Cond_Branch) {
+        Assert(branch.OpCode.Code is Code.Conv_I4 or Code.Conv_I or Code.Ldc_I4_0 or Code.Ceq or Code.Nop,"Unexpected empty-selection comparison.");
+        if(branch.OpCode.Code==Code.Ceq) compareToZero=true;
+        branch=branch.Next;
+    }
+    Assert(branch.OpCode.Code is Code.Brtrue or Code.Brtrue_S or Code.Brfalse or Code.Brfalse_S);
+    bool branchesWhenTrue=branch.OpCode.Code is Code.Brtrue or Code.Brtrue_S;
+    var zeroPath=branchesWhenTrue==compareToZero ? (Instruction)branch.Operand : branch.Next;
+    var reachable=ReachableInstructions(zeroPath).ToArray();
+    Assert(reachable.Any(i=>i.OpCode.Code==Code.Ret),"Empty selection cannot reach a return.");
+    Assert(!reachable.Select(i=>i.Operand).OfType<MethodReference>().Any(StartsNativeObservation),"Empty selection reaches native observation setup.");
+    Assert(!instructions.Where(i=>i.Offset<branch.Offset).Select(i=>i.Operand).OfType<MethodReference>().Any(StartsNativeObservation),"Native observation setup precedes the empty selection guard.");
 });
 Check("compiled engine and plugins contain no game writes/invocation or DummyDll reference", () => {
     var paths=names.Append("PlayerHook").Select(n=>Path.Combine(root,$"src/NightsHack.{n}/bin/Release/net6.0/{n}.dll"))
@@ -191,11 +271,11 @@ Check("compiled plugins embed exactly the reviewed catalogs", () => {
         Assert(!Flatten(plugin.MainModule.Types).Any(t=>t.Name is "NativeSnapshots" or "Catalog" or "TargetValidation" or "SampleGate"));
     }
 });
-Check("Player detail profile and bounded readers survive runtime migration", () => {
+Check("optional Player detail capture and bounded readers remain available", () => {
     using var plugin=AssemblyDefinition.ReadAssembly(Path.Combine(root,"src/NightsHack.PlayerHook/bin/Release/net6.0/PlayerHook.dll"));
     var entry=plugin.MainModule.Types.Single(t=>t.Name=="PlayerHook");
     var profile=entry.Methods.Single(m=>m.Name=="get_CapturePlayerDetails");
-    Assert(profile.Body.Instructions.Any(i=>i.OpCode==Mono.Cecil.Cil.OpCodes.Ldc_I4_1));
+    Assert(profile.ReturnType.FullName=="System.Boolean");
     var observer=engine.MainModule.Types.Single(t=>t.Name=="ObservationPlugin");
     var capture=observer.Methods.Single(m=>m.Name=="CaptureValues");
     var calls=capture.Body.Instructions.Select(i=>i.Operand).OfType<MethodReference>().ToArray();
@@ -208,9 +288,31 @@ Check("Player detail profile and bounded readers survive runtime migration", () 
     Assert(snapshots.Methods.Single(m=>m.Name=="ReadField").Body.Instructions.Any(i=>i.Operand as string=="Nivalis.PlayerManager+PlayerKnowledge"));
     Assert(snapshots.Methods.Single(m=>m.Name=="Arguments").Body.Instructions.Any(i=>i.Operand as string=="Nivalis.PlayerStat"));
 });
-Check("Player catalog remains byte-identical through the refactor", () => {
+Check("historical Player catalog remains intact as passive metadata", () => {
     string path=Path.Combine(root,"src/NightsHack.PlayerHook/PlayerCatalog.json");
     Assert(Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(path)))=="40FB6DCAF34E7C3ECAD163714A44525EBC523C9B0DAAA27FE1A0E78DAEC79AAA");
+});
+Check("passive catalogs retain visual metadata without installing observers", () => {
+    Assert(player.Methods.Any(m => m.Type == "Nivalis.PlayerCameraController" && m.Name == "SetDepthOfField"));
+    Assert(player.Types.Any(t => t.Name == "Nivalis.PlayerHandsAnimator"));
+    Assert(catalogs["WorldHook"].Methods.Any(m => m.Name == "EnableHighLight"));
+    Assert(catalogs["ItemHook"].Methods.Any(m => m.Type == "Nivalis.PlacementSpot" && m.Name == "ToggleHighlight"));
+    Assert(catalogs["GameRuntimeHook"].Methods.Any(m => m.Type == "Nivalis.DayNightCycle.LightCycleManager" && m.Name == "UpdateLighting"));
+    foreach (var c in catalogs.Values.Append(player))
+        Assert(ObservationPolicy.Select(c, "", false, "", "").Length == 0);
+});
+Check("passive catalogs retain AI metadata without selecting AI observers", () => {
+    var runtime = catalogs["GameRuntimeHook"];
+    var world = catalogs["WorldHook"];
+    Assert(runtime.Methods.Count(m => m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)) == 17);
+    Assert(world.Methods.Count(m => m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)) == 13);
+    foreach (string name in new[] { "EnsureInitialized", "UpdateCurrentAgentAction", "SelectNewAction", "SwitchAction" })
+        Assert(runtime.Methods.Any(m => m.Name == name && m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)));
+    Assert(world.Methods.Any(m => m.Name == "UpdatePositionInternal" && m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)));
+    Assert(runtime.Types.Any(t => t.Name.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)));
+    Assert(world.Types.Any(t => t.Name.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)));
+    Assert(ObservationPolicy.Select(runtime, "", false, "", "").Length == 0);
+    Assert(ObservationPolicy.Select(world, "", false, "", "").Length == 0);
 });
 Check("byref projected native structs rejected before unsafe wrapper invocation", () => {
     foreach (string name in new[] { "OutProjected", "RefProjected" })

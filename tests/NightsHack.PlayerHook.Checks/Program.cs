@@ -111,6 +111,14 @@ Check("compiled callbacks cannot skip original or assign arguments/results", () 
         Assert(method.Parameters.All(p => !p.ParameterType.IsByReference || p.Name == "__state"));
     }
 });
+Check("compiled counter callback requests no arguments, instance, result or value capture", () => {
+    var type = allTypes.Single(t => t.FullName == "NightsHack.HookRuntime.ObservationPlugin");
+    var counter = type.Methods.Single(m => m.Name == "CounterOnly");
+    Assert(counter.ReturnType.FullName == "System.Void");
+    Assert(counter.Parameters.Count == 1 && counter.Parameters[0].Name == "__originalMethod" &&
+        counter.Parameters[0].ParameterType.FullName == "System.Reflection.MethodBase");
+    Assert(!counter.Body.Instructions.Select(i => i.Operand).OfType<MethodReference>().Any(m => m.Name == "CaptureValues"));
+});
 Check("compiled observer has no IL2CPP write/invoke or game method references", () => {
     var calls = allTypes.SelectMany(t => t.Methods).Where(m => m.HasBody)
         .SelectMany(m => m.Body.Instructions).Select(i => i.Operand).OfType<MethodReference>().ToArray();
