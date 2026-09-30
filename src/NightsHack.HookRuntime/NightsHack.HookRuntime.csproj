@@ -11,6 +11,7 @@
     <BepInExCore Condition="'$(BepInExCore)' == ''">$(MSBuildThisFileDirectory)../../work/hook-dependencies/bepinex-6.0.0-pre.2/BepInEx/core</BepInExCore>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="../NightsHack.Logging/Audit.cs" Link="Audit.cs" />
     <Reference Include="BepInEx.Core" HintPath="$(BepInExCore)/BepInEx.Core.dll" Private="false" />
     <Reference Include="BepInEx.Unity.IL2CPP" HintPath="$(BepInExCore)/BepInEx.Unity.IL2CPP.dll" Private="false" />
     <Reference Include="Il2CppInterop.Runtime" HintPath="$(BepInExCore)/Il2CppInterop.Runtime.dll" Private="false" />

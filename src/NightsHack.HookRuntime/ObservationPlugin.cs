@@ -71,7 +71,10 @@ public abstract class ObservationPlugin : BasePlugin
 
     public override void Load()
     {
-        if (!Config.Bind("Hook", "Enabled", true, "Enable the passive target registry; does not opt into observation.").Value) return;
+        HookAudit.Initialize(Path.Combine(Paths.BepInExRootPath, "logs", "NightsHack"));
+        HookAudit.Lifecycle(Identifier, "HOOK_LOAD_BEGIN", "Loading", "Initializing passive target registry.");
+        if (!Config.Bind("Hook", "Enabled", true, "Enable the passive target registry; does not opt into observation.").Value)
+        { HookAudit.Lifecycle(Identifier, "HOOK_DISABLED", "Disabled", "Plugin disabled by explicit configuration."); return; }
         if (!ActivePlugins.TryAdd(Identifier, this)) { Log.LogWarning(Identifier + " already active."); return; }
         try
         {
@@ -89,6 +92,7 @@ public abstract class ObservationPlugin : BasePlugin
                 $"{e.Type}.{e.Name}@{e.Rva}", "Excluded", "Excluded", e.Reason, 0, 0, 0)).ToArray());
             if (selection.Length == 0)
             {
+                HookAudit.Lifecycle(Identifier, "HOOK_READY", "Passive", $"targets={catalog.Methods.Length}; observationPatches=0; snapshots=false; exportTimer=false");
                 Log.LogInfo($"{Identifier}: passive registry ready; {catalog.Methods.Length} available targets, 0 observation patches, no snapshots or export timer. AI/render targets are metadata only.");
                 return;
             }
@@ -151,6 +155,7 @@ public abstract class ObservationPlugin : BasePlugin
             }
             diagnosticDeadline = Stopwatch.GetTimestamp() + (long)duration * Stopwatch.Frequency;
             Volatile.Write(ref installed, endpoints.Any(e => e.State == "Installed"));
+            HookAudit.Lifecycle(Identifier, "HOOK_READY", "ExplicitObservation", $"Selected={endpoints.Length}; Installed={endpoints.Count(e => e.State == "Installed")}; diagnostics={diagnosticsEnabled}");
             Log.LogInfo($"{Identifier}: {endpoints.Count(e => e.State == "Installed")}/{endpoints.Length} installed; {catalog.Excluded.Length} excluded. Observation only.");
             foreach (var status in GetStatus().Where(s => s.State is "Failed" or "Rejected")) Log.LogWarning($"{status.Id}: {status.Detail}");
             foreach (string diagnostic in FieldDiagnostics) Log.LogWarning("Field unavailable: " + diagnostic);
@@ -165,10 +170,20 @@ public abstract class ObservationPlugin : BasePlugin
                 diagnosticsTimer = new System.Threading.Timer(_ => ExportDiagnostics(), null, timerInterval, timerInterval);
             }
         }
-        catch (Exception error) { Log.LogError(Identifier + " installation refused/failed: " + error); Unload(); }
+        catch (Exception error) { Log.LogError(Identifier + " installation refused/failed: " + error); HookAudit.Lifecycle(Identifier, "HOOK_LOAD_FAILED", "Failed", error.ToString(), "ERROR"); Unload(); }
     }
 
     private bool DiagnosticsExpired => Stopwatch.GetTimestamp() >= diagnosticDeadline;
+
+    /// <summary>Future feature entry: logs request, validated target, invocation and explicit outcome.
+    /// Caller must supply its feature-specific instance/state validation and remain on the loader/game thread.</summary>
+    public HookCommandResult<T> ExecuteCommand<T>(Guid requestId, string feature, string operation, string targetId,
+        Func<MethodInfo, HookCommandResult<T>> execute) =>
+        HookAudit.Execute<T>(requestId, feature, Identifier, targetId, operation, () =>
+        {
+            var target = ResolveTarget(targetId);
+            return () => execute(target);
+        });
 
     // Resolution is deliberately separate from interception. It never installs a
     // Harmony patch, executes a method, or treats a historical pointer as an instance.
@@ -272,6 +287,7 @@ public abstract class ObservationPlugin : BasePlugin
             snapshots = null;
             gameAssembly = null;
         }
+        HookAudit.Lifecycle(Identifier, "HOOK_UNLOAD", success ? "Unloaded" : "CleanupUncertain", "Plugin unload completed.", success ? "INFO" : "WARN");
         return success;
     }
 

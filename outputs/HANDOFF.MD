@@ -1,5 +1,14 @@
 # NightsHack — 快速交接
 
+v0.4.2-Dev-Fix：注入就绪、注入完成及就绪审计失败提示明确列出 PlayerHook、WorldHook、ItemHook、GameRuntimeHook。Bootstrap 编译和 GUI 发布成功，12 项修改器检查通过，231 个 payload 文件哈希一致；未重新注入游戏。原 v0.4.2-Dev 发布目录被运行中进程占用，完整新包保存在 outputs/BuildRelease/v0.4.2-Dev-LogNames；程序版本号仍为 v0.4.2-Dev，Fix 为源码发布标签。
+
+2026-09-30 最新 v0.4.2-Dev：界面只保留“手动注入”和注入器日志。删除游戏路径/浏览区域、两句说明、实时钩子日志页及其轮询定时器；按运行中 Nivalis Nights 进程定位 PID，后台读取进程路径完成原有校验和部署，拒绝无目标/多个目标并校验 PID+启动时间避免换进程。既有钩子日志输出和审计链保持不变。成品 outputs/BuildRelease/v0.4.2-Dev；构建与 12 项修改器检查通过，UI 已渲染核对，本轮没有重启游戏或重新注入。下方双页日志说明为历史记录。
+
+最终发布包复验（2026-09-30 22:55 +08:00）：PID 38628 正常启动后确认 CoreCLR 未自动加载；动态注入成功，请求 ID 035ed955-3fce-465c-a283-fa05be405bce。GUI 实际读取本会话九条记录，四个 HOOK_READY 均显示为 Passive、observationPatches=0、snapshots=false、exportTimer=false，进程有响应。231 个 payload 文件 SHA256 全部一致，静态启动文件数 0。
+
+2026-09-30 最新修改器状态（覆盖下方 v0.4 双模式记录）：v0.4.1-Dev 仅动态注入，标题 Kainy's Nivalis Nights Trainer · v0.4.1-Dev。静态按钮/API/发布包启动文件已移除；本机旧 winhttp.dll、doorstop_config.ini、.doorstop_version 已按哈希确认并备份移至 work/static-loader-retired/20260930-b00da622f6e9489fb2fe6c6294c05b17。用户保存授权后正常重启，PID 39244 未自动加载 CoreCLR，随后新版动态注入成功，四个被动钩子 0 观察。审计日志 BepInEx/logs/NightsHack/hooks-{PID}-{StartTimeUtcTicks}.jsonl，注入请求 GUID 贯通共享内存/Bootstrap/HookAudit，成功必须有本次四个 HOOK_READY。GUI 实际测试确认当前会话九条日志、四个 HOOK_READY 显示；修复正反斜杠路径匹配问题。新增 ExecuteCommand/HookAudit.Execute 按事件记录未来功能请求、目标验证、调用及明确结果，异常区分 NotExecuted/SideEffectsUnknown，不新增常驻原版方法拦截；没有实现 IPC/线程调度/具体玩法。58+11 检查通过，实际主菜单加载/日志已验证，存档玩法与长期性能未复测。成品 outputs/BuildRelease/v0.4.1-Dev，未提交/推送。详见 src/NightsHack.Modifier/README.md。
+
+
 更新：2026-09-30。工作区：`D:/NightsHack`。目标：Nivalis Nights 单机修改器／调试工具。
 
 ## 仓库与文档入口（v0.1-Dev）
@@ -13,6 +22,8 @@
 - .gitignore 排除游戏二进制、完整元数据/反编译导出、SDK、第三方依赖、缓存和编译产物；仓库保留自有源码、候选目录、检查程序、文档与分析工具。完整本地构建/静态检查仍需自行准备 README 所列输入。
 
 ## 最新状态与下一步
+
+2026-09-30 修改器 v0.4-Dev：在 v0.3-Dev-LagFix（7db63f4，已推送）基础上新增 src/NightsHack.Modifier（WinForms）、NightsHack.Native（一次性 WH_GETMESSAGE 原生引导）、NightsHack.Bootstrap（net6 托管初始化）和 8 项修改器检查。Build-Modifier.ps1 输出 outputs/BuildRelease/v0.4-Dev，携带私有 GUI 运行时与既有 BepInEx 依赖，不含游戏程序集。静态按钮要求退出游戏，版本/包双层校验、备份/回滚、保留配置；动态按钮要求运行中且未加载 CoreCLR，不安装启动代理，不重复初始化。动态在 PID 35320 主菜单实测载入四插件且恢复响应，四插件仍默认 0 观察；随后静态校验和正常启动 PID 11152 确认四插件加载。仅验证主菜单/现有互操作缓存，存档玩法和首次缓存生成尚未验证。此前减负版已部署且用户反馈性能问题彻底解决；不要把下方旧记录的“未部署/未验证”当作当前状态。本轮修改器代码尚未提交推送，未创建新标签；详见 src/NightsHack.Modifier/README.md。
 
 2026-09-30 最新减负架构：Catalog.Load 恢复完整 1067 个被动入口（324/350/220/173），视觉 183 和 AI 30 重新作为目录资料保留，不再因目录存在而安装。默认 Features.AllowList 为空、Diagnostics.Enabled=false，空选择在原生上下文、NativeSnapshots、Harmony 和 Timer 之前返回；旧 Hook.Enabled/Groups/Export 配置不能自动开启。新增 AvailableTargetIds 和 ResolveTarget：仅在 loader 线程按需双哈希/签名/ABI/RVA校验，不 patch、不调用业务、不提供游戏线程命令服务。显式功能名单仅Counter；独立诊断Counter/Trace精确签名、Trace默认无字段展开、有限速/总量/时限。诊断到期停止采集并尝试最终导出，但detour仍需重启/明确卸载才移除。保留全部原兼容性拒绝。源码与静态验证支持默认模式不增加目标方法调用路径成本，AI/渲染主动调用或显式诊断的性能不作保证。Release 零警告/错误，16+42=58 项托管/静态检查通过（含编译后默认早退/解析无patch检查）。构建包在 outputs/Hooks；本轮没有启动/关闭游戏，当前已运行进程未改动，本版本尚未游戏内验证和部署，未推送、未改tag。以下为历史迭代记录。
 
