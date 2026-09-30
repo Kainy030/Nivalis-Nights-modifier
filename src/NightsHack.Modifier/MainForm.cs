@@ -7,6 +7,9 @@ internal sealed class MainForm : Form
 {
     readonly Button manualButton = new() { Text = "手动注入", Width = 160, Height = 42 };
     readonly TextBox status = LogBox();
+    readonly TabControl pages = new() { Dock = DockStyle.Fill, DrawMode = TabDrawMode.OwnerDrawFixed };
+    readonly TabPage homePage = new("首页");
+    readonly TabPage basicPage = new("基础选项") { Enabled = false };
     readonly EventJournal journal;
     bool busy;
     Guid request;
@@ -14,7 +17,7 @@ internal sealed class MainForm : Form
     static TextBox LogBox() => new() { Dock = DockStyle.Fill, Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Both, WordWrap = false, Font = new Font("Consolas", 9) };
     public MainForm()
     {
-        string version = "v0.4.3-Dev";
+        string version = "v0.4.4-Dev";
         string build = Path.Combine(AppContext.BaseDirectory, "build.json");
         if (File.Exists(build))
         {
@@ -39,16 +42,34 @@ internal sealed class MainForm : Form
         layout.Controls.Add(actions, 0, 0);
         layout.Controls.Add(new Label { Text = "注入器日志", AutoSize = true }, 0, 1);
         layout.Controls.Add(status, 0, 2);
-        Controls.Add(layout);
+        homePage.Controls.Add(layout);
+        pages.TabPages.AddRange(new[] { homePage, basicPage });
+        pages.Selecting += (_, e) => { if (e.TabPage == basicPage && !basicPage.Enabled) e.Cancel = true; };
+        pages.DrawItem += (_, e) =>
+        {
+            var page = pages.TabPages[e.Index];
+            TextRenderer.DrawText(e.Graphics, page.Text, Font, e.Bounds,
+                page.Enabled ? SystemColors.ControlText : SystemColors.GrayText,
+                TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+        };
+        Controls.Add(pages);
         manualButton.Click += async (_, _) => await RunAction();
         FormClosing += (_, e) => { if (busy) { e.Cancel = true; Log("OPERATION_IN_PROGRESS", "注入操作尚未结束，请等待结果。", "WARN"); } };
         FormClosed += (_, _) => journal.Dispose();        Log("TRAINER_READY", "初始化完成。日志文件：" + journal.Path);
+    }
+
+    internal void SetHooksReady(bool ready)
+    {
+        basicPage.Enabled = ready;
+        if (!ready) pages.SelectedTab = homePage;
+        pages.Invalidate();
     }
 
     async Task RunAction()
     {
         if (busy) return;
         busy = true; request = Guid.NewGuid(); targetPid = 0;
+        SetHooksReady(false);
         manualButton.Enabled = false;
         IProgress<InjectorEvent> progress = new Progress<InjectorEvent>(item => {
             if (item.TargetProcessId != 0) targetPid = item.TargetProcessId;
@@ -65,6 +86,7 @@ internal sealed class MainForm : Form
                 new GameInstall(executable, AppContext.BaseDirectory).InjectDynamic(progress, request, game);
             });
             Log("INJECTION_COMPLETED", "手动注入与 PlayerHook、WorldHook、ItemHook、GameRuntimeHook 就绪日志验证完成。", outcome: "Succeeded");
+            SetHooksReady(true);
         }
         catch (Exception error) { Log("INJECTION_FAILED", error.GetBaseException().Message, "ERROR", "Failed"); }
         finally { busy = false; manualButton.Enabled = true; }
