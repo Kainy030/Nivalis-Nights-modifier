@@ -212,6 +212,34 @@ Check("Player catalog remains byte-identical through the refactor", () => {
     string path=Path.Combine(root,"src/NightsHack.PlayerHook/PlayerCatalog.json");
     Assert(Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(path)))=="40FB6DCAF34E7C3ECAD163714A44525EBC523C9B0DAAA27FE1A0E78DAEC79AAA");
 });
+Check("byref projected native structs rejected before unsafe wrapper invocation", () => {
+    foreach (string name in new[] { "OutProjected", "RefProjected" })
+        Reject(() => TargetValidation.VerifyByRefMarshalling(typeof(Fixture).GetMethod(name)!));
+});
+Check("all ref/out signatures quarantined including float trampoline failures", () => {
+    foreach (string name in new[] { "Out", "OutReference", "RefFloat", "OutFloat" })
+        Reject(() => TargetValidation.VerifyByRefMarshalling(typeof(Fixture).GetMethod(name)!));
+    TargetValidation.VerifyByRefMarshalling(typeof(Fixture).GetMethod("ValueProjected")!);
+});
+Check("projected struct returns quarantined while managed values and references remain eligible", () => {
+    Reject(() => TargetValidation.VerifyReturnMarshalling(typeof(Fixture).GetMethod("ReturnProjected")!, t => t == typeof(ProjectedStruct)));
+    TargetValidation.VerifyReturnMarshalling(typeof(Fixture).GetMethod("ReturnReference")!, _ => false);
+    TargetValidation.VerifyReturnMarshalling(typeof(Fixture).GetMethod("ReturnScalar")!, _ => true);
+});
+Check("inline projected structs rejected without excluding large indirect structs", () => {
+    var method = typeof(Fixture).GetMethod("ValueProjected")!;
+    foreach (int size in new[] {1,2,4,8}) Reject(() => TargetValidation.VerifySmallValueParameters(method, _ => size));
+    TargetValidation.VerifySmallValueParameters(method, _ => 16);
+    TargetValidation.VerifySmallValueParameters(method, _ => null);
+});
+Check("reproduced HoldableEntity Update incompatibility is narrowly quarantined", () => {
+    var spec = new MethodSpec("HoldableEntity", "Nivalis.HoldableEntity", "Update", "System.Void",
+        Array.Empty<string>(), Array.Empty<string>(), Array.Empty<bool>(), "0x840710", true);
+    Reject(() => TargetValidation.VerifyKnownNativeCompatibility(spec));
+    TargetValidation.VerifyKnownNativeCompatibility(spec with { Name = "Start" });
+    TargetValidation.VerifyKnownNativeCompatibility(spec with { Type = "Nivalis.Other" });
+    TargetValidation.VerifyKnownNativeCompatibility(spec with { Rva = "0x840720" });
+});
 Console.WriteLine($"{passed} managed/static checks passed. No loader/native/game integration executed.");
 
 public sealed class Fixture
@@ -221,4 +249,14 @@ public sealed class Fixture
     public static void Static() { }
     public void Generic<T>() { }
     public void Out(out int value) => value=7;
+    public void RefFloat(ref float value) { }
+    public void OutFloat(out float value) => value=0;
+    public void OutProjected(out ProjectedStruct value) => value = new();
+    public void RefProjected(ref ProjectedStruct value) { }
+    public void ValueProjected(ProjectedStruct value) { }
+    public void OutReference(out object value) => value = new();
+    public ProjectedStruct ReturnProjected() => new();
+    public object ReturnReference() => new();
+    public int ReturnScalar() => 0;
 }
+public sealed class ProjectedStruct { }

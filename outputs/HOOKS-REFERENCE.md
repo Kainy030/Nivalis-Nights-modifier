@@ -8,7 +8,7 @@
 
 新增背包加物品契约 `IBackpackItemAddition`，当前是明确拒绝执行的预留实现。它不创建物品、不排队、不解析游戏实例；有效请求返回 `NotImplemented` 和 `AddedQuantity=0`。
 
-当前为 **Release 编译及托管/静态检查通过**，不是游戏内验证。未部署加载器或插件。统一交付目录：[Hooks](D:/NightsHack/outputs/Hooks)；构建入口：[Build-Hooks.ps1](D:/NightsHack/Build-Hooks.ps1)。旧构建入口转发到统一构建，并同步更新旧交付目录。
+当前已完成 **Release 编译、41 项托管/静态检查及有限游戏内实测**。本机部署后隔离了启动和读档崩溃，最终安装 1,019/1,067 个候选，48 个明确拒绝；四组都有真实回调。详细证据及尚未验证内容见 [运行实测报告](HOOK-RUNTIME-TEST.md)。统一交付目录：[Hooks](D:/NightsHack/outputs/Hooks)；构建入口：[Build-Hooks.ps1](D:/NightsHack/Build-Hooks.ps1)。旧构建入口转发到统一构建，并同步更新旧交付目录。
 
 ## 范围与 PlayerHook 对照原则
 
@@ -37,6 +37,7 @@ PlayerInventory.AddItem、AddAllFurniture、ClearItems 与 PlayerObjectHolder.St
 
 - 使用生成的 runtime interop，不引用或部署 DummyDll；DummyDll 仅用于生成清单和静态检查。
 - 保留游戏输入双哈希锁；RVA 仅做解析后的交叉校验，不作为固定偏移写值。
+- 当前桥接兼容性边界：拒绝 ref/out、投影原生值类型返回、1/2/4/8 字节的投影原生值类型按值参数及已复现崩溃的 HoldableEntity.Update；保留原方法。完整候选表不等同于已安装表。最终配置无临时 RVA 排除，具体运行状态见 GetStatus 或诊断导出。
 - 支持静态入口：单独回调形状，不注入不存在的 `__instance`。静态样本实例地址为 0，未快照静态字段。
 - 支持七个实际协程 MoveNext；对 interop 改名的嵌套类，核对原生类名再选择，不把“拿到 IEnumerator”误认为协程完成。仍有默认采样，不保证每个状态跳转都有记录。
 - 字段通过 IL2CPP 字段 API 读取，引用不展开为库存清单，不调用业务 getter，不调用用户自定义 ToString。复杂结构为原生字节或 opaque。
@@ -50,7 +51,7 @@ PlayerInventory.AddItem、AddAllFurniture、ClearItems 与 PlayerObjectHolder.St
 
 ## Player 迁移与 API
 
-PlayerHook 现在与其他三个插件共用安装引擎及观测类型。324 个候选、32 个字段 schema、18 个分组保持；属性/技能字典最多 32 项、knowledge、PlayerStat 参数和锁对象快照仍由公共库的 Player 扩展提供，仅 PlayerHook 启用。迁移后已通过 15 项 Player 检查和 21 项跨插件/运行库检查；没有进行游戏内验证。
+PlayerHook 现在与其他三个插件共用安装引擎及观测类型。324 个候选、32 个字段 schema、18 个分组保持；属性/技能字典最多 32 项、knowledge、PlayerStat 参数和锁对象快照仍由公共库的 Player 扩展提供，仅 PlayerHook 启用。当前通过 15 项 Player 检查和 26 项跨插件/运行库检查；有限游戏内实测见报告，未覆盖全部玩法或字段。
 
 公共记录统一为 NightsHack.HookRuntime.HookObservation / HookObservationBuffer / HookStatus。原 PlayerObservation 等类型已移除，显式引用旧类型的消费者需要重新编译；常用 Active、Observations、GetStatus、FieldDiagnostics、Installed 入口保留。各插件仍有独立队列与 CallId；卸载自身不会主动卸载其他插件。
 

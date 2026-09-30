@@ -71,4 +71,52 @@ internal static class TargetValidation
                 m.GetParameters().Select(p => p.IsOut).SequenceEqual(spec.OutParameters)).ToArray();
         return matches.Length == 1 ? matches[0] : throw new InvalidOperationException($"Signature not unique/exact: {spec.Id}");
     }
+
+    internal static void VerifyByRefMarshalling(MethodInfo method)
+    {
+        foreach (var parameter in method.GetParameters().Where(p => p.ParameterType.IsByRef))
+        {
+            Type element = parameter.ParameterType.GetElementType()!;
+            // The installed 1.4.6 bridge dereferences byrefs using ldind.i, even for
+            // float parameters, and reads out storage before the original initializes it.
+            // LoadSaveHeader additionally uses pointer-sized storage for a projected struct.
+            // Conservatively quarantine all ref/out signatures until a replacement bridge is tested.
+            throw new InvalidOperationException($"Unsupported ref/out parameter: {parameter.Name} ({Canonical(element)}). Current bridge is not ABI-safe for this category; original left unpatched.");
+        }
+    }
+
+    internal static void VerifyKnownNativeCompatibility(MethodSpec spec)
+    {
+        // A/B save-load trials reproduce a native crash with this entry installed;
+        // leaving only this entry unpatched permits all four plugins to enter the scene.
+        // Its 14-byte conditional/tail-jump body suggests relocation trouble, but the
+        // precise detour defect is not yet proven. Do not silently claim this hook works.
+        if (spec.Type == "Nivalis.HoldableEntity" && spec.Name == "Update" &&
+            spec.Parameters.Length == 0 && !spec.IsStatic && spec.ReturnType == "System.Void" &&
+            Convert.ToInt64(spec.Rva, 16) == 0x840710)
+            throw new InvalidOperationException("Known native hook incompatibility: HoldableEntity.Update at 0x840710 reproduces a save-load crash with the installed detour backend. Original left unpatched pending a verified bridge fix.");
+    }
+
+    internal static void VerifyReturnMarshalling(MethodInfo method, Func<Type, bool> isNativeValueType)
+    {
+        Type result = method.ReturnType;
+        // GetValidSaves reproduced invalid generated IL followed by a native failure.
+        // Quarantine this projected-struct return category until a correct bridge is tested.
+        if (!result.IsValueType && isNativeValueType(result))
+            throw new InvalidOperationException($"Unsupported native value-type return projection: {Canonical(result)}. Current Harmony bridge is not validated for this return ABI; original left unpatched.");
+    }
+
+    internal static void VerifySmallValueParameters(MethodInfo method, Func<Type, int?> projectedNativeSize)
+    {
+        foreach (var parameter in method.GetParameters())
+        {
+            Type type = parameter.ParameterType;
+            if (type.IsByRef || type.IsValueType) continue;
+            int? size = projectedNativeSize(type);
+            // The installed bridge boxes projected structs from a pointer on x64.
+            // Windows x64 instead passes 1/2/4/8 byte structs as inline register values.
+            if (size is 1 or 2 or 4 or 8)
+                throw new InvalidOperationException($"Unsupported inline native value-type parameter: {parameter.Name} ({Canonical(type)}, {size} bytes). Current bridge treats inline bits as a pointer; original left unpatched.");
+        }
+    }
 }

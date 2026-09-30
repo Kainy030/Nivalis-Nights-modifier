@@ -24,6 +24,8 @@ public abstract class ObservationPlugin : BasePlugin
     public bool Installed => Volatile.Read(ref installed);
     public IReadOnlyList<string> FieldDiagnostics => snapshots?.Diagnostics ?? Array.Empty<string>();
     private bool installed;
+    private System.Threading.Timer? diagnosticsTimer;
+    private readonly object diagnosticsLock = new();
     private long callSequence;
     private NativeSnapshots? snapshots;
     private Endpoint[] endpoints = Array.Empty<Endpoint>();
@@ -73,9 +75,15 @@ public abstract class ObservationPlugin : BasePlugin
             using var process = Process.GetCurrentProcess();
             var module = process.Modules.Cast<ProcessModule>().Single(m => string.Equals(m.ModuleName, "GameAssembly.dll", StringComparison.OrdinalIgnoreCase));
             long moduleBase = module.BaseAddress.ToInt64();
+            var excludedRvas = Config.Bind("Diagnostics", "ExcludedRvas", "",
+                "Temporary isolation only: comma-separated catalog RVAs to leave unpatched. Empty enables the full configured scope.").Value
+                .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
             for (int i = 0; i < endpoints.Length; i++)
             {
                 var endpoint = endpoints[i];
+                if (excludedRvas.Contains(endpoint.Spec.Rva))
+                { endpoint.State = "Disabled"; endpoint.Detail = "Explicit diagnostic isolation override."; continue; }
                 if (!Config.Bind("Groups", endpoint.Spec.Group, true, "Observe this subsystem type.").Value)
                 { endpoint.State = "Disabled"; continue; }
                 try
@@ -86,7 +94,23 @@ public abstract class ObservationPlugin : BasePlugin
                     IntPtr klass = Il2CppClassPointerStore.GetNativeClassPointer(type);
                     if (klass == IntPtr.Zero) throw new InvalidOperationException("No native class.");
                     endpoint.Method = TargetValidation.Resolve(type, endpoint.Spec, NativeSnapshots.NativeName(klass));
+                    bool IsNativeValueType(Type element)
+                    {
+                        if (!typeof(Il2CppObjectBase).IsAssignableFrom(element)) return false;
+                        IntPtr elementClass = Il2CppClassPointerStore.GetNativeClassPointer(element);
+                        if (elementClass == IntPtr.Zero) throw new InvalidOperationException("Missing byref native class.");
+                        return IL2CPP.il2cpp_class_is_valuetype(elementClass);
+                    }
+                    TargetValidation.VerifyByRefMarshalling(endpoint.Method);
+                    TargetValidation.VerifyReturnMarshalling(endpoint.Method, IsNativeValueType);
+                    TargetValidation.VerifySmallValueParameters(endpoint.Method, element =>
+                    {
+                        if (!IsNativeValueType(element)) return null;
+                        uint alignment = 0;
+                        return IL2CPP.il2cpp_class_value_size(Il2CppClassPointerStore.GetNativeClassPointer(element), ref alignment);
+                    });
                     VerifyNativeEntry(endpoint.Method, moduleBase, endpoint.Spec.Rva);
+                    TargetValidation.VerifyKnownNativeCompatibility(endpoint.Spec);
                     if (!Dispatch.TryAdd(endpoint.Method, endpoint)) throw new InvalidOperationException("Method already owned by another observer.");
                 }
                 catch (Exception error)
@@ -115,6 +139,13 @@ public abstract class ObservationPlugin : BasePlugin
             Log.LogInfo($"{Identifier}: {endpoints.Count(e => e.State == "Installed")}/{endpoints.Length} installed; {catalog.Excluded.Length} excluded. Observation only.");
             foreach (var status in GetStatus().Where(s => s.State is "Failed" or "Rejected")) Log.LogWarning($"{status.Id}: {status.Detail}");
             foreach (string diagnostic in FieldDiagnostics) Log.LogWarning("Field unavailable: " + diagnostic);
+            int exportSeconds = Config.Bind("Diagnostics", "ExportIntervalSeconds", 0,
+                "Write detached status/latest samples to BepInEx/diagnostics; 0 disables, otherwise minimum 5 seconds.").Value;
+            if (exportSeconds > 0)
+            {
+                var exportInterval = TimeSpan.FromSeconds(Math.Clamp(exportSeconds, 5, 3600));
+                diagnosticsTimer = new System.Threading.Timer(_ => ExportDiagnostics(), null, exportInterval, exportInterval);
+            }
         }
         catch (Exception error) { Log.LogError(Identifier + " installation refused/failed: " + error); Unload(); }
     }
@@ -133,6 +164,8 @@ public abstract class ObservationPlugin : BasePlugin
 
     public override bool Unload()
     {
+        diagnosticsTimer?.Dispose();
+        diagnosticsTimer = null;
         Volatile.Write(ref installed, false);
         bool success = true;
         foreach (var harmony in patches)
@@ -153,6 +186,28 @@ public abstract class ObservationPlugin : BasePlugin
             if (ReferenceEquals(FindActive(Identifier), this)) ActivePlugins.TryRemove(Identifier, out _);
         }
         return success;
+    }
+
+    private void ExportDiagnostics()
+    {
+        if (!Monitor.TryEnter(diagnosticsLock)) return;
+        try
+        {
+            // Read only managed, detached observations; never access game objects on this timer.
+            string directory = Path.Combine(Paths.BepInExRootPath, "diagnostics");
+            Directory.CreateDirectory(directory);
+            string destination = Path.Combine(directory, Identifier + ".json");
+            var report = new
+            {
+                TimestampUtc = DateTimeOffset.UtcNow, ProcessId = Environment.ProcessId,
+                Plugin = Identifier, Installed, Status = GetStatus(),
+                Dropped = Observations.DroppedCount, Latest = Observations.GetLatest()
+            };
+            File.WriteAllText(destination + ".tmp", System.Text.Json.JsonSerializer.Serialize(report));
+            File.Move(destination + ".tmp", destination, true);
+        }
+        catch (Exception error) { Log.LogWarning(Identifier + " diagnostic export failed: " + error.Message); }
+        finally { Monitor.Exit(diagnosticsLock); }
     }
 
     private sealed record Capture(Endpoint Endpoint, long CallId, long InstanceAddress);

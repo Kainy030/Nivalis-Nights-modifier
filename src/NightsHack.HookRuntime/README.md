@@ -1,6 +1,6 @@
 # HookRuntime：四个观察钩子的公共运行库
 
-PlayerHook、WorldHook、ItemHook、GameRuntimeHook 四个 BepInEx IL2CPP 插件均继承公共 ObservationPlugin，共用 `NightsHack.HookRuntime.dll` 的安装/卸载、签名校验、回调分发、字段读取、采样和快照队列实现；按完整签名及原生 RVA 排除重复。没有写值、UI、IPC、热键或游戏部署。
+PlayerHook、WorldHook、ItemHook、GameRuntimeHook 四个 BepInEx IL2CPP 插件均继承公共 ObservationPlugin，共用 `NightsHack.HookRuntime.dll` 的安装/卸载、签名校验、回调分发、字段读取、采样和快照队列实现；按完整签名及原生 RVA 排除重复。没有写值、UI、IPC 或热键；已在本机游戏部署并进行读档实测，边界见 [实测报告](../../outputs/HOOK-RUNTIME-TEST.md)。
 
 | 插件 | 职责 | 静态候选数 |
 |---|---|---:|
@@ -15,7 +15,7 @@ PlayerHook、WorldHook、ItemHook、GameRuntimeHook 四个 BepInEx IL2CPP 插件
 
 - `D:/NightsHack/Build-Hooks.ps1`：编译四个插件、公共运行库并运行两套检查，成功后统一打包到 `D:/NightsHack/outputs/Hooks/`。旧 Build-PlayerHook.ps1 / Build-WorldHooks.ps1 转发到此入口；旧交付目录同步刷新。
 - 首次需要还原时使用 `./Build-Hooks.ps1 -Restore`。本次已用缓存及单次 `--ignore-failed-sources '-p:NuGetAudit=false'` 还原；未执行在线漏洞审计，未更改依赖版本。
-- 沿用 net6.0/x64、BepInEx 6.0.0-pre.2、Il2CppInterop.Runtime 1.4.6、HarmonyX 2.10.2。
+- 沿用 net6.0/x64、Il2CppInterop.Runtime 1.4.6、HarmonyX 2.10.2；BepInEx 实际自报 6.0.0-be.697 / .NET 6.0.7。依赖目录 pre.2 是历史命名，不代表实际加载器版本。
 - 四个插件共用一份 `NightsHack.HookRuntime.dll`，它是普通依赖库，不另注册为游戏插件。仅复制某个插件 DLL 而漏掉共享库不能视为完整交付。依赖的 BepInEx/Interop/Harmony 来自既定加载器。
 - 此脚本不安装加载器，不复制任何文件到游戏目录。
 
@@ -63,6 +63,10 @@ AddBackpackItemResult result = await service.AddToBackpackAsync(request, cancell
 
 加载时校验两个游戏输入哈希、原生类身份、完整方法签名、静态/实例与 out/ref、动态解析 MethodInfo 对应 RVA。版本或投影不符就拒绝该入口。协程名字被 interop 改写时按原生嵌套类型身份匹配，不猜生成后的名称。
 
-Release 编译 0 警告/错误，Player 检查 15 项及跨插件/运行库检查 21 项通过；检查涵盖目录与原始元数据的一致性、与 PlayerHook 去重、关键方法/协程、队列/采样、回调形状和预留接口不写入。尚未验证加载器发现、Harmony 原生 patch、真实回调、所有字段投影、游戏线程行为、性能或卸载。`Installed` 也只表示 patch API 接受，不等于游戏内逻辑验证。
+Release 编译 0 警告/错误，Player 检查 15 项及跨插件/运行库检查 26 项通过。已在本机验证加载器发现、四插件安装和市场存档真实回调，不能升级为全部玩法验证。完整字段、长期稳定性、性能和热卸载仍未全面验证。`Installed` 只表示 patch API 接受；`Observed` 表示回调发生，不证明所有参数或业务结果都正确。
+
+当前兼容性防护拒绝：所有 ref/out 参数、投影为托管类的原生值类型返回值、同类投影中原生大小为 1/2/4/8 字节的按值参数，以及当前版本已复现崩溃的 HoldableEntity.Update（0x840710）。这些方法保留游戏原入口。其余安装仍需实际路径验证；候选目录不因运行时拒绝而删除。
+
+诊断配置 `[Diagnostics] ExportIntervalSeconds` 默认 0，正值最小 5 秒，导出到 BepInEx/diagnostics。导出只访问托管快照，不从定时器访问游戏对象。`ExcludedRvas` 默认空，为临时二分提供逗号分隔的 RVA 排除；正式修复版不依赖临时排除。Faults=0 不覆盖桥接或原生崩溃。
 
 完整归属/排除：每个插件的 `*.Catalog.json` 与 `hook-coverage-audit.json`。结构和设计档案：`D:/NightsHack/outputs/HOOKS-REFERENCE.md`；原始逆向报告：`D:/NightsHack/outputs/world-investigation.md`。
