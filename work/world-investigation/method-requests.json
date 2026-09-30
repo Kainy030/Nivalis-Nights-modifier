@@ -1,0 +1,328 @@
+[
+  {
+    "class": "Nivalis.GameSceneManager",
+    "methods": [
+      "LoadArea",
+      "LoadSceneObjects",
+      "FinalizeManagerInitialization",
+      "GetWorldLocation",
+      "UnloadArea"
+    ]
+  },
+  {
+    "class": "Nivalis.GameSceneManager.<LoadAreaRoutine>d__85",
+    "methods": [
+      "MoveNext"
+    ]
+  },
+  {
+    "class": "Nivalis.GameSceneManager.<WaitForLevelLoadingUnblocked>d__86",
+    "methods": [
+      "MoveNext"
+    ]
+  },
+  {
+    "class": "Nivalis.TransitionManager.<TransitionRoutine>d__23",
+    "methods": [
+      "MoveNext"
+    ]
+  },
+  {
+    "class": "Nivalis.TravelManager",
+    "methods": [
+      "RequestTravel",
+      "FindShortestPath",
+      "get_CanTravel",
+      "HandleBoatsOnTravel"
+    ]
+  },
+  {
+    "class": "Nivalis.TravelManager.<TeleportPlayer>d__15",
+    "methods": [
+      "MoveNext"
+    ]
+  },
+  {
+    "class": "Nivalis.WorldLocation",
+    "methods": [
+      "get_SceneIsLoaded",
+      "get_SceneIndex"
+    ]
+  },
+  {
+    "class": "Nivalis.TravelUnlockManager",
+    "methods": [
+      "IsLocationUnlocked",
+      "UnlockLocation"
+    ]
+  },
+  {
+    "class": "Nivalis.GhostSystem.Ghost",
+    "methods": [
+      "set_IsActive",
+      "set_IsViewLess",
+      "set_SceneIndex",
+      "set_Transform",
+      "set_Position",
+      "set_ViewId",
+      "set_LoadedView",
+      "Save",
+      "Load",
+      "SetupSavedValues"
+    ]
+  },
+  {
+    "class": "Nivalis.GhostSystem.GhostManager",
+    "methods": [
+      "RegisterGhost",
+      "DeregisterGhost",
+      "FlushGhostOperationQueues",
+      "RegisterGhostImmediate",
+      "DeregisterGhostImmediate",
+      "UpdatePosition",
+      "TransferGhostToScene",
+      "InstantiateGhostViewIfNeeded",
+      "UpdateGhostViewPresence",
+      "OnGhostViewChanged",
+      "ManuallyInitializeSystem",
+      "InitializeInternal"
+    ]
+  },
+  {
+    "class": "Nivalis.GhostSystem.ScenePositionalRegistry",
+    "methods": [
+      "MoveGhost",
+      "AddGhost",
+      "RemoveGhost"
+    ]
+  },
+  {
+    "class": "Nivalis.GhostSystem.StaticGhostViewBase",
+    "methods": [
+      "CreateGhostFromView",
+      "Link",
+      "Unlink"
+    ]
+  },
+  {
+    "class": "Nivalis.GhostSystem.GhostManagerSave",
+    "methods": [
+      "Save",
+      "Load"
+    ]
+  },
+  {
+    "class": "Nivalis.GhostSystem.WorldPointManager",
+    "methods": [
+      "ActivateQuestPointInternal",
+      "DeactivateQuestPointInternal",
+      "TriggerQueuedActivations",
+      "InitializeExternal"
+    ]
+  },
+  {
+    "class": "Nivalis.GhostSystem.Ai.AgentGhostSimulator",
+    "methods": [
+      "Update",
+      "CurrentTimeOnValueChanged",
+      "SkipTime",
+      "UpdateAgentActions",
+      "SwitchAgentAction"
+    ]
+  },
+  {
+    "class": "Nivalis.InventorySystem.ItemInstanceData",
+    "methods": [
+      ".ctor",
+      "UpdateDecay",
+      "get_FreshnessFactor",
+      "get_Freshness",
+      "get_DayOfSpoilage",
+      "Save",
+      "Load"
+    ]
+  },
+  {
+    "class": "Nivalis.InventorySystem.ItemStack",
+    "methods": [
+      "SafeCreate",
+      "AddToStackInternal",
+      "TryMerge",
+      "RemoveFromStack",
+      "RemoveStaleItems",
+      "UpdateItemDecay",
+      "get_StackCount",
+      "Save",
+      "Load"
+    ]
+  },
+  {
+    "class": "Nivalis.InventorySystem.ItemContainer",
+    "methods": [
+      "TryAdd",
+      "TryCreateInInventory",
+      "TryTake",
+      "TakeByType",
+      "Clear",
+      "UpdateItemDecay",
+      "UpdateRestriction",
+      "AcceptsItemType",
+      "CreateSaveData",
+      "LoadFromSaveData"
+    ]
+  },
+  {
+    "class": "Nivalis.InventorySystem.ItemContainerRestriction",
+    "methods": [
+      "CanAddItem",
+      "CanAddItemType",
+      "CanAddSlot"
+    ]
+  },
+  {
+    "class": "Nivalis.InventorySystem.ItemEntity",
+    "methods": [
+      "*"
+    ]
+  },
+  {
+    "class": "Nivalis.InventorySystem.InventoriesManager",
+    "methods": [
+      "*"
+    ]
+  },
+  {
+    "class": "Nivalis.InventorySystem.ItemInstanceCollectionExtensions",
+    "methods": [
+      "*"
+    ]
+  },
+  {
+    "class": "Nivalis.ItemCollectible",
+    "methods": [
+      "DoInteraction"
+    ]
+  },
+  {
+    "class": "Nivalis.HoldableEntity",
+    "methods": [
+      "PickUp",
+      "Place",
+      "CheckHasOverlaps",
+      "CheckColliderOverlap",
+      "CheckValidProperty",
+      "CheckParentValid"
+    ]
+  },
+  {
+    "class": "Nivalis.HoldableEntity.<PlaceRoutine>d__94",
+    "methods": [
+      "MoveNext"
+    ]
+  },
+  {
+    "class": "Nivalis.PlayerObjectHolder",
+    "methods": [
+      "StoreEntity"
+    ]
+  },
+  {
+    "class": "Nivalis.Locale.FurnitureObject",
+    "methods": [
+      "DoInteraction",
+      "set_CurrentProperty",
+      "get_IsIllegal",
+      "get_AllowPicking"
+    ]
+  },
+  {
+    "class": "Nivalis.Dialogue.WorldObjectGhost",
+    "methods": [
+      "Use",
+      "SaveInternal",
+      "LoadInternal"
+    ]
+  },
+  {
+    "class": "Nivalis.Dialogue.WorldObjectView",
+    "methods": [
+      "Use",
+      "ShouldBeActive",
+      "RefreshActivityState",
+      "OnInteracted"
+    ]
+  },
+  {
+    "class": "Nivalis.Dialogue.SetWorldObjActive",
+    "methods": [
+      "RunTrigger"
+    ]
+  },
+  {
+    "class": "Nivalis.TimeOfDayManager",
+    "methods": [
+      "Update",
+      "AddTime",
+      "OnTimeUpdate",
+      "Sleep",
+      "UpdateStaticVariables"
+    ]
+  },
+  {
+    "class": "Nivalis.WeatherForecastController",
+    "methods": [
+      "UpdateWeatherForCurrentTime",
+      "GetForecast",
+      "GetConfiguration",
+      "GetForecastIndex",
+      "OverrideWeatherForecast"
+    ]
+  },
+  {
+    "class": "Nivalis.SerializationManager",
+    "methods": [
+      "Save",
+      "ForceInitializeSerializedObject",
+      "RegisterObject"
+    ]
+  },
+  {
+    "class": "Nivalis.SerializationManager.<UpdateSceneObjects>d__19",
+    "methods": [
+      "MoveNext"
+    ]
+  },
+  {
+    "class": "Nivalis.SerializationManager.<LoadRoutine>d__42",
+    "methods": [
+      "MoveNext"
+    ]
+  },
+  {
+    "class": "Nivalis.GameObjectPool",
+    "methods": [
+      "*"
+    ]
+  },
+  {
+    "class": "Nivalis.PooledElement",
+    "methods": [
+      "*"
+    ]
+  },
+  {
+    "class": "Nivalis.InventorySystem.ItemType",
+    "methods": [
+      "CreateStack",
+      "get_HasDecay",
+      "get_RequiresRefridgeration"
+    ]
+  },
+  {
+    "class": "Nivalis.GameObjectPool.Pool",
+    "methods": [
+      "TryPop",
+      "Release"
+    ]
+  }
+]

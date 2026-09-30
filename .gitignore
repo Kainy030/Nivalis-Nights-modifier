@@ -1,0 +1,34 @@
+# Local SDK, build products and IDE state
+/.tools/
+**/bin/
+**/obj/
+/.vs/
+/.idea/
+*.user
+*.suo
+*.log
+__pycache__/
+*.pyc
+
+# Publish project reports, not packaged binaries or duplicate delivery directories
+/outputs/*
+!/outputs/*.md
+!/outputs/*.MD
+
+# Keep first-party analysis/generation tools and scope/audit metadata only
+/work/*
+!/work/*.ps1
+!/work/*.py
+!/work/world-investigation/
+/work/world-investigation/*
+!/work/world-investigation/hook-scope.json
+!/work/world-investigation/hook-coverage-audit.json
+!/work/world-investigation/method-requests.json
+
+# Local credentials and environment settings
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key

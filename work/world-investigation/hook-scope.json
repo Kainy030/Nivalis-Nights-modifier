@@ -1,0 +1,310 @@
+[
+  {
+    "Type": "GameSceneManager.<LoadAreaRoutine>d__85",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "GameSceneManager.<WaitForLevelLoadingUnblocked>d__86",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GameSceneManager",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "TransitionManager.<TransitionRoutine>d__23",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.PlacementSpot",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.PlacementSlot",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.Greenhouse",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GreenhouseManager",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.WeatherForecastController",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "HoldableEntity.<PlaceRoutine>d__94",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.HoldableEntity",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.PlacementSetting",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.SavedObject",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.SerializableObject",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "SerializationManager.<UpdateSceneObjects>d__19",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "SerializationManager.<LoadRoutine>d__42",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.SerializationManager",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.TimeOfDayManager",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.PortalKey",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "TravelManager.<TeleportPlayer>d__15",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.TravelManager",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.TravelPortal",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.TravelUnlockManager",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.WorldLocation",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.TravelConnection",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "GameObjectPool.Pool",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.GameObjectPool",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.PooledElement",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.PlacementTracker",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.GreenhouseArea",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.ItemCollectible",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.Weather.WeatherManager",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.FoodFreshness",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.ItemInstanceData",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.ItemStack",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.ItemType",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.IItemInstanceCollection",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.ItemInstanceCollectionExtensions",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.InventorySave",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.InventoriesSave",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.InventoriesManager",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.ItemCollectionOperationResult",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.ItemContainer",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.ItemContainerRestriction",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.ItemEntity",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.BuildTimeSceneGhosts",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.Ghost",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.GhostManager",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.GhostManagerSave",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.HoldableGhost",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.ScenePositionalRegistry",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.StaticGhostViewBase",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.WorldPointManager",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.CustomerLoop.Venue",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.CustomerLoop.VenueAreaGhost",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.CustomerLoop.VenueFinances",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.CustomerLoop.VenueInventory",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.CustomerLoop.VenueManager",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.Ai.AgentGhost",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.Ai.AgentGhostSimulator",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.Ai.CustomerGhost",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.GhostSystem.Ai.GhostSimulator",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.Dialogue.SetWorldObjActive",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.Dialogue.ArticyImportedWorldObj",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.Dialogue.WorldObjectGhost",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.Dialogue.WorldObjectView",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.Locale.FurnitureObject",
+    "Owner": "ItemHook"
+  },
+  {
+    "Type": "Nivalis.Apartment.Apartment",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.Apartment.ApartmentAreaGhost",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.Apartment.ApartmentManager",
+    "Owner": "WorldHook"
+  },
+  {
+    "Type": "Nivalis.PlayerObjectHolder",
+    "Owner": "ItemHook",
+    "OnlyMethods": [
+      "StoreEntity"
+    ]
+  },
+  {
+    "Type": "Nivalis.ManagersSave",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.DayNightCycle.LightCycleManager",
+    "Owner": "GameRuntimeHook"
+  },
+  {
+    "Type": "Nivalis.InventorySystem.PlayerInventory",
+    "Owner": "ItemHook",
+    "OnlyMethods": [
+      "AddItem",
+      "AddAllFurniture",
+      "ClearItems"
+    ]
+  }
+]

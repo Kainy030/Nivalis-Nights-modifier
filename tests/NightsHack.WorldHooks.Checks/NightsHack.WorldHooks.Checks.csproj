@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/NightsHack.HookRuntime/Catalog.cs" Link="Catalog.cs" />
+    <Compile Include="../../src/NightsHack.HookRuntime/Observations.cs" Link="Observations.cs" />
+    <Compile Include="../../src/NightsHack.ItemHook/BackpackItems.cs" Link="BackpackItems.cs" />
+    <EmbeddedResource Include="../../src/NightsHack.WorldHook/Catalog.json" LogicalName="WorldHook.Catalog.json" />
+    <EmbeddedResource Include="../../src/NightsHack.ItemHook/Catalog.json" LogicalName="ItemHook.Catalog.json" />
+    <EmbeddedResource Include="../../src/NightsHack.GameRuntimeHook/Catalog.json" LogicalName="GameRuntimeHook.Catalog.json" />
+    <Reference Include="Mono.Cecil" HintPath="../../work/hook-dependencies/bepinex-6.0.0-pre.2/BepInEx/core/Mono.Cecil.dll" />
+  </ItemGroup>
+</Project>
