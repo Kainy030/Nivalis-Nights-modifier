@@ -109,12 +109,12 @@ internal static class Checks
                 Assert(records[^1].Code == "COMMAND_FAILED" && records[^1].Outcome == "SideEffectsUnknown");
                 Assert(!records.Any(r => r.Code == "COMMAND_COMPLETED"));
             });
-            Check("main form has only manual injection and injector log", () => {
+            Check("main form has manual injection, donation and injector log", () => {
                 Application.SetHighDpiMode(HighDpiMode.SystemAware); Application.EnableVisualStyles();
                 using var form = new MainForm(); form.Show(); Application.DoEvents();
                 IEnumerable<Control> Flatten(Control c) => c.Controls.Cast<Control>().SelectMany(x => new[] {x}.Concat(Flatten(x)));
                 var labels = Flatten(form).OfType<Button>().Select(b => b.Text).ToArray();
-                                Assert(labels.SequenceEqual(new[] { "手动注入" }) && form.Text.StartsWith("Kainy's Nivalis Nights Trainer · "));
+                Assert(labels.SequenceEqual(new[] { "手动注入", "无偿捐赠作者" }) && form.Text.StartsWith("Kainy's Nivalis Nights Trainer · "));
                 Assert(!Flatten(form).OfType<TabControl>().Any());
                 Assert(Flatten(form).OfType<TextBox>().Count() == 1 && Flatten(form).OfType<TextBox>().All(t => t.ReadOnly));
                 Assert(!Flatten(form).Any(c => c.Text.Contains("游戏程序") || c.Text.Contains("空闲时") || c.Text.Contains("默认关闭观察") || c.Text == "实时钩子日志"));

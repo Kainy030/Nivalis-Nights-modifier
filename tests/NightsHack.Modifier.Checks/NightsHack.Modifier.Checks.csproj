@@ -8,5 +8,6 @@
     <Compile Include="../../src/NightsHack.Modifier/GameInstall.cs" Link="GameInstall.cs" />
     <Compile Include="../../src/NightsHack.Modifier/DynamicInjector.cs" Link="DynamicInjector.cs" />
     <Compile Include="../../src/NightsHack.Modifier/MainForm.cs" Link="MainForm.cs" />
+    <Compile Include="../../src/NightsHack.Modifier/DonationForm.cs" Link="DonationForm.cs" />
   </ItemGroup>
 </Project>

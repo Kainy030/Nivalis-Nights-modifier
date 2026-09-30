@@ -14,7 +14,7 @@ internal sealed class MainForm : Form
     static TextBox LogBox() => new() { Dock = DockStyle.Fill, Multiline = true, ReadOnly = true, ScrollBars = ScrollBars.Both, WordWrap = false, Font = new Font("Consolas", 9) };
     public MainForm()
     {
-        string version = "v0.4.2-Dev";
+        string version = "v0.4.3-Dev";
         string build = Path.Combine(AppContext.BaseDirectory, "build.json");
         if (File.Exists(build))
         {
@@ -31,7 +31,12 @@ internal sealed class MainForm : Form
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 56));
         layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 26));
         layout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
-        layout.Controls.Add(manualButton, 0, 0);
+        var actions = new FlowLayoutPanel { Dock = DockStyle.Fill, WrapContents = false };
+        var donationButton = new Button { Text = "无偿捐赠作者", Width = 180, Height = 42, Margin = new Padding(12, 3, 3, 3) };
+        donationButton.Click += (_, _) => { using var dialog = new DonationForm(); dialog.ShowDialog(this); };
+        actions.Controls.Add(manualButton);
+        actions.Controls.Add(donationButton);
+        layout.Controls.Add(actions, 0, 0);
         layout.Controls.Add(new Label { Text = "注入器日志", AutoSize = true }, 0, 1);
         layout.Controls.Add(status, 0, 2);
         Controls.Add(layout);

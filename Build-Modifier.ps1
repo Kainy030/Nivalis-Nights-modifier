@@ -1,5 +1,5 @@
 param(
-    [ValidatePattern('^v[0-9]+[.][0-9]+([.][0-9]+)?[-A-Za-z0-9.]*$')][string]$Version = 'v0.4.2-Dev',
+    [ValidatePattern('^v[0-9]+[.][0-9]+([.][0-9]+)?[-A-Za-z0-9.]*$')][string]$Version = 'v0.4.3-Dev',
     [string]$Zig = (Join-Path $PSScriptRoot '.tools/zig/zig-x86_64-windows-0.14.1/zig.exe'),
     [switch]$SkipHooks
 )
@@ -23,6 +23,15 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Offline GUI restore failed' }
     & ./Invoke-Dotnet.ps1 publish src/NightsHack.Modifier/NightsHack.Modifier.csproj -c Release -r win-x64 --self-contained false --no-restore -o $destination
     if ($LASTEXITCODE -ne 0) { throw 'GUI publish failed' }
+    # Package the two donation images only when this release script is explicitly run.
+    $donationImages = @(Get-ChildItem -LiteralPath 'D:\Pay' -File |
+        Where-Object { $_.Extension.ToLowerInvariant() -in @('.png', '.jpg', '.jpeg', '.bmp', '.gif') } | Sort-Object Name)
+    if ($donationImages.Count -ne 2) { throw 'D:\Pay must contain exactly two supported donation images (PNG/JPEG/BMP/GIF).' }
+    $donationDestination = Join-Path $destination 'assets/donation'
+    New-Item -ItemType Directory -Force $donationDestination | Out-Null
+    for ($i = 0; $i -lt 2; $i++) {
+        Copy-Item -LiteralPath $donationImages[$i].FullName -Destination (Join-Path $donationDestination ("donation-{0}.image" -f ($i + 1)))
+    }
     # Private runtime layout recognized by the SDK-generated apphost. No machine-wide .NET installation is needed.
     $localRuntime = Join-Path $destination 'runtime'
     New-Item -ItemType Directory -Force "$localRuntime/shared", "$localRuntime/host" | Out-Null
