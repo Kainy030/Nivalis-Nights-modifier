@@ -53,3 +53,7 @@
 - [World 调查](outputs/world-investigation.md) · [Player 调查](outputs/player-investigation.md) · [金钱调查](outputs/money-investigation.md)。
 
 部分调查文档链接指向本地证据路径；对应游戏导出不随仓库发布。`v0.1-Dev` 标记观察基础设施开发快照，不是已可用的修改器发行版。
+
+## 开源协议
+
+本项目采用 [GNU General Public License v3.0](LICENSE)（SPDX：`GPL-3.0-only`）。

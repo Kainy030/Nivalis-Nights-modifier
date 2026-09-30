@@ -4,6 +4,8 @@
 
 ## 仓库与文档入口（v0.1-Dev）
 
+- 项目开源协议为 GPL-3.0-only，完整条款在根目录 LICENSE；README 已提供链接。许可证作为后续提交发布，已存在的 v0.1-Dev 标签不移动。
+
 - 远端仓库：https://github.com/Kainy030/Nivalis-Nights-modifier；本次发布目标为 main 分支及带注释的 v0.1-Dev 标签，实际推送结果以 Git/远端状态为准。
 - 根目录 [README.MD](../README.MD) 概括项目、模块、当前限制及本地构建前置条件。
 - [catalog.md](catalog.md) 是 HOOKS-REFERENCE.md 和 REFERENCE.md 的完整标题索引，不复制详细方法。新增或重命名章节后同步更新索引。
