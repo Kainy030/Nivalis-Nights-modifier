@@ -7,7 +7,7 @@
 - 余额命令不再使用增加/减少 delta，而是通过本地命名管道 `NightsHack.Command.<PID>` 发送 `Set` 绝对值命令。PlayerHook 在 `Nivalis.PlayerManager.Update()` 的游戏线程回调中排队、解析当前 `LocalPlayer.Inventory` 实例、调用 `Money` setter 并回读结果。
 - 命令审计事件（接收、目标校验、执行、余额写入、完成/拒绝/失败）由 PlayerHook 同时输出到 BepInEx 控制台和游戏目录的 hooks JSONL；注入器窗口及 `logs/injector-*.jsonl` 只保留注入生命周期与钩子状态日志，不再写入玩法命令结果。
 - 源码涉及 `src/NightsHack.Modifier/MainForm.cs`、`src/NightsHack.PlayerHook/PlayerHook.cs`、`src/NightsHack.HookRuntime/HookAudit.cs`、新增 `src/NightsHack.HookRuntime/CommandRuntime.cs`，并同步更新修改器、PlayerHook 和根 README。旧的“无 IPC/无改钱实现”描述仅保留在历史记录中，不代表当前状态。
-- 发布目录：`D:/NightsHack/outputs/BuildRelease/v0.5-Dev-UI-Audit2`，入口为 `NightsHack.exe`。本轮源码提交为 `797f697`，用户要求的 Git 标签为 `v0.5-UIFix`；标签与远端状态在本交接更新后执行并以 Git 核对结果为准。
+- 发布目录：`D:/NightsHack/outputs/BuildRelease/v0.5-Dev-UI-Audit2`，入口为 `NightsHack.exe`。本轮源码提交为 `a18b5fa`，用户要求的 Git 标签为 `v0.5-UIFix`；标签与远端状态已按本交接更新后的收尾步骤执行，并以 Git 核对结果为准。
 - 验证结果：`Build-Hooks.ps1` 构建四插件和公共运行库，16 项 HookRuntime 检查与 44 项跨插件检查通过，零警告/错误；`Build-Modifier.ps1 -Version v0.5-Dev-UI-Audit2 -SkipHooks` 的 13 项修改器检查通过，发布包包含 231 个 payload 文件。静态检查和构建不等于游戏内集成验证；本轮未用新包重新注入并实测余额写入。
 
 ## 赞助图片使用限制（用户明确要求，后续接手必须遵守）
