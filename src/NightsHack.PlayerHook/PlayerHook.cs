@@ -33,8 +33,8 @@ public sealed class PlayerHook : ObservationPlugin
         };
         Commands.Register("Nivalis.PlayerManager.LocalPlayer.Inventory", ProbePlayerInventory);
         Commands.Register("Nivalis.PlayerManager.LocalPlayer.Inventory.Money", SetMoney);
-        if (!Config.Bind("Commands", "Enabled", false,
-            "Experimental command dispatcher; requires explicit opt-in and is disabled by default.").Value) return;
+        if (!Config.Bind("Commands", "Enabled", true,
+            "Game-thread command dispatcher used by the trainer; set false to disable player probing and money commands.").Value) return;
         try
         {
             var managerUpdate = ResolveTarget("Nivalis.PlayerManager.Update()");

@@ -77,7 +77,7 @@ if (hook != null)
 
 未按 LocalPlayer 过滤；回调可能属于多个同类型实例，包括保存对象。初始化前不会补建对象；字段引用未展开的容器、房产、订单等不等于已取得其完整内容。`MaxSpeed` 共享 getter 不钩，读其底层速度字段。`CancelOrder/PrePlayerTravel` 共享入口不钩；因此不是完备取消事件流。
 
-`PlayerInventory.set_Money` 及 `_money` 前后快照已包含，用户已确认只保留 PlayerHook。独立 MoneyHook 的源码、测试、构建脚本和交付物已清理。当前余额设置命令在 PlayerHook 中接入原 setter，通过本地 IPC 排队并在 `PlayerManager.Update()` 的游戏线程回调中执行；命令事件同时写入 BepInEx 控制台和 hooks JSONL。金额以游戏整数单位传输，安全范围为 1–2147483646（对应用户界面 0.01–21474836.46）。调查报告 `outputs/money-investigation.md` 继续保留。旧接口的旧值/请求值/实际值，在这里对应同一 CallId 的 Before 字段、Before 参数和 After 字段；并非旧 MoneyObservation API 的二进制兼容替换。
+`PlayerInventory.set_Money` 及 `_money` 前后快照已包含，用户已确认只保留 PlayerHook。独立 MoneyHook 的源码、测试、构建脚本和交付物已清理。当前余额设置命令在 PlayerHook 中接入原 setter，通过本地 IPC 排队并在 `PlayerManager.Update()` 的游戏线程回调中执行；命令事件同时写入 BepInEx 控制台和 hooks JSONL。`Commands.Enabled` 默认值为 `true`，因为 Trainer 的玩家探测和余额命令依赖该服务；已有配置若保留 `Enabled = false`，需改为 `true` 或删除 `BepInEx/config/nightshack.playerhook.cfg` 后重启游戏。金额以游戏整数单位传输，安全范围为 1–2147483646（对应用户界面 0.01–21474836.46）。调查报告 `outputs/money-investigation.md` 继续保留。旧接口的旧值/请求值/实际值，在这里对应同一 CallId 的 Before 字段、Before 参数和 After 字段；并非旧 MoneyObservation API 的二进制兼容替换。
 
 “不更改游戏逻辑”表示观察器没有业务写入或原调用替换；安装补丁与读取必然有开销。**尚未验证加载器在该游戏的兼容性、324 个候选的实际可安装数量、生成的字典投影、原生回调命中、性能、保存往返或卸载效果。**
 

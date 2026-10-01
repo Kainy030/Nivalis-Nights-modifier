@@ -12,6 +12,15 @@
 
 以下为历史交接，当前名称、路径和重复注入修复以上述记录为准；赞助图片使用限制继续有效。
 
+## 最新交接补充：v0.5.2-BugFix（2026-10-01）
+
+- 跨电脑运行时注入和四个钩子均可正常就绪，但玩家探测/改钱失败的原因已确认：`PlayerHook` 的 `Commands.Enabled` 默认值为 `false`，新电脑生成的 BepInEx 配置因此没有启动本地命令管道。
+- `src/NightsHack.PlayerHook/PlayerHook.cs` 已将该默认值改为 `true`。现有机器若 `BepInEx/config/nightshack.playerhook.cfg` 仍有 `Enabled = false`，需改为 `true` 或删除该配置后重启游戏。命令服务是 Trainer 玩家探测和余额设置的必要组件。
+- `src/NightsHack.PlayerHook/README.md` 已记录配置行为和恢复步骤。其余插件、命名空间、IPC 名称和部署目录保持不变。
+- 已执行 `Build-Hooks.ps1 -Restore`：四插件和公共运行库构建零警告/错误；PlayerHook 检查 16 项通过，跨插件检查 44 项通过。已执行 `Build-Modifier.ps1 -Version v0.5.2-CommandFix -SkipHooks`：修改器检查 13 项通过，发布成功。
+- 新发布包为 `D:/NivalisNightsTrainer/outputs/BuildRelease/v0.5.2-CommandFix`，入口 `NivalisNightsTrainer.exe`。静态检查不等于另一台电脑的实际注入/玩法验证，本轮仍未进行跨机器运行复测。
+- 本轮源码发布标签为 `v0.5.2-BugFix`；提交和远端状态以 Git 最终核对结果为准。
+
 ## 历史交接：v0.5-UIFix（2026-10-01）
 
 - 本轮已完成并准备发布：首页包含“手动注入”“探测玩家数据”“无偿捐赠作者”，三个按钮统一为 `180×42`；“探测玩家数据”不再位于基础选项页。
