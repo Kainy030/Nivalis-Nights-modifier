@@ -9,6 +9,8 @@ public static class HookAudit
 {
     static readonly object Gate = new();
     static EventJournal? journal;
+    /// <summary>Optional game-side sink for command events. The PlayerHook binds this to BepInEx logging.</summary>
+    public static Action<AuditRecord>? CommandEventSink { get; set; }
     public static string? LogPath => journal?.Path;
     public static void Initialize(string logDirectory)
     {
@@ -22,6 +24,14 @@ public static class HookAudit
     public static void Lifecycle(string hook, string code, string outcome, string message, string level = "INFO") =>
         Write(new AuditRecord { Component = "HookRuntime", Hook = hook, Code = code, Level = level, Outcome = outcome,
             RequestId = Environment.GetEnvironmentVariable("NIGHTSHACK_REQUEST_ID") ?? "", Operation = "PluginLifecycle", Message = message });
+
+    public static void CommandEvent(Guid requestId, string feature, string hook, string target, string operation, string code, string outcome, string message, string level = "INFO")
+    {
+        var record = new AuditRecord { Component = "HookRuntime", RequestId = requestId.ToString("D"), Feature = feature, Hook = hook,
+            Target = target, Operation = operation, Code = code, Outcome = outcome, Message = message, Level = level };
+        Write(record);
+        try { CommandEventSink?.Invoke(record); } catch { }
+    }
 
     static void Write(AuditRecord record) => (journal ?? throw new InvalidOperationException("Hook audit is unavailable; execution is refused.")).Write(record);
 

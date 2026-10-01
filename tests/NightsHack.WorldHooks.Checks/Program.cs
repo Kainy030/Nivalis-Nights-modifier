@@ -33,6 +33,24 @@ Check("four catalogs have disjoint signatures and native entries", () => {
     Assert(all.All(m => m.Parameters.Length == m.OutParameters.Length && m.Parameters.Length == m.ParameterNames.Length));
     Assert(catalogs.Values.All(c => c.Methods.Length > 0 && c.Types.Length > 0 && c.Excluded.Length > 0));
 });
+Check("command runtime queues only registered targets and drains on demand", () => {
+    var runtime = new CommandRuntime(1); int calls = 0;
+    Assert(runtime.Register("Fixture.Target", request => { calls++; return new(request.RequestId, "Succeeded", true, "ok", "{\"value\":7}" ); }));
+    var first = new CommandRequest(Guid.NewGuid(), "Fixture", "Fixture.Target", "Run", "{}");
+    Assert(runtime.TryEnqueue(first));
+    Assert(!runtime.TryEnqueue(new(Guid.NewGuid(), "Fixture", "Fixture.Target", "Run", "{}")));
+    Assert(calls == 0 && runtime.PendingCount == 1);
+    Assert(runtime.Drain() == 1 && calls == 1);
+    Assert(runtime.TryGet(first.RequestId, out var response));
+    Assert(response.Succeeded && response.ResultJson.Contains("7"));
+});
+Check("command runtime converts handler faults to uncertain side effects", () => {
+    var runtime = new CommandRuntime();
+    Assert(runtime.Register("Fixture.Fault", _ => throw new InvalidOperationException("boom")));
+    var request = new CommandRequest(Guid.NewGuid(), "Fixture", "Fixture.Fault", "Run", "{}");
+    Assert(runtime.TryEnqueue(request)); runtime.Drain();
+    Assert(runtime.TryGet(request.RequestId, out var response) && response.State == "SideEffectsUnknown" && !response.Succeeded);
+});
 ObservationPolicyChecks.Run(Check);
 Check("every candidate matches original metadata signature, flags and RVA", () => {
     foreach (var spec in all) {

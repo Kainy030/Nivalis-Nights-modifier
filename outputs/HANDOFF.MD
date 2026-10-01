@@ -1,14 +1,14 @@
 # NightsHack — 快速交接
 
-## 最新交接：v0.4.4-Dev（2026-10-01）
+## 最新交接：v0.5-UIFix（2026-10-01）
 
-- Trainer 新增“首页”和“基础选项”页签，默认显示首页；原有手动注入、无偿捐赠作者按钮及注入器日志均在首页。
-- 基础选项默认灰色、禁用且不可切换；只有本次动态注入返回成功（既有四个 Hook 就绪审计确认）后才解锁。每次新注入先重新锁定并返回首页，失败保持锁定。基础选项目前为空页，未实现具体玩法功能、IPC 或游戏线程调度；尚未增加游戏退出后自动重新锁定逻辑。
-- 版本默认值、窗口标题回退值及程序集版本已更新为 v0.4.4-Dev。完整发布目录：`D:/NightsHack/outputs/BuildRelease/v0.4.4-Dev`，启动 `NightsHack.exe`，须保留整个目录及私有运行时。
-- 本轮完整构建成功，58 项钩子托管/静态检查和 12 项修改器检查通过；页签检查覆盖初始锁定、拒绝切换、模拟就绪解锁及重新锁定。231 个 payload 文件 SHA256 与发布清单一致，两张捐赠资源已确认存在且非空，未查看内容。
-- 验证边界：已核对页签主界面渲染；没有对 v0.4.4-Dev 发布 EXE 单独进行启动测试，没有注入游戏或验证真实 Hook 就绪后的解锁，也未验证存档玩法或性能。先前 v0.4.3-Dev 的发布主窗口启动成功记录不能替代本版本运行验证。
-- v0.4.3-Dev 已添加双图片捐赠弹窗、开源公益与无偿捐赠声明及 GitHub 仓库按钮，发布时从 `D:\Pay` 复制两张图片，运行时仅加载发布包资源；图片内容限制见下节。
-- 本轮按用户要求提交当前源码及交接文档，推送目标为 `origin/main` 并创建附注标签 `v0.4.4-Dev`；是否推送成功以 Git 远端核对结果为准。构建产物及赞助图片不纳入源码提交。以下旧版本记录仅作为历史证据。
+- 本轮已完成并准备发布：首页包含“手动注入”“探测玩家数据”“无偿捐赠作者”，三个按钮统一为 `180×42`；“探测玩家数据”不再位于基础选项页。
+- 基础选项改为“修改余额为 [数值] [确定]”。用户输入为显示金币，内部按 `1 金币 = 100` 个游戏整数单位传输；已验证 `PlayerInventory.Money` 是 `int`，安全可写范围为游戏单位 `1..2147483646`，因此界面范围为 `0.01..21474836.46`，不允许超过安全上限后溢出归零。
+- 余额命令不再使用增加/减少 delta，而是通过本地命名管道 `NightsHack.Command.<PID>` 发送 `Set` 绝对值命令。PlayerHook 在 `Nivalis.PlayerManager.Update()` 的游戏线程回调中排队、解析当前 `LocalPlayer.Inventory` 实例、调用 `Money` setter 并回读结果。
+- 命令审计事件（接收、目标校验、执行、余额写入、完成/拒绝/失败）由 PlayerHook 同时输出到 BepInEx 控制台和游戏目录的 hooks JSONL；注入器窗口及 `logs/injector-*.jsonl` 只保留注入生命周期与钩子状态日志，不再写入玩法命令结果。
+- 源码涉及 `src/NightsHack.Modifier/MainForm.cs`、`src/NightsHack.PlayerHook/PlayerHook.cs`、`src/NightsHack.HookRuntime/HookAudit.cs`、新增 `src/NightsHack.HookRuntime/CommandRuntime.cs`，并同步更新修改器、PlayerHook 和根 README。旧的“无 IPC/无改钱实现”描述仅保留在历史记录中，不代表当前状态。
+- 发布目录：`D:/NightsHack/outputs/BuildRelease/v0.5-Dev-UI-Audit2`，入口为 `NightsHack.exe`。本轮源码提交为 `797f697`，用户要求的 Git 标签为 `v0.5-UIFix`；标签与远端状态在本交接更新后执行并以 Git 核对结果为准。
+- 验证结果：`Build-Hooks.ps1` 构建四插件和公共运行库，16 项 HookRuntime 检查与 44 项跨插件检查通过，零警告/错误；`Build-Modifier.ps1 -Version v0.5-Dev-UI-Audit2 -SkipHooks` 的 13 项修改器检查通过，发布包包含 231 个 payload 文件。静态检查和构建不等于游戏内集成验证；本轮未用新包重新注入并实测余额写入。
 
 ## 赞助图片使用限制（用户明确要求，后续接手必须遵守）
 

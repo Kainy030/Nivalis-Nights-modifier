@@ -7,6 +7,7 @@
     <Compile Include="../../src/NightsHack.HookRuntime/Catalog.cs" Link="Catalog.cs" />
     <Compile Include="../../src/NightsHack.HookRuntime/ObservationPolicy.cs" Link="ObservationPolicy.cs" />
     <Compile Include="../../src/NightsHack.HookRuntime/Observations.cs" Link="Observations.cs" />
+    <Compile Include="../../src/NightsHack.HookRuntime/CommandRuntime.cs" Link="CommandRuntime.cs" />
     <Compile Include="../../src/NightsHack.ItemHook/BackpackItems.cs" Link="BackpackItems.cs" />
     <EmbeddedResource Include="../../src/NightsHack.WorldHook/Catalog.json" LogicalName="WorldHook.Catalog.json" />
     <EmbeddedResource Include="../../src/NightsHack.ItemHook/Catalog.json" LogicalName="ItemHook.Catalog.json" />

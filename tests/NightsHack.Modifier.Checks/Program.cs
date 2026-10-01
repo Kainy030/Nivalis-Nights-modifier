@@ -109,25 +109,45 @@ internal static class Checks
                 Assert(records[^1].Code == "COMMAND_FAILED" && records[^1].Outcome == "SideEffectsUnknown");
                 Assert(!records.Any(r => r.Code == "COMMAND_COMPLETED"));
             });
-            Check("main form has manual injection, donation and injector log", () => {
+            Check("money input accepts positive modifier decimals and converts to game cents", () => {
+                Assert(MainForm.TryParseMoneyAmount("1", out var one) && one == 100);
+                Assert(MainForm.TryParseMoneyAmount("1.23", out var cents) && cents == 123);
+                Assert(MainForm.TryParseMoneyAmount("21474836.46", out var max) && max == int.MaxValue - 1);
+                foreach (string value in new[] { "", "0", "-1", "0.001", "abc", "21474836.47", "21474836.48", " 1 " })
+                    Assert(!MainForm.TryParseMoneyAmount(value, out _));
+            });
+            Check("main form has money controls and gated features", () => {
                 Application.SetHighDpiMode(HighDpiMode.SystemAware); Application.EnableVisualStyles();
                 using var form = new MainForm(); form.Show(); Application.DoEvents();
                 IEnumerable<Control> Flatten(Control c) => c.Controls.Cast<Control>().SelectMany(x => new[] {x}.Concat(Flatten(x)));
                 var labels = Flatten(form).OfType<Button>().Select(b => b.Text).ToArray();
-                Assert(labels.SequenceEqual(new[] { "手动注入", "无偿捐赠作者" }) && form.Text.StartsWith("Kainy's Nivalis Nights Trainer · "));
+                Assert(labels.Contains("手动注入") && labels.Contains("无偿捐赠作者") && labels.Contains("探测玩家数据") && labels.Contains("确定") && !labels.Contains("增加金钱") && !labels.Contains("减少金钱") && form.Text.StartsWith("Kainy's Nivalis Nights Trainer · "));
+                var topButtons = Flatten(form).OfType<Button>().Where(b => b.Text is "手动注入" or "探测玩家数据" or "无偿捐赠作者").ToArray();
+                Assert(topButtons.Length == 3 && topButtons.All(b => b.Width == 180 && b.Height == 42));
+                var textLabels = Flatten(form).OfType<Label>().Select(l => l.Text).ToArray();
+                Assert(textLabels.Contains("修改余额为") && textLabels.Contains("范围 0.01 - 21474836.46"));
                 var pages = Flatten(form).OfType<TabControl>().Single();
                 Assert(pages.TabPages.Cast<TabPage>().Select(p => p.Text).SequenceEqual(new[] { "首页", "基础选项" }));
+                var amounts = Flatten(form).OfType<NumericUpDown>().ToArray();
+                Assert(amounts.Length == 1 && amounts.All(a => a.Minimum == 0.01m && a.Maximum == 21474836.46m && a.DecimalPlaces == 2 && a.Increment == 0.01m));
                 Assert(pages.SelectedIndex == 0 && !pages.TabPages[1].Enabled);
                 pages.SelectedIndex = 1;
                 Assert(pages.SelectedIndex == 0);
+                form.SetTestHookState(true);
                 form.SetHooksReady(true);
                 pages.SelectedIndex = 1;
                 Assert(pages.SelectedIndex == 1 && pages.TabPages[1].Enabled);
+                form.SetTestHookState(false);
+                form.RefreshHookStateForTest();
+                Assert(pages.SelectedIndex == 0 && !pages.TabPages[1].Enabled);
+                form.SetTestHookState(true);
+                form.SetHooksReady(true);
                 form.SetHooksReady(false);
                 Assert(pages.SelectedIndex == 0 && !pages.TabPages[1].Enabled);
                 pages.SelectedIndex = 1;
                 Assert(pages.SelectedIndex == 0);
-                Assert(Flatten(form).OfType<TextBox>().Count() == 1 && Flatten(form).OfType<TextBox>().All(t => t.ReadOnly));
+                var logBoxes = Flatten(form).OfType<TextBox>().Where(t => t.Multiline).ToArray();
+                Assert(logBoxes.Length == 1 && logBoxes[0].ReadOnly);
                 Assert(!Flatten(form).Any(c => c.Text.Contains("游戏程序") || c.Text.Contains("空闲时") || c.Text.Contains("默认关闭观察") || c.Text == "实时钩子日志"));
                 using var bitmap = new Bitmap(form.Width, form.Height); form.DrawToBitmap(bitmap, form.ClientRectangle);
                 bitmap.Save(Path.Combine(scratch, "modifier-ui.png"));
