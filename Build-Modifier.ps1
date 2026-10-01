@@ -63,7 +63,7 @@ try {
     $manifest | ConvertTo-Json -Depth 3 | Set-Content -LiteralPath "$destination/payload.sha256.json" -Encoding utf8
     Copy-Item -LiteralPath 'src/NightsHack.Modifier/README.md' -Destination "$destination/README.md"
     Copy-Item -LiteralPath 'LICENSE' -Destination "$destination/LICENSE"
-    [ordered]@{ Version=$Version; BuiltAt=[DateTimeOffset]::Now.ToString('o'); Architecture='win-x64'; Entry='NightsHack.exe'; PayloadFiles=$manifest.Count } |
+    [ordered]@{ Version=$Version; BuiltAt=[DateTimeOffset]::Now.ToString('o'); Architecture='win-x64'; Entry='NivalisNightsTrainer.exe'; PayloadFiles=$manifest.Count } |
         ConvertTo-Json | Set-Content -LiteralPath "$destination/build.json" -Encoding utf8
     # Publish only a completed package. Keep the previous completed build outside the delivery directory.
     New-Item -ItemType Directory -Force (Split-Path $release), 'work/modifier-build-history' | Out-Null
@@ -74,5 +74,5 @@ try {
     }
     try { Move-Item -LiteralPath $destination -Destination $release }
     catch { if ($backup) { Move-Item -LiteralPath $backup -Destination $release }; throw }
-    Write-Output "Built modifier: $release/NightsHack.exe"
+    Write-Output "Built modifier: $release/NivalisNightsTrainer.exe"
 } finally { Pop-Location }

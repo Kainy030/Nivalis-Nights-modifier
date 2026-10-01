@@ -218,6 +218,11 @@ internal sealed class MainForm : Form
     async Task RunAction()
     {
         if (busy) return;
+        if (basicPage.Enabled && HookProcessIsAlive())
+        {
+            Log("INJECTION_ALREADY_READY", "当前游戏会话已注入并就绪，无需重复注入。", outcome: "AlreadyReady");
+            return;
+        }
         busy = true; request = Guid.NewGuid(); targetPid = 0;
         SetHooksReady(false);
         manualButton.Enabled = false;

@@ -137,6 +137,14 @@ internal static class Checks
                 form.SetHooksReady(true);
                 pages.SelectedIndex = 1;
                 Assert(pages.SelectedIndex == 1 && pages.TabPages[1].Enabled);
+                pages.SelectedIndex = 0;
+                var manual = topButtons.Single(b => b.Text == "手动注入");
+                manual.PerformClick();
+                manual.PerformClick();
+                Assert(pages.TabPages[1].Enabled && manual.Enabled);
+                Assert(Flatten(form).OfType<TextBox>().Single(t => t.Multiline).Text.Contains("INJECTION_ALREADY_READY"));
+                pages.SelectedIndex = 1;
+                Assert(pages.SelectedIndex == 1);
                 form.SetTestHookState(false);
                 form.RefreshHookStateForTest();
                 Assert(pages.SelectedIndex == 0 && !pages.TabPages[1].Enabled);

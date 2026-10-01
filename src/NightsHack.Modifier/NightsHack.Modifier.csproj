@@ -9,7 +9,7 @@
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Version>0.4.4-Dev</Version>
-    <AssemblyName>NightsHack</AssemblyName>
+    <AssemblyName>NivalisNightsTrainer</AssemblyName>
     <AppHostRelativeDotNet>runtime</AppHostRelativeDotNet>
   </PropertyGroup>
   <ItemGroup><Compile Include="../NightsHack.Logging/Audit.cs" Link="Audit.cs" /></ItemGroup>

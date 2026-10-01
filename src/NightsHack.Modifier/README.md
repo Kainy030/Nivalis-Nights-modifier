@@ -4,7 +4,7 @@
 
 探测和余额设置通过 PlayerHook 的本地 IPC 排队，在游戏主线程执行。命令接收、目标解析、写入和结果事件写入游戏目录的 BepInEx 日志；注入器窗口日志只记录注入生命周期。
 
-双击 NightsHack.exe，点击“手动注入”自动查找运行中的 Nivalis Nights 进程；无需选择游戏路径。保留整个发布目录；GUI 自带私有 .NET 运行时。
+双击 NivalisNightsTrainer.exe，点击“手动注入”自动查找运行中的 Nivalis Nights 进程；无需选择游戏路径。保留整个发布目录；GUI 自带私有 .NET 运行时。
 
 ## 使用
 
