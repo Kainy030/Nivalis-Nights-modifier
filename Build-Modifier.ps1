@@ -1,5 +1,5 @@
 param(
-    [ValidatePattern('^v[0-9]+[.][0-9]+([.][0-9]+)?[-A-Za-z0-9.]*$')][string]$Version = 'v0.4.4-Dev',
+    [ValidatePattern('^v[0-9]+[.][0-9]+([.][0-9]+)?[-A-Za-z0-9.]*$')][string]$Version = 'v0.6-Dev',
     [string]$Zig = (Join-Path $PSScriptRoot '.tools/zig/zig-x86_64-windows-0.14.1/zig.exe'),
     [switch]$SkipHooks
 )

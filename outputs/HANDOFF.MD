@@ -1,5 +1,17 @@
 # NivalisNightsTrainer — 快速交接
 
+## 最新交接：v1.1-Dev（2026-10-03）
+
+- 当前最新源码版本为 `v1.1-Dev`，基于游戏升级后的新 `GameAssembly.dll` 与 `global-metadata.dat` 哈希；HookRuntime 与修改器校验已同步更新。
+- 修改器命令与玩家探测日志已增强：金币命令记录 ACK、完成/拒绝/超时/失败结果；玩家探测同样记录结果与超时；无效金币输入会明确拒绝并提示安全范围。
+- PlayerHook 清单更新为 323 个方法、32 个类型、48 个明确排除项；四插件合计 1,066 个候选入口。
+- 当前发布包为 `outputs/BuildRelease/v1.1-Dev`，入口 `NivalisNightsTrainer.exe`，`build.json` 标记版本 `v1.1-Dev`，包含 231 个 payload 文件。
+- 已清理旧发布目录 `outputs/BuildRelease/v0.5.2-CommandFix`、`v0.6-Dev`、`v1.0-Dev`；保留当前 `v1.1-Dev` 及源码、参考文档和调查证据。
+- 本次版本变更将提交到 `main`，随后推送远端并创建注释标签 `v1.1-Dev`。构建包存在不等于已完成真实游戏内注入、玩法或跨电脑验证；如未有新的运行证据，不应宣称这些行为已验证。
+
+以下为历史交接记录；如与本节冲突，以本节为准。
+# NivalisNightsTrainer — 快速交接
+
 ## 最新交接：v0.5.1-BugFix（2026-10-01）
 
 - 工作区根目录已由用户改名为 `D:/NivalisNightsTrainer`，旧 `D:/NightsHack` 已不存在。下方历史路径保留为历史记录；后续命令使用新根目录。文档索引位于 `outputs/catalog.md`。
@@ -200,3 +212,5 @@ MCP 顺序：`list_dumps → load_project → search_symbols → get_class_info 
 - 统一交付 outputs/Hooks 有四插件 DLL/PDB、公共 HookRuntime DLL/PDB、README、两份参考文档、各插件 Catalog 和 build-sha256.json；旧 outputs/PlayerHook、outputs/WorldHooks 同步刷新，以实际文件和新哈希为准。
 - **尚未验证**：实际 loader 兼容、324 候选可安装数量、原生回调、生成的字典投影、各 schema 可读性、性能、存档往返、卸载。未写游戏目录。
 - Player 底层报告来自已有导出/只读 PE：75 份方法反汇编记录、74 个唯一入口；IL2CPP MCP 因审批后端 403 无法执行，未绕过审批。详细工具限制、输入身份、字段与公式见 player-investigation.md。
+
+

@@ -46,7 +46,7 @@ internal sealed class MainForm : Form
     public MainForm()
     {
         status.Name = "injectorLog";
-        string version = "v0.5-Dev-IPC";
+        string version = "v0.6-Dev";
         string build = Path.Combine(AppContext.BaseDirectory, "build.json");
         if (File.Exists(build))
         {
@@ -111,6 +111,8 @@ internal sealed class MainForm : Form
     {
         if (TryConvertModifierMoney(moneyAmount.Value, out int amount))
             _ = ExecuteSetMoneyAsync(amount);
+        else
+            Log("MONEY_REJECTED", "金币数值无效或超出范围。请输入 0.01 到 21474836.46，最多两位小数。", "WARN", "Rejected");
     }
 
     async Task ExecuteSetMoneyAsync(int value)
@@ -121,17 +123,25 @@ internal sealed class MainForm : Form
         {
             var command = new PipeCommandRequest(id, "Player", "Nivalis.PlayerManager.LocalPlayer.Inventory.Money", "Set", JsonSerializer.Serialize(new { value }));
             var ack = await SendPipeCommandAsync("NightsHack.Command." + targetPid, command, TimeSpan.FromSeconds(3));
+            Log("MONEY_COMMAND_ACK", ack.Summary, ack.Succeeded ? "INFO" : "WARN", ack.State);
             if (!ack.Succeeded) return;
+            bool completed = false;
             DateTime deadline = DateTime.UtcNow.AddSeconds(8);
             while (DateTime.UtcNow < deadline)
             {
                 await Task.Delay(250);
                 var poll = new PipeCommandRequest(Guid.NewGuid(), "Player", "Nivalis.PlayerManager.LocalPlayer.Inventory.Money", "GetResult", JsonSerializer.Serialize(new { requestId = id }));
                 var reply = await SendPipeCommandAsync("NightsHack.Command." + targetPid, poll, TimeSpan.FromSeconds(1));
-                if (reply.State is "Completed" or "SideEffectsUnknown" or "Rejected") break;
+                if (reply.State is "Completed" or "SideEffectsUnknown" or "Rejected")
+                {
+                    completed = true;
+                    Log("MONEY_COMMAND_RESULT", reply.Summary + (reply.ResultJson == "{}" ? "" : "; " + reply.ResultJson), reply.Succeeded ? "INFO" : "WARN", reply.State);
+                    break;
+                }
             }
+            if (!completed) Log("MONEY_COMMAND_TIMEOUT", "游戏线程在 8 秒内没有返回金币结果；请查看 BepInEx 日志中的 COMMAND_TICK/COMMAND_FAILED。", "WARN", "Pending");
         }
-        catch (Exception) { }
+        catch (Exception error) { Log("MONEY_COMMAND_FAILED", error.GetBaseException().Message, "ERROR", "Failed"); }
         finally { setMoneyButton.Enabled = basicPage.Enabled; }
     }
 
@@ -147,20 +157,28 @@ internal sealed class MainForm : Form
         {
             var command = new PipeCommandRequest(id, "Player", "Nivalis.PlayerManager.LocalPlayer.Inventory", "Probe", "{}");
             var ack = await SendPipeCommandAsync("NightsHack.Command." + targetPid, command, TimeSpan.FromSeconds(3));
+            Log("PLAYER_PROBE_ACK", ack.Summary, ack.Succeeded ? "INFO" : "WARN", ack.State);
             if (!ack.Succeeded)
             {
                 return;
             }
+            bool completed = false;
             DateTime deadline = DateTime.UtcNow.AddSeconds(8);
             while (DateTime.UtcNow < deadline)
             {
                 await Task.Delay(250);
                 var poll = new PipeCommandRequest(Guid.NewGuid(), "Player", "Nivalis.PlayerManager.LocalPlayer.Inventory", "GetResult", JsonSerializer.Serialize(new { requestId = id }));
                 var reply = await SendPipeCommandAsync("NightsHack.Command." + targetPid, poll, TimeSpan.FromSeconds(1));
-                if (reply.State == "Completed" && reply.ResultJson != "{}") break;
+                if (reply.State is "Completed" or "SideEffectsUnknown" or "Rejected")
+                {
+                    completed = true;
+                    Log("PLAYER_PROBE_RESULT", reply.Summary + (reply.ResultJson == "{}" ? "" : "; " + reply.ResultJson), reply.Succeeded ? "INFO" : "WARN", reply.State);
+                    break;
+                }
             }
+            if (!completed) Log("PLAYER_PROBE_TIMEOUT", "游戏线程在 8 秒内没有返回玩家数据；请查看 BepInEx 日志中的 COMMAND_TICK/COMMAND_FAILED。", "WARN", "Pending");
         }
-        catch (Exception) { }
+        catch (Exception error) { Log("PLAYER_PROBE_FAILED", error.GetBaseException().Message, "ERROR", "Failed"); }
         finally { probePlayerButton.Enabled = basicPage.Enabled; }
     }
 

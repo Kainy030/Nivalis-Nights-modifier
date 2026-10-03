@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Version>0.4.4-Dev</Version>
+    <Version>0.6.0-Dev</Version>
     <AssemblyName>NivalisNightsTrainer</AssemblyName>
     <AppHostRelativeDotNet>runtime</AppHostRelativeDotNet>
   </PropertyGroup>

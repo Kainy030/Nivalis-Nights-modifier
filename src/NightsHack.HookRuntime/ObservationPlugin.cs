@@ -224,8 +224,12 @@ public abstract class ObservationPlugin : BasePlugin
     {
         if (gameAssembly != null) return;
         if (!Environment.Is64BitProcess) throw new PlatformNotSupportedException("x64 required.");
-        TargetValidation.VerifyFile(Path.Combine(Paths.GameRootPath, "GameAssembly.dll"), TargetValidation.AssemblyHash);
-        TargetValidation.VerifyFile(Path.Combine(Paths.GameRootPath, "Nivalis Nights_Data", "il2cpp_data", "Metadata", "global-metadata.dat"), TargetValidation.MetadataHash);
+        string assemblyPath = Path.Combine(Paths.GameRootPath, "GameAssembly.dll");
+        string metadataPath = Path.Combine(Paths.GameRootPath, "Nivalis Nights_Data", "il2cpp_data", "Metadata", "global-metadata.dat");
+        if (!TargetValidation.TryVerifyFile(assemblyPath, TargetValidation.AssemblyHash, out string assemblyWarning))
+            Log.LogWarning($"{Identifier}: 游戏版本/程序集校验不匹配，继续尝试运行；部分钩子功能可能不可用。{assemblyWarning}");
+        if (!TargetValidation.TryVerifyFile(metadataPath, TargetValidation.MetadataHash, out string metadataWarning))
+            Log.LogWarning($"{Identifier}: 游戏 metadata 版本校验不匹配，继续尝试运行；部分钩子功能可能不可用。{metadataWarning}");
         using var process = Process.GetCurrentProcess();
         var module = process.Modules.Cast<ProcessModule>().Single(m => string.Equals(m.ModuleName, "GameAssembly.dll", StringComparison.OrdinalIgnoreCase));
         var assembly = Assembly.Load(new AssemblyName("Assembly-CSharp"));

@@ -25,9 +25,9 @@ var aliases = mapping.RootElement.GetProperty("ScriptMethod").EnumerateArray().G
 
 Check("four catalogs have disjoint signatures and native entries", () => {
     var combined = all.Concat(player.Methods).ToArray();
-    Assert(player.Methods.Length == 324 && player.Types.Length == 32 && player.Excluded.Length == 46);
+    Assert(player.Methods.Length == 323 && player.Types.Length == 32 && player.Excluded.Length == 48);
     Assert(catalogs["WorldHook"].Methods.Length == 350 && catalogs["ItemHook"].Methods.Length == 220 &&
-        catalogs["GameRuntimeHook"].Methods.Length == 173 && combined.Length == 1067);
+        catalogs["GameRuntimeHook"].Methods.Length == 173 && combined.Length == 1066);
     Assert(combined.Select(m => m.Id).Distinct().Count() == combined.Length);
     Assert(combined.Select(m => Convert.ToInt64(m.Rva,16)).Distinct().Count() == combined.Length);
     Assert(all.All(m => m.Parameters.Length == m.OutParameters.Length && m.Parameters.Length == m.ParameterNames.Length));

@@ -14,7 +14,7 @@ MethodSpec Spec(string name, string result, params string[] args) => new("Test",
 
 var catalog = Catalog.Load(Assembly.GetExecutingAssembly(), "PlayerHook.Catalog.json");
 Check("catalog identity, unique signatures and native RVAs", () => {
-    Assert(catalog.Methods.Length == 324 && catalog.Types.Length == 32 && catalog.Excluded.Length == 46);
+    Assert(catalog.Methods.Length == 323 && catalog.Types.Length == 32 && catalog.Excluded.Length == 48);
     Assert(catalog.Methods.Select(m => m.Id).Distinct().Count() == catalog.Methods.Length);
     Assert(catalog.Methods.Select(m => m.Rva).Distinct().Count() == catalog.Methods.Length);
     Assert(catalog.Methods.All(m => m.Parameters.Length == m.OutParameters.Length && m.Parameters.Length == m.ParameterNames.Length));

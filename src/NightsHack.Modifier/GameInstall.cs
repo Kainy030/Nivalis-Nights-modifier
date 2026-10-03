@@ -8,8 +8,8 @@ namespace NightsHack.Modifier;
 internal sealed class GameInstall
 {
     public const string ExeName = "Nivalis Nights.exe";
-    const string AssemblyHash = "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D";
-    const string MetadataHash = "C8BD44F74B47136AEAD259DC2B88F289C12CB01E083FEEECDCD096A6FC1B2CF9";
+    const string AssemblyHash = "0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D";
+    const string MetadataHash = "5139D6BB87229495DE92FEC78F5F253E31C7D05BFE69A950CAE73C90975747E3";
     internal static readonly string[] PluginNames = ["PlayerHook", "WorldHook", "ItemHook", "GameRuntimeHook", "NightsHack.HookRuntime"];
     readonly string executable, root, package;
     internal Func<List<Process>>? TestProcessProbe { get; init; }

@@ -19,7 +19,7 @@ try {
     foreach ($m in $player.Methods) {
         $id = "$($m.Type).$($m.Name)($($m.Parameters -join ','))"
         [void]$playerIds.Add($id)
-        $reserved[[Convert]::ToInt64($m.Rva,16)] = "PlayerHook: $id"
+        $reserved[('0x{0:X}' -f [Convert]::ToInt64($m.Rva,16))] = "PlayerHook: $id"
     }
     $catalogs = @{}
     foreach ($owner in @('WorldHook','ItemHook','GameRuntimeHook')) {
@@ -49,7 +49,7 @@ try {
             $id = "$typeName.$($method.Name)($($params -join ','))"
             $aliasNames = @($aliases[[string]$rva] | Sort-Object)
             $reason = if ($playerIds.Contains($id)) { 'Already covered by PlayerHook signature' }
-                elseif ($rva -ne 0 -and $reserved.ContainsKey($rva)) { 'Native entry already owned by ' + $reserved[$rva] }
+                elseif ($rva -ne 0 -and $reserved.ContainsKey(('0x{0:X}' -f $rva))) { 'Native entry already owned by ' + $reserved[('0x{0:X}' -f $rva)] }
                 elseif ($method.IsConstructor) { 'Construction/finalization is outside observer scope' }
                 elseif ($method.Name -eq 'Finalize') { 'Construction/finalization is outside observer scope' }
                 elseif ($method.IsAbstract -or $type.IsInterface) { 'Abstract/interface declaration; observe implementation' }
@@ -77,7 +77,7 @@ try {
                 $catalog.Excluded.Add($entry)
             } else {
                 $catalog.Methods.Add($entry)
-                $reserved[$rva] = "$($s.Owner): $id"
+                if ($rva -ne 0) { $reserved[('0x{0:X}' -f $rva)] = "$($s.Owner): $id" }
             }
         }
     }

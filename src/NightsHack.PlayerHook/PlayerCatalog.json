@@ -8,10 +8,10 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -34,6 +34,31 @@
     {
       "Group": "Input",
       "Type": "Nivalis.PlayerInputManager",
+      "Name": "TabRightListener",
+      "ReturnType": "System.Void",
+      "Parameters": [
+        "UnityEngine.InputSystem.InputAction+CallbackContext"
+      ],
+      "ParameterNames": [
+        "obj"
+      ],
+      "OutParameters": [
+        false
+      ],
+      "Rva": "0x67A150",
+      "Sampled": false,
+      "Reason": "Shared native RVA; ambiguous entry",
+      "AliasCount": 4,
+      "Aliases": [
+        "Nivalis.Locale.UI.LocaleStaffDetailsDisplay$$FireStaff",
+        "Nivalis.PlayerInputManager$$TabRightListener",
+        "Nivalis.UI.CharacterEditor.CharacterPickerPanel$$AcceptButtonListener",
+        "Nivalis.UI.RadialMenuItemUI$$Click"
+      ]
+    },
+    {
+      "Group": "Input",
+      "Type": "Nivalis.PlayerInputManager",
       "Name": "Is2DVectorCompositePart",
       "ReturnType": "System.Boolean",
       "Parameters": [
@@ -48,7 +73,7 @@
         false,
         false
       ],
-      "Rva": "0x2F084E0",
+      "Rva": "0x67C740",
       "Sampled": false,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -70,7 +95,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F08F20",
+      "Rva": "0x67D180",
       "Sampled": false,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -92,7 +117,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9B1630",
+      "Rva": "0x8FE700",
       "Sampled": false,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -114,7 +139,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x6A75E0",
+      "Rva": "0x8C6E70",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 12,
@@ -141,10 +166,10 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -178,7 +203,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D080D0",
+      "Rva": "0x2E0D3E0",
       "Sampled": false,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -194,7 +219,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D02620",
+      "Rva": "0x2E079C0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 2,
@@ -217,7 +242,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0xFBABB0",
+      "Rva": "0xF549C0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 8,
@@ -246,7 +271,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x6A88B0",
+      "Rva": "0x67FD60",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 55,
@@ -283,7 +308,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D02620",
+      "Rva": "0x2E079C0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 2,
@@ -320,7 +345,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D07FB0",
+      "Rva": "0x67F710",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 5,
@@ -352,7 +377,7 @@
         false,
         false
       ],
-      "Rva": "0x9BDC80",
+      "Rva": "0x90ACD0",
       "Sampled": false,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -380,7 +405,7 @@
         false,
         false
       ],
-      "Rva": "0x9BDE00",
+      "Rva": "0x90AE50",
       "Sampled": true,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -402,7 +427,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x8D0C00",
+      "Rva": "0x90CE30",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 56,
@@ -439,7 +464,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x789580",
+      "Rva": "0x6402E0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 39,
@@ -476,7 +501,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x8D0C20",
+      "Rva": "0x62E840",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 51,
@@ -513,7 +538,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x83F330",
+      "Rva": "0x6402C0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 41,
@@ -550,7 +575,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C0140",
+      "Rva": "0x631F00",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 57,
@@ -587,7 +612,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C0180",
+      "Rva": "0x90D1D0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 7,
@@ -609,7 +634,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C0B40",
+      "Rva": "0x90DB90",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 2,
@@ -626,7 +651,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C0B40",
+      "Rva": "0x90DB90",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 2,
@@ -652,10 +677,10 @@
         false,
         false
       ],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -689,10 +714,10 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -720,10 +745,10 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -751,7 +776,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x79BBD0",
+      "Rva": "0x64C130",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 19,
@@ -782,7 +807,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x79BC20",
+      "Rva": "0x64C180",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 80,
@@ -806,6 +831,37 @@
       ]
     },
     {
+      "Group": "Ghost",
+      "Type": "Nivalis.PlayerGhost",
+      "Name": "CancelVisit",
+      "ReturnType": "System.Void",
+      "Parameters": [],
+      "ParameterNames": [],
+      "OutParameters": [],
+      "Rva": "0x562E20",
+      "Sampled": false,
+      "Reason": "Shared native RVA; ambiguous entry",
+      "AliasCount": 9817,
+      "Aliases": [
+        "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
+        "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
+        "_Work_Lukasz.Scripts.Ranking.RankingListElementVenue$$ClearListeners",
+        "_Work_Lukasz.Scripts.Staging.StagingPanelBig.<>c$$.ctor",
+        "_Work_Lukasz.Scripts.Staging.StagingProgressData$$.ctor",
+        "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.IDisposable.Dispose",
+        "_Work_Lukasz.Scripts.UI.CompostingMachineUI.<>c__DisplayClass37_0$$.ctor",
+        "_Work_Lukasz.Scripts.UI.CompostingMachineUI.<>c__DisplayClass38_0$$.ctor",
+        "_Work_Lukasz.Scripts.UI.MenuQuestEntry$$ClearListeners",
+        "_Work_Lukasz.Scripts.UI.MenuSubQuestEntry$$ClearListeners",
+        "_Work_Lukasz.Scripts.UI.VendingMachineUI.<>c__DisplayClass55_0$$.ctor",
+        "_Work_Lukasz.Scripts.UI.VendingMachineUI.<>c__DisplayClass56_0$$.ctor",
+        "AdSlot.<_LoadRoutine>d__12$$System.IDisposable.Dispose",
+        "AmplifyBloom.AmplifyBokeh$$OnBeforeSerialize",
+        "AmplifyBloom.AmplifyUtils$$.ctor",
+        "AmplifyBloom.StarLineData$$.ctor"
+      ]
+    },
+    {
       "Group": "Movement",
       "Type": "Nivalis.PlayerCharacterController",
       "Name": "set_Camera",
@@ -819,7 +875,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x94D5D0",
+      "Rva": "0x7D7DE0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 123,
@@ -856,7 +912,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x8C2E10",
+      "Rva": "0x6277D0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 84,
@@ -887,7 +943,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C1C80",
+      "Rva": "0x90ECD0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 4,
@@ -912,7 +968,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF1BB0",
+      "Rva": "0x6653A0",
       "Sampled": false,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -934,7 +990,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF1C50",
+      "Rva": "0x665440",
       "Sampled": false,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -950,7 +1006,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D07FB0",
+      "Rva": "0x67F710",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 5,
@@ -985,7 +1041,7 @@
         false,
         false
       ],
-      "Rva": "0x2F10130",
+      "Rva": "0x6843F0",
       "Sampled": false,
       "Reason": "Static entry (instance observer only)",
       "AliasCount": 1,
@@ -1001,10 +1057,10 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -1152,7 +1208,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x6A88B0",
+      "Rva": "0x67FD60",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 55,
@@ -1189,7 +1245,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0BFE0",
+      "Rva": "0x6802A0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 2,
@@ -1235,7 +1291,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0BFE0",
+      "Rva": "0x6802A0",
       "Sampled": false,
       "Reason": "Shared native RVA; ambiguous entry",
       "AliasCount": 2,
@@ -1260,7 +1316,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0A6A0",
+      "Rva": "0x67E900",
       "Sampled": false
     },
     {
@@ -1277,7 +1333,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0A6F0",
+      "Rva": "0x67E950",
       "Sampled": false
     },
     {
@@ -1297,7 +1353,7 @@
         false,
         false
       ],
-      "Rva": "0x2F05770",
+      "Rva": "0x6798D0",
       "Sampled": false
     },
     {
@@ -1308,7 +1364,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F05870",
+      "Rva": "0x6799D0",
       "Sampled": false
     },
     {
@@ -1319,7 +1375,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F058E0",
+      "Rva": "0x679A40",
       "Sampled": false
     },
     {
@@ -1336,7 +1392,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F05960",
+      "Rva": "0x679AC0",
       "Sampled": false
     },
     {
@@ -1347,7 +1403,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F05A00",
+      "Rva": "0x679B60",
       "Sampled": false
     },
     {
@@ -1358,7 +1414,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F05A60",
+      "Rva": "0x679BC0",
       "Sampled": false
     },
     {
@@ -1378,7 +1434,7 @@
         false,
         false
       ],
-      "Rva": "0x2F05C50",
+      "Rva": "0x679DB0",
       "Sampled": false
     },
     {
@@ -1398,7 +1454,7 @@
         false,
         false
       ],
-      "Rva": "0x2F05DD0",
+      "Rva": "0x679F30",
       "Sampled": false
     },
     {
@@ -1421,24 +1477,7 @@
         false,
         false
       ],
-      "Rva": "0x2F05FD0",
-      "Sampled": false
-    },
-    {
-      "Group": "Input",
-      "Type": "Nivalis.PlayerInputManager",
-      "Name": "TabRightListener",
-      "ReturnType": "System.Void",
-      "Parameters": [
-        "UnityEngine.InputSystem.InputAction+CallbackContext"
-      ],
-      "ParameterNames": [
-        "obj"
-      ],
-      "OutParameters": [
-        false
-      ],
-      "Rva": "0x2F05FF0",
+      "Rva": "0x67A130",
       "Sampled": false
     },
     {
@@ -1455,7 +1494,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F06010",
+      "Rva": "0x67A170",
       "Sampled": false
     },
     {
@@ -1466,7 +1505,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F06030",
+      "Rva": "0x67A190",
       "Sampled": false
     },
     {
@@ -1483,7 +1522,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F06C30",
+      "Rva": "0x67AD90",
       "Sampled": false
     },
     {
@@ -1500,7 +1539,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F06CF0",
+      "Rva": "0x67AF50",
       "Sampled": false
     },
     {
@@ -1517,7 +1556,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F06DB0",
+      "Rva": "0x67B010",
       "Sampled": false
     },
     {
@@ -1534,7 +1573,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F06E70",
+      "Rva": "0x67B0D0",
       "Sampled": false
     },
     {
@@ -1551,7 +1590,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F06F30",
+      "Rva": "0x67B190",
       "Sampled": false
     },
     {
@@ -1568,7 +1607,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F06FF0",
+      "Rva": "0x67B250",
       "Sampled": false
     },
     {
@@ -1585,7 +1624,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F07010",
+      "Rva": "0x67B270",
       "Sampled": false
     },
     {
@@ -1602,7 +1641,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F07030",
+      "Rva": "0x67B290",
       "Sampled": false
     },
     {
@@ -1619,7 +1658,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F07210",
+      "Rva": "0x67B470",
       "Sampled": false
     },
     {
@@ -1636,7 +1675,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F072B0",
+      "Rva": "0x67B510",
       "Sampled": false
     },
     {
@@ -1653,7 +1692,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F078F0",
+      "Rva": "0x67BB50",
       "Sampled": false
     },
     {
@@ -1670,7 +1709,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F07980",
+      "Rva": "0x67BBE0",
       "Sampled": false
     },
     {
@@ -1681,7 +1720,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F079F0",
+      "Rva": "0x67BC50",
       "Sampled": false
     },
     {
@@ -1698,7 +1737,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F07A70",
+      "Rva": "0x67BCD0",
       "Sampled": false
     },
     {
@@ -1721,7 +1760,7 @@
         false,
         false
       ],
-      "Rva": "0x2F07C30",
+      "Rva": "0x67BE90",
       "Sampled": false
     },
     {
@@ -1741,7 +1780,7 @@
         false,
         false
       ],
-      "Rva": "0x2F080F0",
+      "Rva": "0x67C350",
       "Sampled": false
     },
     {
@@ -1761,7 +1800,7 @@
         false,
         false
       ],
-      "Rva": "0x2F08150",
+      "Rva": "0x67C3B0",
       "Sampled": false
     },
     {
@@ -1781,7 +1820,7 @@
         false,
         false
       ],
-      "Rva": "0x2F088C0",
+      "Rva": "0x67CB20",
       "Sampled": false
     },
     {
@@ -1804,7 +1843,7 @@
         false,
         false
       ],
-      "Rva": "0x2F091F0",
+      "Rva": "0x67D450",
       "Sampled": false
     },
     {
@@ -1821,7 +1860,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0A2B0",
+      "Rva": "0x67E510",
       "Sampled": false
     },
     {
@@ -1832,7 +1871,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0A300",
+      "Rva": "0x67E560",
       "Sampled": false
     },
     {
@@ -1849,7 +1888,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0A390",
+      "Rva": "0x67E5F0",
       "Sampled": false
     },
     {
@@ -1866,7 +1905,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0A3E0",
+      "Rva": "0x67E640",
       "Sampled": false
     },
     {
@@ -1877,7 +1916,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0A500",
+      "Rva": "0x67E760",
       "Sampled": false
     },
     {
@@ -1888,7 +1927,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B1690",
+      "Rva": "0x8FE760",
       "Sampled": false
     },
     {
@@ -1899,7 +1938,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B1820",
+      "Rva": "0x8FE8F0",
       "Sampled": false
     },
     {
@@ -1910,7 +1949,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B1990",
+      "Rva": "0x8FEA60",
       "Sampled": true
     },
     {
@@ -1927,7 +1966,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9B1F60",
+      "Rva": "0x8FF030",
       "Sampled": true
     },
     {
@@ -1938,7 +1977,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B35B0",
+      "Rva": "0x900680",
       "Sampled": false
     },
     {
@@ -1949,7 +1988,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B37C0",
+      "Rva": "0x900890",
       "Sampled": false
     },
     {
@@ -1960,7 +1999,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B39A0",
+      "Rva": "0x900A70",
       "Sampled": false
     },
     {
@@ -1971,7 +2010,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B3D50",
+      "Rva": "0x900E20",
       "Sampled": false
     },
     {
@@ -1991,7 +2030,7 @@
         false,
         false
       ],
-      "Rva": "0x9B3EE0",
+      "Rva": "0x900FB0",
       "Sampled": false
     },
     {
@@ -2008,7 +2047,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9B4220",
+      "Rva": "0x9012F0",
       "Sampled": false
     },
     {
@@ -2025,7 +2064,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9B4330",
+      "Rva": "0x901400",
       "Sampled": false
     },
     {
@@ -2036,7 +2075,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B4440",
+      "Rva": "0x901510",
       "Sampled": false
     },
     {
@@ -2053,7 +2092,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2DCA650",
+      "Rva": "0x2ED24B0",
       "Sampled": false
     },
     {
@@ -2064,7 +2103,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCA8E0",
+      "Rva": "0x2ED2740",
       "Sampled": false
     },
     {
@@ -2075,7 +2114,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCA9A0",
+      "Rva": "0x2ED2800",
       "Sampled": false
     },
     {
@@ -2086,7 +2125,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCAA90",
+      "Rva": "0x2ED28F0",
       "Sampled": true
     },
     {
@@ -2097,7 +2136,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCADE0",
+      "Rva": "0x2ED2C40",
       "Sampled": true
     },
     {
@@ -2108,7 +2147,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCB040",
+      "Rva": "0x2ED2EA0",
       "Sampled": true
     },
     {
@@ -2119,7 +2158,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCB300",
+      "Rva": "0x2ED3160",
       "Sampled": false
     },
     {
@@ -2130,7 +2169,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCB600",
+      "Rva": "0x2ED3460",
       "Sampled": false
     },
     {
@@ -2147,7 +2186,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2DCBA80",
+      "Rva": "0x2ED38E0",
       "Sampled": false
     },
     {
@@ -2158,7 +2197,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCBDA0",
+      "Rva": "0x2ED3C00",
       "Sampled": false
     },
     {
@@ -2175,7 +2214,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2DCC3F0",
+      "Rva": "0x2ED4250",
       "Sampled": false
     },
     {
@@ -2192,7 +2231,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2DCC6B0",
+      "Rva": "0x2ED4510",
       "Sampled": false
     },
     {
@@ -2203,7 +2242,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCCA20",
+      "Rva": "0x2ED4880",
       "Sampled": false
     },
     {
@@ -2223,7 +2262,7 @@
         false,
         false
       ],
-      "Rva": "0x2DCCAD0",
+      "Rva": "0x2ED4930",
       "Sampled": false
     },
     {
@@ -2234,7 +2273,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCCBA0",
+      "Rva": "0x2ED4A00",
       "Sampled": false
     },
     {
@@ -2245,7 +2284,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCCC40",
+      "Rva": "0x2ED4AA0",
       "Sampled": false
     },
     {
@@ -2256,7 +2295,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3031E40",
+      "Rva": "0x7B6B40",
       "Sampled": false
     },
     {
@@ -2267,7 +2306,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3031EB0",
+      "Rva": "0x7B6BB0",
       "Sampled": true
     },
     {
@@ -2278,7 +2317,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3032350",
+      "Rva": "0x7B7050",
       "Sampled": false
     },
     {
@@ -2295,7 +2334,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3032470",
+      "Rva": "0x7B7170",
       "Sampled": false
     },
     {
@@ -2306,7 +2345,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3032500",
+      "Rva": "0x7B7200",
       "Sampled": true
     },
     {
@@ -2317,7 +2356,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3032730",
+      "Rva": "0x7B7430",
       "Sampled": true
     },
     {
@@ -2334,7 +2373,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3032980",
+      "Rva": "0x7B7680",
       "Sampled": true
     },
     {
@@ -2351,7 +2390,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0D810",
+      "Rva": "0x681AD0",
       "Sampled": false
     },
     {
@@ -2371,7 +2410,7 @@
         false,
         false
       ],
-      "Rva": "0x2F0D900",
+      "Rva": "0x681BC0",
       "Sampled": false
     },
     {
@@ -2382,7 +2421,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0DDF0",
+      "Rva": "0x6820B0",
       "Sampled": false
     },
     {
@@ -2399,7 +2438,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0DE70",
+      "Rva": "0x682130",
       "Sampled": false
     },
     {
@@ -2410,7 +2449,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0DF40",
+      "Rva": "0x682200",
       "Sampled": true
     },
     {
@@ -2421,7 +2460,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0DF70",
+      "Rva": "0x682230",
       "Sampled": false
     },
     {
@@ -2438,7 +2477,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0DF90",
+      "Rva": "0x682250",
       "Sampled": false
     },
     {
@@ -2455,7 +2494,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0DFA0",
+      "Rva": "0x682260",
       "Sampled": false
     },
     {
@@ -2475,7 +2514,7 @@
         false,
         false
       ],
-      "Rva": "0x2F0E150",
+      "Rva": "0x682410",
       "Sampled": false
     },
     {
@@ -2492,7 +2531,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D086A0",
+      "Rva": "0x2E0D9B0",
       "Sampled": false
     },
     {
@@ -2509,7 +2548,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D08990",
+      "Rva": "0x2E0DCA0",
       "Sampled": false
     },
     {
@@ -2520,7 +2559,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D08D70",
+      "Rva": "0x2E0E080",
       "Sampled": false
     },
     {
@@ -2537,7 +2576,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D01CA0",
+      "Rva": "0x2E07040",
       "Sampled": false
     },
     {
@@ -2548,7 +2587,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D01DD0",
+      "Rva": "0x2E07170",
       "Sampled": false
     },
     {
@@ -2565,7 +2604,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D01E90",
+      "Rva": "0x2E07230",
       "Sampled": false
     },
     {
@@ -2582,7 +2621,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D02BB0",
+      "Rva": "0x2E07F50",
       "Sampled": false
     },
     {
@@ -2599,7 +2638,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D02DF0",
+      "Rva": "0x2E08190",
       "Sampled": false
     },
     {
@@ -2616,7 +2655,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D031B0",
+      "Rva": "0x2E08550",
       "Sampled": false
     },
     {
@@ -2633,7 +2672,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D03460",
+      "Rva": "0x2E08800",
       "Sampled": false
     },
     {
@@ -2644,7 +2683,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D03840",
+      "Rva": "0x2E08BE0",
       "Sampled": false
     },
     {
@@ -2664,7 +2703,7 @@
         false,
         false
       ],
-      "Rva": "0x2D03AB0",
+      "Rva": "0x2E08E50",
       "Sampled": false
     },
     {
@@ -2675,7 +2714,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D04690",
+      "Rva": "0x2E09A30",
       "Sampled": true
     },
     {
@@ -2686,7 +2725,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D04BE0",
+      "Rva": "0x2E09FA0",
       "Sampled": false
     },
     {
@@ -2706,7 +2745,7 @@
         false,
         false
       ],
-      "Rva": "0x2D04C50",
+      "Rva": "0x2E0A010",
       "Sampled": false
     },
     {
@@ -2726,7 +2765,7 @@
         false,
         false
       ],
-      "Rva": "0x2D04EC0",
+      "Rva": "0x2E0A280",
       "Sampled": false
     },
     {
@@ -2746,7 +2785,7 @@
         false,
         false
       ],
-      "Rva": "0x2D05130",
+      "Rva": "0x2E0A4F0",
       "Sampled": false
     },
     {
@@ -2757,7 +2796,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D053A0",
+      "Rva": "0x2E0A760",
       "Sampled": false
     },
     {
@@ -2768,7 +2807,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D05B10",
+      "Rva": "0x2E0AED0",
       "Sampled": false
     },
     {
@@ -2779,7 +2818,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D05C30",
+      "Rva": "0x2E0AFF0",
       "Sampled": false
     },
     {
@@ -2790,7 +2829,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D05CA0",
+      "Rva": "0x2E0B060",
       "Sampled": true
     },
     {
@@ -2807,7 +2846,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D060D0",
+      "Rva": "0x2E0B490",
       "Sampled": false
     },
     {
@@ -2824,7 +2863,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D061E0",
+      "Rva": "0x2E0B5A0",
       "Sampled": false
     },
     {
@@ -2841,7 +2880,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D062D0",
+      "Rva": "0x2E0B690",
       "Sampled": false
     },
     {
@@ -2858,7 +2897,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D06380",
+      "Rva": "0x2E0B740",
       "Sampled": false
     },
     {
@@ -2875,7 +2914,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D06430",
+      "Rva": "0x2E0B7F0",
       "Sampled": false
     },
     {
@@ -2901,7 +2940,7 @@
         false,
         false
       ],
-      "Rva": "0x2D066E0",
+      "Rva": "0x2E0BAA0",
       "Sampled": false
     },
     {
@@ -2933,7 +2972,7 @@
         false,
         false
       ],
-      "Rva": "0x2D06930",
+      "Rva": "0x2E0BC60",
       "Sampled": false
     },
     {
@@ -2962,7 +3001,7 @@
         false,
         false
       ],
-      "Rva": "0x2D06C70",
+      "Rva": "0x2E0BFA0",
       "Sampled": false
     },
     {
@@ -2991,7 +3030,7 @@
         false,
         false
       ],
-      "Rva": "0x2D06EB0",
+      "Rva": "0x2E0C1E0",
       "Sampled": false
     },
     {
@@ -3011,7 +3050,7 @@
         false,
         false
       ],
-      "Rva": "0x2D070C0",
+      "Rva": "0x2E0C3F0",
       "Sampled": false
     },
     {
@@ -3031,7 +3070,7 @@
         false,
         false
       ],
-      "Rva": "0x2D07130",
+      "Rva": "0x2E0C460",
       "Sampled": false
     },
     {
@@ -3054,7 +3093,7 @@
         true,
         false
       ],
-      "Rva": "0x2D071D0",
+      "Rva": "0x2E0C500",
       "Sampled": false
     },
     {
@@ -3074,7 +3113,7 @@
         true,
         true
       ],
-      "Rva": "0x2D07750",
+      "Rva": "0x2E0CA80",
       "Sampled": false
     },
     {
@@ -3091,7 +3130,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D07C10",
+      "Rva": "0x2E0CF40",
       "Sampled": false
     },
     {
@@ -3111,7 +3150,7 @@
         false,
         false
       ],
-      "Rva": "0x2D07F30",
+      "Rva": "0x2E0D260",
       "Sampled": false
     },
     {
@@ -3122,7 +3161,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BC920",
+      "Rva": "0x909970",
       "Sampled": false
     },
     {
@@ -3133,7 +3172,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BCE50",
+      "Rva": "0x909EA0",
       "Sampled": false
     },
     {
@@ -3144,7 +3183,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BCED0",
+      "Rva": "0x909F20",
       "Sampled": false
     },
     {
@@ -3155,7 +3194,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BD090",
+      "Rva": "0x90A0E0",
       "Sampled": false
     },
     {
@@ -3166,7 +3205,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BD0A0",
+      "Rva": "0x90A0F0",
       "Sampled": true
     },
     {
@@ -3177,7 +3216,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BD6D0",
+      "Rva": "0x90A720",
       "Sampled": true
     },
     {
@@ -3188,7 +3227,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BD810",
+      "Rva": "0x90A860",
       "Sampled": false
     },
     {
@@ -3211,7 +3250,7 @@
         false,
         false
       ],
-      "Rva": "0x9BDA60",
+      "Rva": "0x90AAB0",
       "Sampled": false
     },
     {
@@ -3222,7 +3261,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BE060",
+      "Rva": "0x90B0B0",
       "Sampled": false
     },
     {
@@ -3233,7 +3272,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BE140",
+      "Rva": "0x90B190",
       "Sampled": false
     },
     {
@@ -3244,7 +3283,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BE2A0",
+      "Rva": "0x90B2F0",
       "Sampled": true
     },
     {
@@ -3261,7 +3300,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9BE3C0",
+      "Rva": "0x90B410",
       "Sampled": false
     },
     {
@@ -3278,7 +3317,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9BE640",
+      "Rva": "0x90B690",
       "Sampled": false
     },
     {
@@ -3289,7 +3328,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9BE660",
+      "Rva": "0x90B6B0",
       "Sampled": true
     },
     {
@@ -3312,7 +3351,7 @@
         false,
         false
       ],
-      "Rva": "0x9BE9A0",
+      "Rva": "0x90B9F0",
       "Sampled": false
     },
     {
@@ -3329,7 +3368,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9BFAB0",
+      "Rva": "0x90CB00",
       "Sampled": false
     },
     {
@@ -3346,7 +3385,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C0250",
+      "Rva": "0x90D2A0",
       "Sampled": false
     },
     {
@@ -3357,7 +3396,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C0290",
+      "Rva": "0x90D2E0",
       "Sampled": false
     },
     {
@@ -3368,7 +3407,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C0370",
+      "Rva": "0x90D3C0",
       "Sampled": false
     },
     {
@@ -3379,7 +3418,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C0710",
+      "Rva": "0x90D760",
       "Sampled": true
     },
     {
@@ -3396,7 +3435,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C0AC0",
+      "Rva": "0x90DB10",
       "Sampled": false
     },
     {
@@ -3407,7 +3446,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C0C70",
+      "Rva": "0x90DCC0",
       "Sampled": false
     },
     {
@@ -3418,7 +3457,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C0D70",
+      "Rva": "0x90DDC0",
       "Sampled": false
     },
     {
@@ -3435,7 +3474,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C0EB0",
+      "Rva": "0x90DF00",
       "Sampled": false
     },
     {
@@ -3446,7 +3485,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C0F00",
+      "Rva": "0x90DF50",
       "Sampled": false
     },
     {
@@ -3466,7 +3505,7 @@
         false,
         false
       ],
-      "Rva": "0x9C1070",
+      "Rva": "0x90E0C0",
       "Sampled": false
     },
     {
@@ -3477,7 +3516,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C1300",
+      "Rva": "0x90E350",
       "Sampled": true
     },
     {
@@ -3494,7 +3533,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C1420",
+      "Rva": "0x90E470",
       "Sampled": false
     },
     {
@@ -3511,7 +3550,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C1860",
+      "Rva": "0x90E8B0",
       "Sampled": false
     },
     {
@@ -3528,7 +3567,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF7140",
+      "Rva": "0x66B120",
       "Sampled": false
     },
     {
@@ -3551,7 +3590,7 @@
         false,
         false
       ],
-      "Rva": "0x2EF7250",
+      "Rva": "0x66B230",
       "Sampled": false
     },
     {
@@ -3562,7 +3601,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF72D0",
+      "Rva": "0x66B2B0",
       "Sampled": true
     },
     {
@@ -3573,7 +3612,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF7340",
+      "Rva": "0x66B320",
       "Sampled": false
     },
     {
@@ -3590,7 +3629,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF74F0",
+      "Rva": "0x66B4D0",
       "Sampled": false
     },
     {
@@ -3601,7 +3640,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF7550",
+      "Rva": "0x66B530",
       "Sampled": false
     },
     {
@@ -3621,7 +3660,7 @@
         false,
         false
       ],
-      "Rva": "0x2EF7680",
+      "Rva": "0x66B660",
       "Sampled": false
     },
     {
@@ -3632,7 +3671,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF79E0",
+      "Rva": "0x66B9C0",
       "Sampled": false
     },
     {
@@ -3643,7 +3682,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF7BA0",
+      "Rva": "0x66BB80",
       "Sampled": false
     },
     {
@@ -3654,7 +3693,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF7CD0",
+      "Rva": "0x66BCB0",
       "Sampled": false
     },
     {
@@ -3665,7 +3704,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF8090",
+      "Rva": "0x66C070",
       "Sampled": false
     },
     {
@@ -3676,7 +3715,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF83C0",
+      "Rva": "0x66C3A0",
       "Sampled": false
     },
     {
@@ -3693,7 +3732,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF8750",
+      "Rva": "0x66C730",
       "Sampled": false
     },
     {
@@ -3710,7 +3749,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF8960",
+      "Rva": "0x66C940",
       "Sampled": false
     },
     {
@@ -3721,7 +3760,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C18A0",
+      "Rva": "0x90E8F0",
       "Sampled": false
     },
     {
@@ -3738,7 +3777,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C18C0",
+      "Rva": "0x90E910",
       "Sampled": false
     },
     {
@@ -3755,7 +3794,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C1F50",
+      "Rva": "0x90EFB0",
       "Sampled": false
     },
     {
@@ -3772,7 +3811,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C2110",
+      "Rva": "0x90F170",
       "Sampled": false
     },
     {
@@ -3783,7 +3822,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C2130",
+      "Rva": "0x90F190",
       "Sampled": false
     },
     {
@@ -3794,7 +3833,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C2580",
+      "Rva": "0x90F5E0",
       "Sampled": false
     },
     {
@@ -3805,7 +3844,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C2760",
+      "Rva": "0x90F7C0",
       "Sampled": false
     },
     {
@@ -3816,7 +3855,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C2DF0",
+      "Rva": "0x90FE50",
       "Sampled": false
     },
     {
@@ -3827,7 +3866,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C2F30",
+      "Rva": "0x90FF90",
       "Sampled": false
     },
     {
@@ -3850,7 +3889,7 @@
         false,
         false
       ],
-      "Rva": "0x9C2FD0",
+      "Rva": "0x910030",
       "Sampled": false
     },
     {
@@ -3861,7 +3900,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C4030",
+      "Rva": "0x9110E0",
       "Sampled": false
     },
     {
@@ -3872,7 +3911,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C4140",
+      "Rva": "0x9111F0",
       "Sampled": false
     },
     {
@@ -3883,7 +3922,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C41A0",
+      "Rva": "0x911250",
       "Sampled": false
     },
     {
@@ -3894,7 +3933,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C44C0",
+      "Rva": "0x911570",
       "Sampled": false
     },
     {
@@ -3911,7 +3950,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C4840",
+      "Rva": "0x9118F0",
       "Sampled": false
     },
     {
@@ -3922,7 +3961,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C4870",
+      "Rva": "0x911920",
       "Sampled": false
     },
     {
@@ -3933,7 +3972,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C5030",
+      "Rva": "0x9120E0",
       "Sampled": false
     },
     {
@@ -3950,7 +3989,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C5220",
+      "Rva": "0x9122D0",
       "Sampled": true
     },
     {
@@ -3961,7 +4000,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C5F00",
+      "Rva": "0x912FB0",
       "Sampled": true
     },
     {
@@ -3981,7 +4020,7 @@
         false,
         false
       ],
-      "Rva": "0x9C5FA0",
+      "Rva": "0x913050",
       "Sampled": true
     },
     {
@@ -3998,7 +4037,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C66A0",
+      "Rva": "0x913750",
       "Sampled": true
     },
     {
@@ -4009,7 +4048,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C6E30",
+      "Rva": "0x913EE0",
       "Sampled": false
     },
     {
@@ -4020,7 +4059,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C6F10",
+      "Rva": "0x913FC0",
       "Sampled": false
     },
     {
@@ -4031,7 +4070,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C7040",
+      "Rva": "0x9140F0",
       "Sampled": true
     },
     {
@@ -4042,7 +4081,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C7580",
+      "Rva": "0x914630",
       "Sampled": true
     },
     {
@@ -4053,7 +4092,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C7930",
+      "Rva": "0x9149E0",
       "Sampled": true
     },
     {
@@ -4064,7 +4103,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C7B30",
+      "Rva": "0x914BE0",
       "Sampled": true
     },
     {
@@ -4084,7 +4123,7 @@
         false,
         false
       ],
-      "Rva": "0x9C7D40",
+      "Rva": "0x914DF0",
       "Sampled": true
     },
     {
@@ -4095,7 +4134,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C8190",
+      "Rva": "0x915240",
       "Sampled": true
     },
     {
@@ -4106,7 +4145,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C8280",
+      "Rva": "0x915330",
       "Sampled": true
     },
     {
@@ -4123,7 +4162,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C82A0",
+      "Rva": "0x915350",
       "Sampled": true
     },
     {
@@ -4140,7 +4179,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C82D0",
+      "Rva": "0x915380",
       "Sampled": true
     },
     {
@@ -4151,7 +4190,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C8330",
+      "Rva": "0x9153E0",
       "Sampled": false
     },
     {
@@ -4162,7 +4201,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C8430",
+      "Rva": "0x9154E0",
       "Sampled": true
     },
     {
@@ -4182,7 +4221,7 @@
         false,
         true
       ],
-      "Rva": "0x9C86E0",
+      "Rva": "0x915790",
       "Sampled": true
     },
     {
@@ -4199,7 +4238,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C89B0",
+      "Rva": "0x915A60",
       "Sampled": true
     },
     {
@@ -4222,7 +4261,7 @@
         false,
         false
       ],
-      "Rva": "0x9C8EC0",
+      "Rva": "0x915F70",
       "Sampled": false
     },
     {
@@ -4242,7 +4281,7 @@
         false,
         false
       ],
-      "Rva": "0x9C9270",
+      "Rva": "0x916320",
       "Sampled": false
     },
     {
@@ -4259,7 +4298,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C93B0",
+      "Rva": "0x916460",
       "Sampled": false
     },
     {
@@ -4276,7 +4315,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C93F0",
+      "Rva": "0x9164A0",
       "Sampled": false
     },
     {
@@ -4293,7 +4332,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C9430",
+      "Rva": "0x9164E0",
       "Sampled": false
     },
     {
@@ -4304,7 +4343,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9C9470",
+      "Rva": "0x916520",
       "Sampled": false
     },
     {
@@ -4321,7 +4360,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9C94C0",
+      "Rva": "0x916570",
       "Sampled": false
     },
     {
@@ -4332,7 +4371,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF1CE0",
+      "Rva": "0x6654D0",
       "Sampled": true
     },
     {
@@ -4343,7 +4382,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF1D00",
+      "Rva": "0x6654F0",
       "Sampled": false
     },
     {
@@ -4354,7 +4393,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF1E60",
+      "Rva": "0x665650",
       "Sampled": false
     },
     {
@@ -4371,7 +4410,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF2020",
+      "Rva": "0x665810",
       "Sampled": false
     },
     {
@@ -4382,7 +4421,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF2210",
+      "Rva": "0x665A00",
       "Sampled": true
     },
     {
@@ -4393,7 +4432,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF2630",
+      "Rva": "0x665E20",
       "Sampled": true
     },
     {
@@ -4410,7 +4449,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF8B20",
+      "Rva": "0x66CB20",
       "Sampled": false
     },
     {
@@ -4421,7 +4460,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF8C00",
+      "Rva": "0x66CC00",
       "Sampled": false
     },
     {
@@ -4432,7 +4471,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF8DD0",
+      "Rva": "0x66CDD0",
       "Sampled": false
     },
     {
@@ -4443,7 +4482,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF9210",
+      "Rva": "0x66D210",
       "Sampled": true
     },
     {
@@ -4454,7 +4493,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF9400",
+      "Rva": "0x66D400",
       "Sampled": false
     },
     {
@@ -4465,7 +4504,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EF99C0",
+      "Rva": "0x66D9C0",
       "Sampled": false
     },
     {
@@ -4482,7 +4521,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF9A30",
+      "Rva": "0x66DA30",
       "Sampled": false
     },
     {
@@ -4499,7 +4538,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EF9EF0",
+      "Rva": "0x66DEF0",
       "Sampled": false
     },
     {
@@ -4516,7 +4555,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EFA0D0",
+      "Rva": "0x66E0D0",
       "Sampled": false
     },
     {
@@ -4536,7 +4575,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFA110",
+      "Rva": "0x66E110",
       "Sampled": false
     },
     {
@@ -4553,7 +4592,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EFA1C0",
+      "Rva": "0x66E1C0",
       "Sampled": false
     },
     {
@@ -4564,7 +4603,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFAE80",
+      "Rva": "0x66EE80",
       "Sampled": true
     },
     {
@@ -4575,7 +4614,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFAEC0",
+      "Rva": "0x66EEC0",
       "Sampled": false
     },
     {
@@ -4595,7 +4634,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFB0F0",
+      "Rva": "0x66F0F0",
       "Sampled": false
     },
     {
@@ -4606,7 +4645,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFB1A0",
+      "Rva": "0x66F1A0",
       "Sampled": true
     },
     {
@@ -4617,7 +4656,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFB8B0",
+      "Rva": "0x66F8B0",
       "Sampled": true
     },
     {
@@ -4628,7 +4667,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFC410",
+      "Rva": "0x670410",
       "Sampled": true
     },
     {
@@ -4639,7 +4678,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFC8C0",
+      "Rva": "0x6708C0",
       "Sampled": false
     },
     {
@@ -4662,7 +4701,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFCAB0",
+      "Rva": "0x670AB0",
       "Sampled": false
     },
     {
@@ -4673,7 +4712,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFCDD0",
+      "Rva": "0x670DD0",
       "Sampled": true
     },
     {
@@ -4684,7 +4723,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFDE20",
+      "Rva": "0x671E20",
       "Sampled": false
     },
     {
@@ -4695,7 +4734,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFDF80",
+      "Rva": "0x671F80",
       "Sampled": false
     },
     {
@@ -4706,7 +4745,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFE0A0",
+      "Rva": "0x6720A0",
       "Sampled": false
     },
     {
@@ -4717,7 +4756,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFE260",
+      "Rva": "0x672260",
       "Sampled": false
     },
     {
@@ -4728,7 +4767,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFE4C0",
+      "Rva": "0x6724C0",
       "Sampled": true
     },
     {
@@ -4739,7 +4778,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFE750",
+      "Rva": "0x672750",
       "Sampled": true
     },
     {
@@ -4750,7 +4789,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFE950",
+      "Rva": "0x672950",
       "Sampled": true
     },
     {
@@ -4761,7 +4800,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFED60",
+      "Rva": "0x672D60",
       "Sampled": true
     },
     {
@@ -4772,7 +4811,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFF0A0",
+      "Rva": "0x6730A0",
       "Sampled": false
     },
     {
@@ -4783,7 +4822,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EFF100",
+      "Rva": "0x673100",
       "Sampled": false
     },
     {
@@ -4800,7 +4839,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EFF160",
+      "Rva": "0x673160",
       "Sampled": false
     },
     {
@@ -4820,7 +4859,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFF260",
+      "Rva": "0x673260",
       "Sampled": false
     },
     {
@@ -4840,7 +4879,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFF310",
+      "Rva": "0x673310",
       "Sampled": false
     },
     {
@@ -4863,7 +4902,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFF3B0",
+      "Rva": "0x6733B0",
       "Sampled": false
     },
     {
@@ -4886,7 +4925,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFF7D0",
+      "Rva": "0x6737D0",
       "Sampled": false
     },
     {
@@ -4915,7 +4954,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFF8A0",
+      "Rva": "0x6738A0",
       "Sampled": false
     },
     {
@@ -4938,7 +4977,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFF990",
+      "Rva": "0x673990",
       "Sampled": false
     },
     {
@@ -4958,7 +4997,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFFDA0",
+      "Rva": "0x673DA0",
       "Sampled": false
     },
     {
@@ -4984,7 +5023,7 @@
         false,
         false
       ],
-      "Rva": "0x2EFFE30",
+      "Rva": "0x673E30",
       "Sampled": false
     },
     {
@@ -5010,7 +5049,7 @@
         false,
         false
       ],
-      "Rva": "0x2F00270",
+      "Rva": "0x674270",
       "Sampled": false
     },
     {
@@ -5030,7 +5069,7 @@
         false,
         false
       ],
-      "Rva": "0x2F00320",
+      "Rva": "0x674320",
       "Sampled": false
     },
     {
@@ -5041,7 +5080,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F003C0",
+      "Rva": "0x6743C0",
       "Sampled": false
     },
     {
@@ -5061,7 +5100,7 @@
         false,
         false
       ],
-      "Rva": "0x2F004C0",
+      "Rva": "0x6744C0",
       "Sampled": false
     },
     {
@@ -5072,7 +5111,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F00560",
+      "Rva": "0x674560",
       "Sampled": false
     },
     {
@@ -5092,7 +5131,7 @@
         false,
         false
       ],
-      "Rva": "0x2F005A0",
+      "Rva": "0x6745A0",
       "Sampled": false
     },
     {
@@ -5109,7 +5148,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F00630",
+      "Rva": "0x674630",
       "Sampled": false
     },
     {
@@ -5120,7 +5159,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F007D0",
+      "Rva": "0x6747D0",
       "Sampled": false
     },
     {
@@ -5131,7 +5170,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F00840",
+      "Rva": "0x674840",
       "Sampled": false
     },
     {
@@ -5148,7 +5187,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F008A0",
+      "Rva": "0x6748A0",
       "Sampled": false
     },
     {
@@ -5171,7 +5210,7 @@
         false,
         false
       ],
-      "Rva": "0x2F00960",
+      "Rva": "0x674960",
       "Sampled": false
     },
     {
@@ -5182,7 +5221,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F009D0",
+      "Rva": "0x6749D0",
       "Sampled": false
     },
     {
@@ -5205,7 +5244,7 @@
         false,
         false
       ],
-      "Rva": "0x2F00A40",
+      "Rva": "0x674A40",
       "Sampled": false
     },
     {
@@ -5216,7 +5255,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F00AB0",
+      "Rva": "0x674AB0",
       "Sampled": false
     },
     {
@@ -5233,7 +5272,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F00B20",
+      "Rva": "0x674B20",
       "Sampled": false
     },
     {
@@ -5253,7 +5292,7 @@
         false,
         false
       ],
-      "Rva": "0x2F00CA0",
+      "Rva": "0x674CA0",
       "Sampled": false
     },
     {
@@ -5270,7 +5309,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F00CF0",
+      "Rva": "0x674CF0",
       "Sampled": false
     },
     {
@@ -5287,7 +5326,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F00DC0",
+      "Rva": "0x674DC0",
       "Sampled": false
     },
     {
@@ -5304,7 +5343,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F00E90",
+      "Rva": "0x674E90",
       "Sampled": false
     },
     {
@@ -5324,7 +5363,7 @@
         false,
         false
       ],
-      "Rva": "0x2F00F10",
+      "Rva": "0x674F10",
       "Sampled": false
     },
     {
@@ -5344,7 +5383,7 @@
         false,
         false
       ],
-      "Rva": "0x2F00FE0",
+      "Rva": "0x674FE0",
       "Sampled": false
     },
     {
@@ -5355,7 +5394,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F01090",
+      "Rva": "0x675090",
       "Sampled": false
     },
     {
@@ -5372,7 +5411,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F01230",
+      "Rva": "0x675230",
       "Sampled": false
     },
     {
@@ -5383,7 +5422,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F013C0",
+      "Rva": "0x6753C0",
       "Sampled": false
     },
     {
@@ -5394,7 +5433,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F01450",
+      "Rva": "0x675450",
       "Sampled": false
     },
     {
@@ -5405,7 +5444,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F015C0",
+      "Rva": "0x6755C0",
       "Sampled": false
     },
     {
@@ -5425,7 +5464,7 @@
         false,
         false
       ],
-      "Rva": "0x2F01620",
+      "Rva": "0x675620",
       "Sampled": false
     },
     {
@@ -5445,7 +5484,7 @@
         false,
         false
       ],
-      "Rva": "0x2F016B0",
+      "Rva": "0x6756B0",
       "Sampled": false
     },
     {
@@ -5462,7 +5501,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F01730",
+      "Rva": "0x675730",
       "Sampled": false
     },
     {
@@ -5473,7 +5512,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F017C0",
+      "Rva": "0x6757C0",
       "Sampled": true
     },
     {
@@ -5484,7 +5523,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F01CF0",
+      "Rva": "0x675CF0",
       "Sampled": false
     },
     {
@@ -5501,7 +5540,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F02290",
+      "Rva": "0x676290",
       "Sampled": false
     },
     {
@@ -5518,7 +5557,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F02410",
+      "Rva": "0x676410",
       "Sampled": false
     },
     {
@@ -5529,7 +5568,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F02540",
+      "Rva": "0x676540",
       "Sampled": false
     },
     {
@@ -5540,7 +5579,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F02AB0",
+      "Rva": "0x676AB0",
       "Sampled": false
     },
     {
@@ -5551,7 +5590,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F02AC0",
+      "Rva": "0x676AC0",
       "Sampled": false
     },
     {
@@ -5562,7 +5601,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F02AE0",
+      "Rva": "0x676AE0",
       "Sampled": false
     },
     {
@@ -5573,7 +5612,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0A9E0",
+      "Rva": "0x67EC50",
       "Sampled": false
     },
     {
@@ -5584,7 +5623,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0AC50",
+      "Rva": "0x67EEC0",
       "Sampled": false
     },
     {
@@ -5595,7 +5634,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0ADD0",
+      "Rva": "0x67F040",
       "Sampled": false
     },
     {
@@ -5606,7 +5645,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0B120",
+      "Rva": "0x67F390",
       "Sampled": false
     },
     {
@@ -5617,7 +5656,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0B260",
+      "Rva": "0x67F4D0",
       "Sampled": true
     },
     {
@@ -5628,7 +5667,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0B4A0",
+      "Rva": "0x67F730",
       "Sampled": true
     },
     {
@@ -5645,7 +5684,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0B610",
+      "Rva": "0x67F8A0",
       "Sampled": false
     },
     {
@@ -5662,7 +5701,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0B770",
+      "Rva": "0x67FA00",
       "Sampled": false
     },
     {
@@ -5679,7 +5718,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0B790",
+      "Rva": "0x67FA20",
       "Sampled": false
     },
     {
@@ -5696,7 +5735,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0E3F0",
+      "Rva": "0x6826B0",
       "Sampled": false
     },
     {
@@ -5713,7 +5752,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0E440",
+      "Rva": "0x682700",
       "Sampled": false
     },
     {
@@ -5724,7 +5763,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0E600",
+      "Rva": "0x6828C0",
       "Sampled": false
     },
     {
@@ -5741,7 +5780,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0F090",
+      "Rva": "0x683350",
       "Sampled": false
     },
     {
@@ -5758,7 +5797,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0F230",
+      "Rva": "0x6834F0",
       "Sampled": false
     },
     {
@@ -5775,7 +5814,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0F440",
+      "Rva": "0x683700",
       "Sampled": true
     },
     {
@@ -5792,7 +5831,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0FAF0",
+      "Rva": "0x683DB0",
       "Sampled": false
     },
     {
@@ -5803,7 +5842,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0FCD0",
+      "Rva": "0x683F90",
       "Sampled": false
     },
     {
@@ -5820,7 +5859,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2DCE000",
+      "Rva": "0x2ED5E60",
       "Sampled": true
     },
     {
@@ -5831,7 +5870,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DCE250",
+      "Rva": "0x2ED60B0",
       "Sampled": true
     },
     {
@@ -5851,7 +5890,7 @@
         false,
         false
       ],
-      "Rva": "0x2DCE4F0",
+      "Rva": "0x2ED6350",
       "Sampled": false
     },
     {
@@ -5862,7 +5901,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2FEB410",
+      "Rva": "0x310AED0",
       "Sampled": false
     },
     {
@@ -5882,7 +5921,7 @@
         false,
         false
       ],
-      "Rva": "0x2FEB5F0",
+      "Rva": "0x310B0B0",
       "Sampled": false
     },
     {
@@ -5905,7 +5944,7 @@
         false,
         false
       ],
-      "Rva": "0x2FEB820",
+      "Rva": "0x310B2E0",
       "Sampled": false
     },
     {
@@ -5922,7 +5961,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2FEBCF0",
+      "Rva": "0x310B7B0",
       "Sampled": false
     },
     {
@@ -5933,7 +5972,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2FEBE20",
+      "Rva": "0x310B8E0",
       "Sampled": false
     },
     {
@@ -5950,7 +5989,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2FEBF70",
+      "Rva": "0x310BA30",
       "Sampled": false
     },
     {
@@ -5967,7 +6006,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2FEC1B0",
+      "Rva": "0x310BC70",
       "Sampled": false
     },
     {
@@ -5984,7 +6023,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D3D920",
+      "Rva": "0x2E80E30",
       "Sampled": false
     },
     {
@@ -6001,7 +6040,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D3DCB0",
+      "Rva": "0x2E811C0",
       "Sampled": false
     },
     {
@@ -6012,7 +6051,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D3DE20",
+      "Rva": "0x2E81330",
       "Sampled": false
     },
     {
@@ -6029,7 +6068,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0B9A0",
+      "Rva": "0x67FC40",
       "Sampled": false
     },
     {
@@ -6040,7 +6079,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0BAC0",
+      "Rva": "0x67FD80",
       "Sampled": false
     },
     {
@@ -6051,7 +6090,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0BE70",
+      "Rva": "0x680130",
       "Sampled": false
     },
     {
@@ -6062,7 +6101,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0BF70",
+      "Rva": "0x680230",
       "Sampled": false
     },
     {
@@ -6082,7 +6121,7 @@
         false,
         false
       ],
-      "Rva": "0x2F0BFF0",
+      "Rva": "0x6802B0",
       "Sampled": false
     },
     {
@@ -6093,7 +6132,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0C050",
+      "Rva": "0x680310",
       "Sampled": false
     },
     {
@@ -6104,7 +6143,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0C440",
+      "Rva": "0x680700",
       "Sampled": false
     },
     {
@@ -6121,1860 +6160,1860 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2F0C460",
+      "Rva": "0x680720",
       "Sampled": false
     }
   ],
   "Types": [
     {
-      "Name": "Nivalis.PlayerInputManagerSave",
       "Fields": [
         {
+          "Name": "BindingJsonString",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "BindingJsonString"
+          "Type": "System.String"
         },
         {
+          "Name": "<Guid>k__BackingField",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "<Guid>k__BackingField"
+          "Type": "System.String"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerInputManagerSave"
     },
     {
-      "Name": "Nivalis.PlayerInputManager",
       "Fields": [
         {
+          "Name": "inputConfigurator",
           "ValueType": false,
-          "Type": "Nivalis.DeviceDisplayConfigurator",
-          "Name": "inputConfigurator"
+          "Type": "Nivalis.DeviceDisplayConfigurator"
         },
         {
+          "Name": "rebindDuplicateSwap",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "rebindDuplicateSwap"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "PreventAllMenuShortcuts",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "PreventAllMenuShortcuts"
+          "Type": "Nivalis.OverrideableBool"
         },
         {
+          "Name": "PreventGameplayMenuShortcuts",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "PreventGameplayMenuShortcuts"
+          "Type": "Nivalis.OverrideableBool"
         },
         {
+          "Name": "PreventSaving",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "PreventSaving"
+          "Type": "Nivalis.OverrideableBool"
         },
         {
+          "Name": "input",
           "ValueType": false,
-          "Type": "GameControls",
-          "Name": "input"
+          "Type": "GameControls"
         },
         {
+          "Name": "user",
           "ValueType": true,
-          "Type": "UnityEngine.InputSystem.Users.InputUser",
-          "Name": "user"
+          "Type": "UnityEngine.InputSystem.Users.InputUser"
         },
         {
+          "Name": "currentMap",
           "ValueType": false,
-          "Type": "UnityEngine.InputSystem.InputActionMap",
-          "Name": "currentMap"
+          "Type": "UnityEngine.InputSystem.InputActionMap"
         },
         {
+          "Name": "currentRebind",
           "ValueType": false,
-          "Type": "UnityEngine.InputSystem.InputActionRebindingExtensions+RebindingOperation",
-          "Name": "currentRebind"
+          "Type": "UnityEngine.InputSystem.InputActionRebindingExtensions+RebindingOperation"
         },
         {
+          "Name": "isListeningForUnpairedDevices",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "isListeningForUnpairedDevices"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "isRebind",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "isRebind"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "lastTimeChange",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "lastTimeChange"
+          "Type": "System.Single"
         },
         {
+          "Name": "changeDeciceDelay",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "changeDeciceDelay"
+          "Type": "System.Single"
         },
         {
+          "Name": "<ConfigurationType>k__BackingField",
           "ValueType": false,
-          "Type": "System.Type",
-          "Name": "<ConfigurationType>k__BackingField"
+          "Type": "System.Type"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerInputManager"
     },
     {
-      "Name": "Nivalis.PlacementSystem",
       "Fields": [
         {
+          "Name": "_player",
           "ValueType": false,
-          "Type": "Nivalis.PlayerManager+Player",
-          "Name": "_player"
+          "Type": "Nivalis.PlayerManager+Player"
         },
         {
+          "Name": "_playerInteractionLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "_playerInteractionLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "placementEvent",
           "ValueType": false,
-          "Type": "Nivalis.ItemPlacedEvent",
-          "Name": "placementEvent"
+          "Type": "Nivalis.ItemPlacedEvent"
         },
         {
+          "Name": "objectHolder",
           "ValueType": false,
-          "Type": "Nivalis.PlayerObjectHolder",
-          "Name": "objectHolder"
+          "Type": "Nivalis.PlayerObjectHolder"
         },
         {
+          "Name": "sphereRadius",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "sphereRadius"
+          "Type": "System.Single"
         },
         {
+          "Name": "lerpRate",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "lerpRate"
+          "Type": "System.Single"
         },
         {
+          "Name": "hitLayer",
           "ValueType": true,
-          "Type": "UnityEngine.LayerMask",
-          "Name": "hitLayer"
+          "Type": "UnityEngine.LayerMask"
         },
         {
+          "Name": "_eyelineTransform",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "_eyelineTransform"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "audioSource",
           "ValueType": false,
-          "Type": "UnityEngine.AudioSource",
-          "Name": "audioSource"
+          "Type": "UnityEngine.AudioSource"
         },
         {
+          "Name": "equipSFX",
           "ValueType": false,
-          "Type": "UnityEngine.AudioClip",
-          "Name": "equipSFX"
+          "Type": "UnityEngine.AudioClip"
         },
         {
+          "Name": "placeSFX",
           "ValueType": false,
-          "Type": "UnityEngine.AudioClip",
-          "Name": "placeSFX"
+          "Type": "UnityEngine.AudioClip"
         },
         {
+          "Name": "storeSFX",
           "ValueType": false,
-          "Type": "UnityEngine.AudioClip",
-          "Name": "storeSFX"
+          "Type": "UnityEngine.AudioClip"
         },
         {
+          "Name": "maxPlacementDistance",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "maxPlacementDistance"
+          "Type": "System.Single"
         },
         {
+          "Name": "throwForce",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "throwForce"
+          "Type": "System.Single"
         },
         {
+          "Name": "_hit",
           "ValueType": true,
-          "Type": "UnityEngine.RaycastHit",
-          "Name": "_hit"
+          "Type": "UnityEngine.RaycastHit"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlacementSystem"
     },
     {
-      "Name": "Nivalis.PlayerObjectHolder",
       "Fields": [
         {
+          "Name": "OnPickUpFound",
           "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
-          "Name": "OnPickUpFound"
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
         },
         {
+          "Name": "OnObjectPickUp",
           "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
-          "Name": "OnObjectPickUp"
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
         },
         {
+          "Name": "OnObjectStore",
           "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
-          "Name": "OnObjectStore"
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
         },
         {
+          "Name": "<IsInControlOfObjectPosition>k__BackingField",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "<IsInControlOfObjectPosition>k__BackingField"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "container",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "container"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "pickUpEvent",
           "ValueType": false,
-          "Type": "Nivalis.ItemPickedUpEvent",
-          "Name": "pickUpEvent"
+          "Type": "Nivalis.ItemPickedUpEvent"
         },
         {
+          "Name": "_heldObjSO",
           "ValueType": false,
-          "Type": "Nivalis.HoldableEntitySO",
-          "Name": "_heldObjSO"
+          "Type": "Nivalis.HoldableEntitySO"
         },
         {
+          "Name": "_eyelineTransform",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "_eyelineTransform"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "_facingTransform",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "_facingTransform"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "focusRaycaster",
           "ValueType": false,
-          "Type": "Nivalis.FocusRaycaster",
-          "Name": "focusRaycaster"
+          "Type": "Nivalis.FocusRaycaster"
         },
         {
+          "Name": "rotationSpeed",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "rotationSpeed"
+          "Type": "System.Single"
         },
         {
+          "Name": "lerpRate",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "lerpRate"
+          "Type": "System.Single"
         },
         {
+          "Name": "_heldObject",
           "ValueType": false,
-          "Type": "Nivalis.HoldableEntity",
-          "Name": "_heldObject"
+          "Type": "Nivalis.HoldableEntity"
         },
         {
+          "Name": "_objectInFront",
           "ValueType": false,
-          "Type": "Nivalis.HoldableEntity",
-          "Name": "_objectInFront"
+          "Type": "Nivalis.HoldableEntity"
         },
         {
+          "Name": "_rotationDirection",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "_rotationDirection"
+          "Type": "System.Single"
         },
         {
+          "Name": "_player",
           "ValueType": false,
-          "Type": "Nivalis.PlayerManager+Player",
-          "Name": "_player"
+          "Type": "Nivalis.PlayerManager+Player"
         },
         {
+          "Name": "_playerSprintLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "_playerSprintLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerObjectHolder"
     },
     {
-      "Name": "Nivalis.FocusRaycaster",
       "Fields": [
         {
+          "Name": "raycastCamera",
           "ValueType": false,
-          "Type": "UnityEngine.Camera",
-          "Name": "raycastCamera"
+          "Type": "UnityEngine.Camera"
         },
         {
+          "Name": "raycastLayers",
           "ValueType": true,
-          "Type": "UnityEngine.LayerMask",
-          "Name": "raycastLayers"
+          "Type": "UnityEngine.LayerMask"
         },
         {
+          "Name": "triggerDetectLayers",
           "ValueType": true,
-          "Type": "UnityEngine.LayerMask",
-          "Name": "triggerDetectLayers"
+          "Type": "UnityEngine.LayerMask"
         },
         {
+          "Name": "focusDistance",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "focusDistance"
+          "Type": "System.Single"
         },
         {
+          "Name": "raycastRadius",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "raycastRadius"
+          "Type": "System.Single"
         },
         {
+          "Name": "excludedObjects",
           "ValueType": false,
-          "Type": "UnityEngine.GameObject[]",
-          "Name": "excludedObjects"
+          "Type": "UnityEngine.GameObject[]"
         },
         {
+          "Name": "_objectsInFocus",
           "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<UnityEngine.GameObject>",
-          "Name": "_objectsInFocus"
+          "Type": "System.Collections.Generic.List`1<UnityEngine.GameObject>"
         },
         {
+          "Name": "hits",
           "ValueType": false,
-          "Type": "UnityEngine.RaycastHit[]",
-          "Name": "hits"
+          "Type": "UnityEngine.RaycastHit[]"
         },
         {
+          "Name": "triggerHits",
           "ValueType": false,
-          "Type": "UnityEngine.RaycastHit[]",
-          "Name": "triggerHits"
+          "Type": "UnityEngine.RaycastHit[]"
         },
         {
+          "Name": "_interactablesInFocus",
           "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.IInteractable>",
-          "Name": "_interactablesInFocus"
+          "Type": "System.Collections.Generic.List`1<Nivalis.IInteractable>"
         },
         {
+          "Name": "_holdablesInFocus",
           "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.HoldableEntity>",
-          "Name": "_holdablesInFocus"
+          "Type": "System.Collections.Generic.List`1<Nivalis.HoldableEntity>"
         }
-      ]
+      ],
+      "Name": "Nivalis.FocusRaycaster"
     },
     {
-      "Name": "Nivalis.PlayerManager",
       "Fields": [
         {
+          "Name": "_localPlayer",
           "ValueType": false,
-          "Type": "Nivalis.PlayerManager+Player",
-          "Name": "_localPlayer"
+          "Type": "Nivalis.PlayerManager+Player"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerManager"
     },
     {
-      "Name": "Nivalis.PlayerManager+PlayerSave",
       "Fields": [
         {
+          "Name": "OwnedProperties",
           "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<System.String>",
-          "Name": "OwnedProperties"
+          "Type": "System.Collections.Generic.List`1<System.String>"
         },
         {
+          "Name": "Money",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "Money"
+          "Type": "System.Int32"
         },
         {
+          "Name": "knowledge",
           "ValueType": true,
-          "Type": "Nivalis.PlayerManager+PlayerKnowledge",
-          "Name": "knowledge"
+          "Type": "Nivalis.PlayerManager+PlayerKnowledge"
         },
         {
+          "Name": "personalReceipts",
           "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.Player.ReceiptBase>",
-          "Name": "personalReceipts"
+          "Type": "System.Collections.Generic.List`1<Nivalis.Player.ReceiptBase>"
         },
         {
+          "Name": "currentPropertyGuid",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "currentPropertyGuid"
+          "Type": "System.String"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerManager+PlayerSave"
     },
     {
-      "Name": "Nivalis.PlayerManager+Player",
       "Fields": [
         {
+          "Name": "OrderMadeByPlayer",
           "ValueType": false,
-          "Type": "Nivalis.PlayerManager+OrderData",
-          "Name": "OrderMadeByPlayer"
+          "Type": "Nivalis.PlayerManager+OrderData"
         },
         {
+          "Name": "<Id>k__BackingField",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "<Id>k__BackingField"
+          "Type": "System.Int32"
         },
         {
+          "Name": "<CurrentProperty>k__BackingField",
           "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty",
-          "Name": "<CurrentProperty>k__BackingField"
+          "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty"
         },
         {
+          "Name": "_state",
           "ValueType": false,
-          "Type": "Nivalis.PlayerState",
-          "Name": "_state"
+          "Type": "Nivalis.PlayerState"
         },
         {
+          "Name": "_character",
           "ValueType": false,
-          "Type": "Nivalis.PlayerCharacter",
-          "Name": "_character"
+          "Type": "Nivalis.PlayerCharacter"
         },
         {
+          "Name": "_ownedProperties",
           "ValueType": false,
-          "Type": "System.Collections.Generic.HashSet`1<System.String>",
-          "Name": "_ownedProperties"
+          "Type": "System.Collections.Generic.HashSet`1<System.String>"
         },
         {
+          "Name": "stats",
           "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.PlayerStat>",
-          "Name": "stats"
+          "Type": "System.Collections.Generic.List`1<Nivalis.PlayerStat>"
         },
         {
+          "Name": "playerPrefab",
           "ValueType": false,
-          "Type": "Nivalis.PlayerCharacter",
-          "Name": "playerPrefab"
+          "Type": "Nivalis.PlayerCharacter"
         },
         {
+          "Name": "inventory",
           "ValueType": false,
-          "Type": "Nivalis.InventorySystem.PlayerInventory",
-          "Name": "inventory"
+          "Type": "Nivalis.InventorySystem.PlayerInventory"
         },
         {
+          "Name": "personalReceipts",
           "ValueType": false,
-          "Type": "Nivalis.Player.ReceiptList",
-          "Name": "personalReceipts"
+          "Type": "Nivalis.Player.ReceiptList"
         },
         {
+          "Name": "knowledge",
           "ValueType": true,
-          "Type": "Nivalis.PlayerManager+PlayerKnowledge",
-          "Name": "knowledge"
+          "Type": "Nivalis.PlayerManager+PlayerKnowledge"
         },
         {
+          "Name": "rank",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "rank"
+          "Type": "System.Int32"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerManager+Player"
     },
     {
-      "Name": "Nivalis.PlayerManager+PlayerKnowledge",
       "Fields": [
         {
+          "Name": "fishing",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "fishing"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "trading",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "trading"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "navigation",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "navigation"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "map",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "map"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "inspiration",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "inspiration"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "storage",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "storage"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "farming",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "farming"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "renting",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "renting"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "hiring",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "hiring"
+          "Type": "System.Boolean"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerManager+PlayerKnowledge"
     },
     {
-      "Name": "Nivalis.PlayerCameraController",
       "Fields": [
         {
+          "Name": "onDialogueStart",
           "ValueType": false,
-          "Type": "Nivalis.Dialogue.DialogueEvent",
-          "Name": "onDialogueStart"
+          "Type": "Nivalis.Dialogue.DialogueEvent"
         },
         {
+          "Name": "onDialogueEnd",
           "ValueType": false,
-          "Type": "Nivalis.Dialogue.DialogueEvent",
-          "Name": "onDialogueEnd"
+          "Type": "Nivalis.Dialogue.DialogueEvent"
         },
         {
+          "Name": "followTarget",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "followTarget"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "dialogueFollowTarget",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "dialogueFollowTarget"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "dialogueCamera",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "dialogueCamera"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "dialogueCameraDistance",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "dialogueCameraDistance"
+          "Type": "System.Single"
         },
         {
+          "Name": "orderCameraDistance",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "orderCameraDistance"
+          "Type": "System.Single"
         },
         {
+          "Name": "zoomSettings",
           "ValueType": false,
-          "Type": "Nivalis.PlayerCameraController+ZoomSettings",
-          "Name": "zoomSettings"
+          "Type": "Nivalis.PlayerCameraController+ZoomSettings"
         },
         {
+          "Name": "playerMovementLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "playerMovementLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "zoomCooldown",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "zoomCooldown"
+          "Type": "System.Single"
         },
         {
+          "Name": "postProcessVolumes",
           "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<UnityEngine.Rendering.PostProcessing.PostProcessVolume>",
-          "Name": "postProcessVolumes"
+          "Type": "System.Collections.Generic.List`1<UnityEngine.Rendering.PostProcessing.PostProcessVolume>"
         },
         {
+          "Name": "defaultFollowTargetOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Pose",
-          "Name": "defaultFollowTargetOffset"
+          "Type": "UnityEngine.Pose"
         },
         {
+          "Name": "focusTargetActivated",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "focusTargetActivated"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "focusTarget",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "focusTarget"
+          "Type": "UnityEngine.Transform"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerCameraController"
     },
     {
-      "Name": "Nivalis.PlayerCharacter",
       "Fields": [
         {
+          "Name": "_objectHolder",
           "ValueType": false,
-          "Type": "Nivalis.PlayerObjectHolder",
-          "Name": "_objectHolder"
+          "Type": "Nivalis.PlayerObjectHolder"
         },
         {
+          "Name": "_placementSystem",
           "ValueType": false,
-          "Type": "Nivalis.PlacementSystem",
-          "Name": "_placementSystem"
+          "Type": "Nivalis.PlacementSystem"
         },
         {
+          "Name": "_interaction",
           "ValueType": false,
-          "Type": "Nivalis.PlayerInteraction",
-          "Name": "_interaction"
+          "Type": "Nivalis.PlayerInteraction"
         },
         {
+          "Name": "_focus",
           "ValueType": false,
-          "Type": "Nivalis.FocusRaycaster",
-          "Name": "_focus"
+          "Type": "Nivalis.FocusRaycaster"
         },
         {
+          "Name": "_controller",
           "ValueType": false,
-          "Type": "Nivalis.PlayerCharacterController",
-          "Name": "_controller"
+          "Type": "Nivalis.PlayerCharacterController"
         },
         {
+          "Name": "spotMovementLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "spotMovementLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "spotEnterPosition",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "spotEnterPosition"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "sitSequence",
           "ValueType": false,
-          "Type": "UnityEngine.Coroutine",
-          "Name": "sitSequence"
+          "Type": "UnityEngine.Coroutine"
         },
         {
+          "Name": "hasCachedInitialDrivenBoat",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "hasCachedInitialDrivenBoat"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "initialDrivenBoat",
           "ValueType": false,
-          "Type": "Nivalis.Boat.BoatController",
-          "Name": "initialDrivenBoat"
+          "Type": "Nivalis.Boat.BoatController"
         },
         {
+          "Name": "drivenBoat",
           "ValueType": false,
-          "Type": "Nivalis.Boat.BoatController",
-          "Name": "drivenBoat"
+          "Type": "Nivalis.Boat.BoatController"
         },
         {
+          "Name": "hasInitializedPooledElement",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "hasInitializedPooledElement"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "pooledElement",
           "ValueType": false,
-          "Type": "Nivalis.PooledElement",
-          "Name": "pooledElement"
+          "Type": "Nivalis.PooledElement"
         },
         {
+          "Name": "dialogueSpot",
           "ValueType": false,
-          "Type": "Nivalis.AISpot",
-          "Name": "dialogueSpot"
+          "Type": "Nivalis.AISpot"
         },
         {
+          "Name": "serveSpot",
           "ValueType": false,
-          "Type": "Nivalis.AISpot",
-          "Name": "serveSpot"
+          "Type": "Nivalis.AISpot"
         },
         {
+          "Name": "teleportSpot",
           "ValueType": false,
-          "Type": "Nivalis.AISpot",
-          "Name": "teleportSpot"
+          "Type": "Nivalis.AISpot"
         },
         {
+          "Name": "_isInitialized",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "_isInitialized"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "_myGhost",
           "ValueType": false,
-          "Type": "Nivalis.PlayerGhost",
-          "Name": "_myGhost"
+          "Type": "Nivalis.PlayerGhost"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerCharacter"
     },
     {
-      "Name": "Nivalis.PlayerGhost",
       "Fields": [
         {
+          "Name": "lastSleepApartment",
           "ValueType": false,
-          "Type": "Nivalis.Apartment.Apartment",
-          "Name": "lastSleepApartment"
+          "Type": "Nivalis.Apartment.Apartment"
         },
         {
+          "Name": "LookRotation",
           "ValueType": true,
-          "Type": "UnityEngine.Vector2",
-          "Name": "LookRotation"
+          "Type": "UnityEngine.Vector2"
         },
         {
+          "Name": "currentOrder",
           "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.VenueOrderReference",
-          "Name": "currentOrder"
+          "Type": "Nivalis.GhostSystem.CustomerLoop.VenueOrderReference"
         },
         {
+          "Name": "chair",
           "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostReference`1<Nivalis.GhostSystem.CustomerLoop.ChairGhost>",
-          "Name": "chair"
+          "Type": "Nivalis.GhostSystem.GhostReference`1<Nivalis.GhostSystem.CustomerLoop.ChairGhost>"
         },
         {
+          "Name": "<DialogueSpot>k__BackingField",
           "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostAISpotReference",
-          "Name": "<DialogueSpot>k__BackingField"
+          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
         },
         {
+          "Name": "<ServeSpot>k__BackingField",
           "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostAISpotReference",
-          "Name": "<ServeSpot>k__BackingField"
+          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
         },
         {
+          "Name": "<TeleportSpot>k__BackingField",
           "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostAISpotReference",
-          "Name": "<TeleportSpot>k__BackingField"
+          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
         },
         {
+          "Name": "venue",
           "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.Venue",
-          "Name": "venue"
+          "Type": "Nivalis.GhostSystem.CustomerLoop.Venue"
         },
         {
+          "Name": "chosenMeals",
           "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.Locale.MealMenuItem>",
-          "Name": "chosenMeals"
+          "Type": "System.Collections.Generic.List`1<Nivalis.Locale.MealMenuItem>"
         },
         {
+          "Name": "IsCancelOrder",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "IsCancelOrder"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "preventSavingWhileSittingLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "preventSavingWhileSittingLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerGhost"
     },
     {
-      "Name": "Nivalis.PlayerCharacterController",
       "Fields": [
         {
+          "Name": "_state",
           "ValueType": true,
-          "Type": "Nivalis.PlayerCharacterController+ControllerState",
-          "Name": "_state"
+          "Type": "Nivalis.PlayerCharacterController+ControllerState"
         },
         {
+          "Name": "<Camera>k__BackingField",
           "ValueType": false,
-          "Type": "UnityEngine.Camera",
-          "Name": "<Camera>k__BackingField"
+          "Type": "UnityEngine.Camera"
         },
         {
+          "Name": "<CameraRainEffect>k__BackingField",
           "ValueType": false,
-          "Type": "Nivalis.CameraRainEffect",
-          "Name": "<CameraRainEffect>k__BackingField"
+          "Type": "Nivalis.CameraRainEffect"
         },
         {
+          "Name": "firstPersonCamera",
           "ValueType": false,
-          "Type": "Cinemachine.CinemachineVirtualCamera",
-          "Name": "firstPersonCamera"
+          "Type": "Cinemachine.CinemachineVirtualCamera"
         },
         {
+          "Name": "cameraController",
           "ValueType": false,
-          "Type": "Nivalis.PlayerCameraController",
-          "Name": "cameraController"
+          "Type": "Nivalis.PlayerCameraController"
         },
         {
+          "Name": "_character",
           "ValueType": false,
-          "Type": "Nivalis.PlayerCharacter",
-          "Name": "_character"
+          "Type": "Nivalis.PlayerCharacter"
         },
         {
+          "Name": "_firstPersonPOV",
           "ValueType": false,
-          "Type": "Cinemachine.CinemachinePOV",
-          "Name": "_firstPersonPOV"
+          "Type": "Cinemachine.CinemachinePOV"
         },
         {
+          "Name": "lookInput",
           "ValueType": false,
-          "Type": "Cinemachine.CinemachineInputProvider",
-          "Name": "lookInput"
+          "Type": "Cinemachine.CinemachineInputProvider"
         },
         {
+          "Name": "_firstPersonTransposer",
           "ValueType": false,
-          "Type": "Cinemachine.CinemachineTransposer",
-          "Name": "_firstPersonTransposer"
+          "Type": "Cinemachine.CinemachineTransposer"
         },
         {
+          "Name": "_characterController",
           "ValueType": false,
-          "Type": "UnityEngine.CharacterController",
-          "Name": "_characterController"
+          "Type": "UnityEngine.CharacterController"
         },
         {
+          "Name": "navMesh",
           "ValueType": false,
-          "Type": "Nivalis.PlayerNavMesh",
-          "Name": "navMesh"
+          "Type": "Nivalis.PlayerNavMesh"
         },
         {
+          "Name": "localPositionOnNavMesh",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "localPositionOnNavMesh"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "lastLocalPositionOnNavMesh",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "lastLocalPositionOnNavMesh"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "initialCameraOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "initialCameraOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "headBobTimer",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "headBobTimer"
+          "Type": "System.Single"
         },
         {
+          "Name": "_cameraLookEnabled",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "_cameraLookEnabled"
+          "Type": "Nivalis.OverrideableBool"
         },
         {
+          "Name": "gravity",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "gravity"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "groundSnapping",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "groundSnapping"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "defaultMoveSpeed",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "defaultMoveSpeed"
+          "Type": "System.Single"
         },
         {
+          "Name": "sprintSpeed",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "sprintSpeed"
+          "Type": "System.Single"
         },
         {
+          "Name": "headBobEnabled",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "headBobEnabled"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "headBobFrequency",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "headBobFrequency"
+          "Type": "System.Single"
         },
         {
+          "Name": "headBobAmplitude",
           "ValueType": true,
-          "Type": "UnityEngine.Vector2",
-          "Name": "headBobAmplitude"
+          "Type": "UnityEngine.Vector2"
         },
         {
+          "Name": "handsAnimator",
           "ValueType": false,
-          "Type": "Nivalis.PlayerHandsAnimator",
-          "Name": "handsAnimator"
+          "Type": "Nivalis.PlayerHandsAnimator"
         },
         {
+          "Name": "environmentTracker",
           "ValueType": false,
-          "Type": "Nivalis.PlayerEnvironmentTracker",
-          "Name": "environmentTracker"
+          "Type": "Nivalis.PlayerEnvironmentTracker"
         },
         {
+          "Name": "dialogueObstacle",
           "ValueType": false,
-          "Type": "UnityEngine.AI.NavMeshObstacle",
-          "Name": "dialogueObstacle"
+          "Type": "UnityEngine.AI.NavMeshObstacle"
         },
         {
+          "Name": "_isSprinting",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "_isSprinting"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "_velocity",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "_velocity"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "_characterControllerVelocity",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "_characterControllerVelocity"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "cameraRotationOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector2",
-          "Name": "cameraRotationOffset"
+          "Type": "UnityEngine.Vector2"
         },
         {
+          "Name": "cameraPositionOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "cameraPositionOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "_canSprint",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "_canSprint"
+          "Type": "Nivalis.OverrideableBool"
         },
         {
+          "Name": "_canMove",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "_canMove"
+          "Type": "Nivalis.OverrideableBool"
         },
         {
+          "Name": "raycastDistance",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "raycastDistance"
+          "Type": "System.Single"
         },
         {
+          "Name": "sphereCastRadius",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "sphereCastRadius"
+          "Type": "System.Single"
         },
         {
+          "Name": "rayCenterOffset",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "rayCenterOffset"
+          "Type": "System.Single"
         },
         {
+          "Name": "gapIgnoreRadius",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "gapIgnoreRadius"
+          "Type": "System.Single"
         },
         {
+          "Name": "groundCollisionMask",
           "ValueType": true,
-          "Type": "UnityEngine.LayerMask",
-          "Name": "groundCollisionMask"
+          "Type": "UnityEngine.LayerMask"
         },
         {
+          "Name": "adjustTimes",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "adjustTimes"
+          "Type": "System.Int32"
         },
         {
+          "Name": "boardedBoat",
           "ValueType": false,
-          "Type": "Nivalis.Boat.BoatController",
-          "Name": "boardedBoat"
+          "Type": "Nivalis.Boat.BoatController"
         },
         {
+          "Name": "isGrounded",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "isGrounded"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "cameraTools",
           "ValueType": false,
-          "Type": "Nivalis.PlayerCameraTools",
-          "Name": "cameraTools"
+          "Type": "Nivalis.PlayerCameraTools"
         },
         {
+          "Name": "_moveSpeedScale",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "_moveSpeedScale"
+          "Type": "System.Single"
         },
         {
+          "Name": "dialogueCamera",
           "ValueType": false,
-          "Type": "Cinemachine.CinemachineVirtualCamera",
-          "Name": "dialogueCamera"
+          "Type": "Cinemachine.CinemachineVirtualCamera"
         },
         {
+          "Name": "dialogueCameraCoroutine",
           "ValueType": false,
-          "Type": "UnityEngine.Coroutine",
-          "Name": "dialogueCameraCoroutine"
+          "Type": "UnityEngine.Coroutine"
         },
         {
+          "Name": "dialogueDistance",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "dialogueDistance"
+          "Type": "System.Single"
         },
         {
+          "Name": "dialogueCharacter",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "dialogueCharacter"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "movementLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "movementLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "handsLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "handsLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "lookAction",
           "ValueType": false,
-          "Type": "UnityEngine.InputSystem.InputActionReference",
-          "Name": "lookAction"
+          "Type": "UnityEngine.InputSystem.InputActionReference"
         },
         {
+          "Name": "_isCameraSmoothed",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "_isCameraSmoothed"
+          "Type": "System.Int32"
         },
         {
+          "Name": "_defaultAxisHorizontal",
           "ValueType": true,
-          "Type": "Cinemachine.AxisState",
-          "Name": "_defaultAxisHorizontal"
+          "Type": "Cinemachine.AxisState"
         },
         {
+          "Name": "_defaultAxisVertical",
           "ValueType": true,
-          "Type": "Cinemachine.AxisState",
-          "Name": "_defaultAxisVertical"
+          "Type": "Cinemachine.AxisState"
         },
         {
+          "Name": "_handsVisibilityLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "_handsVisibilityLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "_handsVisibilityLockOwner",
           "ValueType": false,
-          "Type": "Nivalis.LockDummy",
-          "Name": "_handsVisibilityLockOwner"
+          "Type": "Nivalis.LockDummy"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerCharacterController"
     },
     {
-      "Name": "Nivalis.PlayerEnvironmentTracker",
       "Fields": [
         {
+          "Name": "environmentLayers",
           "ValueType": true,
-          "Type": "UnityEngine.LayerMask",
-          "Name": "environmentLayers"
+          "Type": "UnityEngine.LayerMask"
         },
         {
+          "Name": "interiorAmount",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "interiorAmount"
+          "Type": "System.Single"
         },
         {
+          "Name": "closestVenue",
           "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.Venue",
-          "Name": "closestVenue"
+          "Type": "Nivalis.GhostSystem.CustomerLoop.Venue"
         },
         {
+          "Name": "closestVenueDistance",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "closestVenueDistance"
+          "Type": "System.Single"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerEnvironmentTracker"
     },
     {
-      "Name": "Nivalis.PlayerHandsAnimator",
       "Fields": [
         {
+          "Name": "leftHandIK",
           "ValueType": false,
-          "Type": "RootMotion.FinalIK.LimbIK",
-          "Name": "leftHandIK"
+          "Type": "RootMotion.FinalIK.LimbIK"
         },
         {
+          "Name": "rightHandIK",
           "ValueType": false,
-          "Type": "RootMotion.FinalIK.LimbIK",
-          "Name": "rightHandIK"
+          "Type": "RootMotion.FinalIK.LimbIK"
         },
         {
+          "Name": "leftHandInteraction",
           "ValueType": true,
-          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>",
-          "Name": "leftHandInteraction"
+          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
         },
         {
+          "Name": "rightHandInteraction",
           "ValueType": true,
-          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>",
-          "Name": "rightHandInteraction"
+          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
         },
         {
+          "Name": "currentInteraction",
           "ValueType": true,
-          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>",
-          "Name": "currentInteraction"
+          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
         },
         {
+          "Name": "handsAnimator",
           "ValueType": false,
-          "Type": "UnityEngine.Animator",
-          "Name": "handsAnimator"
+          "Type": "UnityEngine.Animator"
         },
         {
+          "Name": "rig",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "rig"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "leftHand",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "leftHand"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "rightHand",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "rightHand"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "cameraAnchor",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "cameraAnchor"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "fishingBaitAnchor",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "fishingBaitAnchor"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "tray",
           "ValueType": false,
-          "Type": "UnityEngine.GameObject",
-          "Name": "tray"
+          "Type": "UnityEngine.GameObject"
         },
         {
+          "Name": "trayHandTargetLeft",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "trayHandTargetLeft"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "trayHandTargetRight",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "trayHandTargetRight"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "defaultRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "defaultRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "fishingRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "fishingRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "farmingRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "farmingRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "placementRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "placementRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "sitRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "sitRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "foodProcessorRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "foodProcessorRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "cookDrinkRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "cookDrinkRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "deepFryerRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "deepFryerRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "blenderRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "blenderRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "cookerRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "cookerRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "panRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "panRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "sweepRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "sweepRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "sweepCameraTargetOverride",
           "ValueType": true,
-          "Type": "Nivalis.PlayerHandsAnimator+EulerPose",
-          "Name": "sweepCameraTargetOverride"
+          "Type": "Nivalis.PlayerHandsAnimator+EulerPose"
         },
         {
+          "Name": "renderers",
           "ValueType": false,
-          "Type": "UnityEngine.Renderer[]",
-          "Name": "renderers"
+          "Type": "UnityEngine.Renderer[]"
         },
         {
+          "Name": "consumeSFXMealShort",
           "ValueType": false,
-          "Type": "Nivalis.AudioGroup",
-          "Name": "consumeSFXMealShort"
+          "Type": "Nivalis.AudioGroup"
         },
         {
+          "Name": "consumeSFXMealLong",
           "ValueType": false,
-          "Type": "Nivalis.AudioGroup",
-          "Name": "consumeSFXMealLong"
+          "Type": "Nivalis.AudioGroup"
         },
         {
+          "Name": "consumeSFXDrinkShort",
           "ValueType": false,
-          "Type": "Nivalis.AudioGroup",
-          "Name": "consumeSFXDrinkShort"
+          "Type": "Nivalis.AudioGroup"
         },
         {
+          "Name": "consumeSFXDrinkLong",
           "ValueType": false,
-          "Type": "Nivalis.AudioGroup",
-          "Name": "consumeSFXDrinkLong"
+          "Type": "Nivalis.AudioGroup"
         },
         {
+          "Name": "sweepSFX",
           "ValueType": false,
-          "Type": "Nivalis.AudioSingle",
-          "Name": "sweepSFX"
+          "Type": "Nivalis.AudioSingle"
         },
         {
+          "Name": "environmentLayer",
           "ValueType": true,
-          "Type": "UnityEngine.LayerMask",
-          "Name": "environmentLayer"
+          "Type": "UnityEngine.LayerMask"
         },
         {
+          "Name": "playerHeldObject",
           "ValueType": false,
-          "Type": "Nivalis.HoldableEntitySO",
-          "Name": "playerHeldObject"
+          "Type": "Nivalis.HoldableEntitySO"
         },
         {
+          "Name": "newspaper",
           "ValueType": false,
-          "Type": "Nivalis.Newspaper",
-          "Name": "newspaper"
+          "Type": "Nivalis.Newspaper"
         },
         {
+          "Name": "plantAnchor",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "plantAnchor"
+          "Type": "UnityEngine.Transform"
         },
         {
+          "Name": "itemPlacementEvent",
           "ValueType": false,
-          "Type": "Nivalis.ItemPlacedEvent",
-          "Name": "itemPlacementEvent"
+          "Type": "Nivalis.ItemPlacedEvent"
         },
         {
+          "Name": "footstepAudioSource",
           "ValueType": false,
-          "Type": "UnityEngine.AudioSource",
-          "Name": "footstepAudioSource"
+          "Type": "UnityEngine.AudioSource"
         },
         {
+          "Name": "character",
           "ValueType": false,
-          "Type": "Nivalis.PlayerCharacter",
-          "Name": "character"
+          "Type": "Nivalis.PlayerCharacter"
         },
         {
+          "Name": "cameraPOV",
           "ValueType": false,
-          "Type": "Cinemachine.CinemachinePOV",
-          "Name": "cameraPOV"
+          "Type": "Cinemachine.CinemachinePOV"
         },
         {
+          "Name": "chair",
           "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.ChairView",
-          "Name": "chair"
+          "Type": "Nivalis.GhostSystem.CustomerLoop.ChairView"
         },
         {
+          "Name": "isVisible",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "isVisible"
+          "Type": "Nivalis.OverrideableBool"
         },
         {
+          "Name": "playerMovementLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "playerMovementLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "playerCameraLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "playerCameraLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "playerInteractionLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "Name": "playerInteractionLock"
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
         },
         {
+          "Name": "obstacle",
           "ValueType": false,
-          "Type": "UnityEngine.AI.NavMeshObstacle",
-          "Name": "obstacle"
+          "Type": "UnityEngine.AI.NavMeshObstacle"
         },
         {
+          "Name": "transitionSpeed",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "transitionSpeed"
+          "Type": "System.Single"
         },
         {
+          "Name": "rootMotion",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "rootMotion"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "snapRigToLocation",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "snapRigToLocation"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "allowFreelook",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "allowFreelook"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "limitFreelook",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "limitFreelook"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "snapRigRotationToCamera",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "snapRigRotationToCamera"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "placingItem",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "placingItem"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "sleeping",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "sleeping"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "freelookCameraPosition",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "freelookCameraPosition"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "freelookCameraRotation",
           "ValueType": true,
-          "Type": "UnityEngine.Quaternion",
-          "Name": "freelookCameraRotation"
+          "Type": "UnityEngine.Quaternion"
         },
         {
+          "Name": "targetRigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "targetRigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "rigOffset",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "rigOffset"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "snapLocationPose",
           "ValueType": true,
-          "Type": "UnityEngine.Pose",
-          "Name": "snapLocationPose"
+          "Type": "UnityEngine.Pose"
         },
         {
+          "Name": "headAnimationPose",
           "ValueType": true,
-          "Type": "UnityEngine.Pose",
-          "Name": "headAnimationPose"
+          "Type": "UnityEngine.Pose"
         },
         {
+          "Name": "rigLocationSnapBlend",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "rigLocationSnapBlend"
+          "Type": "System.Single"
         },
         {
+          "Name": "snapCameraToAnimation",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "snapCameraToAnimation"
+          "Type": "System.Single"
         },
         {
+          "Name": "previousCameraAnimationBlend",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "previousCameraAnimationBlend"
+          "Type": "System.Single"
         },
         {
+          "Name": "cameraAnimationBlend",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "cameraAnimationBlend"
+          "Type": "System.Single"
         },
         {
+          "Name": "smoothedSpeed",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "smoothedSpeed"
+          "Type": "System.Single"
         },
         {
+          "Name": "side",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "side"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "povCameraRange",
           "ValueType": true,
-          "Type": "UnityEngine.Vector2",
-          "Name": "povCameraRange"
+          "Type": "UnityEngine.Vector2"
         },
         {
+          "Name": "lastFootstepTime",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "lastFootstepTime"
+          "Type": "System.Single"
         },
         {
+          "Name": "lastFootstepSide",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "lastFootstepSide"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "lastInteractionTime",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "lastInteractionTime"
+          "Type": "System.Single"
         },
         {
+          "Name": "cameraForwardOffsetTarget",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "cameraForwardOffsetTarget"
+          "Type": "System.Single"
         },
         {
+          "Name": "cameraForwardOffset",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "cameraForwardOffset"
+          "Type": "System.Single"
         },
         {
+          "Name": "defaultTrayPosition",
           "ValueType": true,
-          "Type": "UnityEngine.Vector3",
-          "Name": "defaultTrayPosition"
+          "Type": "UnityEngine.Vector3"
         },
         {
+          "Name": "cameraTargetOverride",
           "ValueType": true,
-          "Type": "Nivalis.PlayerHandsAnimator+EulerPose",
-          "Name": "cameraTargetOverride"
+          "Type": "Nivalis.PlayerHandsAnimator+EulerPose"
         },
         {
+          "Name": "cameraTargetOverrideSet",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "cameraTargetOverrideSet"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "mealCoroutine",
           "ValueType": false,
-          "Type": "UnityEngine.Coroutine",
-          "Name": "mealCoroutine"
+          "Type": "UnityEngine.Coroutine"
         },
         {
+          "Name": "sittingCoroutine",
           "ValueType": false,
-          "Type": "UnityEngine.Coroutine",
-          "Name": "sittingCoroutine"
+          "Type": "UnityEngine.Coroutine"
         },
         {
+          "Name": "currentIKData",
           "ValueType": false,
-          "Type": "Nivalis.IKData",
-          "Name": "currentIKData"
+          "Type": "Nivalis.IKData"
         },
         {
+          "Name": "_newspaperOpenedFromMenu",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "_newspaperOpenedFromMenu"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "isSitting",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "isSitting"
+          "Type": "System.Boolean"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerHandsAnimator"
     },
     {
-      "Name": "Nivalis.PlayerInteraction",
       "Fields": [
         {
+          "Name": "_raycaster",
           "ValueType": false,
-          "Type": "Nivalis.FocusRaycaster",
-          "Name": "_raycaster"
+          "Type": "Nivalis.FocusRaycaster"
         },
         {
+          "Name": "lookTarget",
           "ValueType": false,
-          "Type": "Nivalis.CharacterTarget+Look",
-          "Name": "lookTarget"
+          "Type": "Nivalis.CharacterTarget+Look"
         },
         {
+          "Name": "crowdTarget",
           "ValueType": false,
-          "Type": "Nivalis.CharacterTarget+Look",
-          "Name": "crowdTarget"
+          "Type": "Nivalis.CharacterTarget+Look"
         },
         {
+          "Name": "sitTarget",
           "ValueType": false,
-          "Type": "Nivalis.CharacterTarget+Look",
-          "Name": "sitTarget"
+          "Type": "Nivalis.CharacterTarget+Look"
         },
         {
+          "Name": "crowdLayer",
           "ValueType": true,
-          "Type": "UnityEngine.LayerMask",
-          "Name": "crowdLayer"
+          "Type": "UnityEngine.LayerMask"
         },
         {
+          "Name": "_currentInteractable",
           "ValueType": false,
-          "Type": "Nivalis.IInteractable",
-          "Name": "_currentInteractable"
+          "Type": "Nivalis.IInteractable"
         },
         {
+          "Name": "_interactionActive",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "_interactionActive"
+          "Type": "Nivalis.OverrideableBool"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerInteraction"
     },
     {
-      "Name": "Nivalis.PlayerManagerSave",
       "Fields": [
         {
+          "Name": "PlayerGhost",
           "ValueType": false,
-          "Type": "Nivalis.GhostSystem.Ghost",
-          "Name": "PlayerGhost"
+          "Type": "Nivalis.GhostSystem.Ghost"
         },
         {
+          "Name": "PlayerSave",
           "ValueType": false,
-          "Type": "Nivalis.PlayerManager+PlayerSave",
-          "Name": "PlayerSave"
+          "Type": "Nivalis.PlayerManager+PlayerSave"
         },
         {
+          "Name": "<Guid>k__BackingField",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "<Guid>k__BackingField"
+          "Type": "System.String"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerManagerSave"
     },
     {
-      "Name": "Nivalis.PlayerNavMesh",
       "Fields": [
         {
+          "Name": "meshFilter",
           "ValueType": false,
-          "Type": "UnityEngine.MeshFilter",
-          "Name": "meshFilter"
+          "Type": "UnityEngine.MeshFilter"
         },
         {
+          "Name": "obstacles",
           "ValueType": false,
-          "Type": "Nivalis.PlayerNavMeshObstacle[]",
-          "Name": "obstacles"
+          "Type": "Nivalis.PlayerNavMeshObstacle[]"
         },
         {
+          "Name": "meshData",
           "ValueType": true,
-          "Type": "Nivalis.PlayerNavMesh+MeshData",
-          "Name": "meshData"
+          "Type": "Nivalis.PlayerNavMesh+MeshData"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerNavMesh"
     },
     {
-      "Name": "Nivalis.PlayerStat",
       "Fields": [
         {
+          "Name": "name",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "name"
+          "Type": "System.String"
         },
         {
+          "Name": "valueRange",
           "ValueType": true,
-          "Type": "UnityEngine.Vector2",
-          "Name": "valueRange"
+          "Type": "UnityEngine.Vector2"
         },
         {
+          "Name": "changeOverGameSecond",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "changeOverGameSecond"
+          "Type": "System.Single"
         },
         {
+          "Name": "startValue",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "startValue"
+          "Type": "System.Single"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerStat"
     },
     {
-      "Name": "Nivalis.PlayerState",
       "Fields": [
         {
+          "Name": "_statValues",
           "ValueType": false,
-          "Type": "System.Collections.Generic.Dictionary`2<Nivalis.PlayerStat,Nivalis.PlayerState+StatValue>",
-          "Name": "_statValues"
+          "Type": "System.Collections.Generic.Dictionary`2<Nivalis.PlayerStat,Nivalis.PlayerState+StatValue>"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerState"
     },
     {
-      "Name": "Nivalis.PlayerState+StatValue",
       "Fields": [
         {
+          "Name": "LastUpdateTime",
           "ValueType": true,
-          "Type": "System.Nullable`1<System.Int32>",
-          "Name": "LastUpdateTime"
+          "Type": "System.Nullable`1<System.Int32>"
         },
         {
+          "Name": "Value",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "Value"
+          "Type": "System.Single"
         }
-      ]
+      ],
+      "Name": "Nivalis.PlayerState+StatValue"
     },
     {
-      "Name": "Nivalis.OverrideableBool",
       "Fields": [
         {
+          "Name": "OnValueChanged",
           "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>",
-          "Name": "OnValueChanged"
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>"
         },
         {
+          "Name": "_defaultValue",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "_defaultValue"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "_overrideOwners",
           "ValueType": false,
-          "Type": "System.Collections.Generic.HashSet`1<System.Object>",
-          "Name": "_overrideOwners"
+          "Type": "System.Collections.Generic.HashSet`1<System.Object>"
         }
-      ]
+      ],
+      "Name": "Nivalis.OverrideableBool"
     },
     {
-      "Name": "Nivalis.OverrideableBool+OverrideLock",
       "Fields": [
         {
+          "Name": "_owner",
           "ValueType": false,
-          "Type": "System.Object",
-          "Name": "_owner"
+          "Type": "System.Object"
         },
         {
+          "Name": "_isReleased",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "_isReleased"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "_target",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "_target"
+          "Type": "Nivalis.OverrideableBool"
         }
-      ]
+      ],
+      "Name": "Nivalis.OverrideableBool+OverrideLock"
     },
     {
-      "Name": "Nivalis.BaseCharacter",
       "Fields": [
         {
+          "Name": "animator",
           "ValueType": false,
-          "Type": "UnityEngine.Animator",
-          "Name": "animator"
+          "Type": "UnityEngine.Animator"
         },
         {
+          "Name": "<BodyOffset>k__BackingField",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "<BodyOffset>k__BackingField"
+          "Type": "System.Single"
         },
         {
+          "Name": "culled",
           "ValueType": true,
-          "Type": "System.Nullable`1<System.Boolean>",
-          "Name": "culled"
+          "Type": "System.Nullable`1<System.Boolean>"
         },
         {
+          "Name": "becameVisible",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "becameVisible"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "<SqrVisibleDistance>k__BackingField",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "<SqrVisibleDistance>k__BackingField"
+          "Type": "System.Single"
         },
         {
+          "Name": "lastVisibleState",
           "ValueType": true,
-          "Type": "Nivalis.BaseCharacter+VisibleState",
-          "Name": "lastVisibleState"
+          "Type": "Nivalis.BaseCharacter+VisibleState"
         },
         {
+          "Name": "<LifeCycle>k__BackingField",
           "ValueType": false,
-          "Type": "Nivalis.PoolingLifeCycle",
-          "Name": "<LifeCycle>k__BackingField"
+          "Type": "Nivalis.PoolingLifeCycle"
         },
         {
+          "Name": "hasThisTransform",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "hasThisTransform"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "thisTransform",
           "ValueType": false,
-          "Type": "UnityEngine.Transform",
-          "Name": "thisTransform"
+          "Type": "UnityEngine.Transform"
         }
-      ]
+      ],
+      "Name": "Nivalis.BaseCharacter"
     },
     {
-      "Name": "Nivalis.SkillSystem.SkillLevelController",
       "Fields": [
         {
+          "Name": "_allSkills",
           "ValueType": false,
-          "Type": "Nivalis.SkillSystem.SkillDefinition[]",
-          "Name": "_allSkills"
+          "Type": "Nivalis.SkillSystem.SkillDefinition[]"
         },
         {
+          "Name": "_skillMap",
           "ValueType": false,
-          "Type": "System.Collections.Generic.Dictionary`2<System.Type,Nivalis.SkillSystem.SkillDefinition>",
-          "Name": "_skillMap"
+          "Type": "System.Collections.Generic.Dictionary`2<System.Type,Nivalis.SkillSystem.SkillDefinition>"
         },
         {
+          "Name": "_playerData",
           "ValueType": false,
-          "Type": "Nivalis.SkillSystem.SkillLevelController+PlayerExperience",
-          "Name": "_playerData"
+          "Type": "Nivalis.SkillSystem.SkillLevelController+PlayerExperience"
         },
         {
+          "Name": "<ConfigurationType>k__BackingField",
           "ValueType": false,
-          "Type": "System.Type",
-          "Name": "<ConfigurationType>k__BackingField"
+          "Type": "System.Type"
         }
-      ]
+      ],
+      "Name": "Nivalis.SkillSystem.SkillLevelController"
     },
     {
-      "Name": "Nivalis.SkillSystem.SkillLevelController+SkillLevelsControllerSave",
       "Fields": [
         {
+          "Name": "<Guid>k__BackingField",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "<Guid>k__BackingField"
+          "Type": "System.String"
         },
         {
+          "Name": "<ManagerType>k__BackingField",
           "ValueType": false,
-          "Type": "System.Type",
-          "Name": "<ManagerType>k__BackingField"
+          "Type": "System.Type"
         },
         {
+          "Name": "PerSkillExperience",
           "ValueType": false,
-          "Type": "System.Collections.Generic.Dictionary`2<System.String,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>",
-          "Name": "PerSkillExperience"
+          "Type": "System.Collections.Generic.Dictionary`2<System.String,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>"
         }
-      ]
+      ],
+      "Name": "Nivalis.SkillSystem.SkillLevelController+SkillLevelsControllerSave"
     },
     {
-      "Name": "Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience",
       "Fields": [
         {
+          "Name": "Experience",
           "ValueType": true,
-          "Type": "System.Single",
-          "Name": "Experience"
+          "Type": "System.Single"
         },
         {
+          "Name": "CurrentLevel",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "CurrentLevel"
+          "Type": "System.Int32"
         }
-      ]
+      ],
+      "Name": "Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience"
     },
     {
-      "Name": "Nivalis.SkillSystem.SkillLevelController+PlayerExperience",
       "Fields": [
         {
+          "Name": "PerSkillExperience",
           "ValueType": false,
-          "Type": "System.Collections.Generic.Dictionary`2<System.Type,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>",
-          "Name": "PerSkillExperience"
+          "Type": "System.Collections.Generic.Dictionary`2<System.Type,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>"
         }
-      ]
+      ],
+      "Name": "Nivalis.SkillSystem.SkillLevelController+PlayerExperience"
     },
     {
-      "Name": "Nivalis.InventorySystem.InventoryData",
       "Fields": [
         {
+          "Name": "itemContainer",
           "ValueType": false,
-          "Type": "Nivalis.InventorySystem.IItemContainer",
-          "Name": "itemContainer"
+          "Type": "Nivalis.InventorySystem.IItemContainer"
         },
         {
+          "Name": "furnitureContainer",
           "ValueType": false,
-          "Type": "Nivalis.InventorySystem.IItemContainer",
-          "Name": "furnitureContainer"
+          "Type": "Nivalis.InventorySystem.IItemContainer"
         }
-      ]
+      ],
+      "Name": "Nivalis.InventorySystem.InventoryData"
     },
     {
-      "Name": "Nivalis.InventorySystem.PlayerInventory",
       "Fields": [
         {
+          "Name": "onMoneyChanged",
           "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<System.Int32,System.Int32>>",
-          "Name": "onMoneyChanged"
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<System.Int32,System.Int32>>"
         },
         {
+          "Name": "lockedMoneyEventPreviousValue",
           "ValueType": true,
-          "Type": "System.Nullable`1<System.Int32>",
-          "Name": "lockedMoneyEventPreviousValue"
+          "Type": "System.Nullable`1<System.Int32>"
         },
         {
+          "Name": "moneyChangeEventLock",
           "ValueType": false,
-          "Type": "Nivalis.OverrideableBool",
-          "Name": "moneyChangeEventLock"
+          "Type": "Nivalis.OverrideableBool"
         },
         {
+          "Name": "_money",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "_money"
+          "Type": "System.Int32"
         },
         {
+          "Name": "_items",
           "ValueType": false,
-          "Type": "Nivalis.InventorySystem.ItemContainer",
-          "Name": "_items"
+          "Type": "Nivalis.InventorySystem.ItemContainer"
         },
         {
+          "Name": "<InventoryData>k__BackingField",
           "ValueType": false,
-          "Type": "Nivalis.InventorySystem.InventoryData",
-          "Name": "<InventoryData>k__BackingField"
+          "Type": "Nivalis.InventorySystem.InventoryData"
         }
-      ]
+      ],
+      "Name": "Nivalis.InventorySystem.PlayerInventory"
     },
     {
-      "Name": "Nivalis.GhostSystem.Ghost",
       "Fields": [
         {
+          "Name": "OnStatePropertyChanged",
           "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>",
-          "Name": "OnStatePropertyChanged"
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>"
         },
         {
+          "Name": "_id",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "_id"
+          "Type": "System.String"
         },
         {
+          "Name": "_prefabId",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "_prefabId"
+          "Type": "System.String"
         },
         {
+          "Name": "<IsValid>k__BackingField",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "<IsValid>k__BackingField"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "<IsActive>k__BackingField",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "<IsActive>k__BackingField"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "_isViewLess",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "_isViewLess"
+          "Type": "System.Boolean"
         },
         {
+          "Name": "_sceneIndex",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "_sceneIndex"
+          "Type": "System.Int32"
         },
         {
+          "Name": "LastSceneIndexRegistry",
           "ValueType": true,
-          "Type": "System.Int32",
-          "Name": "LastSceneIndexRegistry"
+          "Type": "System.Int32"
         },
         {
+          "Name": "LastCellRegistry",
           "ValueType": true,
-          "Type": "UnityEngine.Vector2Int",
-          "Name": "LastCellRegistry"
+          "Type": "UnityEngine.Vector2Int"
         },
         {
+          "Name": "_bounds",
           "ValueType": true,
-          "Type": "UnityEngine.Bounds",
-          "Name": "_bounds"
+          "Type": "UnityEngine.Bounds"
         },
         {
+          "Name": "parent",
           "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostReference`1<Nivalis.GhostSystem.Ghost>",
-          "Name": "parent"
+          "Type": "Nivalis.GhostSystem.GhostReference`1<Nivalis.GhostSystem.Ghost>"
         },
         {
+          "Name": "_transform",
           "ValueType": true,
-          "Type": "Nivalis.PositionRotation",
-          "Name": "_transform"
+          "Type": "Nivalis.PositionRotation"
         },
         {
+          "Name": "_viewId",
           "ValueType": false,
-          "Type": "System.String",
-          "Name": "_viewId"
+          "Type": "System.String"
         },
         {
+          "Name": "_ghostView",
           "ValueType": false,
-          "Type": "Nivalis.GhostSystem.IGhostView",
-          "Name": "_ghostView"
+          "Type": "Nivalis.GhostSystem.IGhostView"
         },
         {
+          "Name": "<IsBakedInstance>k__BackingField",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "<IsBakedInstance>k__BackingField"
+          "Type": "System.Boolean"
         }
-      ]
+      ],
+      "Name": "Nivalis.GhostSystem.Ghost"
     },
     {
-      "Name": "Nivalis.GhostSystem.Ai.CustomerGhost",
       "Fields": [
         {
+          "Name": "<PlayerHandlingComplaint>k__BackingField",
           "ValueType": true,
-          "Type": "System.Boolean",
-          "Name": "<PlayerHandlingComplaint>k__BackingField"
+          "Type": "System.Boolean"
         }
-      ]
+      ],
+      "Name": "Nivalis.GhostSystem.Ai.CustomerGhost"
     }
   ]
 }

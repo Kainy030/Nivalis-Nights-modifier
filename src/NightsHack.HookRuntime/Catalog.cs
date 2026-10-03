@@ -30,14 +30,29 @@ internal sealed record Catalog(TypeSpec[] Types, MethodSpec[] Methods, ExcludedS
 
 internal static class TargetValidation
 {
-    internal const string AssemblyHash = "9A0E32C2D09A5025F867D29BF39B9BEDD0715B513456617FBFD82C581E1A376D";
-    internal const string MetadataHash = "C8BD44F74B47136AEAD259DC2B88F289C12CB01E083FEEECDCD096A6FC1B2CF9";
+    internal const string AssemblyHash = "0DA6AAC5209F504DA743ABD7926F6F528010E2CA7B884B4A20F5198F42F1A26D";
+    internal const string MetadataHash = "5139D6BB87229495DE92FEC78F5F253E31C7D05BFE69A950CAE73C90975747E3";
     internal static void VerifyFile(string path, string expected)
     {
         using var stream = File.OpenRead(path);
         using var hash = SHA256.Create();
         if (!StringComparer.OrdinalIgnoreCase.Equals(Convert.ToHexString(hash.ComputeHash(stream)), expected))
             throw new InvalidOperationException($"Build identity mismatch: {path}. Hook refused.");
+    }
+
+    internal static bool TryVerifyFile(string path, string expected, out string message)
+    {
+        try
+        {
+            VerifyFile(path, expected);
+            message = $"Build identity matches: {path}.";
+            return true;
+        }
+        catch (Exception error)
+        {
+            message = error.Message;
+            return false;
+        }
     }
 
     // Canonical names match Cecil metadata, allowing only known interop projection transformations.
