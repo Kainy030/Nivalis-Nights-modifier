@@ -1,13 +1,16 @@
 # NivalisNightsTrainer — 快速交接
 
-## 最新交接：v1.1-Dev（2026-10-03）
+## 最新交接：v1.1.1-DevFix（2026-10-03）
 
-- 当前最新源码版本为 `v1.1-Dev`，基于游戏升级后的新 `GameAssembly.dll` 与 `global-metadata.dat` 哈希；HookRuntime 与修改器校验已同步更新。
+- 当前最新源码版本为 `v1.1.1-DevFix`，基于游戏升级后的新 `GameAssembly.dll` 与 `global-metadata.dat` 哈希；HookRuntime 与修改器校验已同步更新。
 - 修改器命令与玩家探测日志已增强：金币命令记录 ACK、完成/拒绝/超时/失败结果；玩家探测同样记录结果与超时；无效金币输入会明确拒绝并提示安全范围。
 - PlayerHook 清单更新为 323 个方法、32 个类型、48 个明确排除项；PlayerHook 323、WorldHook 349、ItemHook 220、GameRuntimeHook 174，共 1,066 个 v1.1 候选入口。
-- 当前发布包为 `outputs/BuildRelease/v1.1-Dev`，入口 `NivalisNightsTrainer.exe`，`build.json` 标记版本 `v1.1-Dev`，包含 231 个 payload 文件。
-- 已清理旧发布目录 `outputs/BuildRelease/v0.5.2-CommandFix`、`v0.6-Dev`、`v1.0-Dev`；保留当前 `v1.1-Dev` 及源码、当前 v1.1 反编译导出和生成清单。
+- 当前发布包为 `outputs/BuildRelease/v1.1.1-DevFix`，入口 `NivalisNightsTrainer.exe`，`build.json` 标记版本 `v1.1.1-DevFix`，包含 231 个 payload 文件。
+- 已清理旧发布目录 `outputs/BuildRelease/v0.5.2-CommandFix`、`v0.6-Dev`、`v1.0-Dev`；当前发布目录为 `v1.1.1-DevFix`，源码和 v1.1 反编译导出保留。
 - v1.1 Catalog 已根据当前导出重新生成；旧版 RVA/旧 disassembly-index 不再参与构建。构建包存在不等于已完成真实游戏内注入、玩法或跨电脑验证；如未有新的运行证据，不应宣称这些行为已验证。
+- 本轮教训：不能按目录名称猜测反编译资料是否“旧”。删除前必须用 `rg` 检查生成脚本、测试、文档和构建入口的全部引用；游戏升级后必须用当前版本导出重新生成 Player/World/Item/Runtime Catalog，并运行完整静态检查。旧 RVA 清单与当前元数据混用会造成跨插件重复 RVA、静态检查失败，甚至使未来新增功能定位到错误入口。
+- 当前唯一开发输入为 `work/il2cpp-validation-v1.1`；旧报告可以作为历史资料，但不得作为生成器、构建或新功能的输入。任何版本升级都要先更新输入哈希、重新生成 Catalog，再构建和验证。
+- `Build-Modifier.ps1 -Version v1.1.1-DevFix` 已完成：四插件构建零警告/错误，PlayerHook 16 项、WorldHooks 44 项、修改器 13 项检查通过，发布包已生成；这只证明编译、静态检查和打包，不证明游戏内注入或玩法效果。
 
 以下为历史交接记录；如与本节冲突，以本节为准。
 # NivalisNightsTrainer — 快速交接
