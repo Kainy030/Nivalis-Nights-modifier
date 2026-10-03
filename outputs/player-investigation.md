@@ -1,3 +1,5 @@
+> 历史资料：该文档来自旧版本调查，仅作历史参考；当前构建和新功能只使用 v1.1 导出与当前 Catalog。
+
 # Nivalis Nights：Player 底层调查
 
 日期：2026-09-30。分析对象：逻辑程序集 `Assembly-CSharp.dll` 对应的元数据，以及 `GameAssembly.dll` 中的 x64 机器码。
@@ -57,7 +59,7 @@ flowchart TD
 
 前三个重要对象 getter 与本地玩家 getter 已核对为直接字段读取。更具体的是：`PlayerManager.GetPlayer(int id)`（RVA `0x2F0DF90`）在 `id == 0` 时返回 `_localPlayer`，其他 ID 返回 null。这里只确认该入口的单本地玩家行为，不据此评价整个程序是否具有任何网络相关代码。
 
-元数据入口：[Player 类](/D:/NightsHack/work/il2cpp-validation/dump.cs:714269)、[PlayerManager](/D:/NightsHack/work/il2cpp-validation/dump.cs:714591)、[PlayerCharacter](/D:/NightsHack/work/il2cpp-validation/dump.cs:714937)。
+元数据入口：[Player 类](/D:/NightsHack/work/il2cpp-validation-v1.1/dump.cs:714269)、[PlayerManager](/D:/NightsHack/work/il2cpp-validation-v1.1/dump.cs:714591)、[PlayerCharacter](/D:/NightsHack/work/il2cpp-validation-v1.1/dump.cs:714937)。
 
 ## 3. 两条更新链：属性时间与场景角色
 
@@ -100,7 +102,7 @@ foreach (var (stat, state) in statValues)
 
 `DEV_SetStat` 是已有开发入口。具体有哪些配置实例、它们是否叫饥饿/体力/健康，以及其真实范围和速率，**目前未知**：这些值由 PlayerStat 资产提供，不能从通用字段名杜撰。所查核心 Player 类没有独立的 `Health` 字段，不能由此断言整个游戏不存在健康或受伤系统。
 
-证据：[属性 Update 指令](/D:/NightsHack/work/player-investigation/asm/Nivalis.PlayerState__Update_2DCE250.txt)、[SetStat 指令](/D:/NightsHack/work/player-investigation/asm/Nivalis.PlayerState__SetStat_2DCE4F0.txt)、[配置元数据](/D:/NightsHack/work/il2cpp-validation/dump.cs:717218)。
+证据：[属性 Update 指令](/D:/NightsHack/work/player-investigation/asm/Nivalis.PlayerState__Update_2DCE250.txt)、[SetStat 指令](/D:/NightsHack/work/player-investigation/asm/Nivalis.PlayerState__SetStat_2DCE4F0.txt)、[配置元数据](/D:/NightsHack/work/il2cpp-validation-v1.1/dump.cs:717218)。
 
 ### 3.2 场景角色循环
 
@@ -304,7 +306,7 @@ PlayerSave 的字段和写入流程没有 PlayerState 属性字典，也没有�
 | [Player 类型索引](/D:/NightsHack/work/player-investigation/player-type-index.json) | 134 条类型的名字、TypeDefIndex、来源行 |
 | [所选类型简表](/D:/NightsHack/work/player-investigation/selected-types-brief.txt) | 字段与方法概览 |
 | [方法映射](/D:/NightsHack/work/player-investigation/selected-methods.json) | 970 条原始签名与地址记录 |
-| [反汇编索引](/D:/NightsHack/work/player-investigation/disassembly-index.json) | 75 条方法记录、调用边与未解析间接分派 |
+| [旧版反汇编索引（已从构建检查移除） | 75 条方法记录、调用边与未解析间接分派 |
 | [分析状态](/D:/NightsHack/work/player-investigation/analysis-status.json) | 工具限制、分析范围与检查结果 |
 
 逐方法原始字节与指令在 `D:/NightsHack/work/player-investigation/asm/`，各有 JSON 和 TXT；方法请求清单为同目录上一级的 `method-requests.json`。

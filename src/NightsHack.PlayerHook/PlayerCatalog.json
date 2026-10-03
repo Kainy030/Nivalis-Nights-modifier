@@ -1,4 +1,1856 @@
 {
+  "Types": [
+    {
+      "Fields": [
+        {
+          "Name": "BindingJsonString",
+          "ValueType": false,
+          "Type": "System.String"
+        },
+        {
+          "Name": "<Guid>k__BackingField",
+          "ValueType": false,
+          "Type": "System.String"
+        }
+      ],
+      "Name": "Nivalis.PlayerInputManagerSave"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "inputConfigurator",
+          "ValueType": false,
+          "Type": "Nivalis.DeviceDisplayConfigurator"
+        },
+        {
+          "Name": "rebindDuplicateSwap",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "PreventAllMenuShortcuts",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        },
+        {
+          "Name": "PreventGameplayMenuShortcuts",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        },
+        {
+          "Name": "PreventSaving",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        },
+        {
+          "Name": "input",
+          "ValueType": false,
+          "Type": "GameControls"
+        },
+        {
+          "Name": "user",
+          "ValueType": true,
+          "Type": "UnityEngine.InputSystem.Users.InputUser"
+        },
+        {
+          "Name": "currentMap",
+          "ValueType": false,
+          "Type": "UnityEngine.InputSystem.InputActionMap"
+        },
+        {
+          "Name": "currentRebind",
+          "ValueType": false,
+          "Type": "UnityEngine.InputSystem.InputActionRebindingExtensions+RebindingOperation"
+        },
+        {
+          "Name": "isListeningForUnpairedDevices",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "isRebind",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "lastTimeChange",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "changeDeciceDelay",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "<ConfigurationType>k__BackingField",
+          "ValueType": false,
+          "Type": "System.Type"
+        }
+      ],
+      "Name": "Nivalis.PlayerInputManager"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "_player",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerManager+Player"
+        },
+        {
+          "Name": "_playerInteractionLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "placementEvent",
+          "ValueType": false,
+          "Type": "Nivalis.ItemPlacedEvent"
+        },
+        {
+          "Name": "objectHolder",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerObjectHolder"
+        },
+        {
+          "Name": "sphereRadius",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "lerpRate",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "hitLayer",
+          "ValueType": true,
+          "Type": "UnityEngine.LayerMask"
+        },
+        {
+          "Name": "_eyelineTransform",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "audioSource",
+          "ValueType": false,
+          "Type": "UnityEngine.AudioSource"
+        },
+        {
+          "Name": "equipSFX",
+          "ValueType": false,
+          "Type": "UnityEngine.AudioClip"
+        },
+        {
+          "Name": "placeSFX",
+          "ValueType": false,
+          "Type": "UnityEngine.AudioClip"
+        },
+        {
+          "Name": "storeSFX",
+          "ValueType": false,
+          "Type": "UnityEngine.AudioClip"
+        },
+        {
+          "Name": "maxPlacementDistance",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "throwForce",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "_hit",
+          "ValueType": true,
+          "Type": "UnityEngine.RaycastHit"
+        }
+      ],
+      "Name": "Nivalis.PlacementSystem"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "OnPickUpFound",
+          "ValueType": true,
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
+        },
+        {
+          "Name": "OnObjectPickUp",
+          "ValueType": true,
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
+        },
+        {
+          "Name": "OnObjectStore",
+          "ValueType": true,
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
+        },
+        {
+          "Name": "<IsInControlOfObjectPosition>k__BackingField",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "container",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "pickUpEvent",
+          "ValueType": false,
+          "Type": "Nivalis.ItemPickedUpEvent"
+        },
+        {
+          "Name": "_heldObjSO",
+          "ValueType": false,
+          "Type": "Nivalis.HoldableEntitySO"
+        },
+        {
+          "Name": "_eyelineTransform",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "_facingTransform",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "focusRaycaster",
+          "ValueType": false,
+          "Type": "Nivalis.FocusRaycaster"
+        },
+        {
+          "Name": "rotationSpeed",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "lerpRate",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "_heldObject",
+          "ValueType": false,
+          "Type": "Nivalis.HoldableEntity"
+        },
+        {
+          "Name": "_objectInFront",
+          "ValueType": false,
+          "Type": "Nivalis.HoldableEntity"
+        },
+        {
+          "Name": "_rotationDirection",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "_player",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerManager+Player"
+        },
+        {
+          "Name": "_playerSprintLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        }
+      ],
+      "Name": "Nivalis.PlayerObjectHolder"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "raycastCamera",
+          "ValueType": false,
+          "Type": "UnityEngine.Camera"
+        },
+        {
+          "Name": "raycastLayers",
+          "ValueType": true,
+          "Type": "UnityEngine.LayerMask"
+        },
+        {
+          "Name": "triggerDetectLayers",
+          "ValueType": true,
+          "Type": "UnityEngine.LayerMask"
+        },
+        {
+          "Name": "focusDistance",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "raycastRadius",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "excludedObjects",
+          "ValueType": false,
+          "Type": "UnityEngine.GameObject[]"
+        },
+        {
+          "Name": "_objectsInFocus",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.List`1<UnityEngine.GameObject>"
+        },
+        {
+          "Name": "hits",
+          "ValueType": false,
+          "Type": "UnityEngine.RaycastHit[]"
+        },
+        {
+          "Name": "triggerHits",
+          "ValueType": false,
+          "Type": "UnityEngine.RaycastHit[]"
+        },
+        {
+          "Name": "_interactablesInFocus",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.List`1<Nivalis.IInteractable>"
+        },
+        {
+          "Name": "_holdablesInFocus",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.List`1<Nivalis.HoldableEntity>"
+        }
+      ],
+      "Name": "Nivalis.FocusRaycaster"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "_localPlayer",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerManager+Player"
+        }
+      ],
+      "Name": "Nivalis.PlayerManager"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "OwnedProperties",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.List`1<System.String>"
+        },
+        {
+          "Name": "Money",
+          "ValueType": true,
+          "Type": "System.Int32"
+        },
+        {
+          "Name": "knowledge",
+          "ValueType": true,
+          "Type": "Nivalis.PlayerManager+PlayerKnowledge"
+        },
+        {
+          "Name": "personalReceipts",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.List`1<Nivalis.Player.ReceiptBase>"
+        },
+        {
+          "Name": "currentPropertyGuid",
+          "ValueType": false,
+          "Type": "System.String"
+        }
+      ],
+      "Name": "Nivalis.PlayerManager+PlayerSave"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "OrderMadeByPlayer",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerManager+OrderData"
+        },
+        {
+          "Name": "<Id>k__BackingField",
+          "ValueType": true,
+          "Type": "System.Int32"
+        },
+        {
+          "Name": "<CurrentProperty>k__BackingField",
+          "ValueType": false,
+          "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty"
+        },
+        {
+          "Name": "_state",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerState"
+        },
+        {
+          "Name": "_character",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerCharacter"
+        },
+        {
+          "Name": "_ownedProperties",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.HashSet`1<System.String>"
+        },
+        {
+          "Name": "stats",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.List`1<Nivalis.PlayerStat>"
+        },
+        {
+          "Name": "playerPrefab",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerCharacter"
+        },
+        {
+          "Name": "inventory",
+          "ValueType": false,
+          "Type": "Nivalis.InventorySystem.PlayerInventory"
+        },
+        {
+          "Name": "personalReceipts",
+          "ValueType": false,
+          "Type": "Nivalis.Player.ReceiptList"
+        },
+        {
+          "Name": "knowledge",
+          "ValueType": true,
+          "Type": "Nivalis.PlayerManager+PlayerKnowledge"
+        },
+        {
+          "Name": "rank",
+          "ValueType": true,
+          "Type": "System.Int32"
+        }
+      ],
+      "Name": "Nivalis.PlayerManager+Player"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "fishing",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "trading",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "navigation",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "map",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "inspiration",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "storage",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "farming",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "renting",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "hiring",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        }
+      ],
+      "Name": "Nivalis.PlayerManager+PlayerKnowledge"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "onDialogueStart",
+          "ValueType": false,
+          "Type": "Nivalis.Dialogue.DialogueEvent"
+        },
+        {
+          "Name": "onDialogueEnd",
+          "ValueType": false,
+          "Type": "Nivalis.Dialogue.DialogueEvent"
+        },
+        {
+          "Name": "followTarget",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "dialogueFollowTarget",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "dialogueCamera",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "dialogueCameraDistance",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "orderCameraDistance",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "zoomSettings",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerCameraController+ZoomSettings"
+        },
+        {
+          "Name": "playerMovementLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "zoomCooldown",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "postProcessVolumes",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.List`1<UnityEngine.Rendering.PostProcessing.PostProcessVolume>"
+        },
+        {
+          "Name": "defaultFollowTargetOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Pose"
+        },
+        {
+          "Name": "focusTargetActivated",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "focusTarget",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        }
+      ],
+      "Name": "Nivalis.PlayerCameraController"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "_objectHolder",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerObjectHolder"
+        },
+        {
+          "Name": "_placementSystem",
+          "ValueType": false,
+          "Type": "Nivalis.PlacementSystem"
+        },
+        {
+          "Name": "_interaction",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerInteraction"
+        },
+        {
+          "Name": "_focus",
+          "ValueType": false,
+          "Type": "Nivalis.FocusRaycaster"
+        },
+        {
+          "Name": "_controller",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerCharacterController"
+        },
+        {
+          "Name": "spotMovementLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "spotEnterPosition",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "sitSequence",
+          "ValueType": false,
+          "Type": "UnityEngine.Coroutine"
+        },
+        {
+          "Name": "hasCachedInitialDrivenBoat",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "initialDrivenBoat",
+          "ValueType": false,
+          "Type": "Nivalis.Boat.BoatController"
+        },
+        {
+          "Name": "drivenBoat",
+          "ValueType": false,
+          "Type": "Nivalis.Boat.BoatController"
+        },
+        {
+          "Name": "hasInitializedPooledElement",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "pooledElement",
+          "ValueType": false,
+          "Type": "Nivalis.PooledElement"
+        },
+        {
+          "Name": "dialogueSpot",
+          "ValueType": false,
+          "Type": "Nivalis.AISpot"
+        },
+        {
+          "Name": "serveSpot",
+          "ValueType": false,
+          "Type": "Nivalis.AISpot"
+        },
+        {
+          "Name": "teleportSpot",
+          "ValueType": false,
+          "Type": "Nivalis.AISpot"
+        },
+        {
+          "Name": "_isInitialized",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "_myGhost",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerGhost"
+        }
+      ],
+      "Name": "Nivalis.PlayerCharacter"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "lastSleepApartment",
+          "ValueType": false,
+          "Type": "Nivalis.Apartment.Apartment"
+        },
+        {
+          "Name": "LookRotation",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector2"
+        },
+        {
+          "Name": "currentOrder",
+          "ValueType": false,
+          "Type": "Nivalis.GhostSystem.CustomerLoop.VenueOrderReference"
+        },
+        {
+          "Name": "chair",
+          "ValueType": true,
+          "Type": "Nivalis.GhostSystem.GhostReference`1<Nivalis.GhostSystem.CustomerLoop.ChairGhost>"
+        },
+        {
+          "Name": "<DialogueSpot>k__BackingField",
+          "ValueType": true,
+          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
+        },
+        {
+          "Name": "<ServeSpot>k__BackingField",
+          "ValueType": true,
+          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
+        },
+        {
+          "Name": "<TeleportSpot>k__BackingField",
+          "ValueType": true,
+          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
+        },
+        {
+          "Name": "venue",
+          "ValueType": false,
+          "Type": "Nivalis.GhostSystem.CustomerLoop.Venue"
+        },
+        {
+          "Name": "chosenMeals",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.List`1<Nivalis.Locale.MealMenuItem>"
+        },
+        {
+          "Name": "IsCancelOrder",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "preventSavingWhileSittingLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        }
+      ],
+      "Name": "Nivalis.PlayerGhost"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "_state",
+          "ValueType": true,
+          "Type": "Nivalis.PlayerCharacterController+ControllerState"
+        },
+        {
+          "Name": "<Camera>k__BackingField",
+          "ValueType": false,
+          "Type": "UnityEngine.Camera"
+        },
+        {
+          "Name": "<CameraRainEffect>k__BackingField",
+          "ValueType": false,
+          "Type": "Nivalis.CameraRainEffect"
+        },
+        {
+          "Name": "firstPersonCamera",
+          "ValueType": false,
+          "Type": "Cinemachine.CinemachineVirtualCamera"
+        },
+        {
+          "Name": "cameraController",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerCameraController"
+        },
+        {
+          "Name": "_character",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerCharacter"
+        },
+        {
+          "Name": "_firstPersonPOV",
+          "ValueType": false,
+          "Type": "Cinemachine.CinemachinePOV"
+        },
+        {
+          "Name": "lookInput",
+          "ValueType": false,
+          "Type": "Cinemachine.CinemachineInputProvider"
+        },
+        {
+          "Name": "_firstPersonTransposer",
+          "ValueType": false,
+          "Type": "Cinemachine.CinemachineTransposer"
+        },
+        {
+          "Name": "_characterController",
+          "ValueType": false,
+          "Type": "UnityEngine.CharacterController"
+        },
+        {
+          "Name": "navMesh",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerNavMesh"
+        },
+        {
+          "Name": "localPositionOnNavMesh",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "lastLocalPositionOnNavMesh",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "initialCameraOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "headBobTimer",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "_cameraLookEnabled",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        },
+        {
+          "Name": "gravity",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "groundSnapping",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "defaultMoveSpeed",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "sprintSpeed",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "headBobEnabled",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "headBobFrequency",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "headBobAmplitude",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector2"
+        },
+        {
+          "Name": "handsAnimator",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerHandsAnimator"
+        },
+        {
+          "Name": "environmentTracker",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerEnvironmentTracker"
+        },
+        {
+          "Name": "dialogueObstacle",
+          "ValueType": false,
+          "Type": "UnityEngine.AI.NavMeshObstacle"
+        },
+        {
+          "Name": "_isSprinting",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "_velocity",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "_characterControllerVelocity",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "cameraRotationOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector2"
+        },
+        {
+          "Name": "cameraPositionOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "_canSprint",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        },
+        {
+          "Name": "_canMove",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        },
+        {
+          "Name": "raycastDistance",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "sphereCastRadius",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "rayCenterOffset",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "gapIgnoreRadius",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "groundCollisionMask",
+          "ValueType": true,
+          "Type": "UnityEngine.LayerMask"
+        },
+        {
+          "Name": "adjustTimes",
+          "ValueType": true,
+          "Type": "System.Int32"
+        },
+        {
+          "Name": "boardedBoat",
+          "ValueType": false,
+          "Type": "Nivalis.Boat.BoatController"
+        },
+        {
+          "Name": "isGrounded",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "cameraTools",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerCameraTools"
+        },
+        {
+          "Name": "_moveSpeedScale",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "dialogueCamera",
+          "ValueType": false,
+          "Type": "Cinemachine.CinemachineVirtualCamera"
+        },
+        {
+          "Name": "dialogueCameraCoroutine",
+          "ValueType": false,
+          "Type": "UnityEngine.Coroutine"
+        },
+        {
+          "Name": "dialogueDistance",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "dialogueCharacter",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "movementLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "handsLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "lookAction",
+          "ValueType": false,
+          "Type": "UnityEngine.InputSystem.InputActionReference"
+        },
+        {
+          "Name": "_isCameraSmoothed",
+          "ValueType": true,
+          "Type": "System.Int32"
+        },
+        {
+          "Name": "_defaultAxisHorizontal",
+          "ValueType": true,
+          "Type": "Cinemachine.AxisState"
+        },
+        {
+          "Name": "_defaultAxisVertical",
+          "ValueType": true,
+          "Type": "Cinemachine.AxisState"
+        },
+        {
+          "Name": "_handsVisibilityLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "_handsVisibilityLockOwner",
+          "ValueType": false,
+          "Type": "Nivalis.LockDummy"
+        }
+      ],
+      "Name": "Nivalis.PlayerCharacterController"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "environmentLayers",
+          "ValueType": true,
+          "Type": "UnityEngine.LayerMask"
+        },
+        {
+          "Name": "interiorAmount",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "closestVenue",
+          "ValueType": false,
+          "Type": "Nivalis.GhostSystem.CustomerLoop.Venue"
+        },
+        {
+          "Name": "closestVenueDistance",
+          "ValueType": true,
+          "Type": "System.Single"
+        }
+      ],
+      "Name": "Nivalis.PlayerEnvironmentTracker"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "leftHandIK",
+          "ValueType": false,
+          "Type": "RootMotion.FinalIK.LimbIK"
+        },
+        {
+          "Name": "rightHandIK",
+          "ValueType": false,
+          "Type": "RootMotion.FinalIK.LimbIK"
+        },
+        {
+          "Name": "leftHandInteraction",
+          "ValueType": true,
+          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
+        },
+        {
+          "Name": "rightHandInteraction",
+          "ValueType": true,
+          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
+        },
+        {
+          "Name": "currentInteraction",
+          "ValueType": true,
+          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
+        },
+        {
+          "Name": "handsAnimator",
+          "ValueType": false,
+          "Type": "UnityEngine.Animator"
+        },
+        {
+          "Name": "rig",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "leftHand",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "rightHand",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "cameraAnchor",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "fishingBaitAnchor",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "tray",
+          "ValueType": false,
+          "Type": "UnityEngine.GameObject"
+        },
+        {
+          "Name": "trayHandTargetLeft",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "trayHandTargetRight",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "defaultRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "fishingRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "farmingRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "placementRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "sitRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "foodProcessorRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "cookDrinkRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "deepFryerRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "blenderRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "cookerRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "panRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "sweepRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "sweepCameraTargetOverride",
+          "ValueType": true,
+          "Type": "Nivalis.PlayerHandsAnimator+EulerPose"
+        },
+        {
+          "Name": "renderers",
+          "ValueType": false,
+          "Type": "UnityEngine.Renderer[]"
+        },
+        {
+          "Name": "consumeSFXMealShort",
+          "ValueType": false,
+          "Type": "Nivalis.AudioGroup"
+        },
+        {
+          "Name": "consumeSFXMealLong",
+          "ValueType": false,
+          "Type": "Nivalis.AudioGroup"
+        },
+        {
+          "Name": "consumeSFXDrinkShort",
+          "ValueType": false,
+          "Type": "Nivalis.AudioGroup"
+        },
+        {
+          "Name": "consumeSFXDrinkLong",
+          "ValueType": false,
+          "Type": "Nivalis.AudioGroup"
+        },
+        {
+          "Name": "sweepSFX",
+          "ValueType": false,
+          "Type": "Nivalis.AudioSingle"
+        },
+        {
+          "Name": "environmentLayer",
+          "ValueType": true,
+          "Type": "UnityEngine.LayerMask"
+        },
+        {
+          "Name": "playerHeldObject",
+          "ValueType": false,
+          "Type": "Nivalis.HoldableEntitySO"
+        },
+        {
+          "Name": "newspaper",
+          "ValueType": false,
+          "Type": "Nivalis.Newspaper"
+        },
+        {
+          "Name": "plantAnchor",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        },
+        {
+          "Name": "itemPlacementEvent",
+          "ValueType": false,
+          "Type": "Nivalis.ItemPlacedEvent"
+        },
+        {
+          "Name": "footstepAudioSource",
+          "ValueType": false,
+          "Type": "UnityEngine.AudioSource"
+        },
+        {
+          "Name": "character",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerCharacter"
+        },
+        {
+          "Name": "cameraPOV",
+          "ValueType": false,
+          "Type": "Cinemachine.CinemachinePOV"
+        },
+        {
+          "Name": "chair",
+          "ValueType": false,
+          "Type": "Nivalis.GhostSystem.CustomerLoop.ChairView"
+        },
+        {
+          "Name": "isVisible",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        },
+        {
+          "Name": "playerMovementLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "playerCameraLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "playerInteractionLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool+OverrideLock"
+        },
+        {
+          "Name": "obstacle",
+          "ValueType": false,
+          "Type": "UnityEngine.AI.NavMeshObstacle"
+        },
+        {
+          "Name": "transitionSpeed",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "rootMotion",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "snapRigToLocation",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "allowFreelook",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "limitFreelook",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "snapRigRotationToCamera",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "placingItem",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "sleeping",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "freelookCameraPosition",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "freelookCameraRotation",
+          "ValueType": true,
+          "Type": "UnityEngine.Quaternion"
+        },
+        {
+          "Name": "targetRigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "rigOffset",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "snapLocationPose",
+          "ValueType": true,
+          "Type": "UnityEngine.Pose"
+        },
+        {
+          "Name": "headAnimationPose",
+          "ValueType": true,
+          "Type": "UnityEngine.Pose"
+        },
+        {
+          "Name": "rigLocationSnapBlend",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "snapCameraToAnimation",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "previousCameraAnimationBlend",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "cameraAnimationBlend",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "smoothedSpeed",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "side",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "povCameraRange",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector2"
+        },
+        {
+          "Name": "lastFootstepTime",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "lastFootstepSide",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "lastInteractionTime",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "cameraForwardOffsetTarget",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "cameraForwardOffset",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "defaultTrayPosition",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector3"
+        },
+        {
+          "Name": "cameraTargetOverride",
+          "ValueType": true,
+          "Type": "Nivalis.PlayerHandsAnimator+EulerPose"
+        },
+        {
+          "Name": "cameraTargetOverrideSet",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "mealCoroutine",
+          "ValueType": false,
+          "Type": "UnityEngine.Coroutine"
+        },
+        {
+          "Name": "sittingCoroutine",
+          "ValueType": false,
+          "Type": "UnityEngine.Coroutine"
+        },
+        {
+          "Name": "currentIKData",
+          "ValueType": false,
+          "Type": "Nivalis.IKData"
+        },
+        {
+          "Name": "_newspaperOpenedFromMenu",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "isSitting",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        }
+      ],
+      "Name": "Nivalis.PlayerHandsAnimator"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "_raycaster",
+          "ValueType": false,
+          "Type": "Nivalis.FocusRaycaster"
+        },
+        {
+          "Name": "lookTarget",
+          "ValueType": false,
+          "Type": "Nivalis.CharacterTarget+Look"
+        },
+        {
+          "Name": "crowdTarget",
+          "ValueType": false,
+          "Type": "Nivalis.CharacterTarget+Look"
+        },
+        {
+          "Name": "sitTarget",
+          "ValueType": false,
+          "Type": "Nivalis.CharacterTarget+Look"
+        },
+        {
+          "Name": "crowdLayer",
+          "ValueType": true,
+          "Type": "UnityEngine.LayerMask"
+        },
+        {
+          "Name": "_currentInteractable",
+          "ValueType": false,
+          "Type": "Nivalis.IInteractable"
+        },
+        {
+          "Name": "_interactionActive",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        }
+      ],
+      "Name": "Nivalis.PlayerInteraction"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "PlayerGhost",
+          "ValueType": false,
+          "Type": "Nivalis.GhostSystem.Ghost"
+        },
+        {
+          "Name": "PlayerSave",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerManager+PlayerSave"
+        },
+        {
+          "Name": "<Guid>k__BackingField",
+          "ValueType": false,
+          "Type": "System.String"
+        }
+      ],
+      "Name": "Nivalis.PlayerManagerSave"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "meshFilter",
+          "ValueType": false,
+          "Type": "UnityEngine.MeshFilter"
+        },
+        {
+          "Name": "obstacles",
+          "ValueType": false,
+          "Type": "Nivalis.PlayerNavMeshObstacle[]"
+        },
+        {
+          "Name": "meshData",
+          "ValueType": true,
+          "Type": "Nivalis.PlayerNavMesh+MeshData"
+        }
+      ],
+      "Name": "Nivalis.PlayerNavMesh"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "name",
+          "ValueType": false,
+          "Type": "System.String"
+        },
+        {
+          "Name": "valueRange",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector2"
+        },
+        {
+          "Name": "changeOverGameSecond",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "startValue",
+          "ValueType": true,
+          "Type": "System.Single"
+        }
+      ],
+      "Name": "Nivalis.PlayerStat"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "_statValues",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.Dictionary`2<Nivalis.PlayerStat,Nivalis.PlayerState+StatValue>"
+        }
+      ],
+      "Name": "Nivalis.PlayerState"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "LastUpdateTime",
+          "ValueType": true,
+          "Type": "System.Nullable`1<System.Int32>"
+        },
+        {
+          "Name": "Value",
+          "ValueType": true,
+          "Type": "System.Single"
+        }
+      ],
+      "Name": "Nivalis.PlayerState+StatValue"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "OnValueChanged",
+          "ValueType": true,
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>"
+        },
+        {
+          "Name": "_defaultValue",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "_overrideOwners",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.HashSet`1<System.Object>"
+        }
+      ],
+      "Name": "Nivalis.OverrideableBool"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "_owner",
+          "ValueType": false,
+          "Type": "System.Object"
+        },
+        {
+          "Name": "_isReleased",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "_target",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        }
+      ],
+      "Name": "Nivalis.OverrideableBool+OverrideLock"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "animator",
+          "ValueType": false,
+          "Type": "UnityEngine.Animator"
+        },
+        {
+          "Name": "<BodyOffset>k__BackingField",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "culled",
+          "ValueType": true,
+          "Type": "System.Nullable`1<System.Boolean>"
+        },
+        {
+          "Name": "becameVisible",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "<SqrVisibleDistance>k__BackingField",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "lastVisibleState",
+          "ValueType": true,
+          "Type": "Nivalis.BaseCharacter+VisibleState"
+        },
+        {
+          "Name": "<LifeCycle>k__BackingField",
+          "ValueType": false,
+          "Type": "Nivalis.PoolingLifeCycle"
+        },
+        {
+          "Name": "hasThisTransform",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "thisTransform",
+          "ValueType": false,
+          "Type": "UnityEngine.Transform"
+        }
+      ],
+      "Name": "Nivalis.BaseCharacter"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "_allSkills",
+          "ValueType": false,
+          "Type": "Nivalis.SkillSystem.SkillDefinition[]"
+        },
+        {
+          "Name": "_skillMap",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.Dictionary`2<System.Type,Nivalis.SkillSystem.SkillDefinition>"
+        },
+        {
+          "Name": "_playerData",
+          "ValueType": false,
+          "Type": "Nivalis.SkillSystem.SkillLevelController+PlayerExperience"
+        },
+        {
+          "Name": "<ConfigurationType>k__BackingField",
+          "ValueType": false,
+          "Type": "System.Type"
+        }
+      ],
+      "Name": "Nivalis.SkillSystem.SkillLevelController"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "<Guid>k__BackingField",
+          "ValueType": false,
+          "Type": "System.String"
+        },
+        {
+          "Name": "<ManagerType>k__BackingField",
+          "ValueType": false,
+          "Type": "System.Type"
+        },
+        {
+          "Name": "PerSkillExperience",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.Dictionary`2<System.String,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>"
+        }
+      ],
+      "Name": "Nivalis.SkillSystem.SkillLevelController+SkillLevelsControllerSave"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "Experience",
+          "ValueType": true,
+          "Type": "System.Single"
+        },
+        {
+          "Name": "CurrentLevel",
+          "ValueType": true,
+          "Type": "System.Int32"
+        }
+      ],
+      "Name": "Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "PerSkillExperience",
+          "ValueType": false,
+          "Type": "System.Collections.Generic.Dictionary`2<System.Type,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>"
+        }
+      ],
+      "Name": "Nivalis.SkillSystem.SkillLevelController+PlayerExperience"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "itemContainer",
+          "ValueType": false,
+          "Type": "Nivalis.InventorySystem.IItemContainer"
+        },
+        {
+          "Name": "furnitureContainer",
+          "ValueType": false,
+          "Type": "Nivalis.InventorySystem.IItemContainer"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.InventoryData"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "onMoneyChanged",
+          "ValueType": true,
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<System.Int32,System.Int32>>"
+        },
+        {
+          "Name": "lockedMoneyEventPreviousValue",
+          "ValueType": true,
+          "Type": "System.Nullable`1<System.Int32>"
+        },
+        {
+          "Name": "moneyChangeEventLock",
+          "ValueType": false,
+          "Type": "Nivalis.OverrideableBool"
+        },
+        {
+          "Name": "_money",
+          "ValueType": true,
+          "Type": "System.Int32"
+        },
+        {
+          "Name": "_items",
+          "ValueType": false,
+          "Type": "Nivalis.InventorySystem.ItemContainer"
+        },
+        {
+          "Name": "<InventoryData>k__BackingField",
+          "ValueType": false,
+          "Type": "Nivalis.InventorySystem.InventoryData"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.PlayerInventory"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "OnStatePropertyChanged",
+          "ValueType": true,
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>"
+        },
+        {
+          "Name": "_id",
+          "ValueType": false,
+          "Type": "System.String"
+        },
+        {
+          "Name": "_prefabId",
+          "ValueType": false,
+          "Type": "System.String"
+        },
+        {
+          "Name": "<IsValid>k__BackingField",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "<IsActive>k__BackingField",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "_isViewLess",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        },
+        {
+          "Name": "_sceneIndex",
+          "ValueType": true,
+          "Type": "System.Int32"
+        },
+        {
+          "Name": "LastSceneIndexRegistry",
+          "ValueType": true,
+          "Type": "System.Int32"
+        },
+        {
+          "Name": "LastCellRegistry",
+          "ValueType": true,
+          "Type": "UnityEngine.Vector2Int"
+        },
+        {
+          "Name": "_bounds",
+          "ValueType": true,
+          "Type": "UnityEngine.Bounds"
+        },
+        {
+          "Name": "parent",
+          "ValueType": true,
+          "Type": "Nivalis.GhostSystem.GhostReference`1<Nivalis.GhostSystem.Ghost>"
+        },
+        {
+          "Name": "_transform",
+          "ValueType": true,
+          "Type": "Nivalis.PositionRotation"
+        },
+        {
+          "Name": "_viewId",
+          "ValueType": false,
+          "Type": "System.String"
+        },
+        {
+          "Name": "_ghostView",
+          "ValueType": false,
+          "Type": "Nivalis.GhostSystem.IGhostView"
+        },
+        {
+          "Name": "<IsBakedInstance>k__BackingField",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        }
+      ],
+      "Name": "Nivalis.GhostSystem.Ghost"
+    },
+    {
+      "Fields": [
+        {
+          "Name": "<PlayerHandlingComplaint>k__BackingField",
+          "ValueType": true,
+          "Type": "System.Boolean"
+        }
+      ],
+      "Name": "Nivalis.GhostSystem.Ai.CustomerGhost"
+    }
+  ],
   "Excluded": [
     {
       "Group": "Save",
@@ -6162,1858 +8014,6 @@
       ],
       "Rva": "0x680720",
       "Sampled": false
-    }
-  ],
-  "Types": [
-    {
-      "Fields": [
-        {
-          "Name": "BindingJsonString",
-          "ValueType": false,
-          "Type": "System.String"
-        },
-        {
-          "Name": "<Guid>k__BackingField",
-          "ValueType": false,
-          "Type": "System.String"
-        }
-      ],
-      "Name": "Nivalis.PlayerInputManagerSave"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "inputConfigurator",
-          "ValueType": false,
-          "Type": "Nivalis.DeviceDisplayConfigurator"
-        },
-        {
-          "Name": "rebindDuplicateSwap",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "PreventAllMenuShortcuts",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        },
-        {
-          "Name": "PreventGameplayMenuShortcuts",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        },
-        {
-          "Name": "PreventSaving",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        },
-        {
-          "Name": "input",
-          "ValueType": false,
-          "Type": "GameControls"
-        },
-        {
-          "Name": "user",
-          "ValueType": true,
-          "Type": "UnityEngine.InputSystem.Users.InputUser"
-        },
-        {
-          "Name": "currentMap",
-          "ValueType": false,
-          "Type": "UnityEngine.InputSystem.InputActionMap"
-        },
-        {
-          "Name": "currentRebind",
-          "ValueType": false,
-          "Type": "UnityEngine.InputSystem.InputActionRebindingExtensions+RebindingOperation"
-        },
-        {
-          "Name": "isListeningForUnpairedDevices",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "isRebind",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "lastTimeChange",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "changeDeciceDelay",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "<ConfigurationType>k__BackingField",
-          "ValueType": false,
-          "Type": "System.Type"
-        }
-      ],
-      "Name": "Nivalis.PlayerInputManager"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "_player",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerManager+Player"
-        },
-        {
-          "Name": "_playerInteractionLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "placementEvent",
-          "ValueType": false,
-          "Type": "Nivalis.ItemPlacedEvent"
-        },
-        {
-          "Name": "objectHolder",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerObjectHolder"
-        },
-        {
-          "Name": "sphereRadius",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "lerpRate",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "hitLayer",
-          "ValueType": true,
-          "Type": "UnityEngine.LayerMask"
-        },
-        {
-          "Name": "_eyelineTransform",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "audioSource",
-          "ValueType": false,
-          "Type": "UnityEngine.AudioSource"
-        },
-        {
-          "Name": "equipSFX",
-          "ValueType": false,
-          "Type": "UnityEngine.AudioClip"
-        },
-        {
-          "Name": "placeSFX",
-          "ValueType": false,
-          "Type": "UnityEngine.AudioClip"
-        },
-        {
-          "Name": "storeSFX",
-          "ValueType": false,
-          "Type": "UnityEngine.AudioClip"
-        },
-        {
-          "Name": "maxPlacementDistance",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "throwForce",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "_hit",
-          "ValueType": true,
-          "Type": "UnityEngine.RaycastHit"
-        }
-      ],
-      "Name": "Nivalis.PlacementSystem"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "OnPickUpFound",
-          "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
-        },
-        {
-          "Name": "OnObjectPickUp",
-          "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
-        },
-        {
-          "Name": "OnObjectStore",
-          "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>"
-        },
-        {
-          "Name": "<IsInControlOfObjectPosition>k__BackingField",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "container",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "pickUpEvent",
-          "ValueType": false,
-          "Type": "Nivalis.ItemPickedUpEvent"
-        },
-        {
-          "Name": "_heldObjSO",
-          "ValueType": false,
-          "Type": "Nivalis.HoldableEntitySO"
-        },
-        {
-          "Name": "_eyelineTransform",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "_facingTransform",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "focusRaycaster",
-          "ValueType": false,
-          "Type": "Nivalis.FocusRaycaster"
-        },
-        {
-          "Name": "rotationSpeed",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "lerpRate",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "_heldObject",
-          "ValueType": false,
-          "Type": "Nivalis.HoldableEntity"
-        },
-        {
-          "Name": "_objectInFront",
-          "ValueType": false,
-          "Type": "Nivalis.HoldableEntity"
-        },
-        {
-          "Name": "_rotationDirection",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "_player",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerManager+Player"
-        },
-        {
-          "Name": "_playerSprintLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        }
-      ],
-      "Name": "Nivalis.PlayerObjectHolder"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "raycastCamera",
-          "ValueType": false,
-          "Type": "UnityEngine.Camera"
-        },
-        {
-          "Name": "raycastLayers",
-          "ValueType": true,
-          "Type": "UnityEngine.LayerMask"
-        },
-        {
-          "Name": "triggerDetectLayers",
-          "ValueType": true,
-          "Type": "UnityEngine.LayerMask"
-        },
-        {
-          "Name": "focusDistance",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "raycastRadius",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "excludedObjects",
-          "ValueType": false,
-          "Type": "UnityEngine.GameObject[]"
-        },
-        {
-          "Name": "_objectsInFocus",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<UnityEngine.GameObject>"
-        },
-        {
-          "Name": "hits",
-          "ValueType": false,
-          "Type": "UnityEngine.RaycastHit[]"
-        },
-        {
-          "Name": "triggerHits",
-          "ValueType": false,
-          "Type": "UnityEngine.RaycastHit[]"
-        },
-        {
-          "Name": "_interactablesInFocus",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.IInteractable>"
-        },
-        {
-          "Name": "_holdablesInFocus",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.HoldableEntity>"
-        }
-      ],
-      "Name": "Nivalis.FocusRaycaster"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "_localPlayer",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerManager+Player"
-        }
-      ],
-      "Name": "Nivalis.PlayerManager"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "OwnedProperties",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<System.String>"
-        },
-        {
-          "Name": "Money",
-          "ValueType": true,
-          "Type": "System.Int32"
-        },
-        {
-          "Name": "knowledge",
-          "ValueType": true,
-          "Type": "Nivalis.PlayerManager+PlayerKnowledge"
-        },
-        {
-          "Name": "personalReceipts",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.Player.ReceiptBase>"
-        },
-        {
-          "Name": "currentPropertyGuid",
-          "ValueType": false,
-          "Type": "System.String"
-        }
-      ],
-      "Name": "Nivalis.PlayerManager+PlayerSave"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "OrderMadeByPlayer",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerManager+OrderData"
-        },
-        {
-          "Name": "<Id>k__BackingField",
-          "ValueType": true,
-          "Type": "System.Int32"
-        },
-        {
-          "Name": "<CurrentProperty>k__BackingField",
-          "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty"
-        },
-        {
-          "Name": "_state",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerState"
-        },
-        {
-          "Name": "_character",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerCharacter"
-        },
-        {
-          "Name": "_ownedProperties",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.HashSet`1<System.String>"
-        },
-        {
-          "Name": "stats",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.PlayerStat>"
-        },
-        {
-          "Name": "playerPrefab",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerCharacter"
-        },
-        {
-          "Name": "inventory",
-          "ValueType": false,
-          "Type": "Nivalis.InventorySystem.PlayerInventory"
-        },
-        {
-          "Name": "personalReceipts",
-          "ValueType": false,
-          "Type": "Nivalis.Player.ReceiptList"
-        },
-        {
-          "Name": "knowledge",
-          "ValueType": true,
-          "Type": "Nivalis.PlayerManager+PlayerKnowledge"
-        },
-        {
-          "Name": "rank",
-          "ValueType": true,
-          "Type": "System.Int32"
-        }
-      ],
-      "Name": "Nivalis.PlayerManager+Player"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "fishing",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "trading",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "navigation",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "map",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "inspiration",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "storage",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "farming",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "renting",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "hiring",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        }
-      ],
-      "Name": "Nivalis.PlayerManager+PlayerKnowledge"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "onDialogueStart",
-          "ValueType": false,
-          "Type": "Nivalis.Dialogue.DialogueEvent"
-        },
-        {
-          "Name": "onDialogueEnd",
-          "ValueType": false,
-          "Type": "Nivalis.Dialogue.DialogueEvent"
-        },
-        {
-          "Name": "followTarget",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "dialogueFollowTarget",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "dialogueCamera",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "dialogueCameraDistance",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "orderCameraDistance",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "zoomSettings",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerCameraController+ZoomSettings"
-        },
-        {
-          "Name": "playerMovementLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "zoomCooldown",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "postProcessVolumes",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<UnityEngine.Rendering.PostProcessing.PostProcessVolume>"
-        },
-        {
-          "Name": "defaultFollowTargetOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Pose"
-        },
-        {
-          "Name": "focusTargetActivated",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "focusTarget",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        }
-      ],
-      "Name": "Nivalis.PlayerCameraController"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "_objectHolder",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerObjectHolder"
-        },
-        {
-          "Name": "_placementSystem",
-          "ValueType": false,
-          "Type": "Nivalis.PlacementSystem"
-        },
-        {
-          "Name": "_interaction",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerInteraction"
-        },
-        {
-          "Name": "_focus",
-          "ValueType": false,
-          "Type": "Nivalis.FocusRaycaster"
-        },
-        {
-          "Name": "_controller",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerCharacterController"
-        },
-        {
-          "Name": "spotMovementLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "spotEnterPosition",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "sitSequence",
-          "ValueType": false,
-          "Type": "UnityEngine.Coroutine"
-        },
-        {
-          "Name": "hasCachedInitialDrivenBoat",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "initialDrivenBoat",
-          "ValueType": false,
-          "Type": "Nivalis.Boat.BoatController"
-        },
-        {
-          "Name": "drivenBoat",
-          "ValueType": false,
-          "Type": "Nivalis.Boat.BoatController"
-        },
-        {
-          "Name": "hasInitializedPooledElement",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "pooledElement",
-          "ValueType": false,
-          "Type": "Nivalis.PooledElement"
-        },
-        {
-          "Name": "dialogueSpot",
-          "ValueType": false,
-          "Type": "Nivalis.AISpot"
-        },
-        {
-          "Name": "serveSpot",
-          "ValueType": false,
-          "Type": "Nivalis.AISpot"
-        },
-        {
-          "Name": "teleportSpot",
-          "ValueType": false,
-          "Type": "Nivalis.AISpot"
-        },
-        {
-          "Name": "_isInitialized",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "_myGhost",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerGhost"
-        }
-      ],
-      "Name": "Nivalis.PlayerCharacter"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "lastSleepApartment",
-          "ValueType": false,
-          "Type": "Nivalis.Apartment.Apartment"
-        },
-        {
-          "Name": "LookRotation",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector2"
-        },
-        {
-          "Name": "currentOrder",
-          "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.VenueOrderReference"
-        },
-        {
-          "Name": "chair",
-          "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostReference`1<Nivalis.GhostSystem.CustomerLoop.ChairGhost>"
-        },
-        {
-          "Name": "<DialogueSpot>k__BackingField",
-          "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
-        },
-        {
-          "Name": "<ServeSpot>k__BackingField",
-          "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
-        },
-        {
-          "Name": "<TeleportSpot>k__BackingField",
-          "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostAISpotReference"
-        },
-        {
-          "Name": "venue",
-          "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.Venue"
-        },
-        {
-          "Name": "chosenMeals",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.List`1<Nivalis.Locale.MealMenuItem>"
-        },
-        {
-          "Name": "IsCancelOrder",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "preventSavingWhileSittingLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        }
-      ],
-      "Name": "Nivalis.PlayerGhost"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "_state",
-          "ValueType": true,
-          "Type": "Nivalis.PlayerCharacterController+ControllerState"
-        },
-        {
-          "Name": "<Camera>k__BackingField",
-          "ValueType": false,
-          "Type": "UnityEngine.Camera"
-        },
-        {
-          "Name": "<CameraRainEffect>k__BackingField",
-          "ValueType": false,
-          "Type": "Nivalis.CameraRainEffect"
-        },
-        {
-          "Name": "firstPersonCamera",
-          "ValueType": false,
-          "Type": "Cinemachine.CinemachineVirtualCamera"
-        },
-        {
-          "Name": "cameraController",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerCameraController"
-        },
-        {
-          "Name": "_character",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerCharacter"
-        },
-        {
-          "Name": "_firstPersonPOV",
-          "ValueType": false,
-          "Type": "Cinemachine.CinemachinePOV"
-        },
-        {
-          "Name": "lookInput",
-          "ValueType": false,
-          "Type": "Cinemachine.CinemachineInputProvider"
-        },
-        {
-          "Name": "_firstPersonTransposer",
-          "ValueType": false,
-          "Type": "Cinemachine.CinemachineTransposer"
-        },
-        {
-          "Name": "_characterController",
-          "ValueType": false,
-          "Type": "UnityEngine.CharacterController"
-        },
-        {
-          "Name": "navMesh",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerNavMesh"
-        },
-        {
-          "Name": "localPositionOnNavMesh",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "lastLocalPositionOnNavMesh",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "initialCameraOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "headBobTimer",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "_cameraLookEnabled",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        },
-        {
-          "Name": "gravity",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "groundSnapping",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "defaultMoveSpeed",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "sprintSpeed",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "headBobEnabled",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "headBobFrequency",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "headBobAmplitude",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector2"
-        },
-        {
-          "Name": "handsAnimator",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerHandsAnimator"
-        },
-        {
-          "Name": "environmentTracker",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerEnvironmentTracker"
-        },
-        {
-          "Name": "dialogueObstacle",
-          "ValueType": false,
-          "Type": "UnityEngine.AI.NavMeshObstacle"
-        },
-        {
-          "Name": "_isSprinting",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "_velocity",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "_characterControllerVelocity",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "cameraRotationOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector2"
-        },
-        {
-          "Name": "cameraPositionOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "_canSprint",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        },
-        {
-          "Name": "_canMove",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        },
-        {
-          "Name": "raycastDistance",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "sphereCastRadius",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "rayCenterOffset",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "gapIgnoreRadius",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "groundCollisionMask",
-          "ValueType": true,
-          "Type": "UnityEngine.LayerMask"
-        },
-        {
-          "Name": "adjustTimes",
-          "ValueType": true,
-          "Type": "System.Int32"
-        },
-        {
-          "Name": "boardedBoat",
-          "ValueType": false,
-          "Type": "Nivalis.Boat.BoatController"
-        },
-        {
-          "Name": "isGrounded",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "cameraTools",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerCameraTools"
-        },
-        {
-          "Name": "_moveSpeedScale",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "dialogueCamera",
-          "ValueType": false,
-          "Type": "Cinemachine.CinemachineVirtualCamera"
-        },
-        {
-          "Name": "dialogueCameraCoroutine",
-          "ValueType": false,
-          "Type": "UnityEngine.Coroutine"
-        },
-        {
-          "Name": "dialogueDistance",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "dialogueCharacter",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "movementLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "handsLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "lookAction",
-          "ValueType": false,
-          "Type": "UnityEngine.InputSystem.InputActionReference"
-        },
-        {
-          "Name": "_isCameraSmoothed",
-          "ValueType": true,
-          "Type": "System.Int32"
-        },
-        {
-          "Name": "_defaultAxisHorizontal",
-          "ValueType": true,
-          "Type": "Cinemachine.AxisState"
-        },
-        {
-          "Name": "_defaultAxisVertical",
-          "ValueType": true,
-          "Type": "Cinemachine.AxisState"
-        },
-        {
-          "Name": "_handsVisibilityLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "_handsVisibilityLockOwner",
-          "ValueType": false,
-          "Type": "Nivalis.LockDummy"
-        }
-      ],
-      "Name": "Nivalis.PlayerCharacterController"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "environmentLayers",
-          "ValueType": true,
-          "Type": "UnityEngine.LayerMask"
-        },
-        {
-          "Name": "interiorAmount",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "closestVenue",
-          "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.Venue"
-        },
-        {
-          "Name": "closestVenueDistance",
-          "ValueType": true,
-          "Type": "System.Single"
-        }
-      ],
-      "Name": "Nivalis.PlayerEnvironmentTracker"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "leftHandIK",
-          "ValueType": false,
-          "Type": "RootMotion.FinalIK.LimbIK"
-        },
-        {
-          "Name": "rightHandIK",
-          "ValueType": false,
-          "Type": "RootMotion.FinalIK.LimbIK"
-        },
-        {
-          "Name": "leftHandInteraction",
-          "ValueType": true,
-          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
-        },
-        {
-          "Name": "rightHandInteraction",
-          "ValueType": true,
-          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
-        },
-        {
-          "Name": "currentInteraction",
-          "ValueType": true,
-          "Type": "Nivalis.PooledReference`1<Nivalis.CharacterTarget>"
-        },
-        {
-          "Name": "handsAnimator",
-          "ValueType": false,
-          "Type": "UnityEngine.Animator"
-        },
-        {
-          "Name": "rig",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "leftHand",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "rightHand",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "cameraAnchor",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "fishingBaitAnchor",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "tray",
-          "ValueType": false,
-          "Type": "UnityEngine.GameObject"
-        },
-        {
-          "Name": "trayHandTargetLeft",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "trayHandTargetRight",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "defaultRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "fishingRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "farmingRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "placementRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "sitRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "foodProcessorRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "cookDrinkRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "deepFryerRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "blenderRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "cookerRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "panRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "sweepRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "sweepCameraTargetOverride",
-          "ValueType": true,
-          "Type": "Nivalis.PlayerHandsAnimator+EulerPose"
-        },
-        {
-          "Name": "renderers",
-          "ValueType": false,
-          "Type": "UnityEngine.Renderer[]"
-        },
-        {
-          "Name": "consumeSFXMealShort",
-          "ValueType": false,
-          "Type": "Nivalis.AudioGroup"
-        },
-        {
-          "Name": "consumeSFXMealLong",
-          "ValueType": false,
-          "Type": "Nivalis.AudioGroup"
-        },
-        {
-          "Name": "consumeSFXDrinkShort",
-          "ValueType": false,
-          "Type": "Nivalis.AudioGroup"
-        },
-        {
-          "Name": "consumeSFXDrinkLong",
-          "ValueType": false,
-          "Type": "Nivalis.AudioGroup"
-        },
-        {
-          "Name": "sweepSFX",
-          "ValueType": false,
-          "Type": "Nivalis.AudioSingle"
-        },
-        {
-          "Name": "environmentLayer",
-          "ValueType": true,
-          "Type": "UnityEngine.LayerMask"
-        },
-        {
-          "Name": "playerHeldObject",
-          "ValueType": false,
-          "Type": "Nivalis.HoldableEntitySO"
-        },
-        {
-          "Name": "newspaper",
-          "ValueType": false,
-          "Type": "Nivalis.Newspaper"
-        },
-        {
-          "Name": "plantAnchor",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        },
-        {
-          "Name": "itemPlacementEvent",
-          "ValueType": false,
-          "Type": "Nivalis.ItemPlacedEvent"
-        },
-        {
-          "Name": "footstepAudioSource",
-          "ValueType": false,
-          "Type": "UnityEngine.AudioSource"
-        },
-        {
-          "Name": "character",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerCharacter"
-        },
-        {
-          "Name": "cameraPOV",
-          "ValueType": false,
-          "Type": "Cinemachine.CinemachinePOV"
-        },
-        {
-          "Name": "chair",
-          "ValueType": false,
-          "Type": "Nivalis.GhostSystem.CustomerLoop.ChairView"
-        },
-        {
-          "Name": "isVisible",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        },
-        {
-          "Name": "playerMovementLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "playerCameraLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "playerInteractionLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool+OverrideLock"
-        },
-        {
-          "Name": "obstacle",
-          "ValueType": false,
-          "Type": "UnityEngine.AI.NavMeshObstacle"
-        },
-        {
-          "Name": "transitionSpeed",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "rootMotion",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "snapRigToLocation",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "allowFreelook",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "limitFreelook",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "snapRigRotationToCamera",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "placingItem",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "sleeping",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "freelookCameraPosition",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "freelookCameraRotation",
-          "ValueType": true,
-          "Type": "UnityEngine.Quaternion"
-        },
-        {
-          "Name": "targetRigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "rigOffset",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "snapLocationPose",
-          "ValueType": true,
-          "Type": "UnityEngine.Pose"
-        },
-        {
-          "Name": "headAnimationPose",
-          "ValueType": true,
-          "Type": "UnityEngine.Pose"
-        },
-        {
-          "Name": "rigLocationSnapBlend",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "snapCameraToAnimation",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "previousCameraAnimationBlend",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "cameraAnimationBlend",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "smoothedSpeed",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "side",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "povCameraRange",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector2"
-        },
-        {
-          "Name": "lastFootstepTime",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "lastFootstepSide",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "lastInteractionTime",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "cameraForwardOffsetTarget",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "cameraForwardOffset",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "defaultTrayPosition",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector3"
-        },
-        {
-          "Name": "cameraTargetOverride",
-          "ValueType": true,
-          "Type": "Nivalis.PlayerHandsAnimator+EulerPose"
-        },
-        {
-          "Name": "cameraTargetOverrideSet",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "mealCoroutine",
-          "ValueType": false,
-          "Type": "UnityEngine.Coroutine"
-        },
-        {
-          "Name": "sittingCoroutine",
-          "ValueType": false,
-          "Type": "UnityEngine.Coroutine"
-        },
-        {
-          "Name": "currentIKData",
-          "ValueType": false,
-          "Type": "Nivalis.IKData"
-        },
-        {
-          "Name": "_newspaperOpenedFromMenu",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "isSitting",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        }
-      ],
-      "Name": "Nivalis.PlayerHandsAnimator"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "_raycaster",
-          "ValueType": false,
-          "Type": "Nivalis.FocusRaycaster"
-        },
-        {
-          "Name": "lookTarget",
-          "ValueType": false,
-          "Type": "Nivalis.CharacterTarget+Look"
-        },
-        {
-          "Name": "crowdTarget",
-          "ValueType": false,
-          "Type": "Nivalis.CharacterTarget+Look"
-        },
-        {
-          "Name": "sitTarget",
-          "ValueType": false,
-          "Type": "Nivalis.CharacterTarget+Look"
-        },
-        {
-          "Name": "crowdLayer",
-          "ValueType": true,
-          "Type": "UnityEngine.LayerMask"
-        },
-        {
-          "Name": "_currentInteractable",
-          "ValueType": false,
-          "Type": "Nivalis.IInteractable"
-        },
-        {
-          "Name": "_interactionActive",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        }
-      ],
-      "Name": "Nivalis.PlayerInteraction"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "PlayerGhost",
-          "ValueType": false,
-          "Type": "Nivalis.GhostSystem.Ghost"
-        },
-        {
-          "Name": "PlayerSave",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerManager+PlayerSave"
-        },
-        {
-          "Name": "<Guid>k__BackingField",
-          "ValueType": false,
-          "Type": "System.String"
-        }
-      ],
-      "Name": "Nivalis.PlayerManagerSave"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "meshFilter",
-          "ValueType": false,
-          "Type": "UnityEngine.MeshFilter"
-        },
-        {
-          "Name": "obstacles",
-          "ValueType": false,
-          "Type": "Nivalis.PlayerNavMeshObstacle[]"
-        },
-        {
-          "Name": "meshData",
-          "ValueType": true,
-          "Type": "Nivalis.PlayerNavMesh+MeshData"
-        }
-      ],
-      "Name": "Nivalis.PlayerNavMesh"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "name",
-          "ValueType": false,
-          "Type": "System.String"
-        },
-        {
-          "Name": "valueRange",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector2"
-        },
-        {
-          "Name": "changeOverGameSecond",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "startValue",
-          "ValueType": true,
-          "Type": "System.Single"
-        }
-      ],
-      "Name": "Nivalis.PlayerStat"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "_statValues",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.Dictionary`2<Nivalis.PlayerStat,Nivalis.PlayerState+StatValue>"
-        }
-      ],
-      "Name": "Nivalis.PlayerState"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "LastUpdateTime",
-          "ValueType": true,
-          "Type": "System.Nullable`1<System.Int32>"
-        },
-        {
-          "Name": "Value",
-          "ValueType": true,
-          "Type": "System.Single"
-        }
-      ],
-      "Name": "Nivalis.PlayerState+StatValue"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "OnValueChanged",
-          "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>"
-        },
-        {
-          "Name": "_defaultValue",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "_overrideOwners",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.HashSet`1<System.Object>"
-        }
-      ],
-      "Name": "Nivalis.OverrideableBool"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "_owner",
-          "ValueType": false,
-          "Type": "System.Object"
-        },
-        {
-          "Name": "_isReleased",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "_target",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        }
-      ],
-      "Name": "Nivalis.OverrideableBool+OverrideLock"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "animator",
-          "ValueType": false,
-          "Type": "UnityEngine.Animator"
-        },
-        {
-          "Name": "<BodyOffset>k__BackingField",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "culled",
-          "ValueType": true,
-          "Type": "System.Nullable`1<System.Boolean>"
-        },
-        {
-          "Name": "becameVisible",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "<SqrVisibleDistance>k__BackingField",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "lastVisibleState",
-          "ValueType": true,
-          "Type": "Nivalis.BaseCharacter+VisibleState"
-        },
-        {
-          "Name": "<LifeCycle>k__BackingField",
-          "ValueType": false,
-          "Type": "Nivalis.PoolingLifeCycle"
-        },
-        {
-          "Name": "hasThisTransform",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "thisTransform",
-          "ValueType": false,
-          "Type": "UnityEngine.Transform"
-        }
-      ],
-      "Name": "Nivalis.BaseCharacter"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "_allSkills",
-          "ValueType": false,
-          "Type": "Nivalis.SkillSystem.SkillDefinition[]"
-        },
-        {
-          "Name": "_skillMap",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.Dictionary`2<System.Type,Nivalis.SkillSystem.SkillDefinition>"
-        },
-        {
-          "Name": "_playerData",
-          "ValueType": false,
-          "Type": "Nivalis.SkillSystem.SkillLevelController+PlayerExperience"
-        },
-        {
-          "Name": "<ConfigurationType>k__BackingField",
-          "ValueType": false,
-          "Type": "System.Type"
-        }
-      ],
-      "Name": "Nivalis.SkillSystem.SkillLevelController"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "<Guid>k__BackingField",
-          "ValueType": false,
-          "Type": "System.String"
-        },
-        {
-          "Name": "<ManagerType>k__BackingField",
-          "ValueType": false,
-          "Type": "System.Type"
-        },
-        {
-          "Name": "PerSkillExperience",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.Dictionary`2<System.String,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>"
-        }
-      ],
-      "Name": "Nivalis.SkillSystem.SkillLevelController+SkillLevelsControllerSave"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "Experience",
-          "ValueType": true,
-          "Type": "System.Single"
-        },
-        {
-          "Name": "CurrentLevel",
-          "ValueType": true,
-          "Type": "System.Int32"
-        }
-      ],
-      "Name": "Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "PerSkillExperience",
-          "ValueType": false,
-          "Type": "System.Collections.Generic.Dictionary`2<System.Type,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>"
-        }
-      ],
-      "Name": "Nivalis.SkillSystem.SkillLevelController+PlayerExperience"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "itemContainer",
-          "ValueType": false,
-          "Type": "Nivalis.InventorySystem.IItemContainer"
-        },
-        {
-          "Name": "furnitureContainer",
-          "ValueType": false,
-          "Type": "Nivalis.InventorySystem.IItemContainer"
-        }
-      ],
-      "Name": "Nivalis.InventorySystem.InventoryData"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "onMoneyChanged",
-          "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<System.Int32,System.Int32>>"
-        },
-        {
-          "Name": "lockedMoneyEventPreviousValue",
-          "ValueType": true,
-          "Type": "System.Nullable`1<System.Int32>"
-        },
-        {
-          "Name": "moneyChangeEventLock",
-          "ValueType": false,
-          "Type": "Nivalis.OverrideableBool"
-        },
-        {
-          "Name": "_money",
-          "ValueType": true,
-          "Type": "System.Int32"
-        },
-        {
-          "Name": "_items",
-          "ValueType": false,
-          "Type": "Nivalis.InventorySystem.ItemContainer"
-        },
-        {
-          "Name": "<InventoryData>k__BackingField",
-          "ValueType": false,
-          "Type": "Nivalis.InventorySystem.InventoryData"
-        }
-      ],
-      "Name": "Nivalis.InventorySystem.PlayerInventory"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "OnStatePropertyChanged",
-          "ValueType": true,
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>"
-        },
-        {
-          "Name": "_id",
-          "ValueType": false,
-          "Type": "System.String"
-        },
-        {
-          "Name": "_prefabId",
-          "ValueType": false,
-          "Type": "System.String"
-        },
-        {
-          "Name": "<IsValid>k__BackingField",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "<IsActive>k__BackingField",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "_isViewLess",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        },
-        {
-          "Name": "_sceneIndex",
-          "ValueType": true,
-          "Type": "System.Int32"
-        },
-        {
-          "Name": "LastSceneIndexRegistry",
-          "ValueType": true,
-          "Type": "System.Int32"
-        },
-        {
-          "Name": "LastCellRegistry",
-          "ValueType": true,
-          "Type": "UnityEngine.Vector2Int"
-        },
-        {
-          "Name": "_bounds",
-          "ValueType": true,
-          "Type": "UnityEngine.Bounds"
-        },
-        {
-          "Name": "parent",
-          "ValueType": true,
-          "Type": "Nivalis.GhostSystem.GhostReference`1<Nivalis.GhostSystem.Ghost>"
-        },
-        {
-          "Name": "_transform",
-          "ValueType": true,
-          "Type": "Nivalis.PositionRotation"
-        },
-        {
-          "Name": "_viewId",
-          "ValueType": false,
-          "Type": "System.String"
-        },
-        {
-          "Name": "_ghostView",
-          "ValueType": false,
-          "Type": "Nivalis.GhostSystem.IGhostView"
-        },
-        {
-          "Name": "<IsBakedInstance>k__BackingField",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        }
-      ],
-      "Name": "Nivalis.GhostSystem.Ghost"
-    },
-    {
-      "Fields": [
-        {
-          "Name": "<PlayerHandlingComplaint>k__BackingField",
-          "ValueType": true,
-          "Type": "System.Boolean"
-        }
-      ],
-      "Name": "Nivalis.GhostSystem.Ai.CustomerGhost"
     }
   ]
 }

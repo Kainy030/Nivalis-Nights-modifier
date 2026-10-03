@@ -1,9 +1,9 @@
 # 四个钩子与公共 HookRuntime
 
-范围更新（2026-09-30）：完整 1,067 个目录入口恢复为被动资料，含 AI/视觉；默认观察选择为空，不初始化原生目标/字段/定时器。仅 Features.AllowList 或独立 Diagnostics.Enabled + 精确 AllowList 可安装观察。ResolveTarget 按需校验解析，不自动 patch 或调用游戏。旧安装数与实测为历史状态；本版本尚未游戏内验证。
+范围更新（2026-09-30）：完整 1,066 个目录入口恢复为被动资料，含 AI/视觉；默认观察选择为空，不初始化原生目标/字段/定时器。仅 Features.AllowList 或独立 Diagnostics.Enabled + 精确 AllowList 可安装观察。ResolveTarget 按需校验解析，不自动 patch 或调用游戏。旧安装数与实测为历史状态；本版本尚未游戏内验证。
 
 
-更新：2026-09-30。项目 `D:/NightsHack`，目标 Nivalis Nights，IL2CPP/net6.0/x64。
+更新：2026-09-30。项目 `D:/NivalisNightsTrainer`，目标 Nivalis Nights，IL2CPP/net6.0/x64。
 
 ## 本轮结果
 
@@ -11,7 +11,7 @@
 
 新增背包加物品契约 `IBackpackItemAddition`，当前是明确拒绝执行的预留实现。它不创建物品、不排队、不解析游戏实例；有效请求返回 `NotImplemented` 和 `AddedQuantity=0`。
 
-当前已完成 **Release 编译、41 项托管/静态检查及有限游戏内实测**。本机部署后隔离了启动和读档崩溃，最终安装 1,019/1,067 个候选，48 个明确拒绝；四组都有真实回调。详细证据及尚未验证内容见 [运行实测报告](HOOK-RUNTIME-TEST.md)。统一交付目录：[Hooks](D:/NightsHack/outputs/Hooks)；构建入口：[Build-Hooks.ps1](D:/NightsHack/Build-Hooks.ps1)。旧构建入口转发到统一构建，并同步更新旧交付目录。
+当前已完成 **Release 编译、60 项托管/静态检查及有限游戏内实测**。本机部署后隔离了启动和读档崩溃，最终安装 1,019/1,066 个候选，48 个明确拒绝；四组都有真实回调。详细证据及尚未验证内容见 [运行实测报告](HOOK-RUNTIME-TEST.md)。统一交付目录：[Hooks](D:/NivalisNightsTrainer/outputs/Hooks)；构建入口：[Build-Hooks.ps1](D:/NivalisNightsTrainer/Build-Hooks.ps1)。旧构建入口转发到统一构建，并同步更新旧交付目录。
 
 ## 范围与 PlayerHook 对照原则
 
@@ -21,7 +21,7 @@
 
 PlayerInventory.AddItem、AddAllFurniture、ClearItems 与 PlayerObjectHolder.StoreEntity 保持在 PlayerHook，不重复加入 ItemHook。下层 ItemContainer、ItemStack、ItemEntity 并未因此重复：它们既是调用链更深层，也是其他库存来源会使用的入口。一次游戏行为可能产生多个层级的观察记录，不应直接按记录条数计算获得物品数量。
 
-本次重构改变 PlayerHook 的外层实现和二进制依赖，方法清单字节保持不变（SHA256：`40FB6DCAF34E7C3ECAD163714A44525EBC523C9B0DAAA27FE1A0E78DAEC79AAA`）。最新 DLL 哈希见 outputs/Hooks/build-sha256.json。四个插件总计 1,067 个互不重复的候选入口。
+本次重构改变 PlayerHook 的外层实现和二进制依赖，方法清单字节保持不变（SHA256：`34C58324DE292774AE85FDA33B597346845C5842BA2316F9295E30376D25AA88`）。最新 DLL 哈希见 outputs/Hooks/build-sha256.json。四个插件总计 1,066 个互不重复的候选入口。
 
 ## 分类
 
@@ -60,7 +60,7 @@ PlayerHook 现在与其他三个插件共用安装引擎及观测类型。324 �
 
 ## 未来增加物品到背包的接口
 
-源码：[BackpackItems.cs](D:/NightsHack/src/NightsHack.ItemHook/BackpackItems.cs)。公开入口为 `NightsHack.ItemHook.ItemHook.BackpackItems`，类型 `IBackpackItemAddition`，契约面向**执行时的当前本地玩家背包**。
+源码：[BackpackItems.cs](D:/NivalisNightsTrainer/src/NightsHack.ItemHook/BackpackItems.cs)。公开入口为 `NightsHack.ItemHook.ItemHook.BackpackItems`，类型 `IBackpackItemAddition`，契约面向**执行时的当前本地玩家背包**。
 
 ```csharp
 var request = new AddBackpackItemRequest(
@@ -92,12 +92,12 @@ var result = await ItemHook.BackpackItems.AddToBackpackAsync(request, cancellati
 
 ## 源码与可再生证据
 
-- [WorldHook](D:/NightsHack/src/NightsHack.WorldHook/WorldHook.cs)、[ItemHook](D:/NightsHack/src/NightsHack.ItemHook/ItemHook.cs)、[GameRuntimeHook](D:/NightsHack/src/NightsHack.GameRuntimeHook/GameRuntimeHook.cs)。
-- [共享观察引擎](D:/NightsHack/src/NightsHack.HookRuntime/ObservationPlugin.cs)、[README](D:/NightsHack/src/NightsHack.HookRuntime/README.md)。
-- [范围清单](D:/NightsHack/work/world-investigation/hook-scope.json) → [生成器](D:/NightsHack/work/Generate-WorldHookCatalogs.ps1) → 各源码目录 Catalog.json。
-- [逐方法覆盖审计](D:/NightsHack/work/world-investigation/hook-coverage-audit.json)：候选和排除均含归属、完整签名、RVA、原因。
-- [托管/静态检查](D:/NightsHack/tests/NightsHack.WorldHooks.Checks/Program.cs)。
-- 原始结构、公式和调用证据：[world-investigation.md](D:/NightsHack/outputs/world-investigation.md)；Player 档案：[REFERENCE.md](D:/NightsHack/outputs/REFERENCE.md)。
+- [WorldHook](D:/NivalisNightsTrainer/src/NightsHack.WorldHook/WorldHook.cs)、[ItemHook](D:/NivalisNightsTrainer/src/NightsHack.ItemHook/ItemHook.cs)、[GameRuntimeHook](D:/NivalisNightsTrainer/src/NightsHack.GameRuntimeHook/GameRuntimeHook.cs)。
+- [共享观察引擎](D:/NivalisNightsTrainer/src/NightsHack.HookRuntime/ObservationPlugin.cs)、[README](D:/NivalisNightsTrainer/src/NightsHack.HookRuntime/README.md)。
+- [范围清单](D:/NivalisNightsTrainer/work/world-investigation/hook-scope.json) → [生成器](D:/NivalisNightsTrainer/work/Generate-WorldHookCatalogs.ps1) → 各源码目录 Catalog.json。
+- [逐方法覆盖审计](D:/NivalisNightsTrainer/work/world-investigation/hook-coverage-audit.json)：候选和排除均含归属、完整签名、RVA、原因。
+- [托管/静态检查](D:/NivalisNightsTrainer/tests/NightsHack.WorldHooks.Checks/Program.cs)。
+- 原始结构、公式和调用证据：[world-investigation.md](D:/NivalisNightsTrainer/outputs/world-investigation.md)；Player 档案：[REFERENCE.md](D:/NivalisNightsTrainer/outputs/REFERENCE.md)。
 
 未验证：真实插件加载、原生 patch 数量与命中、全部 interop 投影/字段可读性、复杂 ref/out 参数桥接、帧开销、原生清理行为、存档往返，以及未来物品命令效果。元数据扩展部分未全部达到上轮 202 条反汇编记录的调查深度。
 
@@ -107,10 +107,10 @@ var result = await ItemHook.BackpackItems.AddToBackpackAsync(request, cancellati
 
 | 插件 | 字段 schema | 字段数 | 方法候选 | 明确排除 | 静态候选 |
 |---|---:|---:|---:|---:|---:|
-| PlayerHook | 32 | 338 | 324 | 46 | 0 |
-| WorldHook | 34 | 348 | 350 | 453 | 12 |
+| PlayerHook | 32 | 338 | 323 | 48 | 0 |
+| WorldHook | 34 | 348 | 349 | 454 | 12 |
 | ItemHook | 22 | 203 | 220 | 248 | 11 |
-| GameRuntimeHook | 15 | 186 | 173 | 136 | 12 |
+| GameRuntimeHook | 15 | 186 | 174 | 135 | 12 |
 
 字段 schema 可包含只用于读取的支撑类型；没有同名方法不代表没有字段 schema。字段条目按各插件分别计数。
 
@@ -193,7 +193,7 @@ var result = await ItemHook.BackpackItems.AddToBackpackAsync(request, cancellati
 | `Nivalis.PlayerObjectHolder.ReleasePlayerLocks()` | `System.Void` | `0x2DCCC40` | 否 | 否 | 否 |
 | `Nivalis.FocusRaycaster.Awake()` | `System.Void` | `0x3031E40` | 否 | 否 | 否 |
 | `Nivalis.FocusRaycaster.UpdateFocus()` | `System.Void` | `0x3031EB0` | 否 | 是 | 否 |
-| `Nivalis.FocusRaycaster.ClearFocus()` | `System.Void` | `0x3032350` | 否 | 否 | 否 |
+| `Nivalis.FocusRaycaster.ClearFocus()` | `System.Void` | `0x3032349` | 否 | 否 | 否 |
 | `Nivalis.FocusRaycaster.CheckClearFocus(System.Boolean)` | `System.Void` | `0x3032470` | 否 | 否 | 否 |
 | `Nivalis.FocusRaycaster.FindInteractable()` | `Nivalis.IInteractable` | `0x3032500` | 否 | 是 | 否 |
 | `Nivalis.FocusRaycaster.FindAgent()` | `Nivalis.GhostSystem.Ai.Agent` | `0x3032730` | 否 | 是 | 否 |
@@ -402,7 +402,7 @@ var result = await ItemHook.BackpackItems.AddToBackpackAsync(request, cancellati
 | `Nivalis.PlayerHandsAnimator.NewspaperSequence()` | `System.Collections.IEnumerator` | `0x2F015C0` | 否 | 否 | 否 |
 | `Nivalis.PlayerHandsAnimator.StartCameraTilt(System.Single, System.Single)` | `System.Void` | `0x2F01620` | 否 | 否 | 否 |
 | `Nivalis.PlayerHandsAnimator.CameraTiltSequence(System.Single, System.Single)` | `System.Collections.IEnumerator` | `0x2F016B0` | 否 | 否 | 否 |
-| `Nivalis.PlayerHandsAnimator.SetDutchAngle(System.Single)` | `System.Void` | `0x2F01730` | 否 | 否 | 否 |
+| `Nivalis.PlayerHandsAnimator.SetDutchAngle(System.Single)` | `System.Void` | `0x2F01740` | 否 | 否 | 否 |
 | `Nivalis.PlayerHandsAnimator.UpdateFootsteps()` | `System.Void` | `0x2F017C0` | 否 | 是 | 否 |
 | `Nivalis.PlayerHandsAnimator.GetSurface()` | `System.String` | `0x2F01CF0` | 否 | 否 | 否 |
 | `Nivalis.PlayerHandsAnimator.IsInPuddle(UnityEngine.RaycastHit)` | `System.Boolean` | `0x2F02290` | 否 | 否 | 否 |
@@ -1096,7 +1096,7 @@ var result = await ItemHook.BackpackItems.AddToBackpackAsync(request, cancellati
 | `Nivalis.SerializableObject.SetupSavedValues(Nivalis.SavedObject)` | `System.Void` | `0x79B060` | 否 | 否 | 否 |
 | `Nivalis.SerializableObject.OnAfterLoad()` | `System.Void` | `0x79B990` | 否 | 否 | 否 |
 | `Nivalis.SerializationManager+<UpdateSceneObjects>d__19.MoveNext()` | `System.Boolean` | `0x2D18860` | 否 | 是 | 是 |
-| `Nivalis.SerializationManager+<LoadRoutine>d__42.MoveNext()` | `System.Boolean` | `0x2D16400` | 否 | 是 | 是 |
+| `Nivalis.SerializationManager+<LoadRoutine>d__47.MoveNext()` | `System.Boolean` | `0x2E1BCD0` | 否 | 是 | 是 |
 | `Nivalis.SerializationManager.Awake()` | `System.Void` | `0x79CAA0` | 否 | 否 | 否 |
 | `Nivalis.SerializationManager.Clear()` | `System.Void` | `0x79CBA0` | 否 | 否 | 是 |
 | `Nivalis.SerializationManager.OnDestroyInternal()` | `System.Void` | `0x79CBF0` | 否 | 否 | 是 |
@@ -1208,7 +1208,7 @@ var result = await ItemHook.BackpackItems.AddToBackpackAsync(request, cancellati
 | `Nivalis.GhostSystem.Ai.AgentGhostSimulator.UpdateCurrentAgentAction(Nivalis.GhostSystem.Ai.AgentGhost, System.Single)` | `System.Void` | `0x31EE540` | 否 | 否 | 否 |
 | `Nivalis.GhostSystem.Ai.AgentGhostSimulator.SelectNewAction(Nivalis.GhostSystem.Ai.AgentGhost, System.Boolean)` | `System.Void` | `0x31EEA80` | 否 | 否 | 否 |
 | `Nivalis.GhostSystem.Ai.AgentGhostSimulator.SwitchToDialogueAction(Nivalis.GhostSystem.Ai.AgentGhost)` | `System.Void` | `0x31EF180` | 否 | 否 | 否 |
-| `Nivalis.GhostSystem.Ai.AgentGhostSimulator.SwitchAction(Nivalis.GhostSystem.Ai.AgentGhost, Nivalis.GhostSystem.Ai.AgentActionType, System.Int32, Nivalis.GhostSystem.Ai.PersonSchedule)` | `System.Boolean` | `0x31EF350` | 否 | 否 | 否 |
+| `Nivalis.GhostSystem.Ai.AgentGhostSimulator.SwitchAction(Nivalis.GhostSystem.Ai.AgentGhost, Nivalis.GhostSystem.Ai.AgentActionType, System.Int32, Nivalis.GhostSystem.Ai.PersonSchedule)` | `System.Boolean` | `0x31EF349` | 否 | 否 | 否 |
 | `Nivalis.GhostSystem.Ai.AgentGhostSimulator.TryConstructAction(Nivalis.GhostSystem.Ai.AgentGhost, Nivalis.GhostSystem.Ai.AgentActionType, Nivalis.GhostSystem.Ai.PersonSchedule)` | `System.ValueTuple`2<Nivalis.GhostSystem.Ai.AgentAction,Nivalis.GhostSystem.Ai.IAgentInteractable>` | `0x31EF5F0` | 否 | 否 | 否 |
 | `Nivalis.GhostSystem.Ai.AgentGhostSimulator.SwitchAgentAction(System.Int32, Nivalis.GhostSystem.Ai.AgentGhost, Nivalis.GhostSystem.Ai.AgentAction, Nivalis.GhostSystem.Ai.IAgentInteractable, Nivalis.GhostSystem.Ai.PersonSchedule)` | `System.Boolean` | `0x31EF710` | 否 | 否 | 否 |
 | `Nivalis.GhostSystem.Ai.AgentGhostSimulator.EnsureInitialized(Nivalis.GhostSystem.Ai.AgentGhost)` | `System.Void` | `0x31EFAA0` | 否 | 否 | 否 |

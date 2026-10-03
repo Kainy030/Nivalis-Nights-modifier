@@ -46,7 +46,7 @@ internal sealed class MainForm : Form
     public MainForm()
     {
         status.Name = "injectorLog";
-        string version = "v0.6-Dev";
+        string version = "v1.1-Dev";
         string build = Path.Combine(AppContext.BaseDirectory, "build.json");
         if (File.Exists(build))
         {

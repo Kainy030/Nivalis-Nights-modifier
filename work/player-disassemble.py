@@ -21,7 +21,7 @@ OUT = ROOT / 'work/player-investigation'
 ASM = OUT / 'asm'
 ASM.mkdir(exist_ok=True)
 data = Path('D:/Steam/steamapps/common/Nivalis Nights/GameAssembly.dll').read_bytes()
-mapping = json.loads((ROOT / 'work/il2cpp-validation/script.json').read_text(encoding='utf-8-sig'))
+mapping = json.loads((ROOT / 'work/il2cpp-validation-v1.1/script.json').read_text(encoding='utf-8-sig'))
 pe = struct.unpack_from('<I', data, 0x3c)[0]
 section_count = struct.unpack_from('<H', data, pe+6)[0]
 optional_size = struct.unpack_from('<H', data, pe+20)[0]

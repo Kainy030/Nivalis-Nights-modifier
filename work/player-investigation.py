@@ -8,7 +8,7 @@ import re
 ROOT = Path('D:/NightsHack')
 OUT = ROOT / 'work/player-investigation'
 OUT.mkdir(exist_ok=True)
-source = (ROOT / 'work/il2cpp-validation/dump.cs').read_text(encoding='utf-8-sig')
+source = (ROOT / 'work/il2cpp-validation-v1.1/dump.cs').read_text(encoding='utf-8-sig')
 blocks = []
 line = 1
 last = 0
@@ -51,7 +51,7 @@ for b in selected:
     '\n'.join(f'{b["line"]+i}: {row}' for i,row in enumerate(b['text'].splitlines())
         if 'TypeDefIndex' in row or (row.startswith('\t') and row.strip() and not row.lstrip().startswith(('//','[','|','/*','*/'))))
     for b in selected), encoding='utf-8')
-mapping = json.loads((ROOT / 'work/il2cpp-validation/script.json').read_text(encoding='utf-8-sig'))
+mapping = json.loads((ROOT / 'work/il2cpp-validation-v1.1/script.json').read_text(encoding='utf-8-sig'))
 methods = [m for m in mapping['ScriptMethod'] if
     any(m['Name'].split('$$')[0] == b['full_name'] or
         (not b['namespace'] and m['Name'].split('$$')[0].endswith('.'+b['name']))
@@ -61,8 +61,8 @@ hashes = {}
 for name,path in {
     'GameAssembly.dll': Path('D:/Steam/steamapps/common/Nivalis Nights/GameAssembly.dll'),
     'global-metadata.dat': Path('D:/Steam/steamapps/common/Nivalis Nights/Nivalis Nights_Data/il2cpp_data/Metadata/global-metadata.dat'),
-    'dump.cs': ROOT / 'work/il2cpp-validation/dump.cs',
-    'script.json': ROOT / 'work/il2cpp-validation/script.json',
+    'dump.cs': ROOT / 'work/il2cpp-validation-v1.1/dump.cs',
+    'script.json': ROOT / 'work/il2cpp-validation-v1.1/script.json',
 }.items():
     with path.open('rb') as stream:
         hashes[name] = {'path':str(path), 'sha256':hashlib.file_digest(stream, 'sha256').hexdigest().upper()}

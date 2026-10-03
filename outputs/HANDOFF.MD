@@ -4,17 +4,17 @@
 
 - 当前最新源码版本为 `v1.1-Dev`，基于游戏升级后的新 `GameAssembly.dll` 与 `global-metadata.dat` 哈希；HookRuntime 与修改器校验已同步更新。
 - 修改器命令与玩家探测日志已增强：金币命令记录 ACK、完成/拒绝/超时/失败结果；玩家探测同样记录结果与超时；无效金币输入会明确拒绝并提示安全范围。
-- PlayerHook 清单更新为 323 个方法、32 个类型、48 个明确排除项；四插件合计 1,066 个候选入口。
+- PlayerHook 清单更新为 323 个方法、32 个类型、48 个明确排除项；PlayerHook 323、WorldHook 349、ItemHook 220、GameRuntimeHook 174，共 1,066 个 v1.1 候选入口。
 - 当前发布包为 `outputs/BuildRelease/v1.1-Dev`，入口 `NivalisNightsTrainer.exe`，`build.json` 标记版本 `v1.1-Dev`，包含 231 个 payload 文件。
-- 已清理旧发布目录 `outputs/BuildRelease/v0.5.2-CommandFix`、`v0.6-Dev`、`v1.0-Dev`；保留当前 `v1.1-Dev` 及源码、参考文档和调查证据。
-- 本次版本变更将提交到 `main`，随后推送远端并创建注释标签 `v1.1-Dev`。构建包存在不等于已完成真实游戏内注入、玩法或跨电脑验证；如未有新的运行证据，不应宣称这些行为已验证。
+- 已清理旧发布目录 `outputs/BuildRelease/v0.5.2-CommandFix`、`v0.6-Dev`、`v1.0-Dev`；保留当前 `v1.1-Dev` 及源码、当前 v1.1 反编译导出和生成清单。
+- v1.1 Catalog 已根据当前导出重新生成；旧版 RVA/旧 disassembly-index 不再参与构建。构建包存在不等于已完成真实游戏内注入、玩法或跨电脑验证；如未有新的运行证据，不应宣称这些行为已验证。
 
 以下为历史交接记录；如与本节冲突，以本节为准。
 # NivalisNightsTrainer — 快速交接
 
 ## 最新交接：v0.5.1-BugFix（2026-10-01）
 
-- 工作区根目录已由用户改名为 `D:/NivalisNightsTrainer`，旧 `D:/NightsHack` 已不存在。下方历史路径保留为历史记录；后续命令使用新根目录。文档索引位于 `outputs/catalog.md`。
+- 工作区根目录已由用户改名为 `D:/NivalisNightsTrainer`，旧 `D:/NivalisNightsTrainer` 已不存在。下方历史路径保留为历史记录；后续命令使用新根目录。文档索引位于 `outputs/catalog.md`。
 - GUI 程序集和发布入口由 `NightsHack` 改为 `NivalisNightsTrainer`，构建脚本的 build.json Entry 和使用说明已同步；内部项目目录、命名空间、插件 ID、IPC 和游戏内部署路径保持原标识。
 - 修复已注入状态再次点击“手动注入”导致基础选项锁定：RunAction 在重置目标 PID 和页面状态之前，检查基础选项已就绪且原游戏会话仍存活；成立时记录 `INJECTION_ALREADY_READY` 并直接返回，保留会话和基础选项状态。会话失效时仍执行原有校验和锁定流程。
 - 回归检查在模拟有效游戏会话下连续触发两次真实按钮 Click，核对基础选项仍可选、按钮仍可用及提示日志；原有会话失效锁定检查仍保留。这是 UI 状态回归检查，不是真实游戏注入验证。
@@ -40,7 +40,7 @@
 - 余额命令不再使用增加/减少 delta，而是通过本地命名管道 `NightsHack.Command.<PID>` 发送 `Set` 绝对值命令。PlayerHook 在 `Nivalis.PlayerManager.Update()` 的游戏线程回调中排队、解析当前 `LocalPlayer.Inventory` 实例、调用 `Money` setter 并回读结果。
 - 命令审计事件（接收、目标校验、执行、余额写入、完成/拒绝/失败）由 PlayerHook 同时输出到 BepInEx 控制台和游戏目录的 hooks JSONL；注入器窗口及 `logs/injector-*.jsonl` 只保留注入生命周期与钩子状态日志，不再写入玩法命令结果。
 - 源码涉及 `src/NightsHack.Modifier/MainForm.cs`、`src/NightsHack.PlayerHook/PlayerHook.cs`、`src/NightsHack.HookRuntime/HookAudit.cs`、新增 `src/NightsHack.HookRuntime/CommandRuntime.cs`，并同步更新修改器、PlayerHook 和根 README。旧的“无 IPC/无改钱实现”描述仅保留在历史记录中，不代表当前状态。
-- 发布目录：`D:/NightsHack/outputs/BuildRelease/v0.5-Dev-UI-Audit2`，入口为 `NightsHack.exe`。本轮源码提交为 `a18b5fa`，用户要求的 Git 标签为 `v0.5-UIFix`；标签与远端状态已按本交接更新后的收尾步骤执行，并以 Git 核对结果为准。
+- 发布目录：`D:/NivalisNightsTrainer/outputs/BuildRelease/v0.5-Dev-UI-Audit2`，入口为 `NightsHack.exe`。本轮源码提交为 `a18b5fa`，用户要求的 Git 标签为 `v0.5-UIFix`；标签与远端状态已按本交接更新后的收尾步骤执行，并以 Git 核对结果为准。
 - 验证结果：`Build-Hooks.ps1` 构建四插件和公共运行库，16 项 HookRuntime 检查与 44 项跨插件检查通过，零警告/错误；`Build-Modifier.ps1 -Version v0.5-Dev-UI-Audit2 -SkipHooks` 的 13 项修改器检查通过，发布包包含 231 个 payload 文件。静态检查和构建不等于游戏内集成验证；本轮未用新包重新注入并实测余额写入。
 
 ## 赞助图片使用限制（用户明确要求，后续接手必须遵守）
@@ -59,7 +59,7 @@ v0.4.2-Dev-Fix：注入就绪、注入完成及就绪审计失败提示明确列
 2026-09-30 最新修改器状态（覆盖下方 v0.4 双模式记录）：v0.4.1-Dev 仅动态注入，标题 Kainy's Nivalis Nights Trainer · v0.4.1-Dev。静态按钮/API/发布包启动文件已移除；本机旧 winhttp.dll、doorstop_config.ini、.doorstop_version 已按哈希确认并备份移至 work/static-loader-retired/20260930-b00da622f6e9489fb2fe6c6294c05b17。用户保存授权后正常重启，PID 39244 未自动加载 CoreCLR，随后新版动态注入成功，四个被动钩子 0 观察。审计日志 BepInEx/logs/NightsHack/hooks-{PID}-{StartTimeUtcTicks}.jsonl，注入请求 GUID 贯通共享内存/Bootstrap/HookAudit，成功必须有本次四个 HOOK_READY。GUI 实际测试确认当前会话九条日志、四个 HOOK_READY 显示；修复正反斜杠路径匹配问题。新增 ExecuteCommand/HookAudit.Execute 按事件记录未来功能请求、目标验证、调用及明确结果，异常区分 NotExecuted/SideEffectsUnknown，不新增常驻原版方法拦截；没有实现 IPC/线程调度/具体玩法。58+11 检查通过，实际主菜单加载/日志已验证，存档玩法与长期性能未复测。成品 outputs/BuildRelease/v0.4.1-Dev，未提交/推送。详见 src/NightsHack.Modifier/README.md。
 
 
-更新：2026-09-30。工作区：`D:/NightsHack`。目标：Nivalis Nights 单机修改器／调试工具。
+更新：2026-09-30。工作区：`D:/NivalisNightsTrainer`。目标：Nivalis Nights 单机修改器／调试工具。
 
 ## 仓库与文档入口（v0.1-Dev）
 
@@ -86,7 +86,7 @@ v0.4.2-Dev-Fix：注入就绪、注入完成及就绪审计失败提示明确列
 修复采用当前桥接版本的兼容性拒绝：32 个 ref/out、6 个投影值类型返回、6 个小结构体按值参数，以及单独复现 native 崩溃的 HoldableEntity.Update；另 3 个旧有签名匹配失败。拒绝方法仍走游戏原入口。HoldableEntity.Update 的短函数重定位原因仍是推断，未声称底层桥接缺陷已修复。两份调试 dump、逐次试验及生成 IL 已保留；无钩子对照组能进入同一存档。实际加载器自报 BepInEx 6.0.0-be.697/.NET 6.0.7，pre.2 只是历史目录名。Release 0 警告/错误，41 项静态检查通过。详见 [运行实测报告](HOOK-RUNTIME-TEST.md)，首次失败记录保留在 [原始报告](hook-test-20260930/RESULT.md)。
 
 以下重构、发布和早期工具权限文字含历史状态；当前部署/实测状态以上述报告为准。下一步先完成手动交互反馈，再按用户指令推进功能，不应将被拒绝入口或未实施的改钱/加物品接口当成已验证。
-四个观察钩子的外层重构已完成：PlayerHook、WorldHook、ItemHook、GameRuntimeHook 全部使用公共 HookRuntime。统一构建 [Build-Hooks.ps1](D:/NightsHack/Build-Hooks.ps1)，推荐交付 [outputs/Hooks](D:/NightsHack/outputs/Hooks)。四个插件 DLL 必须配套同一版 NightsHack.HookRuntime.dll；旧交付目录是兼容副本，不要把多个目录的重复插件同时部署。
+四个观察钩子的外层重构已完成：PlayerHook、WorldHook、ItemHook、GameRuntimeHook 全部使用公共 HookRuntime。统一构建 [Build-Hooks.ps1](D:/NivalisNightsTrainer/Build-Hooks.ps1)，推荐交付 [outputs/Hooks](D:/NivalisNightsTrainer/outputs/Hooks)。四个插件 DLL 必须配套同一版 NightsHack.HookRuntime.dll；旧交付目录是兼容副本，不要把多个目录的重复插件同时部署。
 
 上一轮已实际完成 Release 构建（0 警告/错误），15 项 Player 检查与 21 项跨插件/运行库检查通过，共 36 项。尚无修改器本体、命令执行通道、IPC 或游戏内验证。此次补充文档索引和根 README，并初始化版本控制、提交推送源码及开发标签；沿用上一轮构建结果，不重新编译，不部署。
 
@@ -140,7 +140,7 @@ ItemHook.BackpackItems 暴露 IBackpackItemAddition.AddToBackpackAsync：预留 
 
 | 项目 | 位置 / 状态 |
 |---|---|
-| 实际游戏导出 | `D:/NightsHack/work/il2cpp-validation/`：script.json、dump.cs、il2cpp.h、stringliteral.json、DummyDll |
+| 实际游戏导出 | `D:/NivalisNightsTrainer/work/il2cpp-validation/`：script.json、dump.cs、il2cpp.h、stringliteral.json、DummyDll |
 | MCP 原始结果 | 同目录 `mcp-results.jsonl`、`mcp.stderr.log` |
 | IL2CPP MCP | `C:/Users/Administrator/.codex/mcp-servers/il2cpp-decompiler/bin/il2cpp_mcp.exe`，握手版本 1.1.0 |
 | 配套导出工具 | 同一 bin 下 `Il2CppDumper/Il2CppDumper.exe` |
@@ -194,7 +194,7 @@ MCP 顺序：`list_dumps → load_project → search_symbols → get_class_info 
 
 ## 7. 新对话提示词（可直接复制）
 
-> 请读取 D:/NightsHack/outputs/HANDOFF.MD、REFERENCE.md 和 HOOKS-REFERENCE.md 接手。PlayerHook/WorldHook/ItemHook/GameRuntimeHook 已全部共用 HookRuntime，候选分别 324/350/220/173，共 1,067 个不重复入口。统一构建 Build-Hooks.ps1，交付 outputs/Hooks；四插件加一份公共 DLL。Release 与 36 项托管/静态检查已通过，未部署、未验证游戏内效果。加物品接口只是占位，有效请求返回 NotImplemented，不会执行。按本轮指令推进：项目目标是调用正常游戏内部业务的多功能修改器，不要为“更底层”继续全面研究引擎或扩钩。当前没有本体、IPC 或命令执行；这些应在用户要求开发时实现。不要复用历史 PID、固定地址或旧 DLL 哈希，不把候选数、编译结果当成原生成功命中。工具审批拒绝必须尊重，阅读交接不等于部署授权。
+> 请读取 D:/NivalisNightsTrainer/outputs/HANDOFF.MD、REFERENCE.md 和 HOOKS-REFERENCE.md 接手。PlayerHook/WorldHook/ItemHook/GameRuntimeHook 已全部共用 HookRuntime，候选分别 324/350/220/173，共 1,067 个不重复入口。统一构建 Build-Hooks.ps1，交付 outputs/Hooks；四插件加一份公共 DLL。Release 与 36 项托管/静态检查已通过，未部署、未验证游戏内效果。加物品接口只是占位，有效请求返回 NotImplemented，不会执行。按本轮指令推进：项目目标是调用正常游戏内部业务的多功能修改器，不要为“更底层”继续全面研究引擎或扩钩。当前没有本体、IPC 或命令执行；这些应在用户要求开发时实现。不要复用历史 PID、固定地址或旧 DLL 哈希，不把候选数、编译结果当成原生成功命中。工具审批拒绝必须尊重，阅读交接不等于部署授权。
 
 建议首批功能：改钱、加物品、属性/经验、速度/传送。按功能验证入口、实例归属、游戏线程和真实结果；再做 UI/存档一致性检查。不以读完整个 Runtime 源码作为前提。
 
@@ -214,3 +214,9 @@ MCP 顺序：`list_dumps → load_project → search_symbols → get_class_info 
 - Player 底层报告来自已有导出/只读 PE：75 份方法反汇编记录、74 个唯一入口；IL2CPP MCP 因审批后端 403 无法执行，未绕过审批。详细工具限制、输入身份、字段与公式见 player-investigation.md。
 
 
+
+## v1.1 Catalog 修复
+
+- 重新生成四个 Catalog：Player 323、World 349、Item 220、Runtime 174，共 1,066 个入口，RVA 全部唯一。
+- 生成器、静态检查和文档统一使用 work/il2cpp-validation-v1.1；已移除对旧 disassembly-index.json 的构建检查依赖。
+- 44 项 WorldHooks 静态检查和四插件编译通过；未执行游戏内注入或玩法验证。

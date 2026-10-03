@@ -1,4 +1,4 @@
-# v0.6 游戏升级反编译记录
+# v1.1 游戏升级反编译记录
 
 日期：2026-10-03
 进程：PID 17912（已通过 WinDbg attach 确认）
@@ -12,7 +12,7 @@
 - Il2CppDumper：Metadata 27，IL2CPP 27，自动切换 27.1
 - CodeRegistration：`0x183BE45E0`
 - MetadataRegistration：`0x183BE66F0`
-- 导出目录：`work/il2cpp-validation-v0.6`
+- 导出目录：`work/il2cpp-validation-v1.1`
 - IL2CPP MCP 加载：244,279 methods，29,817 classes，field layouts loaded
 
 ## 关键映射
@@ -32,3 +32,4 @@
 ## 限制
 
 新版本反编译数据已生成并加载，关键类和方法已重新定位。当前 decompiler 对 `set_Money`、`AddItem` 的输出仍包含 object 类型和未恢复变量，不能把伪代码直接当作可编译 C#。本轮只更新了游戏身份哈希，尚未重新生成四个插件的完整候选目录，也未重新构建、部署或进行游戏内余额/物品验证。
+

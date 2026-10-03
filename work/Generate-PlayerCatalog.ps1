@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 Set-Location (Join-Path $PSScriptRoot '..')
 [void][Reflection.Assembly]::LoadFrom((Resolve-Path 'work/hook-dependencies/bepinex-6.0.0-pre.2/BepInEx/core/Mono.Cecil.dll'))
-$assembly = [Mono.Cecil.AssemblyDefinition]::ReadAssembly((Resolve-Path 'work/il2cpp-validation/DummyDll/Assembly-CSharp.dll'))
+$assembly = [Mono.Cecil.AssemblyDefinition]::ReadAssembly((Resolve-Path 'work/il2cpp-validation-v1.1/DummyDll/Assembly-CSharp.dll'))
 function Flatten($types) { foreach ($t in $types) { $t; Flatten $t.NestedTypes } }
 $all = @(Flatten $assembly.MainModule.Types)
 $groups = [ordered]@{
@@ -31,7 +31,7 @@ $support = @('Nivalis.PlayerStat','Nivalis.PlayerState/StatValue','Nivalis.Playe
     'Nivalis.SkillSystem.SkillLevelController/PlayerExperience','Nivalis.SkillSystem.SkillLevelController/PlayerSkillExperience',
     'Nivalis.OverrideableBool','Nivalis.OverrideableBool/OverrideLock','Nivalis.InventorySystem.InventoryData',
     'Nivalis.BaseCharacter','Nivalis.GhostSystem.Ghost','Nivalis.GhostSystem.Ai.CustomerGhost')
-$mapping = Get-Content 'work/il2cpp-validation/script.json' -Raw | ConvertFrom-Json -AsHashtable
+$mapping = Get-Content 'work/il2cpp-validation-v1.1/script.json' -Raw | ConvertFrom-Json -AsHashtable
 $aliases = @{}
 foreach ($m in $mapping.ScriptMethod) {
     $key = [string][long]$m.Address

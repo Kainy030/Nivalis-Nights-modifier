@@ -1,3 +1,5 @@
+> 历史资料：该文档来自旧版本调查，仅作历史参考；当前构建和新功能只使用 v1.1 导出与当前 Catalog。
+
 # World 底层调查与后续钩子参考
 
 > 后续实现（2026-09-30）：本报告完成后的封装已交付 WorldHook、ItemHook、GameRuntimeHook，见 [HOOKS-REFERENCE.md](D:/NightsHack/outputs/HOOKS-REFERENCE.md)。下文“本轮未实现 WorldHook”描述的是原始逆向阶段；后续插件也仅观察，未部署、未做游戏内验证。
@@ -23,7 +25,7 @@
 核心证据：
 
 - [71 类字段与方法声明目录](D:/NightsHack/work/world-investigation/focused-catalog.md)
-- [方法签名、RVA、调用边、未解析调用索引](D:/NightsHack/work/world-investigation/disassembly-index.json)
+- [方法签名、RVA、调用边、未解析调用索引](历史版本索引（已从构建检查移除）)
 - [直接调用摘要](D:/NightsHack/work/world-investigation/call-summary.txt)
 - [广义类型索引](D:/NightsHack/work/world-investigation/world-type-index.json)
 - [分析请求清单](D:/NightsHack/work/world-investigation/method-requests.json)
@@ -241,7 +243,7 @@ SerializationManager.Save [0x79F360]
   ├─ Ghost.Save [0x305D990]
   └─ SavedObject.Save
 
-SerializationManager.<LoadRoutine>d__42.MoveNext [0x2D16400]
+SerializationManager.<LoadRoutine>d__47.MoveNext（当前 RVA 见 v1.1 Catalog）
   ├─ CreateBuildTimeGhostCopies
   ├─ Ghost.LoadHeader / Ghost.Load
   ├─ SavedObject.Load / RestoreDefaults

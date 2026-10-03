@@ -13,8 +13,8 @@
 
 ## 当前状态
 
-- 四插件共用 HookRuntime，1,067 个被动目录入口；默认 0 个观察补丁。
-- Release 构建零警告、零错误；58 项托管/静态检查通过，含默认早退、按需解析、独立诊断及预算。
+- 四插件共用 HookRuntime，1,066 个 v1.1 被动目录入口；默认 0 个观察补丁。
+- Release 构建零警告、零错误；60 项托管/静态检查通过，含默认早退、按需解析、独立诊断及预算。
 - 调整前版本已部署并完成读档崩溃隔离：1,019 个候选安装，48 个明确拒绝，四组已有真实回调；完整玩法和长期稳定性尚未全面验证。详见 [运行实测报告](outputs/HOOK-RUNTIME-TEST.md)。候选数不等于实际安装或命中数。
 - 已有仅动态注入 UI、功能审计包装和 PlayerHook 的本地 IPC/游戏线程命令执行层；当前支持玩家数据探测和余额设置。加物品接口仅预留，当前不会实际添加物品。
 
@@ -22,10 +22,10 @@
 
 | 模块 | 职责 | 候选入口 |
 |---|---|---:|
-| PlayerHook | 玩家业务、移动/交互、相机与动画入口资料 | 324 |
-| WorldHook | 场景、实体、AI Agent、任务与经营入口资料 | 350 |
+| PlayerHook | 玩家业务、移动/交互、相机与动画入口资料 | 323 |
+| WorldHook | 场景、实体、AI Agent、任务与经营入口资料 | 349 |
 | ItemHook | 库存、物品、摆放与展示入口资料 | 220 |
-| GameRuntimeHook | 时间、AI、天气光照、存档和对象池入口资料 | 173 |
+| GameRuntimeHook | 时间、AI、天气光照、存档和对象池入口资料 | 174 |
 | HookRuntime | 四插件公共安装、校验、观察回调、采样、快照与卸载 | 公共依赖 |
 
 首批规划功能包括改钱、增加背包物品、调整属性/经验、速度及传送；改钱已接入 PlayerHook，其他功能仍待实现与实测。
@@ -38,7 +38,7 @@
 
 1. 在 `.tools/dotnet` 准备 .NET SDK（已验证版本 10.0.401）及构建所需引用包。
 2. 在 `work/hook-dependencies/bepinex-6.0.0-pre.2/BepInEx/core` 准备上述版本的 BepInEx/Interop/Harmony 和 Mono.Cecil 依赖。
-3. 完整静态检查需要从自己的游戏副本生成 `work/il2cpp-validation` 下的元数据辅助文件，以及对应的 `work/world-investigation/disassembly-index.json`。调查及生成脚本在 `work` 中；详细前置条件见参考文档。
+3. 完整静态检查需要从自己的游戏副本生成 `work/il2cpp-validation-v1.1` 下的元数据辅助文件，以及对应的当前 `work/world-investigation/hook-scope.json` 和覆盖审计。调查及生成脚本在 `work` 中；详细前置条件见参考文档。
 4. 前置条件齐备后运行：
 
 ```powershell

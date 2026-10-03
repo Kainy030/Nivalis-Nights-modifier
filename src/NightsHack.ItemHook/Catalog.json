@@ -8,7 +8,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E9670",
+      "Rva": "0x616430",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -41,7 +41,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF590",
+      "Rva": "0x8FC630",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -60,7 +60,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF590",
+      "Rva": "0x8FC630",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -79,7 +79,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x79A8C0",
+      "Rva": "0x8FC670",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -98,7 +98,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF5D0",
+      "Rva": "0x8FC6A0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -117,7 +117,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF5D0",
+      "Rva": "0x8FC6A0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -136,12 +136,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -169,7 +169,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF600",
+      "Rva": "0x8FC6D0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true,
@@ -187,7 +187,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B1300",
+      "Rva": "0x8FE3D0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -205,7 +205,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x79BBD0",
+      "Rva": "0x64C130",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -238,7 +238,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x79BC20",
+      "Rva": "0x64C180",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -298,7 +298,7 @@
         false,
         false
       ],
-      "Rva": "0x9AF0A0",
+      "Rva": "0x8FC140",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -316,7 +316,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF170",
+      "Rva": "0x8FC210",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -334,7 +334,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x7A9400",
+      "Rva": "0x6402B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -367,7 +367,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF1D0",
+      "Rva": "0x8FC270",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -406,7 +406,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9AF1E0",
+      "Rva": "0x8FC280",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -427,7 +427,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF290",
+      "Rva": "0x8FC330",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -451,12 +451,12 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x7FE680",
+      "Rva": "0x6D6510",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Construction/finalization is outside observer scope",
-      "AliasCount": 381,
+      "AliasCount": 380,
       "Aliases": [
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$.ctor",
         "AdSlot.<_LoadRoutine>d__12$$.ctor",
@@ -484,12 +484,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -517,12 +517,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8000",
+      "Rva": "0x5998E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1604,
+      "AliasCount": 1614,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Items",
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.Collections.Generic.IEnumerator<System.Object>.get_Current",
@@ -530,6 +530,7 @@
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_LeftToRightIndex",
+        "<>f__AnonymousType1<object, object>$$get_Available",
         "AmplifyBloom.AmplifyBloomBase$$get_MaskTexture",
         "AmplifyBloom.StarDefData$$get_StarName",
         "Articy.Nivalis.Features.AmountFeature$$get_OwnerId",
@@ -538,8 +539,7 @@
         "Articy.Nivalis.Features.CharacterSelectorFromFeature$$get_OwnerId",
         "Articy.Nivalis.Features.ConditionScriptFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_InnerConflict",
-        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId",
-        "Articy.Nivalis.Features.FarmingQuestTypeSelectorFeature$$get_OwnerId"
+        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId"
       ]
     },
     {
@@ -550,7 +550,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D235C0",
+      "Rva": "0x2E29490",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -568,12 +568,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8000",
+      "Rva": "0x5998E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1604,
+      "AliasCount": 1614,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Items",
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.Collections.Generic.IEnumerator<System.Object>.get_Current",
@@ -581,6 +581,7 @@
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_LeftToRightIndex",
+        "<>f__AnonymousType1<object, object>$$get_Available",
         "AmplifyBloom.AmplifyBloomBase$$get_MaskTexture",
         "AmplifyBloom.StarDefData$$get_StarName",
         "Articy.Nivalis.Features.AmountFeature$$get_OwnerId",
@@ -589,8 +590,7 @@
         "Articy.Nivalis.Features.CharacterSelectorFromFeature$$get_OwnerId",
         "Articy.Nivalis.Features.ConditionScriptFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_InnerConflict",
-        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId",
-        "Articy.Nivalis.Features.FarmingQuestTypeSelectorFeature$$get_OwnerId"
+        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId"
       ]
     },
     {
@@ -601,7 +601,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F000",
+      "Rva": "0x3055B10",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -619,7 +619,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F1F0",
+      "Rva": "0x3055D00",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -637,7 +637,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F280",
+      "Rva": "0x3055D90",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -655,7 +655,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6A75D0",
+      "Rva": "0x62E820",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -688,7 +688,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F310",
+      "Rva": "0x3055E20",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -706,7 +706,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x61AFA0",
+      "Rva": "0x616420",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -739,7 +739,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x7A9400",
+      "Rva": "0x6402B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -778,7 +778,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x83F330",
+      "Rva": "0x6402C0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -811,7 +811,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E9670",
+      "Rva": "0x616430",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -850,7 +850,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x789580",
+      "Rva": "0x6402E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -883,7 +883,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F350",
+      "Rva": "0x3055E40",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -901,7 +901,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F5D0",
+      "Rva": "0x64AB60",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -922,7 +922,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F5E0",
+      "Rva": "0x30560C0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -940,12 +940,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6E3530",
+      "Rva": "0x655CB0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 74,
+      "AliasCount": 73,
       "Aliases": [
         "AmplifyBloom.AmplifyBloomBase$$get_LensDirtTexture",
         "Articy.Nivalis.GlobalVariables.ArticyGlobalVariables$$get_Zaffer",
@@ -973,7 +973,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6E3550",
+      "Rva": "0x628D10",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1006,7 +1006,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F5F0",
+      "Rva": "0x151C5C0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1032,7 +1032,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x83F610",
+      "Rva": "0x151C5E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1052,7 +1052,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F630",
+      "Rva": "0x30560D0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1070,7 +1070,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F680",
+      "Rva": "0x3056120",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1088,7 +1088,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83FB70",
+      "Rva": "0x3056610",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1106,7 +1106,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83FBA0",
+      "Rva": "0x3056640",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1124,7 +1124,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x843F10",
+      "Rva": "0x305A9B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1142,7 +1142,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x844100",
+      "Rva": "0x305ABA0",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1160,7 +1160,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x7A5370",
+      "Rva": "0x64E1B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1193,7 +1193,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x95C750",
+      "Rva": "0x67FC30",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1226,7 +1226,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6A88A0",
+      "Rva": "0x619B70",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1259,7 +1259,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x61AFA0",
+      "Rva": "0x616420",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1292,7 +1292,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF040",
+      "Rva": "0x8FC0E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1310,7 +1310,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B4690",
+      "Rva": "0x901760",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1328,12 +1328,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Construction/finalization is outside observer scope",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -1367,7 +1367,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9B6030",
+      "Rva": "0x903100",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1385,12 +1385,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8000",
+      "Rva": "0x5998E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1604,
+      "AliasCount": 1614,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Items",
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.Collections.Generic.IEnumerator<System.Object>.get_Current",
@@ -1398,6 +1398,7 @@
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_LeftToRightIndex",
+        "<>f__AnonymousType1<object, object>$$get_Available",
         "AmplifyBloom.AmplifyBloomBase$$get_MaskTexture",
         "AmplifyBloom.StarDefData$$get_StarName",
         "Articy.Nivalis.Features.AmountFeature$$get_OwnerId",
@@ -1406,8 +1407,7 @@
         "Articy.Nivalis.Features.CharacterSelectorFromFeature$$get_OwnerId",
         "Articy.Nivalis.Features.ConditionScriptFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_InnerConflict",
-        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId",
-        "Articy.Nivalis.Features.FarmingQuestTypeSelectorFeature$$get_OwnerId"
+        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId"
       ]
     },
     {
@@ -1418,7 +1418,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x30553A0",
+      "Rva": "0x7FC900",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1436,7 +1436,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055450",
+      "Rva": "0x7FC9B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1455,7 +1455,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E9660",
+      "Rva": "0x647480",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1488,7 +1488,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x78A0C0",
+      "Rva": "0x7FCA20",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1527,7 +1527,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x78A0D0",
+      "Rva": "0x7FCA30",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1552,7 +1552,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055450",
+      "Rva": "0x7FC9B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1571,12 +1571,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -1604,7 +1604,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055D70",
+      "Rva": "0x7FD2F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1622,12 +1622,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6AA780",
+      "Rva": "0x613FD0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1307,
+      "AliasCount": 1311,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Requirement",
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Assembly",
@@ -1635,6 +1635,7 @@
         "<>f__AnonymousType0<object, object>$$get_Assembly",
         "<>f__AnonymousType0<object, object>$$get_Expression",
         "<>f__AnonymousType0<Operation, int>$$get_Expression",
+        "<>f__AnonymousType1<object, object>$$get_Data",
         "AmplifyBloom.AmplifyGlare$$get_CustomGlareDef",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_Motivation",
         "Articy.Nivalis.Features.ItemFeature$$get_Name",
@@ -1643,8 +1644,7 @@
         "Articy.Nivalis.Features.PropertyDataFeature$$get_Name",
         "Articy.Nivalis.Features.QuestBasicFeature$$get_QuestTitle",
         "Articy.Nivalis.Features.RecipeFeature$$get_Name",
-        "Articy.Nivalis.Features.WorldObjFeature$$get_InteractionText",
-        "Articy.Nivalis.IncomingConnection$$get_Label"
+        "Articy.Nivalis.Features.WorldObjFeature$$get_InteractionText"
       ]
     },
     {
@@ -1655,12 +1655,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6BF360",
+      "Rva": "0x6D6530",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 769,
+      "AliasCount": 774,
       "Aliases": [
         "<>f__AnonymousType0<object, int>$$get_LeftToRightIndex",
         "<>f__AnonymousType0<Operation, int>$$get_LeftToRightIndex",
@@ -1688,7 +1688,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x7FE6B0",
+      "Rva": "0x6D6550",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1721,12 +1721,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6ACF00",
+      "Rva": "0x628320",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 213,
+      "AliasCount": 214,
       "Aliases": [
         "AmplifyBloom.AmplifyLensFlare$$get_LensFlareGhostAmount",
         "AmplifyBloom.StarDefData$$get_StarlinesCount",
@@ -1754,7 +1754,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8124D0",
+      "Rva": "0x6EA2B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1787,7 +1787,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3104230",
+      "Rva": "0x7C1750",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1805,12 +1805,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Construction/finalization is outside observer scope",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -1847,7 +1847,7 @@
         false,
         false
       ],
-      "Rva": "0x3104260",
+      "Rva": "0x7C1780",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1880,7 +1880,7 @@
         false,
         false
       ],
-      "Rva": "0x3104310",
+      "Rva": "0x7C1830",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -1898,7 +1898,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3104350",
+      "Rva": "0x7C1870",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1916,7 +1916,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x31043E0",
+      "Rva": "0x7C1900",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -1934,12 +1934,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6A7510",
+      "Rva": "0x6132D0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 374,
+      "AliasCount": 376,
       "Aliases": [
         "AmplifyBloom.AmplifyBloomBase$$get_TargetTexture",
         "AmplifyBloom.GlareDefData$$get_CustomStarData",
@@ -1967,12 +1967,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8000",
+      "Rva": "0x5998E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1604,
+      "AliasCount": 1614,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Items",
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.Collections.Generic.IEnumerator<System.Object>.get_Current",
@@ -1980,6 +1980,7 @@
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_LeftToRightIndex",
+        "<>f__AnonymousType1<object, object>$$get_Available",
         "AmplifyBloom.AmplifyBloomBase$$get_MaskTexture",
         "AmplifyBloom.StarDefData$$get_StarName",
         "Articy.Nivalis.Features.AmountFeature$$get_OwnerId",
@@ -1988,8 +1989,7 @@
         "Articy.Nivalis.Features.CharacterSelectorFromFeature$$get_OwnerId",
         "Articy.Nivalis.Features.ConditionScriptFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_InnerConflict",
-        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId",
-        "Articy.Nivalis.Features.FarmingQuestTypeSelectorFeature$$get_OwnerId"
+        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId"
       ]
     },
     {
@@ -2000,7 +2000,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x7AD7C0",
+      "Rva": "0x617090",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2045,7 +2045,7 @@
         false,
         false
       ],
-      "Rva": "0x310A470",
+      "Rva": "0x7C79E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -2072,7 +2072,7 @@
         false,
         false
       ],
-      "Rva": "0x310A740",
+      "Rva": "0x7C7CB0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -2099,7 +2099,7 @@
         false,
         false
       ],
-      "Rva": "0x310A890",
+      "Rva": "0x7C7E00",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -2126,7 +2126,7 @@
         false,
         false
       ],
-      "Rva": "0x310A970",
+      "Rva": "0x7C7EE0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -2156,7 +2156,7 @@
         false,
         false
       ],
-      "Rva": "0x310AAC0",
+      "Rva": "0x7C8030",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -2174,12 +2174,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Construction/finalization is outside observer scope",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -2207,7 +2207,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x7A1F90",
+      "Rva": "0x7CA390",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -2240,7 +2240,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8123A0",
+      "Rva": "0x655C80",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2273,7 +2273,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2DE7780",
+      "Rva": "0x7CA900",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -2292,7 +2292,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D210",
+      "Rva": "0x7CA920",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2310,7 +2310,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D280",
+      "Rva": "0x7CA990",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2328,12 +2328,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6A7570",
+      "Rva": "0x61D550",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 278,
+      "AliasCount": 277,
       "Aliases": [
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_Fears",
         "Articy.Nivalis.Features.Goto_SpotFeature$$get_OwnerId",
@@ -2361,17 +2361,18 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x1635290",
+      "Rva": "0x62E7E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 16,
+      "AliasCount": 17,
       "Aliases": [
         "ChessEngine.AI.Guy.GuyChessAI$$get_IsThinking",
         "ChessEngine.AI.Riddle.RiddleChessAI$$get_IsThinking",
         "ChessEngine.AI.Stockfish.StockfishChessAI$$get_IsThinking",
         "Nivalis.AchievementSeries$$get_IsCompleted",
+        "Nivalis.BlinkingLight$$get_IsOn",
         "Nivalis.InventorySystem.ItemType$$get_IsPlayerStorable",
         "Nivalis.Locale.FurnitureObject$$get_IsInOwnedProperty",
         "Nivalis.Newspaper$$get_Equipped",
@@ -2382,8 +2383,7 @@
         "System.Globalization.CultureData$$get_UseUserOverride",
         "System.Xml.Serialization.TypeData$$get_HasPublicConstructor",
         "System.Xml.XmlWriterSettings$$get_DoNotEscapeUriAttributes",
-        "TheraBytes.BetterUi.BetterAxisAlignedLayoutGroup$$get_childScaleWidth",
-        "UnityEngine.UI.HorizontalOrVerticalLayoutGroup$$get_childScaleWidth"
+        "TheraBytes.BetterUi.BetterAxisAlignedLayoutGroup$$get_childScaleWidth"
       ]
     },
     {
@@ -2394,7 +2394,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8C2E50",
+      "Rva": "0x7CAA10",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2427,7 +2427,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D300",
+      "Rva": "0x7CAA20",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2445,7 +2445,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x93FC20",
+      "Rva": "0x7CAA90",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2478,7 +2478,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0xAC3200",
+      "Rva": "0x7CAAA0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2511,7 +2511,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x107F9D0",
+      "Rva": "0x7CAAB0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2533,7 +2533,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2C71F40",
+      "Rva": "0x7CAAC0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2552,7 +2552,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D370",
+      "Rva": "0x7CAAD0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2570,7 +2570,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2C71F60",
+      "Rva": "0x7CAAE0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2589,12 +2589,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0xBB78C0",
+      "Rva": "0x6568A0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 13,
+      "AliasCount": 14,
       "Aliases": [
         "AmplifyBloom.AmplifyBloomBase$$get_OverallThreshold",
         "CrazyMinnow.SALSA.Salsa$$get_CachedAnalysisValue",
@@ -2605,6 +2605,7 @@
         "Nivalis.Rocket$$get_LaunchStartTime",
         "Nivalis.Weather.WeatherManager$$get_GlobalSnow",
         "RootMotion.FinalIK.InteractionObject$$get_length",
+        "Tayx.Graphy.Audio.G_AudioMonitor$$get_MaxDB",
         "UnityEngine.InputSystem.InputSettings$$get_defaultTapTime",
         "UnityEngine.InputSystem.UI.InputSystemUIInputModule$$get_moveRepeatDelay",
         "UnityEngine.InputSystem.UI.InputSystemUIInputModule$$get_repeatDelay",
@@ -2619,7 +2620,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x61AFA0",
+      "Rva": "0x616420",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2652,7 +2653,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E9600",
+      "Rva": "0x655CA0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2685,7 +2686,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x80B0A0",
+      "Rva": "0x62E830",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2718,12 +2719,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x949DB0",
+      "Rva": "0x7CAAF0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 8,
+      "AliasCount": 9,
       "Aliases": [
         "Articy.Nivalis.Comment$$get_ShortId",
         "Articy.Nivalis.Link$$get_Visibility",
@@ -2731,6 +2732,7 @@
         "Cysharp.Threading.Tasks.UnityEventHandlerAsyncEnumerable.UnityEventHandlerAsyncEnumerator<int>$$get_Current",
         "Nivalis.InventorySystem.ItemType$$get_DecayTime",
         "SimpleLoopMove$$get_CurrentStopIndex",
+        "Tayx.Graphy.GraphyManager$$get_FpsGraphResolution",
         "UnityEngine.GUILayoutGroup$$get_marginBottom",
         "UnityEngine.InputSystem.Layouts.InputControlLayout.ControlItem$$get_bit"
       ]
@@ -2743,7 +2745,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D380",
+      "Rva": "0x7CAB00",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2761,7 +2763,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D390",
+      "Rva": "0x7CAB10",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2779,7 +2781,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D410",
+      "Rva": "0x7CAB90",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2797,12 +2799,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x78A200",
+      "Rva": "0x626A30",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 246,
+      "AliasCount": 247,
       "Aliases": [
         "Articy.Nivalis.Features.ChessGameFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_Habits",
@@ -2830,12 +2832,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x78A200",
+      "Rva": "0x626A30",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 246,
+      "AliasCount": 247,
       "Aliases": [
         "Articy.Nivalis.Features.ChessGameFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_Habits",
@@ -2863,7 +2865,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D460",
+      "Rva": "0x7CABE0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2881,7 +2883,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D4D0",
+      "Rva": "0x7CAC50",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2899,7 +2901,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D540",
+      "Rva": "0x7CACC0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2917,7 +2919,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x175B760",
+      "Rva": "0x7CAE40",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2937,7 +2939,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x949F20",
+      "Rva": "0x633580",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -2963,12 +2965,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x959A90",
+      "Rva": "0x7B44B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 12,
+      "AliasCount": 13,
       "Aliases": [
         "Articy.Nivalis.Dialogue$$get_ShortId",
         "Articy.Nivalis.FlowFragment$$get_ShortId",
@@ -2981,6 +2983,7 @@
         "Nivalis.PlayerManager.Player$$get_Rank",
         "System.Net.FileWebRequest$$get_Timeout",
         "System.Xml.XmlSqlBinaryReader$$get_NodeType",
+        "Tayx.Graphy.GraphyManager$$get_RamModuleState",
         "UnityEngine.InputSystem.Layouts.InputControlLayout.ControlItem$$get_format"
       ]
     },
@@ -2992,7 +2995,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D6D0",
+      "Rva": "0x7CAE60",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3010,7 +3013,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D6F0",
+      "Rva": "0x7CAE80",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3028,7 +3031,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x18772D0",
+      "Rva": "0x619F30",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3057,7 +3060,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6E3560",
+      "Rva": "0x63E7E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3090,7 +3093,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6E3570",
+      "Rva": "0x63E810",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3123,7 +3126,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x160D660",
+      "Rva": "0x706A40",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3145,7 +3148,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D710",
+      "Rva": "0x7CAEA0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3163,7 +3166,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x95E350",
+      "Rva": "0x7CAEC0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3186,7 +3189,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x95E4C0",
+      "Rva": "0x7CAED0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3208,18 +3211,19 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8C97B0",
+      "Rva": "0x7CAEE0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 5,
+      "AliasCount": 6,
       "Aliases": [
         "Nivalis.Dialogue.DialogueUI$$get_CallDialogueAnchor",
         "Nivalis.InventorySystem.ItemType$$get_OptimalLightness",
         "System.Globalization.NumberFormatInfo$$get_PercentDecimalDigits",
         "System.Xml.Schema.XmlSchemaComplexType$$get_BlockResolved",
-        "System.Xml.XmlTextReaderImpl$$get_AttributeCount"
+        "System.Xml.XmlTextReaderImpl$$get_AttributeCount",
+        "Tayx.Graphy.GraphyManager$$get_RamGraphResolution"
       ]
     },
     {
@@ -3230,7 +3234,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D730",
+      "Rva": "0x7CAEF0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3248,7 +3252,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x1C7EE70",
+      "Rva": "0x75DD70",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3273,7 +3277,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6E35D0",
+      "Rva": "0x761990",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3306,7 +3310,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EB94C0",
+      "Rva": "0x7CAF10",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3325,7 +3329,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0xBB8290",
+      "Rva": "0x7CAF20",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3344,16 +3348,17 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x1BF65D0",
+      "Rva": "0x7CAF30",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 5,
+      "AliasCount": 6,
       "Aliases": [
         "AmplifyBloom.AmplifyBloomBase$$get_MainThresholdSize",
         "Nivalis.InventorySystem.ItemType$$get_RequiredFarmingLevel",
         "System.Net.HttpWebRequest$$get_Timeout",
+        "Tayx.Graphy.GraphyManager$$get_AudioGraphResolution",
         "TheraBytes.BetterUi.BetterRawImage$$get_ColoringMode",
         "UnityEngine.UI.Image$$get_fillMethod"
       ]
@@ -3366,7 +3371,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x1BB01D0",
+      "Rva": "0x7CAF40",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3385,7 +3390,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D750",
+      "Rva": "0x7CAF50",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3403,7 +3408,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D760",
+      "Rva": "0x7CAF60",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3421,7 +3426,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x28D5260",
+      "Rva": "0x7CAF70",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3440,7 +3445,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x80F0C0",
+      "Rva": "0x6E6EC0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3460,7 +3465,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6E3620",
+      "Rva": "0x761BE0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3493,7 +3498,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x813E80",
+      "Rva": "0x6EBC60",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3515,7 +3520,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D770",
+      "Rva": "0x7CAF80",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3533,7 +3538,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D7E0",
+      "Rva": "0x7CAFF0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3551,7 +3556,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D850",
+      "Rva": "0x7CB060",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3569,7 +3574,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D8B0",
+      "Rva": "0x7CB0C0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3587,7 +3592,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x107FF90",
+      "Rva": "0x7CB140",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3608,7 +3613,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6E3670",
+      "Rva": "0x759F60",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3634,7 +3639,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D930",
+      "Rva": "0x7CB150",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3652,7 +3657,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D950",
+      "Rva": "0x7CB170",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3670,7 +3675,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D960",
+      "Rva": "0x7CB180",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3688,7 +3693,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x1122760",
+      "Rva": "0x7CB190",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3709,7 +3714,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x28DFB00",
+      "Rva": "0x7CB1A0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3728,7 +3733,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D970",
+      "Rva": "0x7CB1B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3746,7 +3751,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0xE9FC00",
+      "Rva": "0x7CB1D0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3765,7 +3770,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0xE9FC20",
+      "Rva": "0x7CB1E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3784,7 +3789,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0xBB87C0",
+      "Rva": "0x7CB1F0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3805,7 +3810,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D990",
+      "Rva": "0x7CB200",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3823,7 +3828,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D9B0",
+      "Rva": "0x7CB220",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3841,7 +3846,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D9C0",
+      "Rva": "0x7CB230",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -3865,7 +3870,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x8C2E60",
+      "Rva": "0x7CB250",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -3897,12 +3902,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -3930,12 +3935,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -3963,7 +3968,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310FA50",
+      "Rva": "0x7CD2D0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -3981,7 +3986,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310FB00",
+      "Rva": "0x7CD380",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -3999,7 +4004,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310FD80",
+      "Rva": "0x7CD600",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4297,7 +4302,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3052620",
+      "Rva": "0x7F9A80",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4315,7 +4320,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3046650",
+      "Rva": "0x7EDAA0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4333,7 +4338,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3046680",
+      "Rva": "0x7EDAD0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4351,7 +4356,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3046BA0",
+      "Rva": "0x7EDFF0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4369,12 +4374,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8000",
+      "Rva": "0x5998E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1604,
+      "AliasCount": 1614,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Items",
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.Collections.Generic.IEnumerator<System.Object>.get_Current",
@@ -4382,6 +4387,7 @@
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_LeftToRightIndex",
+        "<>f__AnonymousType1<object, object>$$get_Available",
         "AmplifyBloom.AmplifyBloomBase$$get_MaskTexture",
         "AmplifyBloom.StarDefData$$get_StarName",
         "Articy.Nivalis.Features.AmountFeature$$get_OwnerId",
@@ -4390,8 +4396,7 @@
         "Articy.Nivalis.Features.CharacterSelectorFromFeature$$get_OwnerId",
         "Articy.Nivalis.Features.ConditionScriptFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_InnerConflict",
-        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId",
-        "Articy.Nivalis.Features.FarmingQuestTypeSelectorFeature$$get_OwnerId"
+        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId"
       ]
     },
     {
@@ -4402,7 +4407,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x30464F0",
+      "Rva": "0x7ED940",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4420,7 +4425,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055DC0",
+      "Rva": "0x7FD340",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4438,14 +4443,16 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8124F0",
+      "Rva": "0x6EA2D0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 47,
+      "AliasCount": 49,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$get_IsActive",
+        "<>f__AnonymousType1<KeyValuePair<ItemType, ShoppingListManager.ShoppingListData>, bool>$$get_Available",
+        "<>f__AnonymousType1<KeyValuePair<object, object>, bool>$$get_Available",
         "AmplifyBloom.AmplifyGlare$$get_ApplyLensGlare",
         "Articy.Nivalis.Features.Goto_SpotFeature$$get_StayOnSpot",
         "Articy.Unity.ArticyPackageDefinition$$get_IsDefaultPackage",
@@ -4458,9 +4465,7 @@
         "MagicaCloth.PhysicsTeamData$$get_MergeAvatarCollider",
         "Newtonsoft.Json.Bson.BsonValue$$get_Type",
         "Nivalis.CraftingSystem.MealRecipeDefinition$$get_Disabled",
-        "Nivalis.Dialogue.ArticyScriptParamChecker$$get_CheckForTrue",
-        "Nivalis.Dialogue.LogicOnlyStoryTree$$get_AlreadyShown",
-        "Nivalis.DiegeticButton$$get_IsActive"
+        "Nivalis.Dialogue.ArticyScriptParamChecker$$get_CheckForTrue"
       ]
     },
     {
@@ -4477,7 +4482,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x839F20",
+      "Rva": "0x7FA730",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4510,7 +4515,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055E00",
+      "Rva": "0x7FD380",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4528,7 +4533,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055E40",
+      "Rva": "0x7FD3C0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4546,7 +4551,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0xE04780",
+      "Rva": "0x7FD450",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4575,7 +4580,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x1BA13E0",
+      "Rva": "0x7FD460",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4597,7 +4602,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4EBCA0",
+      "Rva": "0x619D50",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4630,7 +4635,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055ED0",
+      "Rva": "0x7FD470",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4648,7 +4653,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x30560B0",
+      "Rva": "0x7FD650",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4666,7 +4671,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x30563A0",
+      "Rva": "0x7FD940",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4684,12 +4689,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6A7570",
+      "Rva": "0x61D550",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 278,
+      "AliasCount": 277,
       "Aliases": [
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_Fears",
         "Articy.Nivalis.Features.Goto_SpotFeature$$get_OwnerId",
@@ -4717,12 +4722,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6AE580",
+      "Rva": "0x67EC40",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 149,
+      "AliasCount": 151,
       "Aliases": [
         "AmplifyBloom.AmplifyGlare$$get_CromaticColorGradient",
         "AmplifyBloom.AmplifyLensFlare$$get_LensFlareGradient",
@@ -4750,7 +4755,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x30565A0",
+      "Rva": "0x7FDB40",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4780,7 +4785,7 @@
         false,
         false
       ],
-      "Rva": "0x3056D00",
+      "Rva": "0x7FE220",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4798,7 +4803,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x305B060",
+      "Rva": "0x802480",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4816,7 +4821,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x31010D0",
+      "Rva": "0x7BE5E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -4834,7 +4839,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3102410",
+      "Rva": "0x7BF920",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4852,12 +4857,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -4885,12 +4890,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -4918,12 +4923,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -4951,7 +4956,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3102660",
+      "Rva": "0x7BFB70",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -4969,12 +4974,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8000",
+      "Rva": "0x5998E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1604,
+      "AliasCount": 1614,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Items",
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.Collections.Generic.IEnumerator<System.Object>.get_Current",
@@ -4982,6 +4987,7 @@
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_LeftToRightIndex",
+        "<>f__AnonymousType1<object, object>$$get_Available",
         "AmplifyBloom.AmplifyBloomBase$$get_MaskTexture",
         "AmplifyBloom.StarDefData$$get_StarName",
         "Articy.Nivalis.Features.AmountFeature$$get_OwnerId",
@@ -4990,8 +4996,7 @@
         "Articy.Nivalis.Features.CharacterSelectorFromFeature$$get_OwnerId",
         "Articy.Nivalis.Features.ConditionScriptFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_InnerConflict",
-        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId",
-        "Articy.Nivalis.Features.FarmingQuestTypeSelectorFeature$$get_OwnerId"
+        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId"
       ]
     },
     {
@@ -5002,12 +5007,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E85A0",
+      "Rva": "0x61B500",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Construction/finalization is outside observer scope",
-      "AliasCount": 509,
+      "AliasCount": 514,
       "Aliases": [
         "_Work_Lukasz.Scripts.Chess.MoveStrategies.ARandomMoveStrategy$$.ctor",
         "_Work_Lukasz.Scripts.Chess.MoveStrategies.BasicRandomMoveStrategy$$.ctor",
@@ -5035,7 +5040,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D6D700",
+      "Rva": "0x2E94E00",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5054,7 +5059,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8D08E0",
+      "Rva": "0x28ACD80",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5075,7 +5080,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x1A81230",
+      "Rva": "0x1A22850",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5103,7 +5108,7 @@
         false,
         false
       ],
-      "Rva": "0x80F0E0",
+      "Rva": "0x618670",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5140,7 +5145,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D6DA50",
+      "Rva": "0x618A50",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5159,7 +5164,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE3B60",
+      "Rva": "0x2FBE8E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5177,7 +5182,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE3CF0",
+      "Rva": "0x2FBEA70",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5195,7 +5200,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE3E80",
+      "Rva": "0x2FBEC00",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5213,7 +5218,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE3EA0",
+      "Rva": "0x2FBEC20",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5231,12 +5236,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6AA780",
+      "Rva": "0x613FD0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1307,
+      "AliasCount": 1311,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Requirement",
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Assembly",
@@ -5244,6 +5249,7 @@
         "<>f__AnonymousType0<object, object>$$get_Assembly",
         "<>f__AnonymousType0<object, object>$$get_Expression",
         "<>f__AnonymousType0<Operation, int>$$get_Expression",
+        "<>f__AnonymousType1<object, object>$$get_Data",
         "AmplifyBloom.AmplifyGlare$$get_CustomGlareDef",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_Motivation",
         "Articy.Nivalis.Features.ItemFeature$$get_Name",
@@ -5252,8 +5258,7 @@
         "Articy.Nivalis.Features.PropertyDataFeature$$get_Name",
         "Articy.Nivalis.Features.QuestBasicFeature$$get_QuestTitle",
         "Articy.Nivalis.Features.RecipeFeature$$get_Name",
-        "Articy.Nivalis.Features.WorldObjFeature$$get_InteractionText",
-        "Articy.Nivalis.IncomingConnection$$get_Label"
+        "Articy.Nivalis.Features.WorldObjFeature$$get_InteractionText"
       ]
     },
     {
@@ -5270,7 +5275,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x4E9C60",
+      "Rva": "0x617070",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5303,12 +5308,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8000",
+      "Rva": "0x5998E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1604,
+      "AliasCount": 1614,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Items",
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.Collections.Generic.IEnumerator<System.Object>.get_Current",
@@ -5316,6 +5321,7 @@
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_LeftToRightIndex",
+        "<>f__AnonymousType1<object, object>$$get_Available",
         "AmplifyBloom.AmplifyBloomBase$$get_MaskTexture",
         "AmplifyBloom.StarDefData$$get_StarName",
         "Articy.Nivalis.Features.AmountFeature$$get_OwnerId",
@@ -5324,8 +5330,7 @@
         "Articy.Nivalis.Features.CharacterSelectorFromFeature$$get_OwnerId",
         "Articy.Nivalis.Features.ConditionScriptFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_InnerConflict",
-        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId",
-        "Articy.Nivalis.Features.FarmingQuestTypeSelectorFeature$$get_OwnerId"
+        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId"
       ]
     },
     {
@@ -5342,12 +5347,12 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x4E9C80",
+      "Rva": "0x616FD0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 178,
+      "AliasCount": 179,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$set_Items",
         "AmplifyBloom.AmplifyBloomBase$$set_MaskTexture",
@@ -5387,7 +5392,7 @@
         false,
         false
       ],
-      "Rva": "0x2EE3EC0",
+      "Rva": "0x2FBEC40",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5405,7 +5410,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE43C0",
+      "Rva": "0x2FBF140",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5423,7 +5428,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE46B0",
+      "Rva": "0x2FBF430",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5441,7 +5446,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE4E70",
+      "Rva": "0x2FBFBF0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5459,12 +5464,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8000",
+      "Rva": "0x5998E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 1604,
+      "AliasCount": 1614,
       "Aliases": [
         "_Work_Lukasz.Scripts.Staging.StagingProgressData$$get_Items",
         "_Work_Lukasz.Scripts.UI.AutoClickButton.<AutoClickRoutine>d__8$$System.Collections.Generic.IEnumerator<System.Object>.get_Current",
@@ -5472,6 +5477,7 @@
         "<>f__AnonymousType0<Assembly, RegisterDictionaryKeyPathProviderAttribute>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_Attribute",
         "<>f__AnonymousType0<object, object>$$get_LeftToRightIndex",
+        "<>f__AnonymousType1<object, object>$$get_Available",
         "AmplifyBloom.AmplifyBloomBase$$get_MaskTexture",
         "AmplifyBloom.StarDefData$$get_StarName",
         "Articy.Nivalis.Features.AmountFeature$$get_OwnerId",
@@ -5480,8 +5486,7 @@
         "Articy.Nivalis.Features.CharacterSelectorFromFeature$$get_OwnerId",
         "Articy.Nivalis.Features.ConditionScriptFeature$$get_OwnerId",
         "Articy.Nivalis.Features.DefaultExtendedCharacterFeatureFeature$$get_InnerConflict",
-        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId",
-        "Articy.Nivalis.Features.FarmingQuestTypeSelectorFeature$$get_OwnerId"
+        "Articy.Nivalis.Features.DemeanorFeatureFeature$$get_OwnerId"
       ]
     },
     {
@@ -5492,13 +5497,14 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x1A63AA0",
+      "Rva": "0x7D8F30",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 3,
+      "AliasCount": 4,
       "Aliases": [
+        "LightCullingSystem$$get_CullingActive",
         "Nivalis.Locale.FurnitureObject$$get_IgnoreFirstPlacedArea",
         "Nivalis.RetroArcade$$get_GameActive",
         "System.Xml.XmlReaderSettings$$get_IgnoreProcessingInstructions"
@@ -5512,7 +5518,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x7A9400",
+      "Rva": "0x6402B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5551,7 +5557,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x83F330",
+      "Rva": "0x6402C0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5584,7 +5590,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3169E80",
+      "Rva": "0x8C5860",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5602,17 +5608,18 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x1635290",
+      "Rva": "0x62E7E0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 16,
+      "AliasCount": 17,
       "Aliases": [
         "ChessEngine.AI.Guy.GuyChessAI$$get_IsThinking",
         "ChessEngine.AI.Riddle.RiddleChessAI$$get_IsThinking",
         "ChessEngine.AI.Stockfish.StockfishChessAI$$get_IsThinking",
         "Nivalis.AchievementSeries$$get_IsCompleted",
+        "Nivalis.BlinkingLight$$get_IsOn",
         "Nivalis.InventorySystem.ItemType$$get_IsPlayerStorable",
         "Nivalis.Locale.FurnitureObject$$get_IsInOwnedProperty",
         "Nivalis.Newspaper$$get_Equipped",
@@ -5623,8 +5630,7 @@
         "System.Globalization.CultureData$$get_UseUserOverride",
         "System.Xml.Serialization.TypeData$$get_HasPublicConstructor",
         "System.Xml.XmlWriterSettings$$get_DoNotEscapeUriAttributes",
-        "TheraBytes.BetterUi.BetterAxisAlignedLayoutGroup$$get_childScaleWidth",
-        "UnityEngine.UI.HorizontalOrVerticalLayoutGroup$$get_childScaleWidth"
+        "TheraBytes.BetterUi.BetterAxisAlignedLayoutGroup$$get_childScaleWidth"
       ]
     },
     {
@@ -5641,17 +5647,18 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2A360D0",
+      "Rva": "0x75BF00",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 5,
+      "AliasCount": 6,
       "Aliases": [
         "ChessEngine.AI.Guy.GuyChessAI$$set_IsThinking",
         "ChessEngine.AI.Riddle.RiddleChessAI$$set_IsThinking",
         "ChessEngine.AI.Stockfish.StockfishChessAI$$set_IsThinking",
         "ChessEngine.Undo.InstanceHistory$$set_TrackHistory",
+        "Nivalis.BlinkingLight$$set_IsOn",
         "Nivalis.Locale.FurnitureObject$$set_IsInOwnedProperty"
       ]
     },
@@ -5663,7 +5670,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x16352A0",
+      "Rva": "0x8C5AF0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5694,7 +5701,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x192C9C0",
+      "Rva": "0x8C5B00",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5714,7 +5721,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316A250",
+      "Rva": "0x8C5C50",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5732,7 +5739,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316A270",
+      "Rva": "0x8C5C70",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5750,7 +5757,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316A2D0",
+      "Rva": "0x8C5CD0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5768,7 +5775,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316A430",
+      "Rva": "0x8C5E30",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5786,7 +5793,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316A5B0",
+      "Rva": "0x8C5FB0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5804,12 +5811,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x6A7510",
+      "Rva": "0x6132D0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 374,
+      "AliasCount": 376,
       "Aliases": [
         "AmplifyBloom.AmplifyBloomBase$$get_TargetTexture",
         "AmplifyBloom.GlareDefData$$get_CustomStarData",
@@ -5837,7 +5844,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316A6C0",
+      "Rva": "0x8C60C0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5855,7 +5862,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316AEB0",
+      "Rva": "0x8C68B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5873,7 +5880,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316B140",
+      "Rva": "0x8C6B40",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5891,7 +5898,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4EBCA0",
+      "Rva": "0x619D50",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5924,7 +5931,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316B460",
+      "Rva": "0x8C6E60",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false,
@@ -5948,7 +5955,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x6A75E0",
+      "Rva": "0x8C6E70",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -5977,12 +5984,12 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x4E8210",
+      "Rva": "0x562E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
       "Reason": "Shared or unmapped native RVA; ambiguous entry",
-      "AliasCount": 9821,
+      "AliasCount": 9817,
       "Aliases": [
         "_Scripts.WorldObjects.HireStaffInteractable$$CancelInteraction",
         "_Work_Lukasz.Scripts.Ranking.RankingListElement$$ClearListeners",
@@ -6010,7 +6017,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316CB20",
+      "Rva": "0x8C8530",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -6028,7 +6035,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316CF60",
+      "Rva": "0x8C8970",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -6052,7 +6059,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2DCC3F0",
+      "Rva": "0x2ED4250",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -6079,7 +6086,7 @@
         false,
         false
       ],
-      "Rva": "0x2F0BFF0",
+      "Rva": "0x6802B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -6097,7 +6104,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0C050",
+      "Rva": "0x680310",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -6115,7 +6122,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2F0C440",
+      "Rva": "0x680700",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false,
@@ -6123,1132 +6130,6 @@
       "AliasCount": 1,
       "Aliases": [
         "Nivalis.InventorySystem.PlayerInventory$$ClearItems"
-      ]
-    }
-  ],
-  "Types": [
-    {
-      "Name": "Nivalis.PlacementSpot",
-      "Fields": [
-        {
-          "Name": "detectBounds",
-          "Type": "UnityEngine.Bounds",
-          "ValueType": true
-        },
-        {
-          "Name": "<LifeCycle>k__BackingField",
-          "Type": "Nivalis.PoolingLifeCycle",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.PlacementSlot",
-      "Fields": [
-        {
-          "Name": "highlight",
-          "Type": "UnityEngine.MeshRenderer",
-          "ValueType": false
-        },
-        {
-          "Name": "sector",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "rect",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "type",
-          "Type": "Nivalis.InventorySystem.ItemType+SlotType",
-          "ValueType": true
-        },
-        {
-          "Name": "aiPriority",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "objects",
-          "Type": "Nivalis.InventorySystem.ItemType[]",
-          "ValueType": false
-        },
-        {
-          "Name": "snap",
-          "Type": "Nivalis.PlacementSlot+SnapAxis",
-          "ValueType": true
-        },
-        {
-          "Name": "IsCover",
-          "Type": "System.Boolean",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.HoldableEntity+<PlaceRoutine>d__94",
-      "Fields": [
-        {
-          "Name": "<>1__state",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "<>2__current",
-          "Type": "System.Object",
-          "ValueType": false
-        },
-        {
-          "Name": "<>4__this",
-          "Type": "Nivalis.HoldableEntity",
-          "ValueType": false
-        },
-        {
-          "Name": "isKinematic",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "velocity",
-          "Type": "UnityEngine.Vector3",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.HoldableEntity",
-      "Fields": [
-        {
-          "Name": "EOnDestroyed",
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>",
-          "ValueType": true
-        },
-        {
-          "Name": "OnHeldStateChanged",
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<System.Boolean>>",
-          "ValueType": true
-        },
-        {
-          "Name": "_furniture",
-          "Type": "Nivalis.Locale.FurnitureObject",
-          "ValueType": false
-        },
-        {
-          "Name": "_itemEntity",
-          "Type": "Nivalis.InventorySystem.ItemEntity",
-          "ValueType": false
-        },
-        {
-          "Name": "isHeld",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "_isBeingPlaced",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "<LocalCanBePlaced>k__BackingField",
-          "Type": "Nivalis.OverrideableBool",
-          "ValueType": false
-        },
-        {
-          "Name": "<spot>k__BackingField",
-          "Type": "Nivalis.PlacementSpot",
-          "ValueType": false
-        },
-        {
-          "Name": "<slot>k__BackingField",
-          "Type": "Nivalis.PlacementSlot",
-          "ValueType": false
-        },
-        {
-          "Name": "pickupPosition",
-          "Type": "UnityEngine.Vector3",
-          "ValueType": true
-        },
-        {
-          "Name": "pickupRotation",
-          "Type": "UnityEngine.Quaternion",
-          "ValueType": true
-        },
-        {
-          "Name": "_currentRenderMode",
-          "Type": "Nivalis.HoldableEntity+RenderMode",
-          "ValueType": true
-        },
-        {
-          "Name": "settings",
-          "Type": "Nivalis.PlacementSetting",
-          "ValueType": false
-        },
-        {
-          "Name": "snapOffset",
-          "Type": "UnityEngine.Vector3",
-          "ValueType": true
-        },
-        {
-          "Name": "_rigidbody",
-          "Type": "UnityEngine.Rigidbody",
-          "ValueType": false
-        },
-        {
-          "Name": "<CenterOfMassOffset>k__BackingField",
-          "Type": "UnityEngine.Vector3",
-          "ValueType": true
-        },
-        {
-          "Name": "placementColliders",
-          "Type": "UnityEngine.Collider[]",
-          "ValueType": false
-        },
-        {
-          "Name": "snapDisableCollider",
-          "Type": "UnityEngine.Collider",
-          "ValueType": false
-        },
-        {
-          "Name": "<PlacementColliderOffset>k__BackingField",
-          "Type": "UnityEngine.Vector3",
-          "ValueType": true
-        },
-        {
-          "Name": "currentRotation",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "heldLocalOffset",
-          "Type": "UnityEngine.Vector3",
-          "ValueType": true
-        },
-        {
-          "Name": "_pickedUpLock",
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "ValueType": false
-        },
-        {
-          "Name": "IsInteractable",
-          "Type": "Nivalis.OverrideableBool",
-          "ValueType": false
-        },
-        {
-          "Name": "isManuallyPlacable",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "canBeRotated",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "triggerBlockingLayer",
-          "Type": "UnityEngine.LayerMask",
-          "ValueType": true
-        },
-        {
-          "Name": "myColliders",
-          "Type": "System.Collections.Generic.List`1<UnityEngine.Collider>",
-          "ValueType": false
-        },
-        {
-          "Name": "defaultColliderToTriggerMap",
-          "Type": "System.Collections.Generic.Dictionary`2<UnityEngine.Collider,System.Boolean>",
-          "ValueType": false
-        },
-        {
-          "Name": "isSleeping",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "interactable",
-          "Type": "Nivalis.IInteractable",
-          "ValueType": false
-        },
-        {
-          "Name": "entityRenderer",
-          "Type": "Nivalis.HoldableEntityRenderer",
-          "ValueType": false
-        },
-        {
-          "Name": "touchingTriggerColliders",
-          "Type": "System.Collections.Generic.List`1<UnityEngine.Collider>",
-          "ValueType": false
-        },
-        {
-          "Name": "tracker",
-          "Type": "Nivalis.PlacementTracker",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.PlacementSetting",
-      "Fields": [
-        {
-          "Name": "rotationAxis",
-          "Type": "UnityEngine.Vector3",
-          "ValueType": true
-        },
-        {
-          "Name": "surfaceType",
-          "Type": "Nivalis.SurfaceType",
-          "ValueType": true
-        },
-        {
-          "Name": "mustBePlacedOnSurface",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "surfaceMask",
-          "Type": "Nivalis.OptionalLayerMask",
-          "ValueType": false
-        },
-        {
-          "Name": "placeLayer",
-          "Type": "UnityEngine.LayerMask",
-          "ValueType": true
-        },
-        {
-          "Name": "snapRadius",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "moduleType",
-          "Type": "Nivalis.PlacementSetting+ModuleType",
-          "ValueType": true
-        },
-        {
-          "Name": "invalidPlacementMaterial",
-          "Type": "UnityEngine.Material",
-          "ValueType": false
-        },
-        {
-          "Name": "validPlacementMaterial",
-          "Type": "UnityEngine.Material",
-          "ValueType": false
-        },
-        {
-          "Name": "surfaceDotThreshold",
-          "Type": "System.Single",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.PlacementTracker",
-      "Fields": [
-        {
-          "Name": "view",
-          "Type": "Nivalis.GhostSystem.IGhostView",
-          "ValueType": false
-        },
-        {
-          "Name": "myHoldableEntity",
-          "Type": "Nivalis.HoldableEntity",
-          "ValueType": false
-        },
-        {
-          "Name": "currentParent",
-          "Type": "FurnitureParent",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.ItemCollectible",
-      "Fields": [
-        {
-          "Name": "guid",
-          "Type": "System.String",
-          "ValueType": false
-        },
-        {
-          "Name": "itemsOverride",
-          "Type": "System.Collections.Generic.List`1<Nivalis.CollectibleManager+Collectible>",
-          "ValueType": false
-        },
-        {
-          "Name": "prop",
-          "Type": "UnityEngine.GameObject",
-          "ValueType": false
-        },
-        {
-          "Name": "interactionCollider",
-          "Type": "UnityEngine.Collider",
-          "ValueType": false
-        },
-        {
-          "Name": "interactAudio",
-          "Type": "Nivalis.AudioGroup",
-          "ValueType": false
-        },
-        {
-          "Name": "collectedLabel",
-          "Type": "Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocStringSingle>",
-          "ValueType": false
-        },
-        {
-          "Name": "defaultLabel",
-          "Type": "Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocStringSingle>",
-          "ValueType": false
-        },
-        {
-          "Name": "<IsActive>k__BackingField",
-          "Type": "System.Boolean",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.ItemInstanceData",
-      "Fields": [
-        {
-          "Name": "type",
-          "Type": "Nivalis.InventorySystem.ItemType",
-          "ValueType": false
-        },
-        {
-          "Name": "value",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "creationDay",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "remainingDecayTime",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "lastUpdateDay",
-          "Type": "System.Int32",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.ItemStack",
-      "Fields": [
-        {
-          "Name": "_lastUpdateTime",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "_type",
-          "Type": "Nivalis.InventorySystem.ItemType",
-          "ValueType": false
-        },
-        {
-          "Name": "_instanceData",
-          "Type": "System.Collections.Generic.List`1<Nivalis.InventorySystem.ItemInstanceData>",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.ItemType",
-      "Fields": [
-        {
-          "Name": "guid",
-          "Type": "Nivalis.SerializableGuid",
-          "ValueType": false
-        },
-        {
-          "Name": "ArticyGuid",
-          "Type": "System.String",
-          "ValueType": false
-        },
-        {
-          "Name": "icon",
-          "Type": "UnityEngine.Sprite",
-          "ValueType": false
-        },
-        {
-          "Name": "locObjRef",
-          "Type": "Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocItemPlain>",
-          "ValueType": false
-        },
-        {
-          "Name": "basePrice",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "minStockPerVendor",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "maxStockPerVendor",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "allowBuying",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "allowSelling",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "allowDailyDeal",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "timedStockPriceModifier",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "baseMarketPrice",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "basePriceCurve",
-          "Type": "BasePriceCurve",
-          "ValueType": false
-        },
-        {
-          "Name": "minMealPrice",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "maxMealPrice",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "isPlayerStorable",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "tags",
-          "Type": "System.Collections.Generic.List`1<Nivalis.InventorySystem.ObjectTag>",
-          "ValueType": false
-        },
-        {
-          "Name": "storeAchievementId",
-          "Type": "System.String",
-          "ValueType": false
-        },
-        {
-          "Name": "tagsHashSet",
-          "Type": "System.Collections.Generic.HashSet`1<System.Int32>",
-          "ValueType": false
-        },
-        {
-          "Name": "entityPrefab",
-          "Type": "Nivalis.InventorySystem.ItemEntity",
-          "ValueType": false
-        },
-        {
-          "Name": "isEquippable",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "isIngredient",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "decayTimeInDays",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "requiresRefrigeration",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "allowedProcessingTypes",
-          "Type": "Nivalis.CraftingSystem.IngredientProcessingType",
-          "ValueType": true
-        },
-        {
-          "Name": "calories",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "exclusivity",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "_isPlant",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "_seeds",
-          "Type": "Nivalis.InventorySystem.ItemType",
-          "ValueType": false
-        },
-        {
-          "Name": "_plantPrefab",
-          "Type": "UnityEngine.GameObject",
-          "ValueType": false
-        },
-        {
-          "Name": "_yield",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "_growthDuration",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "_optimalTemperature",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "_optimalHumidity",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "_optimalLightness",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "seedPlants",
-          "Type": "Nivalis.InventorySystem.ItemType[]",
-          "ValueType": false
-        },
-        {
-          "Name": "_isFarmingModule",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "plants",
-          "Type": "Nivalis.InventorySystem.ItemType[]",
-          "ValueType": false
-        },
-        {
-          "Name": "yieldBonus",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "growthSpeedBonus",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "requiredFarmingLevel",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "_isFishingRod",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "throwRange",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "lureRange",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "luck",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "isUseable",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "onUseStatChanges",
-          "Type": "System.Collections.Generic.List`1<Nivalis.InventorySystem.ItemType+StatChange>",
-          "ValueType": false
-        },
-        {
-          "Name": "_isCamera",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "isFish",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "fishData",
-          "Type": "Nivalis.InventorySystem.FishItemData",
-          "ValueType": false
-        },
-        {
-          "Name": "isFurniture",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "furnitureCategories",
-          "Type": "Nivalis.InventorySystem.FurnitureCategory",
-          "ValueType": true
-        },
-        {
-          "Name": "propertyCategories",
-          "Type": "Nivalis.InventorySystem.FurnitureProperty",
-          "ValueType": true
-        },
-        {
-          "Name": "furnitureStyle",
-          "Type": "Nivalis.InventorySystem.FurnitureStyle",
-          "ValueType": true
-        },
-        {
-          "Name": "photoFrameSize",
-          "Type": "Nivalis.PhotoMode.PhotoFrameSize",
-          "ValueType": false
-        },
-        {
-          "Name": "comfort",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "basicStorage",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "refridgeratedStorage",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "staticFurniture",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "furnitureExclusivity",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "vendingMachineCapacity",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "slot",
-          "Type": "Nivalis.InventorySystem.ItemType+SlotType",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.ItemInstanceCollectionExtensions",
-      "Fields": []
-    },
-    {
-      "Name": "Nivalis.InventorySystem.InventorySave",
-      "Fields": [
-        {
-          "Name": "IsManuallyUpdated",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "IsRefridgerated",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "PerTypeInstances",
-          "Type": "System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.ValueTuple`4<System.Int32,System.Int32,System.Int32,System.Int32>>>",
-          "ValueType": false
-        },
-        {
-          "Name": "MaxItems",
-          "Type": "Nivalis.OptionalInt",
-          "ValueType": false
-        },
-        {
-          "Name": "MaxSlots",
-          "Type": "Nivalis.OptionalInt",
-          "ValueType": false
-        },
-        {
-          "Name": "TagFilterGuid",
-          "Type": "System.String",
-          "ValueType": false
-        },
-        {
-          "Name": "AcceptsIngredients",
-          "Type": "System.Boolean",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.InventoriesSave",
-      "Fields": [
-        {
-          "Name": "Inventories",
-          "Type": "System.Collections.Generic.List`1<System.ValueTuple`2<System.String,Nivalis.InventorySystem.InventorySave>>",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.InventoriesManager",
-      "Fields": [
-        {
-          "Name": "<ConfigurationType>k__BackingField",
-          "Type": "System.Type",
-          "ValueType": false
-        },
-        {
-          "Name": "_inventoriesById",
-          "Type": "System.Collections.Generic.Dictionary`2<System.String,Nivalis.InventorySystem.ItemContainer>",
-          "ValueType": false
-        },
-        {
-          "Name": "_inventories",
-          "Type": "System.Collections.Generic.List`1<Nivalis.InventorySystem.ItemContainer>",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.ItemContainer",
-      "Fields": [
-        {
-          "Name": "onContentsChanged",
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventorySystem.IItemContainer,Nivalis.InventorySystem.ItemTypeCountChange>>",
-          "ValueType": true
-        },
-        {
-          "Name": "<IsRefridgerated>k__BackingField",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "<IsManuallyUpdated>k__BackingField",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "_typeMap",
-          "Type": "Nivalis.MultiDictionary`2<Nivalis.InventorySystem.ItemType,System.Collections.Generic.LinkedListNode`1<Nivalis.InventorySystem.ItemStack>>",
-          "ValueType": false
-        },
-        {
-          "Name": "_items",
-          "Type": "System.Collections.Generic.LinkedList`1<Nivalis.InventorySystem.ItemStack>",
-          "ValueType": false
-        },
-        {
-          "Name": "_restriction",
-          "Type": "Nivalis.InventorySystem.ItemContainerRestriction",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.ItemContainerRestriction",
-      "Fields": [
-        {
-          "Name": "MaxItems",
-          "Type": "Nivalis.OptionalInt",
-          "ValueType": false
-        },
-        {
-          "Name": "MaxSlots",
-          "Type": "Nivalis.OptionalInt",
-          "ValueType": false
-        },
-        {
-          "Name": "TagFilter",
-          "Type": "Nivalis.InventorySystem.ObjectTag",
-          "ValueType": false
-        },
-        {
-          "Name": "AcceptsIngredients",
-          "Type": "System.Boolean",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.ItemEntity",
-      "Fields": [
-        {
-          "Name": "data",
-          "Type": "Nivalis.InventorySystem.ItemType",
-          "ValueType": false
-        },
-        {
-          "Name": "_item",
-          "Type": "Nivalis.InventorySystem.ItemStack",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.GhostSystem.HoldableGhost",
-      "Fields": [
-        {
-          "Name": "_canBeHeld",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "_isHeld",
-          "Type": "System.Boolean",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.GhostSystem.CustomerLoop.VenueInventory",
-      "Fields": [
-        {
-          "Name": "<NormalInventory>k__BackingField",
-          "Type": "Nivalis.InventorySystem.ItemContainer",
-          "ValueType": false
-        },
-        {
-          "Name": "<RefridgeratedInventory>k__BackingField",
-          "Type": "Nivalis.InventorySystem.ItemContainer",
-          "ValueType": false
-        },
-        {
-          "Name": "onContentsChanged",
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventorySystem.IItemContainer,Nivalis.InventorySystem.ItemTypeCountChange>>",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.Locale.FurnitureObject",
-      "Fields": [
-        {
-          "Name": "holdableEntity",
-          "Type": "Nivalis.HoldableEntity",
-          "ValueType": false
-        },
-        {
-          "Name": "_currentProperty",
-          "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty",
-          "ValueType": false
-        },
-        {
-          "Name": "_placementLock",
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "ValueType": false
-        },
-        {
-          "Name": "_placementLockOwner",
-          "Type": "Nivalis.LockDummy",
-          "ValueType": false
-        },
-        {
-          "Name": "_pickupLock",
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "ValueType": false
-        },
-        {
-          "Name": "_pickupLockOwner",
-          "Type": "Nivalis.LockDummy",
-          "ValueType": false
-        },
-        {
-          "Name": "_isInteractionActive",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "ignoreFirstPlacedArea",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "allowPicking",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "exhibitionVendors",
-          "Type": "Nivalis.Economy.Vendor[]",
-          "ValueType": false
-        },
-        {
-          "Name": "<PreviousProperty>k__BackingField",
-          "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty",
-          "ValueType": false
-        },
-        {
-          "Name": "<IsInOwnedProperty>k__BackingField",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "<IsWithinFurnitureLimit>k__BackingField",
-          "Type": "System.Boolean",
-          "ValueType": true
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.PlayerObjectHolder",
-      "Fields": [
-        {
-          "Name": "OnPickUpFound",
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
-          "ValueType": true
-        },
-        {
-          "Name": "OnObjectPickUp",
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
-          "ValueType": true
-        },
-        {
-          "Name": "OnObjectStore",
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
-          "ValueType": true
-        },
-        {
-          "Name": "<IsInControlOfObjectPosition>k__BackingField",
-          "Type": "System.Boolean",
-          "ValueType": true
-        },
-        {
-          "Name": "container",
-          "Type": "UnityEngine.Transform",
-          "ValueType": false
-        },
-        {
-          "Name": "pickUpEvent",
-          "Type": "Nivalis.ItemPickedUpEvent",
-          "ValueType": false
-        },
-        {
-          "Name": "_heldObjSO",
-          "Type": "Nivalis.HoldableEntitySO",
-          "ValueType": false
-        },
-        {
-          "Name": "_eyelineTransform",
-          "Type": "UnityEngine.Transform",
-          "ValueType": false
-        },
-        {
-          "Name": "_facingTransform",
-          "Type": "UnityEngine.Transform",
-          "ValueType": false
-        },
-        {
-          "Name": "focusRaycaster",
-          "Type": "Nivalis.FocusRaycaster",
-          "ValueType": false
-        },
-        {
-          "Name": "rotationSpeed",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "lerpRate",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "_heldObject",
-          "Type": "Nivalis.HoldableEntity",
-          "ValueType": false
-        },
-        {
-          "Name": "_objectInFront",
-          "Type": "Nivalis.HoldableEntity",
-          "ValueType": false
-        },
-        {
-          "Name": "_rotationDirection",
-          "Type": "System.Single",
-          "ValueType": true
-        },
-        {
-          "Name": "_player",
-          "Type": "Nivalis.PlayerManager+Player",
-          "ValueType": false
-        },
-        {
-          "Name": "_playerSprintLock",
-          "Type": "Nivalis.OverrideableBool+OverrideLock",
-          "ValueType": false
-        }
-      ]
-    },
-    {
-      "Name": "Nivalis.InventorySystem.PlayerInventory",
-      "Fields": [
-        {
-          "Name": "onMoneyChanged",
-          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<System.Int32,System.Int32>>",
-          "ValueType": true
-        },
-        {
-          "Name": "lockedMoneyEventPreviousValue",
-          "Type": "System.Nullable`1<System.Int32>",
-          "ValueType": true
-        },
-        {
-          "Name": "moneyChangeEventLock",
-          "Type": "Nivalis.OverrideableBool",
-          "ValueType": false
-        },
-        {
-          "Name": "_money",
-          "Type": "System.Int32",
-          "ValueType": true
-        },
-        {
-          "Name": "_items",
-          "Type": "Nivalis.InventorySystem.ItemContainer",
-          "ValueType": false
-        },
-        {
-          "Name": "<InventoryData>k__BackingField",
-          "Type": "Nivalis.InventorySystem.InventoryData",
-          "ValueType": false
-        }
       ]
     }
   ],
@@ -7273,7 +6154,7 @@
         false,
         false
       ],
-      "Rva": "0x9AF610",
+      "Rva": "0x8FC6E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7301,7 +6182,7 @@
         false,
         false
       ],
-      "Rva": "0x9AFBE0",
+      "Rva": "0x8FCCB0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7320,7 +6201,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9AFFF0",
+      "Rva": "0x8FD0C0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7342,7 +6223,7 @@
         false,
         false
       ],
-      "Rva": "0x9B00B0",
+      "Rva": "0x8FD180",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7361,7 +6242,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9B0330",
+      "Rva": "0x8FD400",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7383,7 +6264,7 @@
         false,
         false
       ],
-      "Rva": "0x9B0380",
+      "Rva": "0x8FD450",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7411,7 +6292,7 @@
         false,
         false
       ],
-      "Rva": "0x9B07D0",
+      "Rva": "0x8FD8A0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7433,7 +6314,7 @@
         false,
         false
       ],
-      "Rva": "0x9B0E40",
+      "Rva": "0x8FDF10",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7455,7 +6336,7 @@
         false,
         false
       ],
-      "Rva": "0x9B1260",
+      "Rva": "0x8FE330",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7468,7 +6349,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9AF1F0",
+      "Rva": "0x8FC290",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7490,7 +6371,7 @@
         false,
         false
       ],
-      "Rva": "0x9AF2E0",
+      "Rva": "0x8FC380",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7503,7 +6384,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D23390",
+      "Rva": "0x2E29260",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": true
@@ -7522,7 +6403,7 @@
       "OutParameters": [
         true
       ],
-      "Rva": "0x83F090",
+      "Rva": "0x3055BA0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7541,7 +6422,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x83F320",
+      "Rva": "0x3055E30",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7560,7 +6441,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x83F4D0",
+      "Rva": "0x3055FC0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7579,7 +6460,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x83F6A0",
+      "Rva": "0x3056140",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7592,7 +6473,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83F6C0",
+      "Rva": "0x3056160",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -7605,7 +6486,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x83FC90",
+      "Rva": "0x3056730",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -7618,7 +6499,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x840020",
+      "Rva": "0x3056AC0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7631,7 +6512,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x840490",
+      "Rva": "0x3056F30",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7644,7 +6525,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8405C0",
+      "Rva": "0x3057060",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7657,7 +6538,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x840690",
+      "Rva": "0x3057130",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7670,7 +6551,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8406B0",
+      "Rva": "0x3057150",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7683,7 +6564,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x840710",
+      "Rva": "0x30571B0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -7702,7 +6583,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x840720",
+      "Rva": "0x30571C0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7721,7 +6602,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x840890",
+      "Rva": "0x3057330",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7740,7 +6621,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x840930",
+      "Rva": "0x30573D0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7759,7 +6640,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x840A70",
+      "Rva": "0x3057510",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7772,7 +6653,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x840B10",
+      "Rva": "0x30575B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7785,7 +6666,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x840E90",
+      "Rva": "0x3057930",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7810,7 +6691,7 @@
         false,
         false
       ],
-      "Rva": "0x841150",
+      "Rva": "0x3057BF0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7835,7 +6716,7 @@
         false,
         false
       ],
-      "Rva": "0x8412E0",
+      "Rva": "0x3057D80",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7848,7 +6729,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x841380",
+      "Rva": "0x3057E20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7861,7 +6742,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x841450",
+      "Rva": "0x3057EF0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7874,7 +6755,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8416B0",
+      "Rva": "0x3058150",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7887,7 +6768,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8417F0",
+      "Rva": "0x3058290",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7900,7 +6781,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x841980",
+      "Rva": "0x3058420",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -7922,7 +6803,7 @@
         false,
         false
       ],
-      "Rva": "0x841B50",
+      "Rva": "0x30585F0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -7935,7 +6816,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x842120",
+      "Rva": "0x3058BC0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7948,7 +6829,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x8423B0",
+      "Rva": "0x3058E50",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7961,7 +6842,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x842410",
+      "Rva": "0x3058EB0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7974,7 +6855,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x842470",
+      "Rva": "0x3058F10",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -7993,7 +6874,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x842900",
+      "Rva": "0x30593A0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8006,7 +6887,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x842B30",
+      "Rva": "0x30595D0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -8025,7 +6906,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x842B80",
+      "Rva": "0x3059620",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8044,7 +6925,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x842EA0",
+      "Rva": "0x3059940",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8063,7 +6944,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x8431A0",
+      "Rva": "0x3059C40",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8082,7 +6963,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x8431F0",
+      "Rva": "0x3059C90",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8104,7 +6985,7 @@
         false,
         false
       ],
-      "Rva": "0x8435F0",
+      "Rva": "0x305A090",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8123,7 +7004,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x843BC0",
+      "Rva": "0x305A660",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8142,7 +7023,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9AEC10",
+      "Rva": "0x8FBCB0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8155,7 +7036,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B46B0",
+      "Rva": "0x901780",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8168,7 +7049,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B49F0",
+      "Rva": "0x901AC0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8181,7 +7062,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B4CA0",
+      "Rva": "0x901D70",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8200,7 +7081,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9B4EA0",
+      "Rva": "0x901F70",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8222,7 +7103,7 @@
         false,
         false
       ],
-      "Rva": "0x9B5210",
+      "Rva": "0x9022E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8241,7 +7122,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x9B5520",
+      "Rva": "0x9025F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8254,7 +7135,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x9B55C0",
+      "Rva": "0x902690",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8267,7 +7148,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x30554C0",
+      "Rva": "0x7FCA40",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8280,7 +7161,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055600",
+      "Rva": "0x7FCB80",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8293,7 +7174,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x30556A0",
+      "Rva": "0x7FCC20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -8306,7 +7187,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055A50",
+      "Rva": "0x7FCFD0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8319,7 +7200,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055B10",
+      "Rva": "0x7FD090",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8332,7 +7213,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055C70",
+      "Rva": "0x7FD1F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8345,7 +7226,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055D20",
+      "Rva": "0x7FD2A0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8358,7 +7239,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3104480",
+      "Rva": "0x7C19A0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8371,7 +7252,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x31044E0",
+      "Rva": "0x7C1A00",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8393,7 +7274,7 @@
         false,
         false
       ],
-      "Rva": "0x3104530",
+      "Rva": "0x7C1A50",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8412,7 +7293,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3104590",
+      "Rva": "0x7C1AB0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8431,7 +7312,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3104650",
+      "Rva": "0x7C1B70",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -8444,7 +7325,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3109600",
+      "Rva": "0x7C6B70",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8457,7 +7338,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3109640",
+      "Rva": "0x7C6BB0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8470,7 +7351,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3109780",
+      "Rva": "0x7C6CF0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -8495,7 +7376,7 @@
         false,
         false
       ],
-      "Rva": "0x3109880",
+      "Rva": "0x7C6DF0",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8517,7 +7398,7 @@
         false,
         false
       ],
-      "Rva": "0x3109A30",
+      "Rva": "0x7C6FA0",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8539,7 +7420,7 @@
         false,
         false
       ],
-      "Rva": "0x3109CF0",
+      "Rva": "0x7C7260",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8561,7 +7442,7 @@
         false,
         false
       ],
-      "Rva": "0x3109F30",
+      "Rva": "0x7C74A0",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8586,7 +7467,7 @@
         false,
         false
       ],
-      "Rva": "0x310A1E0",
+      "Rva": "0x7C7750",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8605,7 +7486,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310ABD0",
+      "Rva": "0x7C8140",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8624,7 +7505,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310AC70",
+      "Rva": "0x7C81E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8643,7 +7524,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310ADD0",
+      "Rva": "0x7C8340",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8662,7 +7543,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310AED0",
+      "Rva": "0x7C8440",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8681,7 +7562,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310B080",
+      "Rva": "0x7C85F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8703,7 +7584,7 @@
         false,
         false
       ],
-      "Rva": "0x310B120",
+      "Rva": "0x7C8690",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8725,7 +7606,7 @@
         false,
         false
       ],
-      "Rva": "0x310B1F0",
+      "Rva": "0x7C8760",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8747,7 +7628,7 @@
         false,
         false
       ],
-      "Rva": "0x310B380",
+      "Rva": "0x7C88F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8769,7 +7650,7 @@
         false,
         true
       ],
-      "Rva": "0x310B420",
+      "Rva": "0x7C8990",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8788,7 +7669,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310B4E0",
+      "Rva": "0x7C8BC0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8810,7 +7691,7 @@
         false,
         false
       ],
-      "Rva": "0x310B5E0",
+      "Rva": "0x7C8CC0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8835,7 +7716,7 @@
         false,
         false
       ],
-      "Rva": "0x310B650",
+      "Rva": "0x7C8D30",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8848,7 +7729,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310B7B0",
+      "Rva": "0x7C8E90",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8861,7 +7742,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310B930",
+      "Rva": "0x7C9010",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8874,7 +7755,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310B990",
+      "Rva": "0x7C9070",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8893,7 +7774,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310BB40",
+      "Rva": "0x7C9220",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8915,7 +7796,7 @@
         false,
         false
       ],
-      "Rva": "0x310BC00",
+      "Rva": "0x7C92E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8940,7 +7821,7 @@
         false,
         false
       ],
-      "Rva": "0x310BD90",
+      "Rva": "0x7C9470",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8959,7 +7840,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310BED0",
+      "Rva": "0x7C95B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -8972,7 +7853,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310BF70",
+      "Rva": "0x7C9650",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -8991,7 +7872,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310C030",
+      "Rva": "0x7C9710",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9010,7 +7891,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310C120",
+      "Rva": "0x7C9800",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9029,7 +7910,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310C370",
+      "Rva": "0x7C9A50",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9048,7 +7929,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310C6E0",
+      "Rva": "0x7C9DC0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -9061,7 +7942,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310CAB0",
+      "Rva": "0x7CA190",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9083,7 +7964,7 @@
         false,
         false
       ],
-      "Rva": "0x310CBA0",
+      "Rva": "0x7CA280",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9096,7 +7977,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D6C0",
+      "Rva": "0x7CAE50",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -9121,7 +8002,7 @@
         false,
         true
       ],
-      "Rva": "0x310D9D0",
+      "Rva": "0x7CB240",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9134,7 +8015,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310D9E0",
+      "Rva": "0x7CB260",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9147,7 +8028,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310DB30",
+      "Rva": "0x7CB3B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9160,7 +8041,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310DB80",
+      "Rva": "0x7CB400",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9179,7 +8060,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x310DB90",
+      "Rva": "0x7CB410",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9201,7 +8082,7 @@
         false,
         false
       ],
-      "Rva": "0x310DBA0",
+      "Rva": "0x7CB420",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9229,7 +8110,7 @@
         false,
         false
       ],
-      "Rva": "0x310F5F0",
+      "Rva": "0x7CCE70",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9257,7 +8138,7 @@
         false,
         false
       ],
-      "Rva": "0x310F690",
+      "Rva": "0x7CCF10",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9282,7 +8163,7 @@
         false,
         false
       ],
-      "Rva": "0x310F6E0",
+      "Rva": "0x7CCF60",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9310,7 +8191,7 @@
         false,
         false
       ],
-      "Rva": "0x310F7D0",
+      "Rva": "0x7CD050",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9323,7 +8204,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x310F8E0",
+      "Rva": "0x7CD160",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9342,7 +8223,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3103D30",
+      "Rva": "0x7C1250",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9361,7 +8242,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3051930",
+      "Rva": "0x7F8D90",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9380,7 +8261,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3051CF0",
+      "Rva": "0x7F9150",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9399,7 +8280,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3052150",
+      "Rva": "0x7F95B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -9418,7 +8299,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x30466F0",
+      "Rva": "0x7EDB40",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9437,7 +8318,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3046910",
+      "Rva": "0x7EDD60",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -9450,7 +8331,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3046B40",
+      "Rva": "0x7EDF90",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -9472,7 +8353,7 @@
         false,
         false
       ],
-      "Rva": "0x3045BD0",
+      "Rva": "0x7ED020",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9485,7 +8366,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3045D60",
+      "Rva": "0x7ED1B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9498,7 +8379,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3045E80",
+      "Rva": "0x7ED2D0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9517,7 +8398,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3045F20",
+      "Rva": "0x7ED370",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9530,7 +8411,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3046110",
+      "Rva": "0x7ED560",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -9543,7 +8424,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3046210",
+      "Rva": "0x7ED660",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9571,7 +8452,7 @@
         false,
         false
       ],
-      "Rva": "0x3046360",
+      "Rva": "0x7ED7B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9584,7 +8465,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055EE0",
+      "Rva": "0x7FD480",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -9597,7 +8478,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3055F20",
+      "Rva": "0x7FD4C0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -9616,7 +8497,7 @@
       "OutParameters": [
         true
       ],
-      "Rva": "0x3056700",
+      "Rva": "0x7FDCA0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9635,7 +8516,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x30569C0",
+      "Rva": "0x7FDF60",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9657,7 +8538,7 @@
         false,
         false
       ],
-      "Rva": "0x3056E90",
+      "Rva": "0x7FE3B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9679,7 +8560,7 @@
         false,
         true
       ],
-      "Rva": "0x3057300",
+      "Rva": "0x7FE820",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9698,7 +8579,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3057310",
+      "Rva": "0x7FE830",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9711,7 +8592,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3057540",
+      "Rva": "0x7FEA60",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9730,7 +8611,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3057720",
+      "Rva": "0x7FEC40",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9749,7 +8630,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3057860",
+      "Rva": "0x7FED80",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9768,7 +8649,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3057C60",
+      "Rva": "0x7FF180",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9787,7 +8668,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x30580C0",
+      "Rva": "0x7FF5E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9809,7 +8690,7 @@
         false,
         false
       ],
-      "Rva": "0x3058580",
+      "Rva": "0x7FFAA0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9828,7 +8709,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x30589B0",
+      "Rva": "0x7FFED0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9847,7 +8728,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3058D80",
+      "Rva": "0x8002A0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9872,7 +8753,7 @@
         false,
         false
       ],
-      "Rva": "0x3058DC0",
+      "Rva": "0x8002E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9894,7 +8775,7 @@
         false,
         false
       ],
-      "Rva": "0x3058E30",
+      "Rva": "0x800350",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9916,7 +8797,7 @@
         false,
         false
       ],
-      "Rva": "0x30590C0",
+      "Rva": "0x800560",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9935,7 +8816,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x30591A0",
+      "Rva": "0x800640",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9954,7 +8835,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3059CF0",
+      "Rva": "0x801190",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9973,7 +8854,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3059EC0",
+      "Rva": "0x801360",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -9992,7 +8873,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x305A0B0",
+      "Rva": "0x801550",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10011,7 +8892,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x305A4F0",
+      "Rva": "0x801990",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10033,7 +8914,7 @@
         false,
         false
       ],
-      "Rva": "0x305A730",
+      "Rva": "0x801BD0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10052,7 +8933,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x305A780",
+      "Rva": "0x801C20",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10077,7 +8958,7 @@
         false,
         false
       ],
-      "Rva": "0x305A7C0",
+      "Rva": "0x801C60",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10090,7 +8971,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x305AE00",
+      "Rva": "0x802220",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -10103,7 +8984,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x305AF80",
+      "Rva": "0x8023A0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10122,7 +9003,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x305B140",
+      "Rva": "0x802560",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10141,7 +9022,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x305B160",
+      "Rva": "0x802580",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10154,7 +9035,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x305B240",
+      "Rva": "0x802660",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10167,7 +9048,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x305B510",
+      "Rva": "0x802930",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10186,7 +9067,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x305B820",
+      "Rva": "0x802C40",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10205,7 +9086,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x305BC30",
+      "Rva": "0x803050",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10224,7 +9105,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x305BE00",
+      "Rva": "0x803220",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -10246,7 +9127,7 @@
         false,
         false
       ],
-      "Rva": "0x3100860",
+      "Rva": "0x7BDD70",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10268,7 +9149,7 @@
         false,
         false
       ],
-      "Rva": "0x3100940",
+      "Rva": "0x7BDE50",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10293,7 +9174,7 @@
         false,
         false
       ],
-      "Rva": "0x31009E0",
+      "Rva": "0x7BDEF0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10312,7 +9193,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3100A90",
+      "Rva": "0x7BDFA0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10334,7 +9215,7 @@
         false,
         false
       ],
-      "Rva": "0x3100C30",
+      "Rva": "0x7BE140",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10353,7 +9234,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3100CE0",
+      "Rva": "0x7BE1F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10366,7 +9247,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3100D80",
+      "Rva": "0x7BE290",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10385,7 +9266,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3100DD0",
+      "Rva": "0x7BE2E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10404,7 +9285,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3100EF0",
+      "Rva": "0x7BE400",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -10417,7 +9298,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x3102490",
+      "Rva": "0x7BF9A0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -10436,7 +9317,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x31025A0",
+      "Rva": "0x7BFAB0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10455,7 +9336,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x3102680",
+      "Rva": "0x7BFB90",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -10468,7 +9349,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2D6D760",
+      "Rva": "0x2E94E60",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -10487,7 +9368,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D6D990",
+      "Rva": "0x2E95090",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10506,7 +9387,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2D6D9F0",
+      "Rva": "0x2E950F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10531,7 +9412,7 @@
         false,
         false
       ],
-      "Rva": "0x2D6DAC0",
+      "Rva": "0x2E95150",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10550,7 +9431,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE3BF0",
+      "Rva": "0x2FBE970",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10569,7 +9450,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE3D80",
+      "Rva": "0x2FBEB00",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10591,7 +9472,7 @@
         false,
         false
       ],
-      "Rva": "0x2EE4590",
+      "Rva": "0x2FBF310",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10604,7 +9485,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE4610",
+      "Rva": "0x2FBF390",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10617,7 +9498,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE4750",
+      "Rva": "0x2FBF4D0",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -10630,7 +9511,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE47A0",
+      "Rva": "0x2FBF520",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -10643,7 +9524,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE4820",
+      "Rva": "0x2FBF5A0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -10665,7 +9546,7 @@
         false,
         true
       ],
-      "Rva": "0x2EE4860",
+      "Rva": "0x2FBF5E0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10684,7 +9565,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE48C0",
+      "Rva": "0x2FBF640",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10703,7 +9584,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4930",
+      "Rva": "0x2FBF6B0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10722,7 +9603,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4990",
+      "Rva": "0x2FBF710",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10744,7 +9625,7 @@
         false,
         false
       ],
-      "Rva": "0x2EE4A70",
+      "Rva": "0x2FBF7F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10763,7 +9644,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4AB0",
+      "Rva": "0x2FBF830",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10782,7 +9663,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4B00",
+      "Rva": "0x2FBF880",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10801,7 +9682,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4B40",
+      "Rva": "0x2FBF8C0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10823,7 +9704,7 @@
         false,
         false
       ],
-      "Rva": "0x2EE4B90",
+      "Rva": "0x2FBF910",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10845,7 +9726,7 @@
         false,
         false
       ],
-      "Rva": "0x2EE4BF0",
+      "Rva": "0x2FBF970",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10864,7 +9745,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4CC0",
+      "Rva": "0x2FBFA40",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10889,7 +9770,7 @@
         false,
         false
       ],
-      "Rva": "0x2EE4D90",
+      "Rva": "0x2FBFB10",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10908,7 +9789,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4E30",
+      "Rva": "0x2FBFBB0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10927,7 +9808,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4EB0",
+      "Rva": "0x2FBFC30",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10940,7 +9821,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x2EE4F20",
+      "Rva": "0x2FBFCA0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10959,7 +9840,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x2EE4F60",
+      "Rva": "0x2FBFCE0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -10972,7 +9853,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316A110",
+      "Rva": "0x8C5B10",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -10985,7 +9866,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316A230",
+      "Rva": "0x8C5C30",
       "IsStatic": false,
       "Sampled": true,
       "SkipAfterInstance": false
@@ -11004,7 +9885,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x316A810",
+      "Rva": "0x8C6210",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11017,7 +9898,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316B470",
+      "Rva": "0x8C6E80",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11030,7 +9911,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316B560",
+      "Rva": "0x8C6F70",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -11043,7 +9924,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316B5E0",
+      "Rva": "0x8C6FF0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11056,7 +9937,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316B6E0",
+      "Rva": "0x8C70F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11069,7 +9950,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316BB20",
+      "Rva": "0x8C7530",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11088,7 +9969,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x316BD30",
+      "Rva": "0x8C7740",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11101,7 +9982,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316BE30",
+      "Rva": "0x8C7840",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -11120,7 +10001,7 @@
       "OutParameters": [
         false
       ],
-      "Rva": "0x316C290",
+      "Rva": "0x8C7CA0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11133,7 +10014,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316C430",
+      "Rva": "0x8C7E40",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11146,7 +10027,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316C850",
+      "Rva": "0x8C8260",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": true
@@ -11159,7 +10040,7 @@
       "Parameters": [],
       "ParameterNames": [],
       "OutParameters": [],
-      "Rva": "0x316C9E0",
+      "Rva": "0x8C83F0",
       "IsStatic": false,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11181,7 +10062,7 @@
         false,
         false
       ],
-      "Rva": "0x316CC50",
+      "Rva": "0x8C8660",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
@@ -11203,10 +10084,1136 @@
         false,
         false
       ],
-      "Rva": "0x316CE00",
+      "Rva": "0x8C8810",
       "IsStatic": true,
       "Sampled": false,
       "SkipAfterInstance": false
+    }
+  ],
+  "Types": [
+    {
+      "Fields": [
+        {
+          "Type": "UnityEngine.Bounds",
+          "ValueType": true,
+          "Name": "detectBounds"
+        },
+        {
+          "Type": "Nivalis.PoolingLifeCycle",
+          "ValueType": false,
+          "Name": "<LifeCycle>k__BackingField"
+        }
+      ],
+      "Name": "Nivalis.PlacementSpot"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "UnityEngine.MeshRenderer",
+          "ValueType": false,
+          "Name": "highlight"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "sector"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "rect"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemType+SlotType",
+          "ValueType": true,
+          "Name": "type"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "aiPriority"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemType[]",
+          "ValueType": false,
+          "Name": "objects"
+        },
+        {
+          "Type": "Nivalis.PlacementSlot+SnapAxis",
+          "ValueType": true,
+          "Name": "snap"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "IsCover"
+        }
+      ],
+      "Name": "Nivalis.PlacementSlot"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "<>1__state"
+        },
+        {
+          "Type": "System.Object",
+          "ValueType": false,
+          "Name": "<>2__current"
+        },
+        {
+          "Type": "Nivalis.HoldableEntity",
+          "ValueType": false,
+          "Name": "<>4__this"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isKinematic"
+        },
+        {
+          "Type": "UnityEngine.Vector3",
+          "ValueType": true,
+          "Name": "velocity"
+        }
+      ],
+      "Name": "Nivalis.HoldableEntity+<PlaceRoutine>d__94"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc>",
+          "ValueType": true,
+          "Name": "EOnDestroyed"
+        },
+        {
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<System.Boolean>>",
+          "ValueType": true,
+          "Name": "OnHeldStateChanged"
+        },
+        {
+          "Type": "Nivalis.Locale.FurnitureObject",
+          "ValueType": false,
+          "Name": "_furniture"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemEntity",
+          "ValueType": false,
+          "Name": "_itemEntity"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isHeld"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "_isBeingPlaced"
+        },
+        {
+          "Type": "Nivalis.OverrideableBool",
+          "ValueType": false,
+          "Name": "<LocalCanBePlaced>k__BackingField"
+        },
+        {
+          "Type": "Nivalis.PlacementSpot",
+          "ValueType": false,
+          "Name": "<spot>k__BackingField"
+        },
+        {
+          "Type": "Nivalis.PlacementSlot",
+          "ValueType": false,
+          "Name": "<slot>k__BackingField"
+        },
+        {
+          "Type": "UnityEngine.Vector3",
+          "ValueType": true,
+          "Name": "pickupPosition"
+        },
+        {
+          "Type": "UnityEngine.Quaternion",
+          "ValueType": true,
+          "Name": "pickupRotation"
+        },
+        {
+          "Type": "Nivalis.HoldableEntity+RenderMode",
+          "ValueType": true,
+          "Name": "_currentRenderMode"
+        },
+        {
+          "Type": "Nivalis.PlacementSetting",
+          "ValueType": false,
+          "Name": "settings"
+        },
+        {
+          "Type": "UnityEngine.Vector3",
+          "ValueType": true,
+          "Name": "snapOffset"
+        },
+        {
+          "Type": "UnityEngine.Rigidbody",
+          "ValueType": false,
+          "Name": "_rigidbody"
+        },
+        {
+          "Type": "UnityEngine.Vector3",
+          "ValueType": true,
+          "Name": "<CenterOfMassOffset>k__BackingField"
+        },
+        {
+          "Type": "UnityEngine.Collider[]",
+          "ValueType": false,
+          "Name": "placementColliders"
+        },
+        {
+          "Type": "UnityEngine.Collider",
+          "ValueType": false,
+          "Name": "snapDisableCollider"
+        },
+        {
+          "Type": "UnityEngine.Vector3",
+          "ValueType": true,
+          "Name": "<PlacementColliderOffset>k__BackingField"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "currentRotation"
+        },
+        {
+          "Type": "UnityEngine.Vector3",
+          "ValueType": true,
+          "Name": "heldLocalOffset"
+        },
+        {
+          "Type": "Nivalis.OverrideableBool+OverrideLock",
+          "ValueType": false,
+          "Name": "_pickedUpLock"
+        },
+        {
+          "Type": "Nivalis.OverrideableBool",
+          "ValueType": false,
+          "Name": "IsInteractable"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isManuallyPlacable"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "canBeRotated"
+        },
+        {
+          "Type": "UnityEngine.LayerMask",
+          "ValueType": true,
+          "Name": "triggerBlockingLayer"
+        },
+        {
+          "Type": "System.Collections.Generic.List`1<UnityEngine.Collider>",
+          "ValueType": false,
+          "Name": "myColliders"
+        },
+        {
+          "Type": "System.Collections.Generic.Dictionary`2<UnityEngine.Collider,System.Boolean>",
+          "ValueType": false,
+          "Name": "defaultColliderToTriggerMap"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isSleeping"
+        },
+        {
+          "Type": "Nivalis.IInteractable",
+          "ValueType": false,
+          "Name": "interactable"
+        },
+        {
+          "Type": "Nivalis.HoldableEntityRenderer",
+          "ValueType": false,
+          "Name": "entityRenderer"
+        },
+        {
+          "Type": "System.Collections.Generic.List`1<UnityEngine.Collider>",
+          "ValueType": false,
+          "Name": "touchingTriggerColliders"
+        },
+        {
+          "Type": "Nivalis.PlacementTracker",
+          "ValueType": false,
+          "Name": "tracker"
+        }
+      ],
+      "Name": "Nivalis.HoldableEntity"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "UnityEngine.Vector3",
+          "ValueType": true,
+          "Name": "rotationAxis"
+        },
+        {
+          "Type": "Nivalis.SurfaceType",
+          "ValueType": true,
+          "Name": "surfaceType"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "mustBePlacedOnSurface"
+        },
+        {
+          "Type": "Nivalis.OptionalLayerMask",
+          "ValueType": false,
+          "Name": "surfaceMask"
+        },
+        {
+          "Type": "UnityEngine.LayerMask",
+          "ValueType": true,
+          "Name": "placeLayer"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "snapRadius"
+        },
+        {
+          "Type": "Nivalis.PlacementSetting+ModuleType",
+          "ValueType": true,
+          "Name": "moduleType"
+        },
+        {
+          "Type": "UnityEngine.Material",
+          "ValueType": false,
+          "Name": "invalidPlacementMaterial"
+        },
+        {
+          "Type": "UnityEngine.Material",
+          "ValueType": false,
+          "Name": "validPlacementMaterial"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "surfaceDotThreshold"
+        }
+      ],
+      "Name": "Nivalis.PlacementSetting"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.GhostSystem.IGhostView",
+          "ValueType": false,
+          "Name": "view"
+        },
+        {
+          "Type": "Nivalis.HoldableEntity",
+          "ValueType": false,
+          "Name": "myHoldableEntity"
+        },
+        {
+          "Type": "FurnitureParent",
+          "ValueType": false,
+          "Name": "currentParent"
+        }
+      ],
+      "Name": "Nivalis.PlacementTracker"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "System.String",
+          "ValueType": false,
+          "Name": "guid"
+        },
+        {
+          "Type": "System.Collections.Generic.List`1<Nivalis.CollectibleManager+Collectible>",
+          "ValueType": false,
+          "Name": "itemsOverride"
+        },
+        {
+          "Type": "UnityEngine.GameObject",
+          "ValueType": false,
+          "Name": "prop"
+        },
+        {
+          "Type": "UnityEngine.Collider",
+          "ValueType": false,
+          "Name": "interactionCollider"
+        },
+        {
+          "Type": "Nivalis.AudioGroup",
+          "ValueType": false,
+          "Name": "interactAudio"
+        },
+        {
+          "Type": "Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocStringSingle>",
+          "ValueType": false,
+          "Name": "collectedLabel"
+        },
+        {
+          "Type": "Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocStringSingle>",
+          "ValueType": false,
+          "Name": "defaultLabel"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "<IsActive>k__BackingField"
+        }
+      ],
+      "Name": "Nivalis.ItemCollectible"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.InventorySystem.ItemType",
+          "ValueType": false,
+          "Name": "type"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "value"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "creationDay"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "remainingDecayTime"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "lastUpdateDay"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.ItemInstanceData"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "_lastUpdateTime"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemType",
+          "ValueType": false,
+          "Name": "_type"
+        },
+        {
+          "Type": "System.Collections.Generic.List`1<Nivalis.InventorySystem.ItemInstanceData>",
+          "ValueType": false,
+          "Name": "_instanceData"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.ItemStack"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.SerializableGuid",
+          "ValueType": false,
+          "Name": "guid"
+        },
+        {
+          "Type": "System.String",
+          "ValueType": false,
+          "Name": "ArticyGuid"
+        },
+        {
+          "Type": "UnityEngine.Sprite",
+          "ValueType": false,
+          "Name": "icon"
+        },
+        {
+          "Type": "Nivalis.Localization.LocObjRef`1<Nivalis.Localization.LocItemPlain>",
+          "ValueType": false,
+          "Name": "locObjRef"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "basePrice"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "minStockPerVendor"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "maxStockPerVendor"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "allowBuying"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "allowSelling"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "allowDailyDeal"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "timedStockPriceModifier"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "baseMarketPrice"
+        },
+        {
+          "Type": "BasePriceCurve",
+          "ValueType": false,
+          "Name": "basePriceCurve"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "minMealPrice"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "maxMealPrice"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isPlayerStorable"
+        },
+        {
+          "Type": "System.Collections.Generic.List`1<Nivalis.InventorySystem.ObjectTag>",
+          "ValueType": false,
+          "Name": "tags"
+        },
+        {
+          "Type": "System.String",
+          "ValueType": false,
+          "Name": "storeAchievementId"
+        },
+        {
+          "Type": "System.Collections.Generic.HashSet`1<System.Int32>",
+          "ValueType": false,
+          "Name": "tagsHashSet"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemEntity",
+          "ValueType": false,
+          "Name": "entityPrefab"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isEquippable"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isIngredient"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "decayTimeInDays"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "requiresRefrigeration"
+        },
+        {
+          "Type": "Nivalis.CraftingSystem.IngredientProcessingType",
+          "ValueType": true,
+          "Name": "allowedProcessingTypes"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "calories"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "exclusivity"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "_isPlant"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemType",
+          "ValueType": false,
+          "Name": "_seeds"
+        },
+        {
+          "Type": "UnityEngine.GameObject",
+          "ValueType": false,
+          "Name": "_plantPrefab"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "_yield"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "_growthDuration"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "_optimalTemperature"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "_optimalHumidity"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "_optimalLightness"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemType[]",
+          "ValueType": false,
+          "Name": "seedPlants"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "_isFarmingModule"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemType[]",
+          "ValueType": false,
+          "Name": "plants"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "yieldBonus"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "growthSpeedBonus"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "requiredFarmingLevel"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "_isFishingRod"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "throwRange"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "lureRange"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "luck"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isUseable"
+        },
+        {
+          "Type": "System.Collections.Generic.List`1<Nivalis.InventorySystem.ItemType+StatChange>",
+          "ValueType": false,
+          "Name": "onUseStatChanges"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "_isCamera"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isFish"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.FishItemData",
+          "ValueType": false,
+          "Name": "fishData"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "isFurniture"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.FurnitureCategory",
+          "ValueType": true,
+          "Name": "furnitureCategories"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.FurnitureProperty",
+          "ValueType": true,
+          "Name": "propertyCategories"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.FurnitureStyle",
+          "ValueType": true,
+          "Name": "furnitureStyle"
+        },
+        {
+          "Type": "Nivalis.PhotoMode.PhotoFrameSize",
+          "ValueType": false,
+          "Name": "photoFrameSize"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "comfort"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "basicStorage"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "refridgeratedStorage"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "staticFurniture"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "furnitureExclusivity"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "vendingMachineCapacity"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemType+SlotType",
+          "ValueType": true,
+          "Name": "slot"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.ItemType"
+    },
+    {
+      "Fields": [],
+      "Name": "Nivalis.InventorySystem.ItemInstanceCollectionExtensions"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "IsManuallyUpdated"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "IsRefridgerated"
+        },
+        {
+          "Type": "System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.List`1<System.ValueTuple`4<System.Int32,System.Int32,System.Int32,System.Int32>>>",
+          "ValueType": false,
+          "Name": "PerTypeInstances"
+        },
+        {
+          "Type": "Nivalis.OptionalInt",
+          "ValueType": false,
+          "Name": "MaxItems"
+        },
+        {
+          "Type": "Nivalis.OptionalInt",
+          "ValueType": false,
+          "Name": "MaxSlots"
+        },
+        {
+          "Type": "System.String",
+          "ValueType": false,
+          "Name": "TagFilterGuid"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "AcceptsIngredients"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.InventorySave"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "System.Collections.Generic.List`1<System.ValueTuple`2<System.String,Nivalis.InventorySystem.InventorySave>>",
+          "ValueType": false,
+          "Name": "Inventories"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.InventoriesSave"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "System.Type",
+          "ValueType": false,
+          "Name": "<ConfigurationType>k__BackingField"
+        },
+        {
+          "Type": "System.Collections.Generic.Dictionary`2<System.String,Nivalis.InventorySystem.ItemContainer>",
+          "ValueType": false,
+          "Name": "_inventoriesById"
+        },
+        {
+          "Type": "System.Collections.Generic.List`1<Nivalis.InventorySystem.ItemContainer>",
+          "ValueType": false,
+          "Name": "_inventories"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.InventoriesManager"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventorySystem.IItemContainer,Nivalis.InventorySystem.ItemTypeCountChange>>",
+          "ValueType": true,
+          "Name": "onContentsChanged"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "<IsRefridgerated>k__BackingField"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "<IsManuallyUpdated>k__BackingField"
+        },
+        {
+          "Type": "Nivalis.MultiDictionary`2<Nivalis.InventorySystem.ItemType,System.Collections.Generic.LinkedListNode`1<Nivalis.InventorySystem.ItemStack>>",
+          "ValueType": false,
+          "Name": "_typeMap"
+        },
+        {
+          "Type": "System.Collections.Generic.LinkedList`1<Nivalis.InventorySystem.ItemStack>",
+          "ValueType": false,
+          "Name": "_items"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemContainerRestriction",
+          "ValueType": false,
+          "Name": "_restriction"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.ItemContainer"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.OptionalInt",
+          "ValueType": false,
+          "Name": "MaxItems"
+        },
+        {
+          "Type": "Nivalis.OptionalInt",
+          "ValueType": false,
+          "Name": "MaxSlots"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ObjectTag",
+          "ValueType": false,
+          "Name": "TagFilter"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "AcceptsIngredients"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.ItemContainerRestriction"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.InventorySystem.ItemType",
+          "ValueType": false,
+          "Name": "data"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemStack",
+          "ValueType": false,
+          "Name": "_item"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.ItemEntity"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "_canBeHeld"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "_isHeld"
+        }
+      ],
+      "Name": "Nivalis.GhostSystem.HoldableGhost"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.InventorySystem.ItemContainer",
+          "ValueType": false,
+          "Name": "<NormalInventory>k__BackingField"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemContainer",
+          "ValueType": false,
+          "Name": "<RefridgeratedInventory>k__BackingField"
+        },
+        {
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<Nivalis.InventorySystem.IItemContainer,Nivalis.InventorySystem.ItemTypeCountChange>>",
+          "ValueType": true,
+          "Name": "onContentsChanged"
+        }
+      ],
+      "Name": "Nivalis.GhostSystem.CustomerLoop.VenueInventory"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.HoldableEntity",
+          "ValueType": false,
+          "Name": "holdableEntity"
+        },
+        {
+          "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty",
+          "ValueType": false,
+          "Name": "_currentProperty"
+        },
+        {
+          "Type": "Nivalis.OverrideableBool+OverrideLock",
+          "ValueType": false,
+          "Name": "_placementLock"
+        },
+        {
+          "Type": "Nivalis.LockDummy",
+          "ValueType": false,
+          "Name": "_placementLockOwner"
+        },
+        {
+          "Type": "Nivalis.OverrideableBool+OverrideLock",
+          "ValueType": false,
+          "Name": "_pickupLock"
+        },
+        {
+          "Type": "Nivalis.LockDummy",
+          "ValueType": false,
+          "Name": "_pickupLockOwner"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "_isInteractionActive"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "ignoreFirstPlacedArea"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "allowPicking"
+        },
+        {
+          "Type": "Nivalis.Economy.Vendor[]",
+          "ValueType": false,
+          "Name": "exhibitionVendors"
+        },
+        {
+          "Type": "Nivalis.GhostSystem.CustomerLoop.BaseProperty",
+          "ValueType": false,
+          "Name": "<PreviousProperty>k__BackingField"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "<IsInOwnedProperty>k__BackingField"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "<IsWithinFurnitureLimit>k__BackingField"
+        }
+      ],
+      "Name": "Nivalis.Locale.FurnitureObject"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
+          "ValueType": true,
+          "Name": "OnPickUpFound"
+        },
+        {
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
+          "ValueType": true,
+          "Name": "OnObjectPickUp"
+        },
+        {
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`1<Nivalis.HoldableEntity>>",
+          "ValueType": true,
+          "Name": "OnObjectStore"
+        },
+        {
+          "Type": "System.Boolean",
+          "ValueType": true,
+          "Name": "<IsInControlOfObjectPosition>k__BackingField"
+        },
+        {
+          "Type": "UnityEngine.Transform",
+          "ValueType": false,
+          "Name": "container"
+        },
+        {
+          "Type": "Nivalis.ItemPickedUpEvent",
+          "ValueType": false,
+          "Name": "pickUpEvent"
+        },
+        {
+          "Type": "Nivalis.HoldableEntitySO",
+          "ValueType": false,
+          "Name": "_heldObjSO"
+        },
+        {
+          "Type": "UnityEngine.Transform",
+          "ValueType": false,
+          "Name": "_eyelineTransform"
+        },
+        {
+          "Type": "UnityEngine.Transform",
+          "ValueType": false,
+          "Name": "_facingTransform"
+        },
+        {
+          "Type": "Nivalis.FocusRaycaster",
+          "ValueType": false,
+          "Name": "focusRaycaster"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "rotationSpeed"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "lerpRate"
+        },
+        {
+          "Type": "Nivalis.HoldableEntity",
+          "ValueType": false,
+          "Name": "_heldObject"
+        },
+        {
+          "Type": "Nivalis.HoldableEntity",
+          "ValueType": false,
+          "Name": "_objectInFront"
+        },
+        {
+          "Type": "System.Single",
+          "ValueType": true,
+          "Name": "_rotationDirection"
+        },
+        {
+          "Type": "Nivalis.PlayerManager+Player",
+          "ValueType": false,
+          "Name": "_player"
+        },
+        {
+          "Type": "Nivalis.OverrideableBool+OverrideLock",
+          "ValueType": false,
+          "Name": "_playerSprintLock"
+        }
+      ],
+      "Name": "Nivalis.PlayerObjectHolder"
+    },
+    {
+      "Fields": [
+        {
+          "Type": "Nivalis.NonNull`1<Nivalis.ActionNonAlloc`2<System.Int32,System.Int32>>",
+          "ValueType": true,
+          "Name": "onMoneyChanged"
+        },
+        {
+          "Type": "System.Nullable`1<System.Int32>",
+          "ValueType": true,
+          "Name": "lockedMoneyEventPreviousValue"
+        },
+        {
+          "Type": "Nivalis.OverrideableBool",
+          "ValueType": false,
+          "Name": "moneyChangeEventLock"
+        },
+        {
+          "Type": "System.Int32",
+          "ValueType": true,
+          "Name": "_money"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.ItemContainer",
+          "ValueType": false,
+          "Name": "_items"
+        },
+        {
+          "Type": "Nivalis.InventorySystem.InventoryData",
+          "ValueType": false,
+          "Name": "<InventoryData>k__BackingField"
+        }
+      ],
+      "Name": "Nivalis.InventorySystem.PlayerInventory"
     }
   ]
 }

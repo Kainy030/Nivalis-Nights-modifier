@@ -2,12 +2,12 @@ $ErrorActionPreference = 'Stop'
 Push-Location (Join-Path $PSScriptRoot '..')
 try {
     [void][Reflection.Assembly]::LoadFrom((Resolve-Path 'work/hook-dependencies/bepinex-6.0.0-pre.2/BepInEx/core/Mono.Cecil.dll'))
-    $assembly = [Mono.Cecil.AssemblyDefinition]::ReadAssembly((Resolve-Path 'work/il2cpp-validation/DummyDll/Assembly-CSharp.dll'))
+    $assembly = [Mono.Cecil.AssemblyDefinition]::ReadAssembly((Resolve-Path 'work/il2cpp-validation-v1.1/DummyDll/Assembly-CSharp.dll'))
     function Flatten($types) { foreach ($t in $types) { $t; Flatten $t.NestedTypes } }
     $all = @(Flatten $assembly.MainModule.Types)
     $scope = Get-Content work/world-investigation/hook-scope.json -Raw | ConvertFrom-Json
     $player = Get-Content src/NightsHack.PlayerHook/PlayerCatalog.json -Raw | ConvertFrom-Json
-    $mapping = Get-Content work/il2cpp-validation/script.json -Raw | ConvertFrom-Json -AsHashtable
+    $mapping = Get-Content work/il2cpp-validation-v1.1/script.json -Raw | ConvertFrom-Json -AsHashtable
     $aliases = @{}
     foreach ($m in $mapping.ScriptMethod) {
         $key = [string][long]$m.Address

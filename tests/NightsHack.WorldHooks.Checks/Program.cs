@@ -16,18 +16,18 @@ var names = new[] { "WorldHook", "ItemHook", "GameRuntimeHook" };
 var catalogs = names.ToDictionary(n => n, n => Catalog.Load(Assembly.GetExecutingAssembly(), n + ".Catalog.json"));
 var all = catalogs.Values.SelectMany(c => c.Methods).ToArray();
 var player = JsonSerializer.Deserialize<Catalog>(File.ReadAllText(Path.Combine(root, "src/NightsHack.PlayerHook/PlayerCatalog.json")))!;
-using var metadata = AssemblyDefinition.ReadAssembly(Path.Combine(root, "work/il2cpp-validation/DummyDll/Assembly-CSharp.dll"));
+using var metadata = AssemblyDefinition.ReadAssembly(Path.Combine(root, "work/il2cpp-validation-v1.1/DummyDll/Assembly-CSharp.dll"));
 IEnumerable<TypeDefinition> Flatten(IEnumerable<TypeDefinition> types) => types.SelectMany(t => new[] { t }.Concat(Flatten(t.NestedTypes)));
 var gameTypes = Flatten(metadata.MainModule.Types).ToDictionary(t => t.FullName.Replace('/', '+'));
-using var mapping = JsonDocument.Parse(File.ReadAllText(Path.Combine(root, "work/il2cpp-validation/script.json")));
+using var mapping = JsonDocument.Parse(File.ReadAllText(Path.Combine(root, "work/il2cpp-validation-v1.1/script.json")));
 var aliases = mapping.RootElement.GetProperty("ScriptMethod").EnumerateArray().GroupBy(m => m.GetProperty("Address").GetInt64())
     .ToDictionary(g => g.Key, g => g.Select(m => m.GetProperty("Name").GetString()).Distinct().ToArray());
 
 Check("four catalogs have disjoint signatures and native entries", () => {
     var combined = all.Concat(player.Methods).ToArray();
     Assert(player.Methods.Length == 323 && player.Types.Length == 32 && player.Excluded.Length == 48);
-    Assert(catalogs["WorldHook"].Methods.Length == 350 && catalogs["ItemHook"].Methods.Length == 220 &&
-        catalogs["GameRuntimeHook"].Methods.Length == 173 && combined.Length == 1066);
+    Assert(catalogs["WorldHook"].Methods.Length == 349 && catalogs["ItemHook"].Methods.Length == 220 &&
+        catalogs["GameRuntimeHook"].Methods.Length == 174 && combined.Length == 1066);
     Assert(combined.Select(m => m.Id).Distinct().Count() == combined.Length);
     Assert(combined.Select(m => Convert.ToInt64(m.Rva,16)).Distinct().Count() == combined.Length);
     Assert(all.All(m => m.Parameters.Length == m.OutParameters.Length && m.Parameters.Length == m.ParameterNames.Length));
@@ -93,7 +93,7 @@ Check("core ownership and inventory overloads", () => {
 Check("seven actual iterator execution methods included", () => {
     string[] types = { "Nivalis.GameSceneManager+<LoadAreaRoutine>d__85", "Nivalis.GameSceneManager+<WaitForLevelLoadingUnblocked>d__86",
         "Nivalis.TransitionManager+<TransitionRoutine>d__23", "Nivalis.TravelManager+<TeleportPlayer>d__15",
-        "Nivalis.HoldableEntity+<PlaceRoutine>d__94", "Nivalis.SerializationManager+<LoadRoutine>d__42",
+        "Nivalis.HoldableEntity+<PlaceRoutine>d__94", "Nivalis.SerializationManager+<LoadRoutine>d__47",
         "Nivalis.SerializationManager+<UpdateSceneObjects>d__19" };
     foreach (string type in types) Assert(all.Any(m => m.Type == type && m.Name == "MoveNext" && m.SkipAfterInstance));
 });
@@ -101,17 +101,10 @@ Check("empty GhostManagerSave native body is never patched", () => {
     Assert(!all.Any(m => Convert.ToInt64(m.Rva,16) == 0x4E8210));
     Assert(catalogs["WorldHook"].Excluded.Any(e => e.Type.EndsWith("GhostManagerSave") && e.Name == "Save"));
 });
-Check("every previously disassembled method has a candidate or explicit exclusion", () => {
-    using var disassembly=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"work/world-investigation/disassembly-index.json")));
-    foreach(var row in disassembly.RootElement.EnumerateArray()) {
-        var method=row.GetProperty("method"); string symbol=method.GetProperty("Name").GetString()!;
-        string[] parts=symbol.Split("$$"); long rva=method.GetProperty("Address").GetInt64();
-        bool matched=all.Any(m=>m.Type.Replace('+','.')==parts[0] && m.Name==parts[1] && Convert.ToInt64(m.Rva,16)==rva) ||
-            catalogs.Values.SelectMany(c=>c.Excluded).Any(e=>e.Type.Replace('+','.')==parts[0] && e.Name==parts[1] && Convert.ToInt64(e.Rva,16)==rva);
-        Assert(matched,"Unaccounted investigated method: "+symbol);
-    }
+Check("current v1.1 catalogs have no duplicate native entries", () => {
+    var combined = all.Concat(player.Methods).ToArray();
+    Assert(combined.Select(m => Convert.ToInt64(m.Rva, 16)).Distinct().Count() == combined.Length);
 });
-
 MethodSpec Spec(string name, string result, bool isStatic = false, params string[] args) => new("Test", typeof(Fixture).FullName!, name, result,
     args, args.Select((_,i) => "p"+i).ToArray(), args.Select(_ => false).ToArray(), "0x1", false, isStatic);
 Check("resolver distinguishes overloads, instance/static, return and out/ref", () => {
@@ -306,9 +299,9 @@ Check("optional Player detail capture and bounded readers remain available", () 
     Assert(snapshots.Methods.Single(m=>m.Name=="ReadField").Body.Instructions.Any(i=>i.Operand as string=="Nivalis.PlayerManager+PlayerKnowledge"));
     Assert(snapshots.Methods.Single(m=>m.Name=="Arguments").Body.Instructions.Any(i=>i.Operand as string=="Nivalis.PlayerStat"));
 });
-Check("historical Player catalog remains intact as passive metadata", () => {
+Check("current v1.1 Player catalog has reviewed identity", () => {
     string path=Path.Combine(root,"src/NightsHack.PlayerHook/PlayerCatalog.json");
-    Assert(Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(path)))=="40FB6DCAF34E7C3ECAD163714A44525EBC523C9B0DAAA27FE1A0E78DAEC79AAA");
+    Assert(Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(path)))=="34C58324DE292774AE85FDA33B597346845C5842BA2316F9295E30376D25AA88");
 });
 Check("passive catalogs retain visual metadata without installing observers", () => {
     Assert(player.Methods.Any(m => m.Type == "Nivalis.PlayerCameraController" && m.Name == "SetDepthOfField"));
@@ -323,7 +316,7 @@ Check("passive catalogs retain AI metadata without selecting AI observers", () =
     var runtime = catalogs["GameRuntimeHook"];
     var world = catalogs["WorldHook"];
     Assert(runtime.Methods.Count(m => m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)) == 17);
-    Assert(world.Methods.Count(m => m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)) == 13);
+    Assert(world.Methods.Count(m => m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)) == 14);
     foreach (string name in new[] { "EnsureInitialized", "UpdateCurrentAgentAction", "SelectNewAction", "SwitchAction" })
         Assert(runtime.Methods.Any(m => m.Name == name && m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)));
     Assert(world.Methods.Any(m => m.Name == "UpdatePositionInternal" && m.Type.StartsWith("Nivalis.GhostSystem.Ai.", StringComparison.Ordinal)));

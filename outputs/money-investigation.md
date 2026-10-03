@@ -1,3 +1,5 @@
+> 历史资料：该文档来自旧版本调查，仅作历史参考；当前构建和新功能只使用 v1.1 导出与当前 Catalog。
+
 # Nivalis Nights：Money 核心追踪
 
 日期：2026-09-30。工作区：D:/NightsHack。
@@ -109,8 +111,8 @@ Assembly-CSharp 的命名空间还覆盖对话、AI/顾客循环、技能、制�
 
 ## 6. 证据与复现
 
-- 原始元数据：work/il2cpp-validation/dump.cs；程序集 image 在第 98 行，PlayerInventory 第 755492 行，PlayerSave 第 714116 行，PlayerManager.Player 第 714267 行，PlayerManager 第 714590 行，EconomyManager 第 784043 行附近。
-- 脚本方法映射：work/il2cpp-validation/script.json。
+- 原始元数据：work/il2cpp-validation-v1.1/dump.cs；程序集 image 在第 98 行，PlayerInventory 第 755492 行，PlayerSave 第 714116 行，PlayerManager.Player 第 714267 行，PlayerManager 第 714590 行，EconomyManager 第 784043 行附近。
+- 脚本方法映射：work/il2cpp-validation-v1.1/script.json。
 - 本轮分析脚本：work/money-investigation.py（只读游戏文件；输出仅在工作区）。
 - 类原文摘录：work/money-investigation/selected-types.txt（包含原始行号与 RVA）。
 - 简化类型列表：work/money-investigation/selected-types-brief.txt。

@@ -1,20 +1,20 @@
 # REFERENCE — 修改器入口、公共运行库与 Player 结构档案
 
-更新：2026-09-30。用途：修改器本体开发时查询模块职责、公共 API、业务入口、数据归属和验证边界。本文保留完整 Player 结构与原候选附录；四插件完整清单见 [HOOKS-REFERENCE.md](D:/NightsHack/outputs/HOOKS-REFERENCE.md)。
+更新：2026-09-30。用途：修改器本体开发时查询模块职责、公共 API、业务入口、数据归属和验证边界。本文保留完整 Player 结构与原候选附录；四插件完整清单见 [HOOKS-REFERENCE.md](D:/NivalisNightsTrainer/outputs/HOOKS-REFERENCE.md)。
 
 ## 0. 当前总架构与开发标准
 
 | 组件 | 职责 | 静态候选数 |
 |---|---|---:|
-| PlayerHook | 玩家业务、属性/技能、金钱、移动、交互与背包玩家入口 | 324 |
-| WorldHook | 场景/旅行、Ghost、空间索引、任务对象、地产经营 | 350 |
+| PlayerHook | 玩家业务、属性/技能、金钱、移动、交互与背包玩家入口 | 323 |
+| WorldHook | 场景/旅行、Ghost、空间索引、任务对象、地产经营 | 349 |
 | ItemHook | 库存、堆栈、逐件数据、腐坏、拾取摆放与家具 | 220 |
-| GameRuntimeHook | 时间、模拟、天气/光照、存档、对象池 | 173 |
+| GameRuntimeHook | 时间、模拟、天气/光照、存档、对象池 | 174 |
 | HookRuntime | 四插件公共安装/卸载、校验、回调、采样、快照与状态管理 | 不另设业务清单 |
 
-合计 1,067 个不重复候选签名/原生 RVA，数字不是游戏内成功安装或命中数。四个插件均继承 `NightsHack.HookRuntime.ObservationPlugin`；公共运行库是它们的依赖，不是额外的游戏功能插件。
+合计 1,066 个 v1.1 不重复候选签名/原生 RVA，数字不是游戏内成功安装或命中数。四个插件均继承 `NightsHack.HookRuntime.ObservationPlugin`；公共运行库是它们的依赖，不是额外的游戏功能插件。
 
-统一构建：[Build-Hooks.ps1](D:/NightsHack/Build-Hooks.ps1)。统一交付：[outputs/Hooks](D:/NightsHack/outputs/Hooks)，包括四个插件 DLL 和一份 NightsHack.HookRuntime.dll。旧构建入口转发到统一构建，旧输出目录只是兼容副本，勿同时加载重复插件。DLL 身份以同目录 build-sha256.json 为准。
+统一构建：[Build-Hooks.ps1](D:/NivalisNightsTrainer/Build-Hooks.ps1)。统一交付：[outputs/Hooks](D:/NivalisNightsTrainer/outputs/Hooks)，包括四个插件 DLL 和一份 NightsHack.HookRuntime.dll。旧构建入口转发到统一构建，旧输出目录只是兼容副本，勿同时加载重复插件。DLL 身份以同目录 build-sha256.json 为准。
 
 **项目标准：做多功能修改器，不做 ModLoader，不追求引擎内部或整个 Runtime 的穷尽覆盖。** 当前阶段需要的是正常游戏系统使用的真实业务入口；调用入口时，其内部辅助逻辑会自行执行，不要求逐层都装钩。静态入口已具备开发本体的基础，具体调用约束在各功能实现时验证。
 
@@ -58,12 +58,12 @@ Player 的 324 方法清单保持逐字节不变，32 个字段 schema、属性/
 
 证据分级：
 
-- **静态已验证**：元数据与所查机器码支持。完整原始证据和边界见 [Player 底层调查](D:/NightsHack/outputs/player-investigation.md)。该调查核对 75 份方法记录、74 个唯一 RVA，不代表所有方法实现均已恢复。
+- **静态已验证**：元数据与所查机器码支持。完整原始证据和边界见 [Player 底层调查](D:/NivalisNightsTrainer/outputs/player-investigation.md)。该调查核对 75 份方法记录、74 个唯一 RVA，不代表所有方法实现均已恢复。
 - **元数据已确认**：存在对应字段、签名或类型关系；方法名表达的用途不等于所有内部条件都已验证。
 - **托管验证**：四个插件 Release 编译、15 项 Player 检查及 21 项跨插件/运行库检查通过；不能外推为原生 Hook 已运行。
 - **未验证/未知**：运行时资产、当前实例、完整异常分支、性能及游戏内表现；下文分别指出。
 
-`REFERENCE` 是开发存档，不是游戏更新后的自动适配保证。原始证据目录为 `work/player-investigation/`；全量元数据为 `work/il2cpp-validation/dump.cs`。运行时禁止复用旧进程的地址。
+`REFERENCE` 是开发存档，不是游戏更新后的自动适配保证。原始证据目录为 `work/player-investigation/`；全量元数据为 `work/il2cpp-validation-v1.1/dump.cs`。运行时禁止复用旧进程的地址。
 
 ## 2. 对象层次与权威数据
 
@@ -235,7 +235,7 @@ PlayerSave 未直接包含 PlayerState 字典与技能字典。初始化会新�
 
 ## 5. PlayerHook 实现与 API 契约
 
-源码：[PlayerHook.cs](D:/NightsHack/src/NightsHack.PlayerHook/PlayerHook.cs)。使用说明：[README](D:/NightsHack/src/NightsHack.PlayerHook/README.md)。机器清单：[PlayerCatalog.json](D:/NightsHack/src/NightsHack.PlayerHook/PlayerCatalog.json)。
+源码：[PlayerHook.cs](D:/NivalisNightsTrainer/src/NightsHack.PlayerHook/PlayerHook.cs)。使用说明：[README](D:/NivalisNightsTrainer/src/NightsHack.PlayerHook/README.md)。机器清单：[PlayerCatalog.json](D:/NivalisNightsTrainer/src/NightsHack.PlayerHook/PlayerCatalog.json)。
 
 - 插件类 `NightsHack.PlayerHook.PlayerHook : ObservationPlugin`，ID `nightshack.playerhook`，产物 `PlayerHook.dll`，依赖四插件公共库 `NightsHack.HookRuntime.dll`。
 - 基线为 BepInEx 6.0.0-pre.2 IL2CPP x64/net6.0。324 个候选入口、18 组；32 个 schema/338 字段；46 个明确排除条目。候选数量不是实际命中数量。
@@ -1251,4 +1251,3 @@ PlayerSave 未直接包含 PlayerState 字典与技能字典。初始化会新�
 | `<Guid>k__BackingField` | `System.String` |
 | `<ManagerType>k__BackingField` | `System.Type` |
 | `PerSkillExperience` | `System.Collections.Generic.Dictionary`2<System.String,Nivalis.SkillSystem.SkillLevelController+PlayerSkillExperience>` |
-

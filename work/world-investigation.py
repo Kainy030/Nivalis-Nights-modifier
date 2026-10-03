@@ -4,7 +4,7 @@ import re, json, hashlib, collections
 ROOT=Path('D:/NightsHack')
 OUT=ROOT/'work/world-investigation'
 OUT.mkdir(exist_ok=True)
-source=(ROOT/'work/il2cpp-validation/dump.cs').read_text(encoding='utf-8-sig')
+source=(ROOT/'work/il2cpp-validation-v1.1/dump.cs').read_text(encoding='utf-8-sig')
 blocks=[]; line=1; last=0
 for match in re.finditer(r'(?m)^// Namespace: (.*)\n([\s\S]*?)(?=^// Namespace: |\Z)',source):
     line+=source.count('\n',last,match.start()); last=match.start()
@@ -21,7 +21,7 @@ for b in core:
     stem=re.sub(r'[^A-Za-z0-9_.-]','_',b['full_name'])
     (OUT/(stem+'.txt')).write_text('\n'.join(f'{b["line"]+i}: {row}' for i,row in enumerate(b['text'].splitlines())),encoding='utf-8')
 (OUT/'core-types-brief.txt').write_text('\n\n'.join('\n'.join(f'{b["line"]+i}: {row}' for i,row in enumerate(b['text'].splitlines()) if 'TypeDefIndex' in row or (row.startswith('\t') and row.strip() and not row.lstrip().startswith(('//','[','|','/*','*/')))) for b in core),encoding='utf-8')
-mapping=json.loads((ROOT/'work/il2cpp-validation/script.json').read_text(encoding='utf-8-sig'))
+mapping=json.loads((ROOT/'work/il2cpp-validation-v1.1/script.json').read_text(encoding='utf-8-sig'))
 owners={b['full_name'] for b in core if b['namespace']}
 nested={'.'+b['name'] for b in core if not b['namespace']}
 methods=[m for m in mapping['ScriptMethod'] if m['Name'].split('$$')[0] in owners or any(m['Name'].split('$$')[0].endswith(n) for n in nested)]
@@ -29,7 +29,7 @@ methods=[m for m in mapping['ScriptMethod'] if m['Name'].split('$$')[0] in owner
 paths={
  'GameAssembly.dll':Path('D:/Steam/steamapps/common/Nivalis Nights/GameAssembly.dll'),
  'global-metadata.dat':Path('D:/Steam/steamapps/common/Nivalis Nights/Nivalis Nights_Data/il2cpp_data/Metadata/global-metadata.dat'),
- 'dump.cs':ROOT/'work/il2cpp-validation/dump.cs','script.json':ROOT/'work/il2cpp-validation/script.json'}
+ 'dump.cs':ROOT/'work/il2cpp-validation-v1.1/dump.cs','script.json':ROOT/'work/il2cpp-validation-v1.1/script.json'}
 hashes={}
 for name,path in paths.items():
     with path.open('rb') as f: digest=hashlib.file_digest(f,'sha256').hexdigest().upper()

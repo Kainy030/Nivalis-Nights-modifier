@@ -3,7 +3,7 @@ import re, json, struct, collections
 root=Path('D:/NightsHack')
 out=root/'work/money-investigation'
 out.mkdir(exist_ok=True)
-source=(root/'work/il2cpp-validation/dump.cs').read_text(encoding='utf-8-sig')
+source=(root/'work/il2cpp-validation-v1.1/dump.cs').read_text(encoding='utf-8-sig')
 blocks=[]
 lastpos=0
 lineno=1
@@ -33,7 +33,7 @@ hexes={}
 for name,rva,size in [('get_Money',0x95c750,16),('set_Money',0x2f0b9a0,0x120),('ChangeMoneyWithoutReceipt',0x2f0bfe0,16),('TakeMoney',0x2f0c460,16),('ChangeMoneyWithReceipt',0x1a32180,0x240)]:
     raw=rawof(rva); payload=data[raw:raw+size];hexes[name]={'rva':hex(rva),'file_offset':hex(raw),'hex':payload.hex(' ')}
 (out/'money-machine-bytes.json').write_text(json.dumps(hexes,indent=2),encoding='utf-8')
-mapping=json.loads((root/'work/il2cpp-validation/script.json').read_text(encoding='utf-8-sig'))
+mapping=json.loads((root/'work/il2cpp-validation-v1.1/script.json').read_text(encoding='utf-8-sig'))
 byaddr=collections.defaultdict(list)
 for m in mapping['ScriptMethod']: byaddr[m['Address']].append(m['Name'])
 checks=[]
